@@ -17,11 +17,9 @@ Use `?theme=THEME_NAME` parameter like so :-
 |        `dark`        |       ![image][dark]        |
 |    `highcontrast`    |   ![image][highcontrast]    |
 
-[Add your theme][add-theme]. Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
+Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
 
 [default]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default
 [transparent]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=transparent
 [dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark
 [highcontrast]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=highcontrast
-
-[add-theme]: https://github.com/FajarKim/github-readme-profile/edit/master/themes/index.ts
