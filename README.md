@@ -113,7 +113,7 @@ You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-sp
 </details>
 
 ## 📑 License
-GitHub Readme Profile is released under the AGPL-3.0 license, which grants the following permissions:
+GitHub Readme Profile is released under the MIT license, which grants the following permissions:
 - Commercial use
 - Modification
 - Distribution
