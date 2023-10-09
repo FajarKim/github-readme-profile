@@ -56,4 +56,16 @@ export const themes = {
     bg_color: "1e1e2e",
     username_color: "94e2d5",
   },
+  vue: {
+    title_color: "41b883",
+    icon_color: "41b883",
+    text_color: "273849",
+    bg_color: "fffefe",
+  },
+  "vue-dark": {
+    title_color: "41b883",
+    icon_color: "41b883",
+    text_color: "fffefe",
+    bg_color: "273849",
+  },
 }
