@@ -1,0 +1,20 @@
+themes: themes/index.ts
+doc-translation: docs/*
+card-i18n:
+  - src/src/translations.ts
+documentation:
+  - README.md
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - SECURITY.md
+dependencies:
+  - package.json
+  - package-lock.json
+  - tsconfig.ts
+stats-card:
+  - src/api/index.ts
+  - src/src/apiFetch.ts
+  - src/src/repositoryFetch.ts
+ci:
+  - .github/workflows/*
+  - scripts/*
