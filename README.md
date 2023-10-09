@@ -28,7 +28,7 @@ Change the `?username=` value to your GitHub username.
 [![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim)](https://github.com/FajarKim/github-readme-profile)
 
 ## 🎨 Themes
-With inbuilt themes, you can customize the look of the card without doing any [manual customization](#-customizatin).
+With inbuilt themes, you can customize the look of the card without doing any [manual customization](#%EF%B8%8F-customization).
 
 Use `&theme=THEME_NAME` parameter like so:
 
