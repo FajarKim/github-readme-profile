@@ -8,7 +8,7 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.2",
     "millify": "^4.0.0",
-    "node-base64-image": "^2.0.1"
+    "node-base64-image": "^2.0.5"
   },
   "scripts": {
     "dev": "nodemon ./src/withexpress.ts",
