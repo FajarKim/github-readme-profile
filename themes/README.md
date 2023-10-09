@@ -10,12 +10,16 @@ Use `?theme=THEME_NAME` parameter like so :-
 
 ## Themes Preview
 
-|        Themes        |           Preview           |
-| :------------------: | :-------------------------: |
-|       `default`      |      ![image][default]      |
-|     `transparent`    |    ![image][transparent]    |
-|        `dark`        |       ![image][dark]        |
-|    `highcontrast`    |   ![image][highcontrast]    |
+|        Themes        |            Preview           |
+| :------------------: | :--------------------------: |
+|       `default`      |       ![image][default]      |
+|     `transparent`    |     ![image][transparent]    |
+|        `dark`        |        ![image][dark]        |
+|    `highcontrast`    |    ![image][highcontrast]    |
+|  `catppuccin-latte`  |  ![image][catppuccin-latte]  |
+|  `catppuccin-frappe` |  ![image][catppuccin-frappe] |
+|`catppuccin-macchiato`|![image][catppuccin-macchiato]|
+|  `catppuccin-mocha`  |  ![image][catppuccin-mocha]  |
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
 
@@ -23,3 +27,7 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [transparent]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=transparent
 [dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark
 [highcontrast]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=highcontrast
+[catppuccin-latte]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=catppuccin-latte
+[catppuccin-frappe]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=catppuccin-frappe
+[catppuccin-macchiato]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=catppuccin-macchiato
+[catppuccin-mocha]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=catppuccin-mocha
