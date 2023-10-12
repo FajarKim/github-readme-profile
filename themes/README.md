@@ -22,6 +22,8 @@ Use `?theme=THEME_NAME` parameter like so :-
 |  `catppuccin-mocha`  |  ![image][catppuccin-mocha]  |
 |         `vue`        |         ![image][vue]        |
 |       `vue-dark`     |       ![image][vue-dark]     |
+|      `github_dark`   |      ![image][github_dark]   |
+| `github_dark_dimmed` | ![image][github_dark_dimmed] |
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
 
@@ -35,3 +37,5 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [catppuccin-mocha]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=catppuccin-mocha
 [vue]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=vue
 [vue-dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=vue-dark
+[github_dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=github_dark
+[github_dark_dimmed]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=github_dark_dimmed

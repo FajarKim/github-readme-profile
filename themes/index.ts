@@ -68,4 +68,18 @@ export const themes = {
     text_color: "fffefe",
     bg_color: "273849",
   },
+  github_dark: {
+    title_color: "58A6FF",
+    icon_color: "1F6FEB",
+    text_color: "C3D1D9",
+    bg_color: "0D1117",
+    stroke_color: "24292F",
+  },
+  github_dark_dimmed: {
+    title_color: "539BF5",
+    icon_color: "539BF5",
+    text_color: "ADBAC7",
+    bg_color: "24292F",
+    border_color: "373E47",
+  },
 }
