@@ -146,4 +146,19 @@ export const themes: Themes = {
     bg_color: "002b36",
     stroke_color: "004557",
   },
+  "vision-friendly-dark": {
+    title_color: "ffb000",
+    icon_color: "785ef0",
+    text_color: "ffffff",
+    bg_color: "000000",
+    stroke_color: "111919",
+  },
+  "deuteranopia-friendly-dark": {
+    title_color: "f0e442",
+    icon_color: "56b4e9",
+    text_color: "009e73",
+    bg_color: "000000",
+    stroke_color: "cc79a7",
+    username_color: "e69f00",
+  },
 }

@@ -17,7 +17,7 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `vue-dark` ![vue-dark][vue-dark] | `github_dark` ![github_dark][github_dark] | `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed] |
 | `github_light` ![github_light][github_light] | `whatsapp-light` ![whatsapp-light][whatsapp-light] | `whatsapp-dark` ![whatsapp][whatsapp-dark] |
 | `buefy` ![buefy][buefy] | `buefy-dark` ![buefy-dark][buefy-dark] | `solarized-light` ![solarized-light][solarized-light] |
-| `solarized-dark` ![solarized-dark][solarized-dark] |  |  |
+| `solarized-dark` ![solarized-dark][solarized-dark] | `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark] | `deuteranopia-friendly-dark` ![deuteranopia-friendly-dark][deuteranopia-friendly-dark] |
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
 
@@ -40,3 +40,5 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [buefy-dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=buefy-dark
 [solarized-light]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=solarized-light
 [solarized-dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=solarized-dark
+[vision-friendly-dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=vision-friendly-dark
+[deuteranopia-friendly-dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=deuteranopia-friendly-dark
