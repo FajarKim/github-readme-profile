@@ -10,25 +10,14 @@ Use `?theme=THEME_NAME` parameter like so :-
 
 ## Themes Preview
 
-|        Themes        |            Preview           |
-| :------------------: | :--------------------------: |
-|       `default`      |       ![image][default]      |
-|     `transparent`    |     ![image][transparent]    |
-|        `dark`        |        ![image][dark]        |
-|    `highcontrast`    |    ![image][highcontrast]    |
-|  `catppuccin-latte`  |  ![image][catppuccin-latte]  |
-|  `catppuccin-frappe` |  ![image][catppuccin-frappe] |
-|`catppuccin-macchiato`|![image][catppuccin-macchiato]|
-|  `catppuccin-mocha`  |  ![image][catppuccin-mocha]  |
-|         `vue`        |         ![image][vue]        |
-|       `vue-dark`     |       ![image][vue-dark]     |
-|      `github_dark`   |      ![image][github_dark]   |
-| `github_dark_dimmed` | ![image][github_dark_dimmed] |
-|     `github_light`   |     ![image][github_light]   |
-|    `whatsapp-light`  |    ![image][whatsapp-light]  |
-|     `whatsapp-dark`  |     ![image][whatsapp-dark]  |
-|        `buefy`       |        ![image][buefy]       |
-|      `buefy-dark`    |      ![image][buefy-dark]    |
+| `deafult` ![default][default] | `transparent` ![transparent][transparent] | `dark` ![dark][dark] |
+| :---------------: | :---------------: | :---------------: |
+| `highcontrast` ![highcontrast][highcontrast] | `catppuccin-latte` ![catppuccin-latte][catppuccin-latte] | `catppuccin-frappe` ![catppuccin-frappe][catppuccin-frappe] |
+| `catppuccin-macchiato` ![catppuccin-macchiato][catppuccin-macchiato] | `catppuccin-mocha` ![catppuccin-mocha][catppuccin-mocha] | `vue` ![vue][vue] |
+| `vue-dark` ![vue-dark][vue-dark] | `github_dark` ![github_dark][github_dark] | `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed] |
+| `github_light` ![github_light][github_light] | `whatsapp-light` ![whatsapp-light][whatsapp-light] | `whatsapp-dark` ![whatsapp][whatsapp-dark] |
+| `buefy` ![buefy][buefy] | `buefy-dark` ![buefy-dark][buefy-dark] | `solarized-light` ![solarized-light][solarized-light] |
+| `solarized-dark` ![solarized-dark][solarized-dark] |  |  |
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
 
@@ -49,3 +38,5 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [whatsapp-dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=whatsapp-dark
 [buefy]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=buefy
 [buefy-dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=buefy-dark
+[solarized-light]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=solarized-light
+[solarized-dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=solarized-dark

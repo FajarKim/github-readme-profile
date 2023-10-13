@@ -132,4 +132,18 @@ export const themes: Themes = {
     icon_color: "FF3860",
     bg_color: "1A1B27",
   },
+  "solarized-light": {
+    title_color: "268bd2",
+    icon_color: "b58900",
+    text_color: "859900",
+    bg_color: "fdf6e3",
+    stroke_color: "fdf0ce",
+  },
+  "solarized-dark": {
+    title_color: "268bd2",
+    icon_color: "b58900",
+    text_color: "859900",
+    bg_color: "002b36",
+    stroke_color: "004557",
+  },
 }
