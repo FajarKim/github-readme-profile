@@ -1,6 +1,6 @@
 import getData from "../src/getData";
 import cardStyle from "../src/card";
-import { themes } from "../../themes/index";
+import { Themes } from "../../themes/index";
 
 export type UiConfig = {
   titleColor: string;
@@ -17,8 +17,8 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
     let username = req.query.username;
 
     const fallbackTheme = "default";
-    const defaultTheme = themes[fallbackTheme];
-    const selectTheme = themes[req.query.theme] || defaultTheme;
+    const defaultTheme = Themes[fallbackTheme];
+    const selectTheme = Themes[req.query.theme] || defaultTheme;
 
     let uiConfig: UiConfig = {
       titleColor: req.query.title_color || selectTheme.title_color || defaultTheme.title_color,

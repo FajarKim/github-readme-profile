@@ -27,6 +27,8 @@ Use `?theme=THEME_NAME` parameter like so :-
 |     `github_light`   |     ![image][github_light]   |
 |    `whatsapp-light`  |    ![image][whatsapp-light]  |
 |     `whatsapp-dark`  |     ![image][whatsapp-dark]  |
+|        `buefy`       |        ![image][buefy]       |
+|      `buefy-dark`    |      ![image][buefy-dark]    |
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
 
@@ -44,4 +46,6 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [github_dark_dimmed]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=github_dark_dimmed
 [github_light]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=github_light
 [whatsapp-light]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=whatsapp-light
-[whatsapp-dark]: https://github-readme-profile-theta.vercel.app/api?username&theme=whatsapp-dark
+[whatsapp-dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=whatsapp-dark
+[buefy]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=buefy
+[buefy-dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=buefy-dark
