@@ -86,4 +86,11 @@ export const themes = {
     bg_color: "24292F",
     border_color: "373E47",
   },
+  github_light: {
+    title_color: "1F6FEB",
+    icon_color: "39D353",
+    text_color: "24292F",
+    bg_color: "FFFFFF",
+    border_color: "39D353",
+  },
 }
