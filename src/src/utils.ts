@@ -8,7 +8,7 @@ const encodeHTML = (str: string) => {
     .replace(/\u0008/gim, "");
 };
 
-const renderError = (message: string, secondaryMessage: string = "") => {
+const renderError = (message: string, secondaryMessage?: string = "") => {
   return `
     <svg width="${ERROR_CARD_LENGTH}" height="120" viewBox="0 0 ${ERROR_CARD_LENGTH} 120" fill="none" xmlns="http://www.w3.org/2000/svg">
     <style>
@@ -48,7 +48,7 @@ const SECONDARY_ERROR_MESSAGES: secondaryErrorMsg = {
   GITHUB_REST_API_ERROR: TRY_AGAING_LATER,
 };
 
-export default {
+export {
   renderError,
   SECONDARY_ERROR_MESSAGES,
 };
