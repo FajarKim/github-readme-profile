@@ -107,8 +107,8 @@ export const themes: Themes = {
   },
   "whatsapp-light": {
     title_color: "16D351",
-    text_color: "73828A",
-    icon_color: "121B22",
+    text_color: "121B22",
+    icon_color: "73828A",
     bg_color: "FFFFFF",
     stroke_color: "008069",
   },
