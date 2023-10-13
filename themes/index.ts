@@ -93,4 +93,18 @@ export const themes = {
     bg_color: "FFFFFF",
     border_color: "39D353",
   },
+  "whatsapp-light": {
+    title_color: "16D351",
+    text_color: "73828A",
+    icon_color: "121B22",
+    bg_color: "FFFFFF",
+    stroke_color: "008069",
+  },
+  "whatsapp-dark": {
+    title_color: "16D351",
+    text_color: "E3E7EA",
+    icon_color: "888D90",
+    bg_color: "273741",
+    stroke_color: "008069",
+  },
 }
