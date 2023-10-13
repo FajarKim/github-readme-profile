@@ -1,4 +1,16 @@
-export const themes = {
+export type Themes = {
+  [key: string]: {
+    title_color?: string;
+    text_color?: string;
+    icon_color?: string;
+    border_color?: string;
+    bg_color?: string;
+    stroke_color?: string;
+    username_color?: string;
+  };
+};
+
+export const themes: Themes = {
   default: {
     title_color: "2f80ed",
     text_color: "434d58",
@@ -106,5 +118,18 @@ export const themes = {
     icon_color: "888D90",
     bg_color: "273741",
     stroke_color: "008069",
+  },
+  buefy: {
+    title_color: "7957D5",
+    text_color: "363636",
+    icon_color: "FF3860",
+    border_color: "A8A8A8",
+    bg_color: "FFFFFF",
+  },
+  "buefy-dark": {
+    title_color: "7957D5",
+    text_color: "ABABAB",
+    icon_color: "FF3860",
+    bg_color: "1A1B27",
   },
 }
