@@ -33,6 +33,7 @@ export const themes = {
     text_color: "4c4f69",
     icon_color: "8839ef",
     bg_color: "eff1f5",
+    stroke_color: "dadce0",
     username_color: "137980",
   },
   "catppuccin-frappe": {
@@ -40,6 +41,7 @@ export const themes = {
     text_color: "c6d0f5",
     icon_color: "ca9ee6",
     bg_color: "303446",
+    stroke_color: "434962",
     username_color: "81c8be",
   },
   "catppuccin-macchiato": {
@@ -47,6 +49,7 @@ export const themes = {
     text_color: "cad3f5",
     icon_color: "c6a0f6",
     bg_color: "24273a",
+    stroke_color: "343854",
     username_color: "8bd5ca",
   },
   "catppuccin-mocha": {
@@ -54,6 +57,7 @@ export const themes = {
     text_color: "cdd6f4",
     icon_color: "cba6f7",
     bg_color: "1e1e2e",
+    stroke_color: "2a2a40",
     username_color: "94e2d5",
   },
   vue: {
