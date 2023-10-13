@@ -77,7 +77,7 @@ export const themes = {
     icon_color: "1F6FEB",
     text_color: "C3D1D9",
     bg_color: "0D1117",
-    stroke_color: "24292F",
+    border_color: "39D353",
   },
   github_dark_dimmed: {
     title_color: "539BF5",
