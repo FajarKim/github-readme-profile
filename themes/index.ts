@@ -10,7 +10,7 @@ export type Themes = {
   };
 };
 
-export const themes: Themes = {
+export default const themes: Themes = {
   default: {
     title_color: "2f80ed",
     text_color: "434d58",
