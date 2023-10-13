@@ -24,6 +24,7 @@ Use `?theme=THEME_NAME` parameter like so :-
 |       `vue-dark`     |       ![image][vue-dark]     |
 |      `github_dark`   |      ![image][github_dark]   |
 | `github_dark_dimmed` | ![image][github_dark_dimmed] |
+|     `github_light`   |     ![image][github_light]   |
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
 
@@ -39,3 +40,4 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [vue-dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=vue-dark
 [github_dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=github_dark
 [github_dark_dimmed]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=github_dark_dimmed
+[github_light]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=github_light
