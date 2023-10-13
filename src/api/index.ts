@@ -1,8 +1,6 @@
 import getData from "../src/getData";
 import cardStyle from "../src/card";
 import { themes, Themes } from "../../themes/index";
-import renderError from "../src/utils";
-import SECONDARY_ERROR_MESSAGES from "../src/utils";
 
 export type UiConfig = {
   titleColor: string;
@@ -32,9 +30,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       bgColor: req.query.bg_color || selectTheme.bg_color || defaultTheme.bg_color,
     };
 
-    if (!username) { 
-      return res.send(renderError("Something went wrong", SECONDARY_ERROR_MESSAGES.USER_NOT_FOUND));
-    }
+    if (!username) throw new Error("Username is required", "");
 
     var fetchStats = await getData(username);
     res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");
