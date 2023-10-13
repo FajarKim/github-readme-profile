@@ -11,7 +11,7 @@ Use `?theme=THEME_NAME` parameter like so :-
 ## Themes Preview
 
 | `deafult` ![default][default] | `transparent` ![transparent][transparent] | `dark` ![dark][dark] |
-| :--------------- : | :--------------- : | :--------------- : |
+| :---------------: | :---------------: | :---------------: |
 | `highcontrast` ![highcontrast][highcontrast] | `catppuccin-latte` ![catppuccin-latte][catppuccin-latte] | `catppuccin-frappe` ![catppuccin-frappe][catppuccin-frappe] |
 | `catppuccin-macchiato` ![catppuccin-macchiato][catppuccin-macchiato] | `catppuccin-mocha` ![catppuccin-mocha][catppuccin-mocha] | `vue` ![vue][vue] |
 | `vue-dark` ![vue-dark][vue-dark] | `github_dark` ![github_dark][github_dark] | `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed] |
