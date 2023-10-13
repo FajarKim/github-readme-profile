@@ -1,7 +1,8 @@
 import getData from "../src/getData";
 import cardStyle from "../src/card";
 import { themes, Themes } from "../../themes/index";
-import { renderError, SECONDARY_ERROR_MESSAGES } from "../src/utils";
+import renderError from "../src/utils";
+import SECONDARY_ERROR_MESSAGES from "../src/utils";
 
 export type UiConfig = {
   titleColor: string;

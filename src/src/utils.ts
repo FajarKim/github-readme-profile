@@ -1,3 +1,5 @@
+const ERROR_CARD_LENGTH = 576.5;
+
 const encodeHTML = (str: string) => {
   return str
     .replace(/[\u00A0-\u9999<>&](?!#)/gim, (i) => {
@@ -28,7 +30,7 @@ const renderError = (message: string, secondaryMessage: string = "") => {
 
 const TRY_AGAING_LATER = "Please try again later";
 
-export type const secondaryErrorMsg = {
+export type secondaryErrorMsg = {
   MAX_RETRY: string,
   NO_TOKENS: string,
   USER_NOT_FOUND: string,
