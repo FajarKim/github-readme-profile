@@ -1,4 +1,4 @@
-export type Locale = {
+export type Locales = {
   [key: string]: {
     titleCard: string;
     followersText: string;
@@ -14,7 +14,7 @@ export type Locale = {
   };
 };
 
-export const locale: Locale = {
+export const locales: Locales = {
   en: {
     titleCard: "{name}'s GitHub Stats",
     followersText: "Followers",
