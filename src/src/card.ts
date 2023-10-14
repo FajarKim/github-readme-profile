@@ -13,7 +13,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
       textXAngle = "25",
       dataXAngle = "225";
 
-  if (selectLocale.rtl == "true" || selectLocale.rtl == true || selectLocale.rtl) {
+  if (selectLocale.rtlDirection == "true" || selectLocale.rtlDirection == true || selectLocale.rtlDirection) {
     var direction = "rtl",
         titleXAngle = "510",
         iconXAngle = "255",

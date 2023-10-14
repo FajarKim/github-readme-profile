@@ -11,7 +11,7 @@ export type Locales = {
     totalPRMergedText: string;
     totalIssuesText: string;
     contributedToText: string;
-    rtl?: boolean | string;
+    rtlDirection?: boolean | string;
   };
 };
 
@@ -67,6 +67,6 @@ export const locales: Locales = {
     totalPRMergedText: "إجمالي العلاقات العامة المدمجة",
     totalIssuesText: "إجمالي المشكلات",
     contributedToText: "ساهم في (العام الماضي)",
-    rtl: "true",
+    rtlDirection: true,
   },
 }
