@@ -17,7 +17,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     var direction = "rtl",
         titleXAngle = "510",
         iconXAngle = "255",
-        textXAngle = "215",
+        textXAngle = "225",
         dataXAngle = "15";
   };
 
