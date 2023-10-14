@@ -22,10 +22,10 @@ Copy-paste this into your markdown content, and that is it. Simple!
 Change the `?username=` value to your GitHub username.
 
 ```markdown
-[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim)](https://github.com/FajarKim/github-readme-profile)
+[![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim)](https://github.com/FajarKim/github-readme-profile)
 ```
 
-[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim)](https://github.com/FajarKim/github-readme-profile)
+[![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim)](https://github.com/FajarKim/github-readme-profile)
 
 ## 🎨 Themes
 With inbuilt themes, you can customize the look of the card without doing any [manual customization](#%EF%B8%8F-customization).
@@ -33,12 +33,12 @@ With inbuilt themes, you can customize the look of the card without doing any [m
 Use `&theme=THEME_NAME` parameter like so:
 
 ```markdown
-![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark)
+![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark)
 ```
 <details>
 <summary>Show Example</summary>
 
-[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark)](https://github.com/FajarKim/github-readme-profile)
+[![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark)](https://github.com/FajarKim/github-readme-profile)
 </details>
 
 #### All inbuilt themes
@@ -53,10 +53,10 @@ GitHub Readme Profile comes with several built-in themes (e.g. `transparent`, `d
 
 You can look at a preview for [all available themes](./themes). You can also contribute new themes if you like, contributing guidelines can be found [here](./CONTRIBUTING.md#-themes-contribution).
 
-[default]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default
-[transparent]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=transparent
-[dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark
-[highcontrast]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=highcontrast
+[default]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=default
+[transparent]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=transparent
+[dark]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark
+[highcontrast]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=highcontrast
 
 ## ✏️ Customization
 You can customize the appearance of all your cards however you wish with URL parameters.
@@ -76,41 +76,41 @@ You can customize the appearance of all your cards however you wish with URL par
 We have included a `transparent` theme that has a transparent background. This theme is optimized to look good on GitHub's dark and light default themes. You can enable this theme using the `&theme=transparent` parameter like so:
 
 ```markdown
-![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=transparent)
+![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=transparent)
 ```
 
 <details>
 <summary>Show Example</summary>
 
-[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=transparent)](https://github.com/FajarKim/github-readme-profile)
+[![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=transparent)](https://github.com/FajarKim/github-readme-profile)
 </details>
 
 #### Add transparent alpha channel to a themes `bg_color`
 You can use the `bg_color` parameter to make any of the available themes transparent. This is done by setting the `bg_color` to a color with a transparent alpha channel (i.e. `bg_color=00000000`):
 
 ```markdown
-![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=00000000)
+![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&bg_color=00000000)
 ```
 
 <details>
 <summary>Show Example</summary>
 
-[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=0000000)](https://github.com/FajarKim/github-readme-profile)
+[![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&bg_color=0000000)](https://github.com/FajarKim/github-readme-profile)
 </details>
 
 #### Use GitHub's theme context tag
 You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-specify-theme-context-for-images-in-markdown/) tags to switch the theme based on the user GitHub theme automatically. This is done by appending `#gh-dark-mode-only` or `#gh-light-mode-only` to the end of an image URL. This tag will define whether the image specified in the markdown is only shown to viewers using a light or a dark GitHub theme:
 
 ```markdown
-[![GitHub stats-Dark](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only)
-[![GitHub stats-Light](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-light-mode-only)
+[![GitHub stats-Dark](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only)
+[![GitHub stats-Light](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-light-mode-only)
 ```
 
 <details>
 <summary>Show Example</summary>
 
-[![GitHub stats-Dark](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only)
-[![GitHub stats-Light](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-light-mode-only)
+[![GitHub stats-Dark](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only)
+[![GitHub stats-Light](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-light-mode-only)
 </details>
 
 #### Available locales
@@ -140,13 +140,13 @@ You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-sp
 The locale code added to file should be a 2-letter abbreviation from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or a 4-letter code with a language and country code (eg. `id` or `pt-BR`).
 
 ```markdown
-![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&locale=id)
+![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&locale=id)
 ```
 
 <details>
 <summary>Show Example</summary>
 
-[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&locale=id)](https://github.com/FajarKim/github-readme-profile)
+[![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&locale=id)](https://github.com/FajarKim/github-readme-profile)
 </details>
 
 ## 📑 License
