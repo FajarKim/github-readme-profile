@@ -72,4 +72,18 @@ export const locales: Locales = {
     contributedToText: "ساهم في (العام الماضي)",
     rtlDirection: true,
   },
+  ja: {
+    titleCard: "{name}の GitHub 統計",
+    followersText: "フォロワー",
+    followingText: "フォロー中",
+    totalReposText: "トータルリポジトリ",
+    starsCountText: "星の数",
+    forksCountText: "フォークの数",
+    commitsCountText: "コミットの数",
+    totalPRText: "トータルPR",
+    totalPRMergedText: "トータルPRの マージ",
+    totalIssuesText: "トータル Issues",
+    contributedToText: ""貢献したリポジトリ (昨年)",
+    rtlDirection: false,
+  },
 }
