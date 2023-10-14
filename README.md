@@ -114,10 +114,11 @@ You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-sp
 </details>
 
 #### Available locales
-|     Code     |                  Locale                  |
-| :----------: | :--------------------------------------: |
-|     `en`     | English                                  |
-|     `id`     | Indonesian (Bahasa Indonesia             |
+|   Code   |                  Locale                  |
+| :------: | :--------------------------------------: |
+| `en`     | English                                  |
+| `id`     | Indonesian (Bahasa Indonesia             |
+| `ko`     | Korean (한국어)                          |
 
 The locale code added to file should be a 2-letter abbreviation from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or a 4-letter code with a language and country code (eg. `id` or `pt-BR`).
 
