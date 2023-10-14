@@ -170,7 +170,7 @@ Step-by-step guide on setting up your own Vercel instance.
 8. Click the Continue with GitHub button, search for the required Git Repository and import it by clicking the `Import` button. Alternatively, you can import a Third-Party Git Repository using the `Import Third-Party Git Repository` link at the bottom of the page.
 9. Create a personal access token (PAT) [here](https://github.com/settings/tokens/new) and enable the `repo` and `user` permissions (this allows access to see private repo and user stats).
 10. Add the PAT as an environment variable named `GH_TOKEN`.
-11. In build and output settings, you set toggle install command and add command `npm install typescript`.
+11. In build and output settings, you set install command toggle and add command `npm install typescript`.
 12. Click deploy, and you're good to go. See your domains to use the API!
 
 [![Deploy](https://raw.githubusercontent.com/FajarKim/FajarKim/master/images/deploy-on-vercel.svg)](https://vercel.com/import/project?template=https://github.com/FajarKim/github-readme-profile)
