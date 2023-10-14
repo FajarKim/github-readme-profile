@@ -28,6 +28,7 @@ export const locales: Locales = {
     totalPRMergedText: "Total PRs Merged",
     totalIssuesText: "Total Issues",
     contributedToText: "Contributed to (last year)",
+    rtlDirection: false,
   },
   id: {
     titleCard: "Statistik GitHub {name}",
