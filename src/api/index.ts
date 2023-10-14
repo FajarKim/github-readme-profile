@@ -10,6 +10,7 @@ export type UiConfig = {
   strokeColor: string;
   usernameColor: string;
   bgColor: string;
+  Locale: string;
 };
 
 export default async function readmeStats(req: any, res: any): Promise<any> {
@@ -28,6 +29,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       strokeColor: req.query.stroke_color || req.query.border_color || selectTheme.stroke_color || selectTheme.border_color || defaultTheme.border_color,
       usernameColor: req.query.username_color || req.query.text_color || selectTheme.username_color || selectTheme.text_color || defaultTheme.text_color,
       bgColor: req.query.bg_color || selectTheme.bg_color || defaultTheme.bg_color,
+      Locale: req.query.locale || "en",
     };
 
     if (!username) throw new Error("Username is required", "");

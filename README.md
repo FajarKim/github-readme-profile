@@ -70,6 +70,7 @@ You can customize the appearance of all your cards however you wish with URL par
 - `stroke_color` - Profile image border color (_hex color_). Default: `e4e2e2` or `bg_color` query.
 - `username_color` - Username text color (_hex color_). Deafult: `434d58` or `text_color` query.
 - `theme` - Name of the theme, choose from [all available themes](./themes). Default: `default` theme.
+- `locale` - Sets the language in the card, you can check full list of available locales [here](#available-locales). Default: `en`.
 
 #### Use the transparent theme
 We have included a `transparent` theme that has a transparent background. This theme is optimized to look good on GitHub's dark and light default themes. You can enable this theme using the `&theme=transparent` parameter like so:
@@ -111,6 +112,13 @@ You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-sp
 [![GitHub stats-Dark](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only)
 [![GitHub stats-Light](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-light-mode-only)
 </details>
+
+#### Available locale
+|     Code     |             Locale             |
+| :----------: | :----------------------------: |
+|     `en`     | English                        |
+
+The locale code added to file should be a 2-letter abbreviation from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or a 4-letter code with a language and country code (eg. `id` or `pt-BR`).
 
 ## 📑 License
 GitHub Readme Profile is released under the MIT license, which grants the following permissions:
