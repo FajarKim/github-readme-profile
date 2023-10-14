@@ -1,11 +1,11 @@
 import type { GetData } from "./getData";
 import type { UiConfig } from "../api/index";
-import { locale, Locale } from "./translations";
+import { locales, Locales } from "./translations";
 
 export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   let fallbackLocale = "en";
-  const defaultLocale: Locale[keyof: Locale] = locale[fallbackLocale];
-  const selectLocale: Locale[keyof: Locale] = locale[uiConfig.Locale] || defaultLocale;
+  const defaultLocale: Locales[keyof: Locales] = locales[fallbackLocale];
+  const selectLocale: Locales[keyof: Locales] = locales[uiConfig.Locale] || defaultLocale;
 
   var card = `<svg width="535" height="245" viewBox="0 0 535 245" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>

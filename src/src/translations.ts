@@ -10,7 +10,7 @@ export type Locale = {
     totalPRText: string;
     totalPRMergedText: string;
     totalIssuesText: string;
-    totalContributedToText: string;
+    contributedToText: string;
   };
 };
 
