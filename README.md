@@ -114,11 +114,22 @@ You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-sp
 </details>
 
 #### Available locales
-|     Code     |             Locale             |
-| :----------: | :----------------------------: |
-|     `en`     | English                        |
+|     Code     |                  Locale                  |
+| :----------: | :--------------------------------------: |
+|     `en`     | English                                  |
+|     `id`     | Indonesian (Bahasa Indonesia             |
 
 The locale code added to file should be a 2-letter abbreviation from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or a 4-letter code with a language and country code (eg. `id` or `pt-BR`).
+
+```markdown
+![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&locale=id)
+```
+
+<details>
+<summary>Show Example</summary>
+
+[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&locale=id)](https://github.com/FajarKim/github-readme-profile)
+</details>
 
 ## 📑 License
 GitHub Readme Profile is released under the MIT license, which grants the following permissions:
