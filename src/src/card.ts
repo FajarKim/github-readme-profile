@@ -7,7 +7,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   const defaultLocale: Locales[keyof Locales] = locales[fallbackLocale];
   const selectLocale: Locales[keyof Locales] = locales[uiConfig.Locale] || defaultLocale;
 
-  var direction = "ltr",
+  var direction = "rtl",
       titleXAngle = "5",
       iconXAngle = "0",
       textXAngle = "25",
