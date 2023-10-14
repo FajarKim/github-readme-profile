@@ -7,8 +7,8 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   const defaultLocale: Locales[keyof Locales] = locales[fallbackLocale];
   const selectLocale: Locales[keyof Locales] = locales[uiConfig.Locale] || defaultLocale;
 
-  if (selectLocale.rtl == "true" || selectLocale.rtl == true) {
-    return `<svg width="535" height="245" direction="rtl" viewBox="0 0 535 245" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  if (selectLocale.rtl == "true" || selectLocale.rtl == true || selectLocale.rtl) {
+    var card = `<svg width="535" height="245" direction="rtl" viewBox="0 0 535 245" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
     	/* Animations */
         @keyframes scaleInAnimation {
@@ -197,7 +197,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     </g>
 </svg>`;
   } else {
-      return `<svg width="535" height="245" viewBox="0 0 535 245" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      var card = `<svg width="535" height="245" viewBox="0 0 535 245" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
     	/* Animations */
         @keyframes scaleInAnimation {
@@ -386,4 +386,5 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     </g>
 </svg>`;
   };
+  return card;
 }
