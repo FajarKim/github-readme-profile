@@ -83,7 +83,7 @@ export const locales: Locales = {
     totalPRText: "トータルPR",
     totalPRMergedText: "トータルPRの マージ",
     totalIssuesText: "トータル Issues",
-    contributedToText: ""貢献したリポジトリ (昨年)",
+    contributedToText: "貢献したリポジトリ (昨年)",
     rtlDirection: false,
   },
 }
