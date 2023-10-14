@@ -11,7 +11,7 @@ export type Locales = {
     totalPRMergedText: string;
     totalIssuesText: string;
     contributedToText: string;
-    rtlDirection?: boolean | string;
+    rtlDirection: boolean | string;
   };
 };
 
@@ -41,6 +41,7 @@ export const locales: Locales = {
     totalPRMergedText: "Total PR Digabungkan",
     totalIssuesText: "Total Masalah Dilaporkan",
     contributedToText: "Berkontribusi ke (tahun lalu)",
+    rtlDirection: false,
   },
   ko: {
     titleCard: "{name}의 GitHub 통계",
@@ -54,6 +55,7 @@ export const locales: Locales = {
     totalPRMergedText: "병합된 총 PR",
     totalIssuesText: "총 문제",
     contributedToText: "(작년)에 기여",
+    rtlDirection: false,
   },
   ar: {
     titleCard: "إحصائيات GitHub الخاصة ب {name}",
