@@ -11,7 +11,7 @@ export type Locales = {
     totalPRMergedText: string;
     totalIssuesText: string;
     contributedToText: string;
-    rtl?: string;
+    rtl?: boolean | string;
   };
 };
 
