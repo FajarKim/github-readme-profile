@@ -54,4 +54,17 @@ export const locales: Locales = {
     totalIssuesText: "총 문제",
     contributedToText: "(작년)에 기여",
   },
+  ar: {
+    titleCard: "إحصائيات GitHub الخاصة ب {name}",
+    followersText: "المتابعون",
+    followingText: "يتابع",
+    totalReposText: "إجمالي المستودع",
+    starsCountText: "عدد النجوم",
+    forksCountText: "عدد الشوكة",
+    commitsCountText: "عدد الالتزام",
+    totalPRText: "إجمالي العلاقات العامة",
+    totalPRMergedText: "إجمالي العلاقات العامة المدمجة",
+    totalIssuesText: "إجمالي المشكلات",
+    contributedToText: "ساهم في (العام الماضي)",
+  },
 }
