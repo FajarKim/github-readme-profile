@@ -113,7 +113,7 @@ You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-sp
 [![GitHub stats-Light](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-light-mode-only)
 </details>
 
-#### Available locale
+#### Available locales
 |     Code     |             Locale             |
 | :----------: | :----------------------------: |
 |     `en`     | English                        |
