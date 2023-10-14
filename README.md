@@ -67,7 +67,7 @@ You can customize the appearance of all your cards however you wish with URL par
 - `icon_color` - Icons color if available (_hex color_). Default: `4c71f2`.
 - `border_color` - Card's border color (_hex color_). Default: `e4e2e2`.
 - `bg_color` - Card's background color (_hex color_). Default: `fffefe`.
-- `stroke_color` - Profile image border color (_hex color_). Default: `e4e2e2` or `bg_color` query.
+- `stroke_color` - Profile image border color (_hex color_). Default: `e4e2e2` or `border_color` query.
 - `username_color` - Username text color (_hex color_). Deafult: `434d58` or `text_color` query.
 - `theme` - Name of the theme, choose from [all available themes](./themes). Default: `default` theme.
 - `locale` - Sets the language in the card, you can check full list of available locales [here](#available-locales). Default: `en`.
