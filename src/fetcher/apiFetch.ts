@@ -1,5 +1,5 @@
 import axios from "axios";
-import getRandomToken from "./getRandomToken";
+import getRandomToken from "../getRandomToken";
 
 export interface User {
   name: string;

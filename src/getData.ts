@@ -1,6 +1,6 @@
 import millify from "millify";
-import apiFetch from "./apiFetch";
-import repositoryFetch from "./repositoryFetch";
+import apiFetch from "./fetcher/apiFetch";
+import repositoryFetch from "./fetcher/repositoryFetch";
 const base64ImageFetcher = require("node-base64-image");
 
 export type GetData = {

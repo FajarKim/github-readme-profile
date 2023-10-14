@@ -1,6 +1,6 @@
 import getData from "../src/getData";
 import cardStyle from "../src/card";
-import { themes, Themes } from "../../themes/index";
+import { themes, Themes } from "../themes/index";
 
 export type UiConfig = {
   titleColor: string;
@@ -32,7 +32,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       Locale: req.query.locale || "en",
     };
 
-    if (!username) throw new Error("Username is required", "");
+    if (!username) throw new Error("Username is required");
 
     var fetchStats = await getData(username);
     res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");
