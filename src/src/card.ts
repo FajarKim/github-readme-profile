@@ -4,8 +4,8 @@ import { locales, Locales } from "./translations";
 
 export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   let fallbackLocale = "en";
-  const defaultLocale: Locales[keyof: Locales] = locales[fallbackLocale];
-  const selectLocale: Locales[keyof: Locales] = locales[uiConfig.Locale] || defaultLocale;
+  const defaultLocale: Locales[keyof Locales] = locales[fallbackLocale];
+  const selectLocale: Locales[keyof Locales] = locales[uiConfig.Locale] || defaultLocale;
 
   var card = `<svg width="535" height="245" viewBox="0 0 535 245" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
