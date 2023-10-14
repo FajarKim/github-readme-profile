@@ -1,5 +1,6 @@
 export type Locales = {
   [key: string]: {
+    rtl?: boolean || string;
     titleCard: string;
     followersText: string;
     followingText: string;
@@ -55,6 +56,7 @@ export const locales: Locales = {
     contributedToText: "(작년)에 기여",
   },
   ar: {
+    rtl: true,
     titleCard: "إحصائيات GitHub الخاصة ب {name}",
     followersText: "المتابعون",
     followingText: "يتابع",
