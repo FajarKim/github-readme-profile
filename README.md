@@ -132,6 +132,10 @@ You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-sp
     <td><p align="left">Indonesian (Bahasa Indonesia)</p></td>
   </tr>
   <tr>
+    <td><p align="center"><code>ja</code></p></td>
+    <td><p align="left">Japanese (日本語)</p></td>
+  </tr>
+  <tr>
     <td><p align="center"><code>ko</code></p></td>
     <td><p align="left">Korean (한국어)</p></td>
   </tr>
