@@ -86,4 +86,18 @@ export const locales: Locales = {
     contributedToText: "貢献したリポジトリ (昨年)",
     rtlDirection: false,
   },
+  fr: {
+    titleCard: "Statistiques GitHub de {name}",
+    followersText: "Suiveurs",
+    followingText: "Suivant",
+    totalReposText: "Total des Référentiel",
+    starsCountText: "Nombre d'étoiles",
+    forksCountText: "Nombre de Fork",
+    commitsCountText: "Nombre de Commit",
+    totalPRText: "Total des PRs",
+    totalPRMergedText: "Total des PR Fusionnés",
+    totalIssuesText: "Total d'Émettre",
+    contributedToText: "Contribué à (l'année dernière)",
+    rtlDirection: false,
+  },
 }
