@@ -32,7 +32,7 @@
   "devDependencies": {
     "@markdoc/markdoc": "^0.3.2",
     "@types/express": "^4.17.18",
-    "@types/node": "^20.8.4",
+    "@types/node": "^20.8.6",
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
