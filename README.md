@@ -8,6 +8,10 @@
   <a href="https://github.com/FajarKim/github-readme-profile/graphs/contributors"><img src="https://img.shields.io/github/contributors/FajarKim/github-readme-profile?label=Contributors&labelColor=302d41&color=c9cbff&style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNTEyIj48cGF0aCBmaWxsPSIjRDlFMEVFIiBkPSJNOTYgMTI4YTEyOCAxMjggMCAxIDEgMjU2IDBBMTI4IDEyOCAwIDEgMSA5NiAxMjh6TTAgNDgyLjNDMCAzODMuOCA3OS44IDMwNCAxNzguMyAzMDRoOTEuNEMzNjguMiAzMDQgNDQ4IDM4My44IDQ0OCA0ODIuM2MwIDE2LjQtMTMuMyAyOS43LTI5LjcgMjkuN0gyOS43QzEzLjMgNTEyIDAgNDk4LjcgMCA0ODIuM3pNNjA5LjMgNTEySDQ3MS40YzUuNC05LjQgOC42LTIwLjMgOC42LTMydi04YzAtNjAuNy0yNy4xLTExNS4yLTY5LjgtMTUxLjhjMi40LS4xIDQuNy0uMiA3LjEtLjJoNjEuNEM1NjcuOCAzMjAgNjQwIDM5Mi4yIDY0MCA0ODEuM2MwIDE3LTEzLjggMzAuNy0zMC43IDMwLjd6TTQzMiAyNTZjLTMxIDAtNTktMTIuNi03OS4zLTMyLjlDMzcyLjQgMTk2LjUgMzg0IDE2My42IDM4NCAxMjhjMC0yNi44LTYuNi01Mi4xLTE4LjMtNzQuM0MzODQuMyA0MC4xIDQwNy4yIDMyIDQzMiAzMmM2MS45IDAgMTEyIDUwLjEgMTEyIDExMnMtNTAuMSAxMTItMTEyIDExMnoiLz48L3N2Zz4%3D"/></a>
 </div>
 
+<div align="center">
+  <a href="https://vercel.com"><img src="./powered-by-vercel.svg" alt="Powered by Vercel"/></a>
+</div>
+
 # 📌 Features
 - [🎴 Getting Started](#-getting-started)
   - [🎨 Themes](#-themes)
