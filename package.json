@@ -1,7 +1,7 @@
 {
-  "name": "github-readme-profile",
+  "name": "@FajarKim/github-readme-profile",
   "version": "1.0.0",
-  "description": "Generate your Stats GitHub Profile in SVG",
+  "description": "🙀 Generate your Stats GitHub Profile in SVG",
   "main": "api/index.ts",
   "dependencies": {
     "axios": "^1.5.1",
@@ -19,11 +19,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FajarKim/github-readme-profile.git"
+    "url": "https://github.com/FajarKim/github-readme-profile.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "github-readme-stats",
-    "github-stats"
+    "github-stats",
+    "github-readme-profile",
+    "github-profile-stats"
   ],
   "bugs": {
     "url": "https://github.com/FajarKim/github-readme-profile/issues"
