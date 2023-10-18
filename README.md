@@ -11,7 +11,7 @@
 </br>
 
 <div align="center">
-  <a href="https://vercel.com"><img src="./powered-by-vercel.svg" alt="Powered by Vercel"/></a>
+  <a href="https://vercel.com"><img src="https://raw.githubusercontent.com/FajarKim/FajarKim/master/images/powered-by-vercel.svg" alt="Powered by Vercel"/></a>
 </div>
 
 # 📌 Features
