@@ -21,24 +21,24 @@ Use `?theme=THEME_NAME` parameter like so :-
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
 
-[default]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=default
-[transparent]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=transparent
-[dark]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark
-[highcontrast]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=highcontrast
-[catppuccin-latte]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=catppuccin-latte
-[catppuccin-frappe]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=catppuccin-frappe
-[catppuccin-macchiato]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=catppuccin-macchiato
-[catppuccin-mocha]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=catppuccin-mocha
-[vue]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=vue
-[vue-dark]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=vue-dark
-[github_dark]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=github_dark
-[github_dark_dimmed]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=github_dark_dimmed
-[github_light]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=github_light
-[whatsapp-light]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=whatsapp-light
-[whatsapp-dark]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=whatsapp-dark
-[buefy]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=buefy
-[buefy-dark]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=buefy-dark
-[solarized-light]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=solarized-light
-[solarized-dark]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=solarized-dark
-[vision-friendly-dark]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=vision-friendly-dark
-[deuteranopia-friendly-dark]: https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=deuteranopia-friendly-dark
+[default]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=default
+[transparent]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=transparent
+[dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=dark
+[highcontrast]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=highcontrast
+[catppuccin-latte]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-latte
+[catppuccin-frappe]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-frappe
+[catppuccin-macchiato]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-macchiato
+[catppuccin-mocha]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-mocha
+[vue]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=vue
+[vue-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=vue-dark
+[github_dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_dark
+[github_dark_dimmed]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_dark_dimmed
+[github_light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_light
+[whatsapp-light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=whatsapp-light
+[whatsapp-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=whatsapp-dark
+[buefy]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=buefy
+[buefy-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=buefy-dark
+[solarized-light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=solarized-light
+[solarized-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=solarized-dark
+[vision-friendly-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=vision-friendly-dark
+[deuteranopia-friendly-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=deuteranopia-friendly-dark
