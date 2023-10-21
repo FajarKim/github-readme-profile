@@ -175,7 +175,7 @@ GitHub Readme Profile is released under the MIT license, which grants the follow
 - Distribution
 - Private use
 
-For more convoluted language, see the [LICENSE](LICENSE).
+For more convoluted language, see the [LICENSE](/LICENSE).
 
 ## Deploy on ▲ Vercel
 Step-by-step guide on setting up your own Vercel instance.
