@@ -22,6 +22,8 @@
 - [📑 License](#-license)
 - [Deploy on ▲ Vercel](#deploy-on--vercel)
 - [💳 Credits](#-credits)
+- [💰 Donate](#-donate)
+- [👥 Contributions](#-contributions)
 
 # 🎴 Getting Started
 Copy-paste this into your markdown content, and that is it. Simple!
@@ -207,6 +209,17 @@ Love the project? Please consider donating to help it improve!
 Are you considering supporting the project by donating to me? Please DO NOT!!
 
 Please visit [this link](https://fajarkim.github.io/donate) and make a small donation to help the people in need. A small donation goes a long way. ❤️
+
+### 👥 Contributions
+> Contributions are welcome!
+
+Specially thanks ❤️ for contributors bellow:
+
+<a href="https://github.com/FajarKim/github-readme-profile/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=FajarKim/github-readme-profile" />
+</a>
+
+Want to contribute? Please note our contribution guidelines [here](/CONTRIBUTING.md).
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/FajarKim/FajarKim/master/images/line.svg?sanitize=true"/>
