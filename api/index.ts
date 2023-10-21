@@ -11,6 +11,7 @@ export type UiConfig = {
   usernameColor: string;
   bgColor: string;
   Locale: string;
+  borderWidth: number | string;
 };
 
 export default async function readmeStats(req: any, res: any): Promise<any> {
@@ -30,6 +31,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       usernameColor: req.query.username_color || req.query.text_color || selectTheme.username_color || selectTheme.text_color || defaultTheme.text_color,
       bgColor: req.query.bg_color || selectTheme.bg_color || defaultTheme.bg_color,
       Locale: req.query.locale || "en",
+      borderWidth: req.query.border_width || "1",
     };
 
     if (!username) throw new Error("Username is required");
