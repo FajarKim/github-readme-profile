@@ -108,7 +108,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     </style>
     <title id="titleId">${selectLocale.titleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</title>
 
-    <rect x="0.5" y="0.5" rx="4.5" height="99%" width="534" fill="#${uiConfig.bgColor}" stroke="#${uiConfig.borderColor}" stroke-opacity="1" />
+    <rect x="0.5" y="0.5" rx="4.5" height="99%" width="534" fill="#${uiConfig.bgColor}" stroke="#${uiConfig.borderColor}" stroke-opacity="1" stroke-width="${uiConfig.borderWidth}"/>
     <g transform="translate(0, 25)">
         <g class="div-animation">
             <text x="${titleXAngle}" y="-10" class="text-title">${selectLocale.titleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</text>
