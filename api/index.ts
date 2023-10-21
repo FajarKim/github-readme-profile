@@ -1,3 +1,5 @@
+import svg2img from "svg2img";
+import { Request, Response } from "express";
 import getData from "../src/getData";
 import cardStyle from "../src/card";
 import { themes, Themes } from "../themes/index";
@@ -43,6 +45,19 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
 
     if (req.query.format === "json") {
       res.json(fetchStats);
+    } else if (req.query.format === "png") {
+      const svgBuffer = Buffer.from(cardStyle(fetchStats, uiConfig)) as any;
+      const options = { format: 'png' as any };
+      svg2img(svgBuffer as any, options, (error: Error | null, buffer: Buffer | null) => {
+        if (error) {
+          res.status(500).send(error.message);
+        } else {
+          res.setHeader('Content-Type', 'image/png');
+          if (buffer) {
+            res.send(buffer as any);
+          }
+        }
+      });
     } else {
       res.setHeader("Content-Type", "image/svg+xml");
       let svg = cardStyle(fetchStats, uiConfig);
