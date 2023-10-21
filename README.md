@@ -78,6 +78,8 @@ You can customize the appearance of all your cards however you wish with URL par
 - `username_color` - Username text color (_hex color_). Deafult: `434d58` or `text_color` query.
 - `theme` - Name of the theme, choose from [all available themes](./themes). Default: `default` theme.
 - `locale` - Sets the language in the card, you can check full list of available locales [here](#available-locales). Default: `en`.
+- `border_width` - Sets the border's width manually (_number_). Default: `1`.
+- `border_radius` - Corner rounding on the card. Default: `4.5`.
 
 #### Use the transparent theme
 We have included a `transparent` theme that has a transparent background. This theme is optimized to look good on GitHub's dark and light default themes. You can enable this theme using the `&theme=transparent` parameter like so:
