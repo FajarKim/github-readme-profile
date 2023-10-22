@@ -47,12 +47,12 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       res.json(fetchStats);
     } else if (req.query.format === "png") {
       const svgBuffer = Buffer.from(cardStyle(fetchStats, uiConfig)) as any;
-      const options = { format: 'png' as any };
+      const options = { resvg: { font: { defaultFontFamily: '"Segoe UI"', serifFamily: 'Ubuntu', sansSerifFamily: 'sans-serif' }, background: 'rgba(0, 0, 0, .0)' } as any, format: 'png' as any };
       svg2img(svgBuffer as any, options, (error: Error | null, buffer: Buffer | null) => {
         if (error) {
           res.status(500).send(error.message);
         } else {
-          res.setHeader('Content-Type', 'image/png');
+          res.setHeader("Content-Type", "image/png");
           if (buffer) {
             res.send(buffer as any);
           }
