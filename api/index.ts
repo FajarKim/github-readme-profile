@@ -4,6 +4,21 @@ import getData from "../src/getData";
 import cardStyle from "../src/card";
 import { themes, Themes } from "../themes/index";
 
+const parseBoolean = (value: boolean | string) => {
+  if (typeof value === "boolean") {
+    return value;
+  }
+
+  if (typeof value === "string") {
+    if (value.toLowerCase() === "true") {
+      return true;
+    } else if (value.toLowerCase() === "false") {
+      return false;
+    }
+  }
+  return undefined;
+};
+
 export type UiConfig = {
   titleColor: string;
   textColor: string;
@@ -15,6 +30,8 @@ export type UiConfig = {
   Locale: string;
   borderWidth: number | string;
   borderRadius: number | string;
+  disabledAnimations: boolean | string;
+  Format: string;
 };
 
 export default async function readmeStats(req: any, res: any): Promise<any> {
@@ -36,6 +53,8 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       Locale: req.query.locale || "en",
       borderWidth: req.query.border_width || "1",
       borderRadius: req.query.border_radius || "4.5",
+      disabledAnimations: parseBoolean(req.query.disabled_animations) || false,
+      Format: req.query.format || "svg",
     };
 
     if (!username) throw new Error("Username is required");
