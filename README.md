@@ -158,7 +158,7 @@ You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-sp
   </tr>
 </table>
 
-The locale code added to file should be a 2-letter abbreviation from [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or a 4-letter code with a language and country code (eg. `id` or `pt-BR`).
+The locale code added to file should be a 2-letter abbreviation from [ISO 639-1](https://www.andiamo.co.uk/resources/iso-language-codes/) or a 4-letter code with a language and country code (eg. `id` or `pt-BR`).
 
 ```markdown
 ![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&locale=id)
