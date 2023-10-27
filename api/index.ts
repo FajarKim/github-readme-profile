@@ -44,7 +44,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
     };
 
     if (!username) throw new Error("Username is required");
-    
+
     if (
       !isValidHexColor(uiConfig.bgColor) ||
       !isValidHexColor(uiConfig.titleColor) ||
