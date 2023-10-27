@@ -43,7 +43,7 @@ async function getPerPageReposData(
     method: "get",
     url: `https://api.github.com/users/${username}/repos?page=${pageno}&per_page=100`,
     headers: {
-      "User-Agent": "tuhinpal/readme-stats-github",
+      "User-Agent": "FajarKim/github-readme-profile",
       Authorization: getRandomToken(true),
     },
   });
