@@ -3,21 +3,7 @@ import { Request, Response } from "express";
 import getData from "../src/getData";
 import cardStyle from "../src/card";
 import { themes, Themes } from "../themes/index";
-
-const parseBoolean = (value: boolean | string) => {
-  if (typeof value === "boolean") {
-    return value;
-  }
-
-  if (typeof value === "string") {
-    if (value.toLowerCase() === "true") {
-      return true;
-    } else if (value.toLowerCase() === "false") {
-      return false;
-    }
-  }
-  return undefined;
-};
+import { isValidHexColor, parseBoolean } from "../src/common/utils";
 
 export type UiConfig = {
   titleColor: string;
@@ -58,6 +44,17 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
     };
 
     if (!username) throw new Error("Username is required");
+    
+    if (
+      !isValidHexColor(uiConfig.bgColor) ||
+      !isValidHexColor(uiConfig.titleColor) ||
+      !isValidHexColor(uiConfig.textColor) ||
+      !isValidHexColor(uiConfig.iconColor) ||
+      !isValidHexColor(uiConfig.borderColor) ||
+      !isValidHexColor(uiConfig.usernameColor) ||
+      !isValidHexColor(uiConfig.strokeColor)
+    ) throw new Error("Enter a valid hex color code");
+
 
     var fetchStats = await getData(username);
     res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");
