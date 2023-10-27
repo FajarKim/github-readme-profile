@@ -55,13 +55,12 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       !isValidHexColor(uiConfig.strokeColor)
     ) throw new Error("Enter a valid hex color code");
 
-
     var fetchStats = await getData(username);
     res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");
 
-    if (req.query.format === "json") {
+    if (uiConfig.Format === "json") {
       res.json(fetchStats);
-    } else if (req.query.format === "png") {
+    } else if (uiConfig.Format === "png") {
       const svgBuffer = Buffer.from(cardStyle(fetchStats, uiConfig)) as any;
       const options = { resvg: { font: { defaultFontFamily: '"Segoe UI"', serifFamily: 'Ubuntu', sansSerifFamily: 'sans-serif' }, background: 'rgba(0, 0, 0, .0)' } as any, format: 'png' as any };
       svg2img(svgBuffer as any, options, (error: Error | null, buffer: Buffer | null) => {
