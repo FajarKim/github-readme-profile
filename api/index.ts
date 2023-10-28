@@ -18,6 +18,7 @@ export type UiConfig = {
   borderRadius: number | string;
   disabledAnimations: boolean | string;
   Format: string;
+  hiddenItems?: string;
 };
 
 export default async function readmeStats(req: any, res: any): Promise<any> {
@@ -41,6 +42,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       borderRadius: req.query.border_radius || "4.5",
       disabledAnimations: parseBoolean(req.query.disabled_animations) || false,
       Format: req.query.format || "svg",
+      hiddenItems: req.query.hide || "",
     };
 
     if (!username) throw new Error("Username is required");
