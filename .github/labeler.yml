@@ -19,6 +19,6 @@ stats-card:
 ci:
   - .github/workflows/*
   - scripts/*
-github-actions:
+github_actions:
   - .github/*.yml
   - .github/workflows/*
