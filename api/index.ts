@@ -18,7 +18,7 @@ export type UiConfig = {
   borderRadius: number | string;
   disabledAnimations: boolean | string;
   Format: string;
-  hiddenItems?: string;
+  hiddenItems: string | undefined;
 };
 
 export default async function readmeStats(req: any, res: any): Promise<any> {
@@ -38,14 +38,16 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       usernameColor: req.query.username_color || req.query.text_color || selectTheme.username_color || selectTheme.text_color || defaultTheme.text_color,
       bgColor: req.query.bg_color || selectTheme.bg_color || defaultTheme.bg_color,
       Locale: req.query.locale || "en",
-      borderWidth: req.query.border_width || "1",
-      borderRadius: req.query.border_radius || "4.5",
+      borderWidth: req.query.border_width || 1,
+      borderRadius: req.query.border_radius || 4.5,
       disabledAnimations: parseBoolean(req.query.disabled_animations) || false,
       Format: req.query.format || "svg",
-      hiddenItems: req.query.hide || "",
+      hiddenItems: req.query.hide,
     };
 
-    if (!username) throw new Error("Username is required");
+    if (!username) {
+      throw new Error("Username is required");
+    }
 
     if (
       !isValidHexColor(uiConfig.bgColor) ||
@@ -63,15 +65,21 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
     if (uiConfig.Format === "json") {
       res.json(fetchStats);
     } else if (uiConfig.Format === "png") {
-      const svgBuffer = Buffer.from(cardStyle(fetchStats, uiConfig)) as any;
-      const options = { resvg: { font: { defaultFontFamily: '"Segoe UI"', serifFamily: 'Ubuntu', sansSerifFamily: 'sans-serif' }, background: 'rgba(0, 0, 0, .0)' } as any, format: 'png' as any };
+      const svgBuffer = Buffer.from(cardStyle(fetchStats, uiConfig));
+      const options = {
+        resvg: {
+          font: { defaultFontFamily: '"Segoe UI"', serifFamily: 'Ubuntu', sansSerifFamily: 'sans-serif' },
+          background: 'rgba(0, 0, 0, .0)',
+        },
+        format: 'png' as any,
+      };
       svg2img(svgBuffer as any, options, (error: Error | null, buffer: Buffer | null) => {
         if (error) {
           res.status(500).send(error.message);
         } else {
           res.setHeader("Content-Type", "image/png");
           if (buffer) {
-            res.send(buffer as any);
+            res.send(buffer);
           }
         }
       });

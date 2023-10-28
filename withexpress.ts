@@ -1,6 +1,9 @@
 import express from "express";
-const app = express();
+import dotenv from "dotenv";
 import readmeStats from "./api/index";
+
+dotenv.config();
+const app = express();
 
 app.use("/api", readmeStats);
 
