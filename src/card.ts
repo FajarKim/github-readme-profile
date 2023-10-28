@@ -51,8 +51,9 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
         }`;
 
   const direction = parseBoolean(selectLocale.rtlDirection) ? "rtl" : "ltr";
-  const TitleXAngle = parseBoolean(selectLocale.rtlDirection) ? 510 : 5;
-  const titleXAngle = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? 520 : TitleXAngle;
+  const titleXAngleDirection = parseBoolean(selectLocale.rtlDirection) ? 510 : 5;
+  const titleXAngleDirectionDisabled = parseBoolean(selectLocale.rtlDirection) ? 520 : 15;
+  const titleXAngle = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? titleXAngleDirectionDisabled : titleXAngleDirection;
   const titleYAngle = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? 0 : -10;
   const textXAngle = parseBoolean(selectLocale.rtlDirection) ? 215 : 25;
   const textYAngle = 12.5;
