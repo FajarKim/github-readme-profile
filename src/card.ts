@@ -40,11 +40,11 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
         .div-animation {
             animation: fadeLeftInAnimation 0.7s ease-in-out forwards;
         }
-        
+
         .image-profile-animation {
             animation: scaleInAnimation 0.9s ease-in-out forwards;
         }
-        
+
         .single-item-animation {
             opacity: 0;
             animation: fadeInAnimation 0.3s ease-in-out forwards;
@@ -69,10 +69,10 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   const hiddenItems = uiConfig.hiddenItems || "";
   const hiddenItemsArray = hiddenItems.split(",");
   const cardItems = [
-    { text: selectLocale.totalReposText || defaultLocale.totalReposText, value: data.public_repos, icon: icons.repository, hidden: hiddenItemsArray.includes("repo") },
-    { text: selectLocale.starsCountText || defaultLocale.starsCountText, value: data.total_stars, icon: icons.star, hidden: hiddenItemsArray.includes("star") },
-    { text: selectLocale.forksCountText || defaultLocale.forksCountText, value: data.total_forks, icon: icons.fork, hidden: hiddenItemsArray.includes("fork") },
-    { text: selectLocale.commitsCountText || defaultLocale.commitsCountText, value: data.total_commits, icon: icons.commit, hidden: hiddenItemsArray.includes("commit") },
+    { text: selectLocale.totalReposText || defaultLocale.totalReposText, value: data.public_repos, icon: icons.repository, hidden: hiddenItemsArray.includes("repos") },
+    { text: selectLocale.starsCountText || defaultLocale.starsCountText, value: data.total_stars, icon: icons.star, hidden: hiddenItemsArray.includes("stars") },
+    { text: selectLocale.forksCountText || defaultLocale.forksCountText, value: data.total_forks, icon: icons.fork, hidden: hiddenItemsArray.includes("forks") },
+    { text: selectLocale.commitsCountText || defaultLocale.commitsCountText, value: data.total_commits, icon: icons.commit, hidden: hiddenItemsArray.includes("commits") },
     { text: selectLocale.totalPRText || defaultLocale.totalPRText, value: data.total_prs, icon: icons.pull_request, hidden: hiddenItemsArray.includes("prs") },
     { text: selectLocale.totalPRMergedText || defaultLocale.totalPRMergedText, value: data.total_prs_merged, icon: icons.pull_request_merged, hidden: hiddenItemsArray.includes("prs_merged") },
     { text: selectLocale.totalIssuesText || defaultLocale.totalIssuesText, value: data.total_issues, icon: icons.issue, hidden: hiddenItemsArray.includes("issues") },
@@ -100,11 +100,11 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
             fill: #${uiConfig.textColor};
             font-size: 14px;
         }
-        
+
         .text-bold {
             font-weight: 700;
         }
-        
+
         .text-middle {
             alignment-baseline: middle;
             text-anchor: middle;
@@ -115,7 +115,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
             fill: #${uiConfig.textColor};
             font-size: 13px;
         }
-        
+
         .text-username {
             font-family: "Segoe UI", Ubuntu, sans-serif;
             fill: #${uiConfig.usernameColor};
