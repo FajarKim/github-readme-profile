@@ -9,7 +9,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   const defaultLocale: Locales[keyof Locales] = locales[fallbackLocale];
   const selectLocale: Locales[keyof Locales] = locales[uiConfig.Locale] || defaultLocale;
 
-  const animations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? `        /* Animations */
+  const animations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? `` : `        /* Animations */
         @keyframes scaleInAnimation {
             from {
                 transform: translate(-5px, 5px) scale(0);
@@ -48,7 +48,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
         .single-item-animation {
             opacity: 0;
             animation: fadeInAnimation 0.3s ease-in-out forwards;
-        }` : ``;
+        }`;
 
   const direction = parseBoolean(selectLocale.rtlDirection) ? "rtl" : "ltr";
   const TitleXAngle = parseBoolean(selectLocale.rtlDirection) ? 510 : 5;
