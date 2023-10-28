@@ -50,23 +50,24 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
             animation: fadeInAnimation 0.3s ease-in-out forwards;
         }`;
 
-  const direction = parseBoolean(selectLocale.rtlDirection) ? "rtl" : "ltr";
-  const titleXAngleDirection = parseBoolean(selectLocale.rtlDirection) ? 510 : 5;
-  const titleXAngleDirectionDisabled = parseBoolean(selectLocale.rtlDirection) ? 520 : 15;
-  const titleXAngle = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? titleXAngleDirectionDisabled : titleXAngleDirection;
-  const titleYAngle = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? 0 : -10;
-  const textXAngle = parseBoolean(selectLocale.rtlDirection) ? 215 : 25;
+  const isRtlDirection = parseBoolean(selectLocale.rtlDirection);
+  const isDisabledAnimations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png");
+
+  const direction = isRtlDirection ? "rtl" : "ltr";
+  const titleXAngle = isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5);
+  const titleYAngle = isDisabledAnimations ? 0 : -10;
+  const textXAngle = isRtlDirection ? 215 : 25;
   const textYAngle = 12.5;
-  const dataXAngle = parseBoolean(selectLocale.rtlDirection) ? 15 : 225;
+  const dataXAngle = isRtlDirection ? 15 : 225;
   const dataYAngle = 12.5;
-  const iconXAngle = parseBoolean(selectLocale.rtlDirection) ? 225 : 0;
+  const iconXAngle = isRtlDirection ? 225 : 0;
   const iconYAngle = 0;
-  const imageXAngle = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? 120 : 125;
-  const imageYAngle = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? 70 : 65;
-  const userXAngle = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? 119.9 : 109.9;
-  const userYAngle = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? 140 : 130;
-  const follXAngle = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? 120 : 110;
-  const follYAngle = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? 161 : 151;
+  const imageXAngle = isDisabledAnimations ? 120 : 125;
+  const imageYAngle = isDisabledAnimations ? 70 : 65;
+  const userXAngle = isDisabledAnimations ? 119.9 : 109.9;
+  const userYAngle = isDisabledAnimations ? 140 : 130;
+  const follXAngle = isDisabledAnimations ? 120 : 110;
+  const follYAngle = isDisabledAnimations ? 161 : 151;
 
   const cardItems = [
     { text: selectLocale.totalReposText || defaultLocale.totalReposText, value: data.public_repos, icon: icons.repository },
