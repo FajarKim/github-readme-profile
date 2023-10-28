@@ -57,11 +57,8 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   const titleXAngle = isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5);
   const titleYAngle = isDisabledAnimations ? 0 : -10;
   const textXAngle = isRtlDirection ? 215 : 25;
-  const textYAngle = 12.5;
   const dataXAngle = isRtlDirection ? 15 : 225;
-  const dataYAngle = 12.5;
   const iconXAngle = isRtlDirection ? 225 : 0;
-  const iconYAngle = 0;
   const imageXAngle = isDisabledAnimations ? 120 : 125;
   const imageYAngle = isDisabledAnimations ? 70 : 65;
   const userXAngle = isDisabledAnimations ? 119.9 : 109.9;
@@ -83,11 +80,11 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   const cardItemsSVG = cardItems.map((item, index) => `
             <g transform="translate(230, ${index * 25})">
                 <g class="single-item-animation" style="animation-delay: ${210 + index * 100}ms" transform="translate(25, 0)">
-                    <svg x="${iconXAngle}" y="${iconYAngle}" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                    <svg x="${iconXAngle}" y="0" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         ${item.icon}
                     </svg>
-                    <text class="text" x="${textXAngle}" y="${textYAngle}">${item.text}:</text>
-                    <text class="text text-bold" x="${dataXAngle}" y="${dataYAngle}">${item.value}</text>
+                    <text class="text" x="${textXAngle}" y="12.5">${item.text}:</text>
+                    <text class="text text-bold" x="${dataXAngle}" y="12.5">${item.value}</text>
                 </g>
             </g>`).join('\n');
 
