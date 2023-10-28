@@ -108,7 +108,7 @@ You can use the `bg_color` parameter to make any of the available themes transpa
 <details>
 <summary>Show Example</summary>
 
-[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=0000000)](https://github.com/FajarKim/github-readme-profile)
+[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=00000000)](https://github.com/FajarKim/github-readme-profile)
 </details>
 
 #### Use GitHub's theme context tag
