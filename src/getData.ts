@@ -52,7 +52,7 @@ async function getData(username: string): Promise<GetData> {
         user.contributionsCollection.totalCommitContributions
     ),
     total_review: millify(user.contributionsCollection.totalPullRequestReviewContributions),
-    total_discussion_answered: millify(user.discussionStarted.totalCount),
+    total_discussion_answered: millify(user.discussionAnswered.totalCount),
     total_discussion_started: millify(user.discussionStarted.totalCount),
     total_contributed_to: millify(user.repositoriesContributedTo.totalCount),
   };
