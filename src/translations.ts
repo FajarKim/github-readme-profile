@@ -1,16 +1,20 @@
 export type Locales = {
   [key: string]: {
     titleCard: string;
-    followersText: string;
-    followingText: string;
-    totalReposText: string;
-    starsCountText: string;
-    forksCountText: string;
-    commitsCountText: string;
-    totalPRText: string;
-    totalPRMergedText: string;
-    totalIssuesText: string;
-    contributedToText: string;
+    followersText?: string;
+    followingText?: string;
+    totalReposText?: string;
+    starsCountText?: string;
+    forksCountText?: string;
+    commitsCountText?: string;
+    totalPRText?: string;
+    totalPRMergedText?: string;
+    totalPRReviewedText?: string;
+    totalIssuesText?: string;
+    totalIssuesClosedText?: string;
+    totalDiscussionStartedText?: string;
+    totalDiscussionAnsweredText?: string;
+    contributedToText?: string;
     rtlDirection: boolean | string;
   };
 };
@@ -26,7 +30,11 @@ export const locales: Locales = {
     commitsCountText: "Commit's Count",
     totalPRText: "Total PRs",
     totalPRMergedText: "Total PRs Merged",
+    totalPRReviewedText: "Total PRs Reviewed",
     totalIssuesText: "Total Issues",
+    totalIssuesClosedText: "Total Issues Closed",
+    totalDiscussionStartedText: "Discussions Started",
+    totalDiscussionAnsweredText: "Discussions Answered",
     contributedToText: "Contributed to (last year)",
     rtlDirection: false,
   },

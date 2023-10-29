@@ -13,6 +13,8 @@ export interface User {
   closedIssues: ClosedIssues;
   pullRequests: PullRequests;
   mergedPullRequests: MergedPullRequests;
+  discussionStarted: DiscussionStarted;
+  discussionAnswered: DiscussionAnswered;
   repositoriesContributedTo: RepositoriesContributedTo;
 }
 
@@ -31,6 +33,7 @@ export interface Following {
 export interface ContributionsCollection {
   totalCommitContributions: number;
   restrictedContributionsCount: number;
+  totalPullRequestReviewContributions: number;
 }
 
 export interface OpenedIssues {
@@ -49,6 +52,14 @@ export interface MergedPullRequests {
   totalCount: number;
 }
 
+export interface DiscussionStarted {
+  totalCount: number;
+}
+
+export interface DiscussionAnswered {
+  totalCount: number;
+}
+
 export interface RepositoriesContributedTo {
   totalCount: number;
 }
@@ -58,7 +69,7 @@ export default async function apiFetch(username: string): Promise<User> {
     method: "post",
     url: "https://api.github.com/graphql",
     headers: {
-      "User-Agent": "tuhinpal/readme-stats-github",
+      "User-Agent": "FajarKim/github-readme-profile",
       Authorization: getRandomToken(true),
     },
     data: {
@@ -79,6 +90,7 @@ export default async function apiFetch(username: string): Promise<User> {
           contributionsCollection {
             totalCommitContributions
             restrictedContributionsCount
+            totalPullRequestReviewContributions
           }
           openedIssues: issues(states: OPEN) {
             totalCount
@@ -90,6 +102,12 @@ export default async function apiFetch(username: string): Promise<User> {
             totalCount
           }
           mergedPullRequests: pullRequests(states: MERGED) {
+            totalCount
+          }
+          discussionStarted: repositoryDiscussions {
+            totalCount
+          }
+          discussionAnswered: repositoryDiscussionComments(onlyAnswers: true) {
             totalCount
           }
           repositoriesContributedTo(first: 1, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) {
