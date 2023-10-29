@@ -9,6 +9,21 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   const defaultLocale: Locales[keyof Locales] = locales[fallbackLocale];
   const selectLocale: Locales[keyof Locales] = locales[uiConfig.Locale] || defaultLocale;
 
+  const isRtlDirection = parseBoolean(selectLocale.rtlDirection);
+  const isDisabledAnimations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png");
+
+  const direction = isRtlDirection ? "rtl" : "ltr";
+  const titleXAngle = isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5);
+  const titleYAngle = isDisabledAnimations ? 0 : -10;
+  const textXAngle = isRtlDirection ? 215 : 25;
+  const dataXAngle = isRtlDirection ? 15 : 225;
+  const iconXAngle = isRtlDirection ? 225 : 0;
+  const imageXAngle = isDisabledAnimations ? 120 : 125;
+  const imageYAngle = isDisabledAnimations ? 70 : 65;
+  const userXAngle = isDisabledAnimations ? 119.9 : 109.9;
+  const userYAngle = isDisabledAnimations ? 140 : 130;
+  const follXAngle = isDisabledAnimations ? 120 : 110;
+  const follYAngle = isDisabledAnimations ? 161 : 151;
   const animations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? `` : `        /* Animations */
         @keyframes scaleInAnimation {
             from {
@@ -42,29 +57,14 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
         }
 
         .image-profile-animation {
-            animation: scaleInAnimation 0.9s ease-in-out forwards;
+            animation: scaleInAnimation 1.2s ease-in-out forwards;
+            transform-origin: ${imageXAngle}px ${imageYAngle}px;
         }
 
         .single-item-animation {
             opacity: 0;
             animation: fadeInAnimation 0.3s ease-in-out forwards;
         }`;
-
-  const isRtlDirection = parseBoolean(selectLocale.rtlDirection);
-  const isDisabledAnimations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png");
-
-  const direction = isRtlDirection ? "rtl" : "ltr";
-  const titleXAngle = isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5);
-  const titleYAngle = isDisabledAnimations ? 0 : -10;
-  const textXAngle = isRtlDirection ? 215 : 25;
-  const dataXAngle = isRtlDirection ? 15 : 225;
-  const iconXAngle = isRtlDirection ? 225 : 0;
-  const imageXAngle = isDisabledAnimations ? 120 : 125;
-  const imageYAngle = isDisabledAnimations ? 70 : 65;
-  const userXAngle = isDisabledAnimations ? 119.9 : 109.9;
-  const userYAngle = isDisabledAnimations ? 140 : 130;
-  const follXAngle = isDisabledAnimations ? 120 : 110;
-  const follYAngle = isDisabledAnimations ? 161 : 151;
 
   const hiddenItems = uiConfig.hiddenItems || "";
   const hiddenItemsArray = hiddenItems.split(",");
