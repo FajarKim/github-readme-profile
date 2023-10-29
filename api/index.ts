@@ -19,6 +19,7 @@ export type UiConfig = {
   disabledAnimations: boolean | string;
   Format: string;
   hiddenItems: string | undefined;
+  showItems: string | undefined;
 };
 
 export default async function readmeStats(req: any, res: any): Promise<any> {
@@ -43,6 +44,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       disabledAnimations: parseBoolean(req.query.disabled_animations) || false,
       Format: req.query.format || "svg",
       hiddenItems: req.query.hide,
+      showItems: req.query.show,
     };
 
     if (!username) {
