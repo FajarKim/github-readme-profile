@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 import getData from "../src/getData";
 import cardStyle from "../src/card";
 import { themes, Themes } from "../themes/index";
-import { isValidHexColor, parseBoolean } from "../src/common/utils";
+import { isValidHexColor, isValidGradient, parseBoolean } from "../src/common/utils";
 
 export type UiConfig = {
   titleColor: string;
@@ -12,7 +12,7 @@ export type UiConfig = {
   borderColor: string;
   strokeColor: string;
   usernameColor: string;
-  bgColor: string;
+  bgColor: any;
   Locale: string;
   borderWidth: number | string;
   borderRadius: number | string;
@@ -52,14 +52,21 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
     }
 
     if (
-      !isValidHexColor(uiConfig.bgColor) ||
       !isValidHexColor(uiConfig.titleColor) ||
       !isValidHexColor(uiConfig.textColor) ||
       !isValidHexColor(uiConfig.iconColor) ||
       !isValidHexColor(uiConfig.borderColor) ||
       !isValidHexColor(uiConfig.usernameColor) ||
       !isValidHexColor(uiConfig.strokeColor)
-    ) throw new Error("Enter a valid hex color code");
+    ) {
+      throw new Error("Enter a valid hex color code");
+    };
+    
+    if (!isValidGradient(uiConfig.bgColor)) {
+      if (!isValidHexColor(uiConfig.bgColor)) {
+        throw new Error("Enter a valid hex color code");
+      };
+    };
 
     var fetchStats = await getData(username);
     res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");

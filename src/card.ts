@@ -98,6 +98,39 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
                 </g>
             </g>`).join('\n');
 
+  function generateGradient(colors: string[]): string {
+    const gradientId = 'gradient';
+    const gradientAngle = colors[0];
+    const getColors = colors.slice(1);
+    const gradientStops = getColors.map((color, index) => {
+      const offset = (index / (colors.length - 1)) * 100;
+      return `<stop offset="${offset}%" stop-color="#${color}"/>`;
+    }).join('');
+    return `
+    <defs>
+        <linearGradient id="${gradientId}" gradientTransform="rotate(${gradientAngle})">
+            ${gradientStops}
+        </linearGradient>
+    </defs>
+    <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.6%" width="99.8%" fill="url(#${gradientId})" stroke="#${uiConfig.borderColor}" stroke-opacity="1" stroke-width="${uiConfig.borderWidth}"/>
+    `;
+  };
+
+  let backgroundSVG = '';
+  if (uiConfig.bgColor) {
+    if (Array.isArray(uiConfig.bgColor)) {
+      backgroundSVG = generateGradient(uiConfig.bgColor);
+    } else if (typeof uiConfig.bgColor === 'string') {
+      const gradientHexArray = uiConfig.bgColor.split(',');
+      if (gradientHexArray.length >= 2) {
+        const gradientColors = gradientHexArray.map(color => color.trim());
+        backgroundSVG = generateGradient(gradientColors);
+      } else {
+        backgroundSVG = `<rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.6%" width="99.8%" fill="#${uiConfig.bgColor}" stroke="#${uiConfig.borderColor}" stroke-opacity="1" stroke-width="${uiConfig.borderWidth}" />`;
+      }
+    }
+  };
+
   var card = `<svg width="535" height="${Math.max(220, 45 + cardItemsToShow.length * 25)}"  direction="${direction}" viewBox="0 0 535 ${Math.max(220, 45 + cardItemsToShow.length * 25)}" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
         ${animations}
@@ -146,7 +179,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     </style>
     <title id="titleId">${selectLocale.titleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</title>
 
-    <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.6%" width="99.8%" fill="#${uiConfig.bgColor}" stroke="#${uiConfig.borderColor}" stroke-opacity="1" stroke-width="${uiConfig.borderWidth}"/>
+    ${backgroundSVG}
     <g transform="translate(0, 25)">
         <g class="div-animation">
             <text x="${titleXAngle}" y="${titleYAngle}" class="text-title">${selectLocale.titleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</text>
