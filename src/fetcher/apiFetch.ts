@@ -104,10 +104,10 @@ export default async function apiFetch(username: string): Promise<User> {
           mergedPullRequests: pullRequests(states: MERGED) {
             totalCount
           }
-          discussionStarted {
+          discussionStarted: repositoryDiscussions {
             totalCount
           }
-          discussionAnswered(onlyAnswers: true) {
+          discussionAnswered: repositoryDiscussionComments(onlyAnswers: true) {
             totalCount
           }
           repositoriesContributedTo(first: 1, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) {
