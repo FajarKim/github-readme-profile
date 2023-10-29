@@ -78,15 +78,15 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     { text: selectLocale.commitsCountText || defaultLocale.commitsCountText, value: data.total_commits, icon: icons.commit, hidden: hiddenItemsArray.includes("commits") },
     { text: selectLocale.totalPRText || defaultLocale.totalPRText, value: data.total_prs, icon: icons.pull_request, hidden: hiddenItemsArray.includes("prs") },
     { text: selectLocale.totalPRMergedText || defaultLocale.totalPRMergedText, value: data.total_prs_merged, icon: icons.pull_request_merged, hidden: hiddenItemsArray.includes("prs_merged") },
-    { text: selectLocale.totalPRReviewedText || defaultLocale.totalPRReviewedText, value: data.total_review, icon: icons.review, show: showItemsArray.includes("reviews") },
+    { text: selectLocale.totalPRReviewedText || defaultLocale.totalPRReviewedText, value: data.total_review, icon: icons.review, hidden: !showItemsArray.includes("reviews") },
     { text: selectLocale.totalIssuesText || defaultLocale.totalIssuesText, value: data.total_issues, icon: icons.issue, hidden: hiddenItemsArray.includes("issues") },
-    { text: selectLocale.totalIssuesClosedText || defaultLocale.totalIssuesClosedText, value: data.total_closed_issues, icon: icons.issue_closed, show: showItemsArray.includes("issues_closed") },
-    { text: selectLocale.totalDiscussionStartedText || defaultLocale.totalDiscussionStartedText, value: data.total_discussion_started, icon: icons.discussion_started, show: showItemsArray.includes("discussions_started") },
-    { text: selectLocale.totalDiscussionAnsweredText || defaultLocale.totalDiscussionAnsweredText, value: data.total_discussion_answered, icon: icons.discussion_answered, show: showItemsArray.includes("discussions_answered") },
+    { text: selectLocale.totalIssuesClosedText || defaultLocale.totalIssuesClosedText, value: data.total_closed_issues, icon: icons.issue_closed, hidden: !showItemsArray.includes("issues_closed") },
+    { text: selectLocale.totalDiscussionStartedText || defaultLocale.totalDiscussionStartedText, value: data.total_discussion_started, icon: icons.discussion_started, hidden: !showItemsArray.includes("discussions_started") },
+    { text: selectLocale.totalDiscussionAnsweredText || defaultLocale.totalDiscussionAnsweredText, value: data.total_discussion_answered, icon: icons.discussion_answered, hidden: !showItemsArray.includes("discussions_answered") },
     { text: selectLocale.contributedToText || defaultLocale.contributedToText, value: data.total_contributed_to, icon: icons.contributed_to, hidden: hiddenItemsArray.includes("contributed") },
   ];
 
-  const cardItemsToShow = cardItems.filter(item => !item.hidden && (item.show || showItems === ""));
+  const cardItemsToShow = cardItems.filter(item => !item.hidden);
   const cardItemsSVG = cardItemsToShow.map((item, index) => `
             <g transform="translate(230, ${index * 25})">
                 <g class="single-item-animation" style="animation-delay: ${210 + index * 100}ms" transform="translate(25, 0)">
