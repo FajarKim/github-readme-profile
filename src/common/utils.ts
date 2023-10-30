@@ -1,10 +1,11 @@
-function isValidHexColor(hexColor: string): boolean {
+function isValidHexColor(hexColor: any): boolean {
   return new RegExp(
     /^([A-Fa-f0-9]{8}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{3}|[A-Fa-f0-9]{4})$/
   ).test(hexColor);
 };
 
-function isValidGradient(colors: string[]): boolean {
+function isValidGradient(hexColors: string[]): boolean {
+  const colors = [hexColors];
   for (let i = 1; i < colors.length; i++) {
     if (!isValidHexColor(colors[i])) {
       return false;

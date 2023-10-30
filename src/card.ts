@@ -103,12 +103,12 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     const gradientAngle = colors[0];
     const getColors = colors.slice(1);
     const gradientStops = getColors.map((color, index) => {
-      const offset = (index / (colors.length - 1)) * 100;
+      const offset = (index * 100) / (colors.length - 1);
       return `<stop offset="${offset}%" stop-color="#${color}"/>`;
     }).join('');
     return `
     <defs>
-        <linearGradient id="${gradientId}" gradientTransform="rotate(${gradientAngle})">
+        <linearGradient id="${gradientId}" gradientTransform="rotate(${gradientAngle})" gradientUnits="userSpaceOnUse">
             ${gradientStops}
         </linearGradient>
     </defs>
