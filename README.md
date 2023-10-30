@@ -84,6 +84,8 @@ You can customize the appearance of all your cards however you wish with URL par
 - `border_radius` - Corner rounding on the card. Default: `4.5`.
 - `format` - Output format card option (`svg`, `png`, and `json`). Default: `svg`.
 - `disabled_animations` - Disables all animations in the card (_boolean_). Default: `false`.
+- `hide` - Hides the [specified items](#hiding-individual-stats) from stats (_Comma-separated values_). Default: `[] (blank array)`.
+- `show` - Shows [additional items](#showing-additional-individual-stats) on stats card (_Comma-separated values_). Default: `[] (blank array)`.
 
 #### Use the transparent theme
 We have included a `transparent` theme that has a transparent background. This theme is optimized to look good on GitHub's dark and light default themes. You can enable this theme using the `&theme=transparent` parameter like so:
@@ -124,6 +126,39 @@ You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-sp
 
 [![GitHub stats-Dark](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only)
 [![GitHub stats-Light](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-light-mode-only)
+</details>
+
+#### Hiding individual stats
+You can pass a query parameter `&hide=` to hide any specific stats with comma-separated values.
+
+> Options:
+> `&hide=repos,stars,forks,commits,prs,prs_merged,issues,
+contributed`
+
+```markdown
+![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&hide=repos,forks,prs_merged)
+```
+
+<details>
+<summary>Show Example</summary>
+
+[![GitHub Stats](https://github-readme-profile-beta.vercel.app/api?username=FajarKim&hide=repos,forks,prs_merged)](https://github.com/FajarKim/github-readme-profile)
+</details>
+
+#### Showing additional individual stats
+You can pass a query parameter `&show=` to show any specific additional stats with comma-separated values
+
+> Options:
+> `&show=reviews,issues_closed,discussions_started,discussions_answered`
+
+```markdown
+![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&show=reviews,issues_closed,discussions_started,discussions_answered)
+```
+
+<details>
+<summary>Show Example</summary>
+
+[![GitHub Stats](https://github-readme-profile-beta.vercel.app/api?username=FajarKim&show=reviews,issues_closed,discussions_answered)](https://github.com/FajarKim/github-readme-profile)
 </details>
 
 #### Available locales
