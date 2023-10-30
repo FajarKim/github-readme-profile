@@ -103,7 +103,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     const gradientAngle = colors[0];
     const getColors = colors.slice(1);
     const gradientStops = getColors.map((color, index) => {
-      const offset = (index * 100) / (colors.length - 1);
+      const offset = (index * 100) / (getColors.length - 1);
       return `<stop offset="${offset}%" stop-color="#${color}"/>`;
     }).join('');
     return `
