@@ -134,7 +134,7 @@ You can use the `bg_color` parameter to make gradient color. This is done by s
 
 <details>
   <summary>Show Example</summary>
-  <a href="https://github.com/FajarKim/github-readme-profilie"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&icon_color=fff" alt="GitHub Stats"/></a>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&icon_color=fff" alt="GitHub Stats"/></a>
 </details>
 
 #### Hiding individual stats
