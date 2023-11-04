@@ -5,7 +5,7 @@ import { icons } from "./icons";
 import { parseBoolean } from "./common/utils";
 
 export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
-  let fallbackLocale = "en";
+  const fallbackLocale = "en";
   const defaultLocale: Locales[keyof Locales] = locales[fallbackLocale];
   const selectLocale: Locales[keyof Locales] = locales[uiConfig.Locale] || defaultLocale;
 
@@ -114,7 +114,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     </defs>
     <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.6%" width="99.8%" fill="url(#${gradientId})" stroke="#${uiConfig.borderColor}" stroke-opacity="1" stroke-width="${uiConfig.borderWidth}"/>
     `;
-  };
+  }
 
   let backgroundSVG = '';
   if (uiConfig.bgColor) {
@@ -129,13 +129,13 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
         backgroundSVG = `<rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.6%" width="99.8%" fill="#${uiConfig.bgColor}" stroke="#${uiConfig.borderColor}" stroke-opacity="1" stroke-width="${uiConfig.borderWidth}" />`;
       }
     }
-  };
+  }
 
-  var card = `<svg width="535" height="${Math.max(220, 45 + cardItemsToShow.length * 25)}"  direction="${direction}" viewBox="0 0 535 ${Math.max(220, 45 + cardItemsToShow.length * 25)}" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  const card = `<svg width="535" height="${Math.max(220, 45 + cardItemsToShow.length * 25)}"  direction="${direction}" viewBox="0 0 535 ${Math.max(220, 45 + cardItemsToShow.length * 25)}" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
         ${animations}
 
-        .text {
+       w .text {
             font-family: "Segoe UI", Ubuntu, sans-serif;
             fill: #${uiConfig.textColor};
             font-size: 14px;
