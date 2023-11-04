@@ -135,7 +135,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     <style>
         ${animations}
 
-       w .text {
+        .text {
             font-family: "Segoe UI", Ubuntu, sans-serif;
             fill: #${uiConfig.textColor};
             font-size: 14px;
