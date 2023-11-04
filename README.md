@@ -46,9 +46,8 @@ Use `&theme=THEME_NAME` parameter like so:
 ![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark)
 ```
 <details>
-<summary>Show Example</summary>
-
-[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark)](https://github.com/FajarKim/github-readme-profile)
+  <summary>Show Example</summary>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark" alt="GitHub Stats"/></a>
 </details>
 
 #### All inbuilt themes
@@ -96,9 +95,8 @@ We have included a `transparent` theme that has a transparent background. This t
 ```
 
 <details>
-<summary>Show Example</summary>
-
-[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=transparent)](https://github.com/FajarKim/github-readme-profile)
+  <summary>Show Example</summary>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=transparent" alt="GitHub Stats"/></a>
 </details>
 
 #### Add transparent alpha channel to a themes `bg_color`
@@ -109,9 +107,8 @@ You can use the `bg_color` parameter to make any of the available themes transpa
 ```
 
 <details>
-<summary>Show Example</summary>
-
-[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=00000000)](https://github.com/FajarKim/github-readme-profile)
+  <summary>Show Example</summary>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=00000000" alt="GitHub Stats"/></a>
 </details>
 
 #### Use GitHub's theme context tag
@@ -123,10 +120,9 @@ You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-sp
 ```
 
 <details>
-<summary>Show Example</summary>
-
-[![GitHub stats-Dark](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only)
-[![GitHub stats-Light](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-light-mode-only)
+  <summary>Show Example</summary>
+  <a href="https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only" alt="GitHub Stats-Dark"/></a>
+  <a href="https://github.com/FajarKim/github-readme-profile#gh-light-mode-only"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only" alt="GitHub Stats-Light"/></a>
 </details>
 
 #### Hiding individual stats
@@ -141,9 +137,8 @@ contributed`
 ```
 
 <details>
-<summary>Show Example</summary>
-
-[![GitHub Stats](https://github-readme-profile-beta.vercel.app/api?username=FajarKim&hide=repos,forks,prs_merged)](https://github.com/FajarKim/github-readme-profile)
+  <summary>Show Example</summary>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-beta.vercel.app/api?username=FajarKim&hide=repos,forks,prs_merged" alt="GitHub Stats"/></a>
 </details>
 
 #### Showing additional individual stats
@@ -157,9 +152,8 @@ You can pass a query parameter `&show=` to show any specific additional stats wi
 ```
 
 <details>
-<summary>Show Example</summary>
-
-[![GitHub Stats](https://github-readme-profile-beta.vercel.app/api?username=FajarKim&show=reviews,issues_closed,discussions_answered)](https://github.com/FajarKim/github-readme-profile)
+  <summary>Show Example</summary>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-beta.vercel.app/api?username=FajarKim&show=reviews,issues_closed,discussions_started,discussions_answered" alt="GitHub Stats"/></a>
 </details>
 
 #### Available locales
@@ -201,9 +195,8 @@ The locale code added to file should be a 2-letter abbreviation from [ISO 639-1]
 ```
 
 <details>
-<summary>Show Example</summary>
-
-[![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim&locale=id)](https://github.com/FajarKim/github-readme-profile)
+  <summary>Show Example</summary>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&locale=id" alt="GitHub Stats"/></a>
 </details>
 
 ## 📑 License
