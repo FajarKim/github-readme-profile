@@ -65,7 +65,7 @@ export interface RepositoriesContributedTo {
 }
 
 export default async function apiFetch(username: string): Promise<User> {
-  let data = await axios({
+  const data = await axios({
     method: "post",
     url: "https://api.github.com/graphql",
     headers: {

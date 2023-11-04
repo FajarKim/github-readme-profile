@@ -20,7 +20,7 @@ export default async function repositoryFetch(
       { length: totalpage },
       async (_, i) => await getPerPageReposData(username, i + 1)
     )
-  ).then((data: any) => {
+  ).then((data: object[]) => {
     data.forEach((repo: any) => {
       stars += repo.stars;
       forks += repo.forks;
@@ -39,7 +39,7 @@ async function getPerPageReposData(
   username: string,
   pageno: number
 ): Promise<object> {
-  let data = await axios({
+  const data = await axios({
     method: "get",
     url: `https://api.github.com/users/${username}/repos?page=${pageno}&per_page=100`,
     headers: {
