@@ -1,5 +1,4 @@
 import svg2img from "svg2img";
-import { Request, Response } from "express";
 import getData from "../src/getData";
 import cardStyle from "../src/card";
 import { themes, Themes } from "../themes/index";
@@ -24,13 +23,13 @@ export type UiConfig = {
 
 export default async function readmeStats(req: any, res: any): Promise<any> {
   try {
-    let username = req.query.username;
+    const username = req.query.username;
 
-    let fallbackTheme = "default";
+    const fallbackTheme = "default";
     const defaultTheme: Themes[keyof Themes] = themes[fallbackTheme];
     const selectTheme: Themes[keyof Themes] = themes[req.query.theme] || defaultTheme;
 
-    let uiConfig: UiConfig = {
+    const uiConfig: UiConfig = {
       titleColor: req.query.title_color || selectTheme.title_color || defaultTheme.title_color,
       textColor: req.query.text_color || selectTheme.text_color || defaultTheme.text_color,
       iconColor: req.query.icon_color || selectTheme.icon_color || defaultTheme.icon_color,
@@ -60,15 +59,15 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       !isValidHexColor(uiConfig.strokeColor)
     ) {
       throw new Error("Enter a valid hex color code");
-    };
+    }
 
     if (!isValidGradient(uiConfig.bgColor)) {
       if (!isValidHexColor(uiConfig.bgColor)) {
         throw new Error("Enter a valid hex color code");
       };
-    };
+    }
 
-    var fetchStats = await getData(username);
+    const fetchStats = await getData(username);
     res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");
 
     if (uiConfig.Format === "json") {
@@ -94,7 +93,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       });
     } else {
       res.setHeader("Content-Type", "image/svg+xml");
-      let svg = cardStyle(fetchStats, uiConfig);
+      const svg = cardStyle(fetchStats, uiConfig);
       res.send(svg);
     }
   } catch (error: any) {
