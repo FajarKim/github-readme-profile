@@ -115,14 +115,26 @@ You can use the `bg_color` parameter to make any of the available themes transpa
 You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-specify-theme-context-for-images-in-markdown/) tags to switch the theme based on the user GitHub theme automatically. This is done by appending `#gh-dark-mode-only` or `#gh-light-mode-only` to the end of an image URL. This tag will define whether the image specified in the markdown is only shown to viewers using a light or a dark GitHub theme:
 
 ```markdown
-[![GitHub stats-Dark](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only)
-[![GitHub stats-Light](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-light-mode-only)
+[![GitHub Stats-Dark](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only)
+[![GitHub Stats-Light](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-light-mode-only)
 ```
 
 <details>
   <summary>Show Example</summary>
   <a href="https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only" alt="GitHub Stats-Dark"/></a>
   <a href="https://github.com/FajarKim/github-readme-profile#gh-light-mode-only"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only" alt="GitHub Stats-Light"/></a>
+</details>
+
+#### Use gradient color
+You can use the `bg_color` parameter to make gradient color. This is done by setting the `bg_color` with format _angle,start,end_ (comma-separated value).
+
+```markdown
+![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&icon_color=fff)
+```
+
+<details>
+  <summary>Show Example</summary>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&icon_color=fff" alt="GitHub Stats"/></a>
 </details>
 
 #### Hiding individual stats
