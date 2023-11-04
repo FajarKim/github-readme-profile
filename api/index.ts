@@ -64,7 +64,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
     if (!isValidGradient(uiConfig.bgColor)) {
       if (!isValidHexColor(uiConfig.bgColor)) {
         throw new Error("Enter a valid hex color code");
-      };
+      }
     }
 
     const fetchStats = await getData(username);
