@@ -1,4 +1,4 @@
-import svg2img from "svg2img";
+import svg2img from "@fajarkim/svg2img";
 import getData from "../src/getData";
 import cardStyle from "../src/card";
 import { themes, Themes } from "../themes/index";
@@ -76,7 +76,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       const svgBuffer = Buffer.from(cardStyle(fetchStats, uiConfig));
       const options = {
         resvg: {
-          font: { defaultFontFamily: '"Segoe UI"', serifFamily: 'Ubuntu', sansSerifFamily: 'sans-serif' },
+          font: { defaultFontFamily: '"Segoe UI"' },
           background: 'rgba(0, 0, 0, .0)',
         },
         format: 'png' as any,
