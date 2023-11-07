@@ -1,12 +1,18 @@
 pull_request_rules:
-  - name: automatic merge for Dependabot pull requests
+  - name: Automatic merge for Dependabot pull requests
     conditions:
       - author = dependabot[bot]
     actions:
-      merge:
+      queue:
         method: merge
-  - name: automatic update for PR
+  - name: Automatic update for PR
     conditions:
       - author = dependabot[bot]
     actions:
       update:
+  - name: Automatic approve for Dependabot pull requests
+    conditions:
+      - author = dependabot[bot]
+    actions:
+      review:
+        type: APPROVE
