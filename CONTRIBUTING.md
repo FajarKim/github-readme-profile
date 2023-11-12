@@ -30,7 +30,12 @@ GitHub Readme Profile supports custom theming, and you can also contribute new t
 > [!NOTE]\
 > Before submitting pull request, please make sure that your theme pass WCAG 2.0 level AA contrast ration test. You can use [this tool](https://webaim.org/resources/contrastchecker/) to check it.
 
-To contribute your theme you need to edit the [themes/index.ts](./themes/index.ts) file and add it at the end of the file. Then, add theme preview to [themes/README.md](./themes/README.md).
+To contribute your theme you need to edit the [themes/index.ts](/themes/index.ts) file and add it at the end of the file.
+
+## 🗣️ Translations Contribution
+GitHub Readme Profile supports multiple languages, if we are missing your language, you can contribute it! You can check the currently supported languages [here](/README.md#available-locales).
+
+To contribute your language you need to edit the [src/translations.ts](/src/translations.ts) file and add new property to each object where the key is the language code in ISO 639-1 standard and the value is the translated string. Anything appearing in [the list](https://gist.github.com/FajarKim/91516c2aecbfc8bf65f584d528d5f2b1) should be fine.
 
 ## 📑 Any contributions you make will be under the MIT Software License
 
@@ -39,6 +44,22 @@ In short, when you submit changes, your submissions are understood to be under t
 ## ⚠️ Report issues/bugs using GitHub's [issues](https://github.com/FajarKim/github-readme-profile/issues)
 
 We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/FajarKim/github-readme-profile/issues/new/choose); it's that easy!
+
+### 🚨 Bug Reports
+
+**Great Bug Reports** tend to have:
+
+-   A quick summary and/or background
+-   Steps to reproduce
+    -   Be specific!
+    -   Share the snapshot, if possible.
+    -   GitHub Readme Stats' live link
+-   What actually happens
+-   What you expected would happen
+-   Notes (possibly including why you think this might be happening or stuff you tried that didn't work)
+
+People ❤️ thorough bug reports. I'm not even kidding.
+
 
 ### 😎 Feature Request
 
