@@ -38,3 +38,4 @@ jobs:
           author_email: github-actions[bot]@users.noreply.github.com
           message: "docs(theme): Auto uptade theme readme"
           add: "themes/README.md"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
