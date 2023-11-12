@@ -1,19 +1,16 @@
 import fs from "fs";
-import { themes } from '../themes/index';
+import { themes } from "../themes/index";
 
 const TARGET_FILE = "./themes/README.md";
 
-// Function to generate the markdown for themes
 function generateThemeMarkdown(theme: string): string {
   return `\`${theme}\` ![${theme}][${theme}]`;
 }
 
-// Function to generate themes preview link
 function generateThemeLink(username: string, theme: string): string {
   return `[${theme}]: https://github-readme-profile-alpha.vercel.app/api?username=${username}&theme=${theme}`
 }
 
-// Function to generate README.md content
 function generateReadme(username: string): string {
   const availableThemes = Object.keys(themes);
   const itemsPerRow = 3;
@@ -56,7 +53,6 @@ ${themesPreviewLink}`;
   return readmeContent;
 }
 
-// Example usage
-const username = 'FajarKim';
+const username = "FajarKim";
 const generatedReadme = generateReadme(username);
 fs.writeFileSync(TARGET_FILE, generatedReadme);

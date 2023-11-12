@@ -17,6 +17,7 @@
     "dev": "nodemon ./withexpress.ts",
     "build": "tsc",
     "theme-readme-gen": "ts-node scripts/generate-theme-doc.ts",
+    "locale-readme-gen": "ts-node scripts/generate-translation-doc.ts",
     "start": "node ./public/withexpress.js"
   },
   "author": "Rangga Fajar Oktariansyah",
