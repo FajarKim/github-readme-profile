@@ -190,4 +190,11 @@ export const themes: Themes = {
     border_color: "004490",
     bg_color: "ffffff00",
   },
+  shadow_purple: {
+    title_color: "6F42C1",
+    text_color: "545454",
+    icon_color: "570182",
+    border_color: "570182",
+    bg_color: "ffffff00",
+  },
 }
