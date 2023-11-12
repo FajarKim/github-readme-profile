@@ -161,4 +161,12 @@ export const themes: Themes = {
     stroke_color: "cc79a7",
     username_color: "e69f00",
   },
+  garden: {
+    title_color: "D2DD3B",
+    icon_color: "DDD4A8",
+    text_color: "6FDD6C",
+    bg_color: "094A4A",
+    border_color: "000000",
+    stroke_color: "095A5A",
+  },
 }
