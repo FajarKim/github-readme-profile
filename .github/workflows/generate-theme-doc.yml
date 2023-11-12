@@ -1,0 +1,40 @@
+name: Generate Theme Readme
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - "themes/index.ts"
+
+jobs:
+  generateThemeDoc:
+    runs-on: ubuntu-latest
+    name: Generate theme doc
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      - name: Setup Node
+        uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: npm install, generate readme
+        run: |
+          npm ci
+          npm run theme-readme-gen
+        env:
+          CI: true
+
+      - name: Commit Changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: GitHub Actions
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "docs(theme): Auto uptade theme readme"
+          add: "themes/README.md"
