@@ -6,23 +6,56 @@ With inbuilt themes, you can customize the look of the card without doing any ma
 Use `?theme=THEME_NAME` parameter like so :-
 
 ```md
-![GitHub Profile](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=dark)
+![GitHub Profile](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark)
 ```
 
 ## Themes Preview
 
 |                   |                   |                   |
 | :---------------: | :---------------: | :---------------: |
-| `default` [![default](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=default)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=default) | `transparent` [![transparent](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=transparent)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=transparent) | `dark` [![dark](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=dark)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=dark) |
-| `highcontrast` [![highcontrast](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=highcontrast)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=highcontrast) | `catppuccin-latte` [![catppuccin-latte](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-latte)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-latte) | `catppuccin-frappe` [![catppuccin-frappe](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-frappe)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-frappe) |
-| `catppuccin-macchiato` [![catppuccin-macchiato](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-macchiato)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-macchiato) | `catppuccin-mocha` [![catppuccin-mocha](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-mocha)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-mocha) | `vue` [![vue](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=vue)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=vue) |
-| `vue-dark` [![vue-dark](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=vue-dark)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=vue-dark) | `github_dark` [![github_dark](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_dark)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_dark) | `github_dark_dimmed` [![github_dark_dimmed](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_dark_dimmed)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_dark_dimmed) |
-| `github_light` [![github_light](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_light)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_light) | `whatsapp-light` [![whatsapp-light](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=whatsapp-light)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=whatsapp-light) | `whatsapp-dark` [![whatsapp-dark](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=whatsapp-dark)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=whatsapp-dark) |
-| `buefy` [![buefy](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=buefy)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=buefy) | `buefy-dark` [![buefy-dark](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=buefy-dark)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=buefy-dark) | `solarized-light` [![solarized-light](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=solarized-light)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=solarized-light) |
-| `solarized-dark` [![solarized-dark](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=solarized-dark)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=solarized-dark) | `vision-friendly-dark` [![vision-friendly-dark](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=vision-friendly-dark)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=vision-friendly-dark) | `deuteranopia-friendly-dark` [![deuteranopia-friendly-dark](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=deuteranopia-friendly-dark)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=deuteranopia-friendly-dark) |
-| `garden` [![garden](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=garden)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=garden) | `shadow_red` [![shadow_red](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_red)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_red) | `shadow_green` [![shadow_green](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_green)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_green) |
-| `shadow_blue` [![shadow_blue](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_blue)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_blue) | `shadow_orange` [![shadow_orange](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_orange)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_orange) | `shadow_purple` [![shadow_purple](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_purple)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_purple) |
-| `shadow_brown` [![shadow_brown](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_brown)](https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_brown) |
+| `default` ![default][default] | `transparent` ![transparent][transparent] | `dark` ![dark][dark] |
+| `highcontrast` ![highcontrast][highcontrast] | `catppuccin-latte` ![catppuccin-latte][catppuccin-latte] | `catppuccin-frappe` ![catppuccin-frappe][catppuccin-frappe] |
+| `catppuccin-macchiato` ![catppuccin-macchiato][catppuccin-macchiato] | `catppuccin-mocha` ![catppuccin-mocha][catppuccin-mocha] | `vue` ![vue][vue] |
+| `vue-dark` ![vue-dark][vue-dark] | `github_dark` ![github_dark][github_dark] | `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed] |
+| `github_light` ![github_light][github_light] | `whatsapp-light` ![whatsapp-light][whatsapp-light] | `whatsapp-dark` ![whatsapp-dark][whatsapp-dark] |
+| `buefy` ![buefy][buefy] | `buefy-dark` ![buefy-dark][buefy-dark] | `solarized-light` ![solarized-light][solarized-light] |
+| `solarized-dark` ![solarized-dark][solarized-dark] | `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark] | `deuteranopia-friendly-dark` ![deuteranopia-friendly-dark][deuteranopia-friendly-dark] |
+| `garden` ![garden][garden] | `shadow_red` ![shadow_red][shadow_red] | `shadow_green` ![shadow_green][shadow_green] |
+| `shadow_blue` ![shadow_blue][shadow_blue] | `shadow_orange` ![shadow_orange][shadow_orange] | `shadow_purple` ![shadow_purple][shadow_purple] |
+| `shadow_brown` ![shadow_brown][shadow_brown] | `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] |
+| `ambient-gradient` ![ambient-gradient][ambient-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
+
+[default]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=default
+[transparent]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=transparent
+[dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=dark
+[highcontrast]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=highcontrast
+[catppuccin-latte]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-latte
+[catppuccin-frappe]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-frappe
+[catppuccin-macchiato]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-macchiato
+[catppuccin-mocha]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=catppuccin-mocha
+[vue]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=vue
+[vue-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=vue-dark
+[github_dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_dark
+[github_dark_dimmed]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_dark_dimmed
+[github_light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_light
+[whatsapp-light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=whatsapp-light
+[whatsapp-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=whatsapp-dark
+[buefy]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=buefy
+[buefy-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=buefy-dark
+[solarized-light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=solarized-light
+[solarized-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=solarized-dark
+[vision-friendly-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=vision-friendly-dark
+[deuteranopia-friendly-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=deuteranopia-friendly-dark
+[garden]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=garden
+[shadow_red]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_red
+[shadow_green]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_green
+[shadow_blue]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_blue
+[shadow_orange]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_orange
+[shadow_purple]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_purple
+[shadow_brown]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_brown
+[sunset-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=sunset-gradient
+[ocean-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ocean-gradient
+[ambient-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ambient-gradient
