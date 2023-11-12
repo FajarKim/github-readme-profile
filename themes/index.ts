@@ -204,4 +204,11 @@ export const themes: Themes = {
     border_color: "570182",
     bg_color: "ffffff00",
   },
+  shadow_brown: {
+    title_color: "755F3E",
+    text_color: "545454",
+    icon_color: "31312D",
+    border_color: "31312D",
+    bg_color: "ffffff00",
+  },
 }
