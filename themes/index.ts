@@ -211,4 +211,25 @@ export const themes: Themes = {
     border_color: "31312D",
     bg_color: "ffffff00",
   },
+  "sunset-gradient": {
+    title_color: "FFFFFF",
+    text_color: "FFFFFF",
+    icon_color: "FFFFFF",
+    border_color: "850000",
+    bg_color: "45,8A2386,E94056,F27120",
+  },
+  "ocean-gradient": {
+    title_color: "FFFFFF",
+    text_color: "FFFFFF",
+    icon_color: "FFFFFF",
+    border_color: "000155",
+    bg_color: "90,0093EA,80D0C8,80D0C8",
+  },
+  "ambient-gradient": {
+    title_color: "FFFFFF",
+    text_color: "FFFFFF",
+    icon_color: "FFFFFF",
+    border_color: "AE58A1",
+    bg_color: "35,4158D0,C850C0,FFCC70",
+  },
 }
