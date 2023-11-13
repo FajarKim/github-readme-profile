@@ -25,6 +25,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   const follXAngle = isDisabledAnimations ? 120 : 110;
   const follYAngle = isDisabledAnimations ? 161 : 151;
   const hideStroke = parseBoolean(uiConfig.hideStroke) ? `` : `stroke="#${uiConfig.strokeColor}" stroke-width="5"`;
+  const hideBorder = parseBoolean(uiConfig.hideBorder) ? `` : `stroke="#${uiConfig.borderColor}" stroke-opacity="1" stroke-width="${uiConfig.borderWidth}"`;
   const animations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? `` : `        /* Animations */
         @keyframes scaleInAnimation {
             from {
@@ -113,7 +114,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
             ${gradientStops}
         </linearGradient>
     </defs>
-    <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.6%" width="99.8%" fill="url(#${gradientId})" stroke="#${uiConfig.borderColor}" stroke-opacity="1" stroke-width="${uiConfig.borderWidth}"/>
+    <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.6%" width="99.8%" fill="url(#${gradientId})" ${hideBorder}/>
     `;
   }
 
@@ -127,7 +128,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
         const gradientColors = gradientHexArray.map(color => color.trim());
         backgroundSVG = generateGradient(gradientColors);
       } else {
-        backgroundSVG = `<rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.6%" width="99.8%" fill="#${uiConfig.bgColor}" stroke="#${uiConfig.borderColor}" stroke-opacity="1" stroke-width="${uiConfig.borderWidth}" />`;
+        backgroundSVG = `<rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.6%" width="99.8%" fill="#${uiConfig.bgColor}" ${hideBorder}/>`;
       }
     }
   }
