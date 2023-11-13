@@ -20,6 +20,7 @@ export type UiConfig = {
   hiddenItems: string | undefined;
   showItems: string | undefined;
   hideStroke: boolean | string;
+  hideBorder: boolean | string;
 };
 
 export default async function readmeStats(req: any, res: any): Promise<any> {
@@ -46,6 +47,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       hiddenItems: req.query.hide,
       showItems: req.query.show,
       hideStroke: parseBoolean(req.query.hide_stroke) || false,
+      hideBorder: parseBoolean(req.query.hide_border) || false,
     };
 
     if (!username) {
