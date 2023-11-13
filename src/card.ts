@@ -24,6 +24,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   const userYAngle = isDisabledAnimations ? 140 : 130;
   const follXAngle = isDisabledAnimations ? 120 : 110;
   const follYAngle = isDisabledAnimations ? 161 : 151;
+  const hideStroke = parseBoolean(uiConfig.hideStroke) ? `` : `stroke="#${uiConfig.strokeColor}" stroke-width="5"`;
   const animations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? `` : `        /* Animations */
         @keyframes scaleInAnimation {
             from {
@@ -190,7 +191,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
                     <image x="0%" y="0%" width="512" height="512" href="data:image/jpeg;base64,${data.pic}"></image>
                 </pattern>
             </defs>
-            <circle cx="${imageXAngle}" cy="${imageYAngle}" r="50" fill="url(#image)" stroke="#${uiConfig.strokeColor}" stroke-width="5"/>
+            <circle cx="${imageXAngle}" cy="${imageYAngle}" r="50" fill="url(#image)" ${hideStroke}/>
         </g>
         <text x="${userXAngle}" y="${userYAngle}" direction="ltr" class="text-username div-animation">@${data.username}</text>
         <g class="div-animation text-middle">
