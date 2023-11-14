@@ -86,6 +86,8 @@ You can customize the appearance of all your cards however you wish with URL par
 - `disabled_animations` - Disables all animations in the card (_boolean_). Default: `false`.
 - `hide` - Hides the [specified items](#hiding-individual-stats) from stats (_Comma-separated values_). Default: `[] (blank array)`.
 - `show` - Shows [additional items](#showing-additional-individual-stats) on stats card (_Comma-separated values_). Default: `[] (blank array)`.
+- `hide_border` - Hides the card's border (_boolean_). Default: `false`.
+- `hide_stroke` - Hides the image's profile stroke in the card (_boolean_). Default: `false`.
 
 #### Use the transparent theme
 We have included a `transparent` theme that has a transparent background. This theme is optimized to look good on GitHub's dark and light default themes. You can enable this theme using the `&theme=transparent` parameter like so:
