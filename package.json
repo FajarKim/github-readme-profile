@@ -27,7 +27,8 @@
     "url": "git+https://github.com/FajarKim/github-readme-profile.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   },
   "keywords": [
     "github-readme-stats",
