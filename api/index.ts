@@ -99,8 +99,8 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
     } else {
       res.setHeader("Content-Type", "image/svg+xml");
       const svg = cardStyle(fetchStats, uiConfig);
-      res.send(svg);
-    }
+      res.send(escapeHTML(svg));
+     }
   } catch (error: any) {
     res.setHeader("Cache-Control", "s-maxage=7200, stale-while-revalidate");
     res.status(500).send(escapeHTML(error.message));
