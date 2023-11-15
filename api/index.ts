@@ -1,3 +1,4 @@
+import escapeHTML from "escape-html";
 import svg2img from "@fajarkim/svg2img";
 import getData from "../src/getData";
 import cardStyle from "../src/card";
@@ -25,7 +26,7 @@ export type UiConfig = {
 
 export default async function readmeStats(req: any, res: any): Promise<any> {
   try {
-    const username = req.query.username;
+    const username = escapeHTML(req.query.username);
 
     const fallbackTheme = "default";
     const defaultTheme: Themes[keyof Themes] = themes[fallbackTheme];
@@ -87,7 +88,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       };
       svg2img(svgBuffer as any, options, (error: Error | null, buffer: Buffer | null) => {
         if (error) {
-          res.status(500).send(error.message);
+          res.status(500).send(escapeHTML(error.message));
         } else {
           res.setHeader("Content-Type", "image/png");
           if (buffer) {
@@ -102,6 +103,6 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
     }
   } catch (error: any) {
     res.setHeader("Cache-Control", "s-maxage=7200, stale-while-revalidate");
-    res.status(500).send(error.message);
+    res.status(500).send(escapeHTML(error.message));
   }
 }
