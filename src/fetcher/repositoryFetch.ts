@@ -39,9 +39,10 @@ async function getPerPageReposData(
   username: string,
   pageno: number
 ): Promise<object> {
+  const sanitizedUsername = encodeURIComponent(username);
   const data = await axios({
     method: "get",
-    url: `https://api.github.com/users/${username}/repos?page=${pageno}&per_page=100`,
+    url: `https://api.github.com/users/${sanitizedUsername}/repos?page=${pageno}&per_page=100`,
     headers: {
       "User-Agent": "FajarKim/github-readme-profile",
       Authorization: getRandomToken(true),
