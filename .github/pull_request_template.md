@@ -12,6 +12,18 @@ Fixes # <!-- add issue number -->
 - [ ] New feature (added a non-breaking change which adds functionality)
 - [ ] Updated documentation (updated the readme, templates, or other repo files)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] Misc change (updated other files non-breaking change)
+
+## How Has This Been Tested?
+
+<!--
+If you have changed a feature of the stats cards, please describe the tests you made to verify your changes.
+Changes strictly related to documentation can skip this section.
+-->
+
+- [ ] Tested locally with a valid username
+- [ ] Tested locally with an invalid username
+- [ ] Added or updated test cases to test new features
 
 ## Checklist:
 
@@ -19,6 +31,7 @@ Fixes # <!-- add issue number -->
 - [ ] The code is properly formatted and is consistent with the existing code style
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have made corresponding changes to the documentation
+- [ ] I have checked this code with command `npm run build`
 - [ ] My changes generate no new warnings
 
 ## Screenshots
