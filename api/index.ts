@@ -45,22 +45,22 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
 
     // Configuring UI based on request parameters or using default values
     const uiConfig: UiConfig = {
-      titleColor: req.query.title_color || selectTheme.title_color || defaultTheme.title_color,
-      textColor: req.query.text_color || selectTheme.text_color || defaultTheme.text_color,
-      iconColor: req.query.icon_color || selectTheme.icon_color || defaultTheme.icon_color,
-      borderColor: req.query.border_color || selectTheme.border_color || defaultTheme.border_color,
-      strokeColor: req.query.stroke_color || req.query.border_color || selectTheme.stroke_color || selectTheme.border_color || defaultTheme.border_color,
-      usernameColor: req.query.username_color || req.query.text_color || selectTheme.username_color || selectTheme.text_color || defaultTheme.text_color,
-      bgColor: req.query.bg_color || selectTheme.bg_color || defaultTheme.bg_color,
-      Locale: req.query.locale || "en",
-      borderWidth: req.query.border_width || 1,
-      borderRadius: req.query.border_radius || 4.5,
-      disabledAnimations: parseBoolean(req.query.disabled_animations) || false,
-      Format: req.query.format || "svg",
-      hiddenItems: req.query.hide,
-      showItems: req.query.show,
-      hideStroke: parseBoolean(req.query.hide_stroke) || false,
-      hideBorder: parseBoolean(req.query.hide_border) || false,
+      titleColor: escapeHTML(req.query.title_color || selectTheme.title_color || defaultTheme.title_color),
+      textColor: escapeHTML(req.query.text_color || selectTheme.text_color || defaultTheme.text_color),
+      iconColor: escapeHTML(req.query.icon_color || selectTheme.icon_color || defaultTheme.icon_color),
+      borderColor: escapeHTML(req.query.border_color || selectTheme.border_color || defaultTheme.border_color),
+      strokeColor: escapeHTML(req.query.stroke_color || req.query.border_color || selectTheme.stroke_color || selectTheme.border_color || defaultTheme.border_color),
+      usernameColor: escapeHTML(req.query.username_color || req.query.text_color || selectTheme.username_color || selectTheme.text_color || defaultTheme.text_color),
+      bgColor: escapeHTML(req.query.bg_color || selectTheme.bg_color || defaultTheme.bg_color),
+      Locale: escapeHTML(req.query.locale || "en"),
+      borderWidth: escapeHTML(req.query.border_width || 1),
+      borderRadius: escapeHTML(req.query.border_radius || 4.5),
+      disabledAnimations: parseBoolean(escapeHTML(req.query.disabled_animations)) || false,
+      Format: escapeHTML(req.query.format || "svg"),
+      hiddenItems: escapeHTML(req.query.hide),
+      showItems: escapeHTML(req.query.show),
+      hideStroke: parseBoolean(escapeHTML(req.query.hide_stroke)) || false,
+      hideBorder: parseBoolean(escapeHTML(req.query.hide_border)) || false,
     };
 
     // Validating username and color codes
