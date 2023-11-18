@@ -1,17 +1,28 @@
+// Importing necessary types and modules
 import type { GetData } from "./getData";
 import type { UiConfig } from "../api/index";
 import { locales, Locales } from "./translations";
 import { icons } from "./icons";
 import { parseBoolean } from "./common/utils";
 
+/**
+ * Generates the SVG code for the user's GitHub stats card based on provided data and UI configuration.
+ *
+ * @param {GetData} data User's GitHub stats data.
+ * @param {UiConfig} uiConfig User interface configuration.
+ * @returns {string} SVG code representing the GitHub stats card.
+ */
 export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
+  // Setting fallback and default locale
   const fallbackLocale = "en";
   const defaultLocale: Locales[keyof Locales] = locales[fallbackLocale];
   const selectLocale: Locales[keyof Locales] = locales[uiConfig.Locale] || defaultLocale;
 
+  // Determining text direction and animations based on UI configuration
   const isRtlDirection = parseBoolean(selectLocale.rtlDirection);
   const isDisabledAnimations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png");
 
+  // Setting angles and positions for SVG elements
   const direction = isRtlDirection ? "rtl" : "ltr";
   const titleXAngle = isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5);
   const titleYAngle = isDisabledAnimations ? 0 : -10;
@@ -24,8 +35,12 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   const userYAngle = isDisabledAnimations ? 140 : 130;
   const follXAngle = isDisabledAnimations ? 120 : 110;
   const follYAngle = isDisabledAnimations ? 161 : 151;
+
+  // Setting styles for hiding stroke and border based on UI configuration
   const hideStroke = parseBoolean(uiConfig.hideStroke) ? `` : `stroke="#${uiConfig.strokeColor}" stroke-width="5"`;
   const hideBorder = parseBoolean(uiConfig.hideBorder) ? `` : `stroke="#${uiConfig.borderColor}" stroke-opacity="1" stroke-width="${uiConfig.borderWidth}"`;
+
+  // CSS animations for SVG elements
   const animations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? `` : `        /* Animations */
         @keyframes scaleInAnimation {
             from {
@@ -68,11 +83,13 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
             animation: fadeInAnimation 0.3s ease-in-out forwards;
         }`;
 
+  // Extracting and formatting hidden and shown items based on UI configuration
   const hiddenItems = uiConfig.hiddenItems || "";
   const hiddenItemsArray = hiddenItems.split(",");
   const showItems = uiConfig.showItems || "";
   const showItemsArray = showItems.split(",");
 
+  // Array containing information about different GitHub stats to be displayed on the card
   const cardItems = [
     { text: selectLocale.totalReposText || defaultLocale.totalReposText, value: data.public_repos, icon: icons.repository, hidden: hiddenItemsArray.includes("repos") },
     { text: selectLocale.starsCountText || defaultLocale.starsCountText, value: data.total_stars, icon: icons.star, hidden: hiddenItemsArray.includes("stars") },
@@ -88,7 +105,10 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     { text: selectLocale.contributedToText || defaultLocale.contributedToText, value: data.total_contributed_to, icon: icons.contributed_to, hidden: hiddenItemsArray.includes("contributed") },
   ];
 
+  // Filtering items based on hiddenItemsArray and showItemsArray
   const cardItemsToShow = cardItems.filter(item => !item.hidden);
+
+  // Generating SVG code for each visible card item
   const cardItemsSVG = cardItemsToShow.map((item, index) => `
             <g transform="translate(230, ${index * 25})">
                 <g class="single-item-animation" style="animation-delay: ${210 + index * 100}ms" transform="translate(25, 0)">
@@ -98,16 +118,22 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
                     <text class="text" x="${textXAngle}" y="12.5">${item.text}:</text>
                     <text class="text text-bold" x="${dataXAngle}" y="12.5">${item.value}</text>
                 </g>
-            </g>`).join('\n');
+            </g>`).join("\n");
 
+  /**
+   * Generates a linear gradient SVG code based on an array of color stops.
+   *
+   * @param {string[]} colors Array of color codes for the gradient stops.
+   * @returns {string} SVG code representing the linear gradient.
+   */
   function generateGradient(colors: string[]): string {
-    const gradientId = 'gradient';
+    const gradientId = "gradient";
     const gradientAngle = colors[0];
     const getColors = colors.slice(1);
     const gradientStops = getColors.map((color, index) => {
       const offset = (index * 100) / (getColors.length - 1);
       return `<stop offset="${offset}%" stop-color="#${color}"/>`;
-    }).join('');
+    }).join("");
     return `
     <defs>
         <linearGradient id="${gradientId}" gradientTransform="rotate(${gradientAngle})" gradientUnits="userSpaceOnUse">
@@ -118,7 +144,8 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     `;
   }
 
-  let backgroundSVG = '';
+  // Generating SVG code for the background based on background color or gradient
+  let backgroundSVG;
   if (uiConfig.bgColor) {
     if (Array.isArray(uiConfig.bgColor)) {
       backgroundSVG = generateGradient(uiConfig.bgColor);
@@ -133,7 +160,8 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     }
   }
 
-  const card = `<svg width="535" height="${Math.max(220, 45 + cardItemsToShow.length * 25)}"  direction="${direction}" viewBox="0 0 535 ${Math.max(220, 45 + cardItemsToShow.length * 25)}" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  // Final SVG code for the GitHub stats card
+  return `<svg width="535" height="${Math.max(220, 45 + cardItemsToShow.length * 25)}"  direction="${direction}" viewBox="0 0 535 ${Math.max(220, 45 + cardItemsToShow.length * 25)}" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
         ${animations}
 
@@ -204,6 +232,4 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
         </svg>
     </g>
 </svg>`;
-
-  return card;
 }

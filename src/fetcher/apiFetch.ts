@@ -1,6 +1,8 @@
+// Importing necessary libraries and modules
 import axios from "axios";
 import getRandomToken from "../getRandomToken";
 
+// Represents the user data obtained from the GitHub GraphQL API.
 export interface User {
   name: string;
   login: string;
@@ -18,52 +20,68 @@ export interface User {
   repositoriesContributedTo: RepositoriesContributedTo;
 }
 
+// Represents the total count of repositories.
 export interface Repositories {
   totalCount: number;
 }
 
+// Represents the total count of followers.
 export interface Followers {
   totalCount: number;
 }
 
+// Represents the total count of following.
 export interface Following {
   totalCount: number;
 }
 
+// Represents contribution data.
 export interface ContributionsCollection {
   totalCommitContributions: number;
   restrictedContributionsCount: number;
   totalPullRequestReviewContributions: number;
 }
 
+// Represents the total count of opened issues.
 export interface OpenedIssues {
   totalCount: number;
 }
 
+// Represents the total count of closed issues.
 export interface ClosedIssues {
   totalCount: number;
 }
 
+// Represents the total count of pull requests.
 export interface PullRequests {
   totalCount: number;
 }
 
+// Represents the total count of merged pull requests.
 export interface MergedPullRequests {
   totalCount: number;
 }
 
+// Represents the total count of started discussions.
 export interface DiscussionStarted {
   totalCount: number;
 }
 
+// Represents the total count of answered discussions.
 export interface DiscussionAnswered {
   totalCount: number;
 }
 
+// Represents the total count of repositories contributed to.
 export interface RepositoriesContributedTo {
   totalCount: number;
 }
 
+/**
+ * Fetches user data from the GitHub GraphQL API.
+ * @param username - GitHub username
+ * @returns Promise<User>
+ */
 export default async function apiFetch(username: string): Promise<User> {
   const data = await axios({
     method: "post",

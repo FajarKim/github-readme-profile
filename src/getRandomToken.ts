@@ -1,5 +1,15 @@
-require("dotenv").config();
+// Importing necessary module
+import dotenv from "dotenv";
 
+// Loads environment variables from a .env file if present.
+dotenv.config();
+
+/**
+ * Generates a random token based on the GH_ environment variables.
+ *
+ * @param bearerHeader - Indicates whether to include "Bearer " prefix for authorization header.
+ * @returns A random token.
+ */
 function getRandomToken(bearerHeader: boolean): string {
   const getEnvs: any = process.env;
   let getGhEnv: any = Object.keys(getEnvs).filter((key) =>

@@ -1,8 +1,10 @@
+// Importing necessary libraries and modules
 import millify from "millify";
 import apiFetch from "./fetcher/apiFetch";
 import repositoryFetch from "./fetcher/repositoryFetch";
 const base64ImageFetcher = require("node-base64-image");
 
+// Represents the data structure returned by the getData function.
 export type GetData = {
   username: string;
   name: string;
@@ -23,13 +25,20 @@ export type GetData = {
   total_contributed_to: string | number;
 };
 
+/**
+ * Fetches and processes data for a given GitHub user.
+ * @param username - GitHub username
+ * @returns Promise<GetData>
+ */
 async function getData(username: string): Promise<GetData> {
   const user = await apiFetch(username);
   const totalRepoPages = Math.ceil(user.repositories.totalCount / 100);
   const userRepositories = await repositoryFetch(username, totalRepoPages);
 
+  // If user.name is not available, use user.login as name
   if (!user.name) user.name = user.login;
 
+  // Creating output object
   const output = {
     username: user.login,
     name: user.name,
