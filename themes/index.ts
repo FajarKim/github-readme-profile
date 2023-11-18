@@ -234,4 +234,10 @@ export const themes: Themes = {
     border_color: "AE58A1",
     bg_color: "35,4158D0,C850C0,FFCC70",
   },
+  "siny-gradient": {
+    title_color: "FFFFFF",
+    text_color: "FFFFFF",
+    icon_color: "FFFFFF",
+    bg_color: "30,E96443,904E95",
+  },
 }
