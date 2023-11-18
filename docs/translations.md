@@ -41,4 +41,4 @@ Use `?locale=LOCALE_CODE` parameter like so :-
   </tr>
 </table>
 
-Want to add a new translations? Consider reading the [contribution guidelines](https://github.com/FajarKim/github-readme-profile/blob/master/CONTRIBUTING.md#%EF%B8%8F-translations-contribution) :D
+Want to add new translations? Consider reading the [contribution guidelines](https://github.com/FajarKim/github-readme-profile/blob/master/CONTRIBUTING.md#%EF%B8%8F-translations-contribution) :D
