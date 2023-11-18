@@ -25,11 +25,11 @@ function generateReadme(): string {
   const availableLocales = Object.keys(locales);
 
   // Generate table rows with locale details.
-  let localesListTable;
+  let localesListTable = "";
   for (let i = 0; i < availableLocales.length; i += 1) {
     const localesSlice = availableLocales.slice(i, i + 1);
     const row = localesSlice.map(locale => generateTranslationsMarkdown(locale)).join("");
-    localesListTable = `  <tr>
+    localesListTable += `  <tr>
     <td><p align="center"><code>${row}</code></p></td>
     <td><p align="left">${languageNames[row]}</p></td>
     <td><p align="center">${Object.keys(locales[row]).length / 16 * 100}%</p></td>

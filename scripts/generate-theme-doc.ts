@@ -38,19 +38,19 @@ function generateReadme(username: string): string {
   const itemsPerRow = 3;
 
   // Generate table rows with theme markdown.
-  let themesPreviewTable;
+  let themesPreviewTable = "";
   for (let i = 0; i < availableThemes.length; i += itemsPerRow) {
     const themesSlice = availableThemes.slice(i, i + itemsPerRow);
     const row = themesSlice.map(theme => generateThemeMarkdown(theme)).join(" | ");
-    themesPreviewTable = `| ${row} |\n`;
+    themesPreviewTable += `| ${row} |\n`;
   }
 
   // Generate individual theme links.
-  let themesPreviewLink;
+  let themesPreviewLink = "";
   for (let i = 0; i < availableThemes.length; i += 1) {
     const themesSlice = availableThemes.slice(i, i + 1);
     const row = themesSlice.map(theme => generateThemeLink(username, theme)).join("\n");
-    themesPreviewLink = `${row}\n`;
+    themesPreviewLink += `${row}\n`;
   }
 
   // Final README content with themes and links.
