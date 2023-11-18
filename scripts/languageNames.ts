@@ -1,9 +1,9 @@
-// Represents the structure of localized code languages name in English.
+// Represents the structure of localized code languages name in English
 export type LanguageNames = {
   [key: string]: string;
 };
 
-// Object containing localized strings for different languages name in English.
+// Object containing localized strings for different languages name in English
 export const languageNames: LanguageNames = {
   "af": "Afrikaans",
   "af-NA": "Afrikaans (Namibia)",

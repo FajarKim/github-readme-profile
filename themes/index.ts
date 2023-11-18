@@ -1,4 +1,4 @@
-// Represents the available themes for GitHub stats cards.
+// Represents the available themes for GitHub stats cards
 export type Themes = {
   [key: string]: {
     title_color?: string;
@@ -11,7 +11,7 @@ export type Themes = {
   };
 };
 
-// Object containing various predefined themes for GitHub stats cards.
+// Object containing various predefined themes for GitHub stats cards
 export const themes: Themes = {
   default: {
     title_color: "2f80ed",

@@ -2,7 +2,7 @@
 import axios from "axios";
 import getRandomToken from "../getRandomToken";
 
-// Represents the user data obtained from the GitHub GraphQL API.
+// Represents the user data obtained from the GitHub GraphQL API
 export interface User {
   name: string;
   login: string;
@@ -20,67 +20,68 @@ export interface User {
   repositoriesContributedTo: RepositoriesContributedTo;
 }
 
-// Represents the total count of repositories.
+// Represents the total count of repositories
 export interface Repositories {
   totalCount: number;
 }
 
-// Represents the total count of followers.
+// Represents the total count of followers
 export interface Followers {
   totalCount: number;
 }
 
-// Represents the total count of following.
+// Represents the total count of following
 export interface Following {
   totalCount: number;
 }
 
-// Represents contribution data.
+// Represents contribution data
 export interface ContributionsCollection {
   totalCommitContributions: number;
   restrictedContributionsCount: number;
   totalPullRequestReviewContributions: number;
 }
 
-// Represents the total count of opened issues.
+// Represents the total count of opened issues
 export interface OpenedIssues {
   totalCount: number;
 }
 
-// Represents the total count of closed issues.
+// Represents the total count of closed issues
 export interface ClosedIssues {
   totalCount: number;
 }
 
-// Represents the total count of pull requests.
+// Represents the total count of pull requests
 export interface PullRequests {
   totalCount: number;
 }
 
-// Represents the total count of merged pull requests.
+// Represents the total count of merged pull requests
 export interface MergedPullRequests {
   totalCount: number;
 }
 
-// Represents the total count of started discussions.
+// Represents the total count of started discussions
 export interface DiscussionStarted {
   totalCount: number;
 }
 
-// Represents the total count of answered discussions.
+// Represents the total count of answered discussions
 export interface DiscussionAnswered {
   totalCount: number;
 }
 
-// Represents the total count of repositories contributed to.
+// Represents the total count of repositories contributed to
 export interface RepositoriesContributedTo {
   totalCount: number;
 }
 
 /**
  * Fetches user data from the GitHub GraphQL API.
- * @param username - GitHub username
- * @returns Promise<User>
+ *
+ * @param {string} username GitHub username.
+ * @returns {Promise<User>} Promise representing the user data obtained from the GitHub Graphql API.
  */
 export default async function apiFetch(username: string): Promise<User> {
   const data = await axios({

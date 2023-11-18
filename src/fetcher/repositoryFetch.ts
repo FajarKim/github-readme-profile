@@ -2,7 +2,7 @@
 import axios from "axios";
 import getRandomToken from "../getRandomToken";
 
-// Represents the structure returned: Promise containing the repository data.
+// Represents the structure returned: Promise containing the repository data
 type RepositoryData = {
   stars: number;
   forks: number;
@@ -12,9 +12,9 @@ type RepositoryData = {
 /**
  * Fetches repository data for the specified user.
  *
- * @param username - GitHub username.
- * @param totalpage - Total pages of repositories to fetch.
- * @returns Promise containing the repository data.
+ * @param {string} username GitHub username.
+ * @param {number} totalpage Total pages of repositories to fetch.
+ * @returns {Promise<RepositoryData>} Promise containing the repository data.
  */
 export default async function repositoryFetch(
   username: string,
@@ -49,9 +49,9 @@ export default async function repositoryFetch(
 /**
  * Fetches repository data for a specific page.
  *
- * @param username - GitHub username.
- * @param pageno - Page number to fetch.
- * @returns Promise containing the repository data for the specified page.
+ * @param {string} username GitHub username.
+ * @param {number} pageno Page number to fetch.
+ * @returns {Promise<RepositoryData>} Promise containing the repository data for the specified page.
  */
 async function getPerPageReposData(
   username: string,

@@ -4,7 +4,7 @@ import apiFetch from "./fetcher/apiFetch";
 import repositoryFetch from "./fetcher/repositoryFetch";
 const base64ImageFetcher = require("node-base64-image");
 
-// Represents the data structure returned by the getData function.
+// Represents the data structure returned by the getData function
 export type GetData = {
   username: string;
   name: string;
@@ -27,8 +27,9 @@ export type GetData = {
 
 /**
  * Fetches and processes data for a given GitHub user.
- * @param username - GitHub username
- * @returns Promise<GetData>
+ *
+ * @param {string} username GitHub username.
+ * @returns Promise<GetData> Promise representing the data structure returned.
  */
 async function getData(username: string): Promise<GetData> {
   const user = await apiFetch(username);

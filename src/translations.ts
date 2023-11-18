@@ -1,4 +1,4 @@
-// Represents the structure of localized strings.
+// Represents the structure of localized strings
 export type Locales = {
   [key: string]: {
     titleCard: string;
@@ -20,7 +20,7 @@ export type Locales = {
   };
 };
 
-// Object containing localized strings for different languages.
+// Object containing localized strings for different languages
 export const locales: Locales = {
   en: {
     titleCard: "{name}'s GitHub Stats",

@@ -6,7 +6,7 @@ import cardStyle from "../src/card";
 import { themes, Themes } from "../themes/index";
 import { isValidHexColor, isValidGradient, parseBoolean } from "../src/common/utils";
 
-// User interface configuration type.
+// User interface configuration type
 export type UiConfig = {
   titleColor: string;
   textColor: string;
