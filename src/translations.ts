@@ -86,7 +86,7 @@ export const locales: Locales = {
     commitsCountText: "عدد الالتزام",
     totalPRText: "إجمالي العلاقات العامة",
     totalPRMergedText: "إجمالي العلاقات العامة المدمجة",
-    totalPRReviewedText: "إجمالي العلاقات العامة التي تمت مراجعتها",
+    totalPRReviewedText: "إجمالي العلاقات العامة تمت مراجعتها",
     totalIssuesText: "إجمالي المشكلات",
     totalIssuesClosedText: "إجمالي المشكلات التي إغلاقها",
     contributedToText: "ساهم في (العام الماضي)",
