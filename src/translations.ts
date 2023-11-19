@@ -89,6 +89,8 @@ export const locales: Locales = {
     totalPRReviewedText: "إجمالي العلاقات العامة تمت مراجعتها",
     totalIssuesText: "إجمالي المشكلات",
     totalIssuesClosedText: "إجمالي المشكلات التي إغلاقها",
+    totalDiscussionStartedText: "بدء المناقشات",
+    totalDiscussionAnsweredText: "الردود على المناقشات",
     contributedToText: "ساهم في (العام الماضي)",
     rtlDirection: true,
   },
