@@ -29,7 +29,7 @@ Use `?locale=LOCALE_CODE` parameter like so :-
   </tr>  <tr>
     <td><p align="center"><code>ar</code></p></td>
     <td><p align="left">Arabic</p></td>
-    <td><p align="center">75%</p></td>
+    <td><p align="center">87.5%</p></td>
   </tr>  <tr>
     <td><p align="center"><code>ja</code></p></td>
     <td><p align="left">Japanese</p></td>
