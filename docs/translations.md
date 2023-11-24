@@ -37,7 +37,7 @@ Use `?locale=LOCALE_CODE` parameter like so :-
   </tr>  <tr>
     <td><p align="center"><code>fr</code></p></td>
     <td><p align="left">French</p></td>
-    <td><p align="center">87.5%</p></td>
+    <td><p align="center">100%</p></td>
   </tr>
 </table>
 
