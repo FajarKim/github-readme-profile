@@ -251,6 +251,13 @@ export const themes: Themes = {
     stroke_color: "545c7e",
     username_color: "9d7cd8",
   },
+  "shades-of-purple": {
+    title_color: "fad000",
+    icon_color: "b362ff",
+    text_color: "a599e9",
+    bg_color: "2d2b55",
+    border_color: "1e1e3f",
+  },
 
   // Gradient themes
   "sunset-gradient": {
