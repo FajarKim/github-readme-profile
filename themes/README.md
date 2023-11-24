@@ -24,8 +24,8 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `shadow_blue` ![shadow_blue][shadow_blue] | `shadow_orange` ![shadow_orange][shadow_orange] | `shadow_purple` ![shadow_purple][shadow_purple] |
 | `shadow_brown` ![shadow_brown][shadow_brown] | `gruvbox` ![gruvbox][gruvbox] | `gruvbox_light` ![gruvbox_light][gruvbox_light] |
 | `apprentice` ![apprentice][apprentice] | `radical` ![radical][radical] | `tokyonight` ![tokyonight][tokyonight] |
-| `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] |
-| `siny-gradient` ![siny-gradient][siny-gradient] |
+| `shades-of-purple` ![shades-of-purple][shades-of-purple] | `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] |
+| `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
@@ -63,6 +63,7 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [apprentice]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=apprentice
 [radical]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=radical
 [tokyonight]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=tokyonight
+[shades-of-purple]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shades-of-purple
 [sunset-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=sunset-gradient
 [ocean-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ocean-gradient
 [ambient-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ambient-gradient
