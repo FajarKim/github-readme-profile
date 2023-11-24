@@ -240,4 +240,20 @@ export const themes: Themes = {
     icon_color: "FFFFFF",
     bg_color: "30,E96443,904E95",
   },
+  gruvbox: {
+    title_color: "fabd2f",
+    icon_color: "fe8019",
+    text_color: "8ec07c",
+    bg_color: "282828",
+    stroke_color: "3c3836",
+    username_color: "ebdbb2",
+  },
+  gruvbox_light: {
+    title_color: "b57614",
+    icon_color: "af3a03",
+    text_color: "427b58",
+    bg_color: "fbf1c7",
+    stroke_color: "ebdbb2",
+    username_color: "3c3836",
+  },
 }
