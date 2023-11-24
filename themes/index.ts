@@ -258,6 +258,27 @@ export const themes: Themes = {
     bg_color: "2d2b55",
     border_color: "1e1e3f",
   },
+  ayu: {
+    title_color: "E6B673",
+    icon_color: "36A3D9",
+    text_color: "E6E1CF",
+    bg_color: "0F1419",
+    border_color: "5C6773",
+  },
+  "ayu-light": {
+    title_color: "CDA273",
+    icon_color: "36A3D9",
+    text_color: "5C6773",
+    bg_color: "FAFAFA",
+    border_color: "ABB0B6",
+  },
+  "ayu-mirage": {
+    title_color: "FFC44C",
+    icon_color: "5CCFE6",
+    text_color: "D9D7CE",
+    bg_color: "212733",
+    border_color: "5C6773",
+  },
 
   // Gradient themes
   "sunset-gradient": {
