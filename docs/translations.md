@@ -38,6 +38,10 @@ Use `?locale=LOCALE_CODE` parameter like so :-
     <td><p align="center"><code>fr</code></p></td>
     <td><p align="left">French</p></td>
     <td><p align="center">100%</p></td>
+  </tr>  <tr>
+    <td><p align="center"><code>fa</code></p></td>
+    <td><p align="left">Persian</p></td>
+    <td><p align="center">100%</p></td>
   </tr>
 </table>
 
