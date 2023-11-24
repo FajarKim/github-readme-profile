@@ -243,6 +243,14 @@ export const themes: Themes = {
     text_color: "a9fef7",
     bg_color: "141321",
   },
+  tokyonight: {
+    title_color: "89ddff",
+    icon_color: "bb9af7",
+    text_color: "1abc9c",
+    bg_color: "1a1b26",
+    stroke_color: "545c7e",
+    username_color: "9d7cd8",
+  },
 
   // Gradient themes
   "sunset-gradient": {
