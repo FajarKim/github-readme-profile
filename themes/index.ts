@@ -13,6 +13,7 @@ export type Themes = {
 
 // Object containing various predefined themes for GitHub stats cards
 export const themes: Themes = {
+  // Solid themes
   default: {
     title_color: "2f80ed",
     text_color: "434d58",
@@ -213,6 +214,31 @@ export const themes: Themes = {
     border_color: "31312D",
     bg_color: "ffffff00",
   },
+  gruvbox: {
+    title_color: "fabd2f",
+    icon_color: "fe8019",
+    text_color: "8ec07c",
+    bg_color: "282828",
+    stroke_color: "3c3836",
+    username_color: "ebdbb2",
+  },
+  gruvbox_light: {
+    title_color: "b57614",
+    icon_color: "af3a03",
+    text_color: "427b58",
+    bg_color: "fbf1c7",
+    stroke_color: "ebdbb2",
+    username_color: "3c3836",
+  },
+  apprentice: {
+    title_color: "ffffff",
+    icon_color: "ffffaf",
+    text_color: "bcbcbc",
+    bg_color: "262626",
+    username_color: "ffffaf",
+  },
+
+  // Gradient themes
   "sunset-gradient": {
     title_color: "FFFFFF",
     text_color: "FFFFFF",
@@ -239,21 +265,5 @@ export const themes: Themes = {
     text_color: "FFFFFF",
     icon_color: "FFFFFF",
     bg_color: "30,E96443,904E95",
-  },
-  gruvbox: {
-    title_color: "fabd2f",
-    icon_color: "fe8019",
-    text_color: "8ec07c",
-    bg_color: "282828",
-    stroke_color: "3c3836",
-    username_color: "ebdbb2",
-  },
-  gruvbox_light: {
-    title_color: "b57614",
-    icon_color: "af3a03",
-    text_color: "427b58",
-    bg_color: "fbf1c7",
-    stroke_color: "ebdbb2",
-    username_color: "3c3836",
   },
 }
