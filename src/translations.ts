@@ -125,6 +125,8 @@ export const locales: Locales = {
     totalPRReviewedText: "Total de PR Examinés",
     totalIssuesText: "Total d'Issue",
     totalIssuesClosedText: "Total d'Issue Clôturées",
+    totalDiscussionStartedText: "Discussions Entamées",
+    totalDiscussionAnsweredText: "Discussions Répondues",
     contributedToText: "Contribué à (l'année dernière)",
     rtlDirection: false,
   },
