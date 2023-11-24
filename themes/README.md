@@ -17,17 +17,17 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `highcontrast` ![highcontrast][highcontrast] | `catppuccin-latte` ![catppuccin-latte][catppuccin-latte] | `catppuccin-frappe` ![catppuccin-frappe][catppuccin-frappe] |
 | `catppuccin-macchiato` ![catppuccin-macchiato][catppuccin-macchiato] | `catppuccin-mocha` ![catppuccin-mocha][catppuccin-mocha] | `vue` ![vue][vue] |
 | `vue-dark` ![vue-dark][vue-dark] | `github_dark` ![github_dark][github_dark] | `github_dark_highcontrast` ![github_dark_highcontrast][github_dark_highcontrast] |
-| `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed] | `github_light` ![github_light][github_light] | `github_light_highcontrast` ![github_light_highcontrast][github_light_highcontrast] |
-| `whatsapp-light` ![whatsapp-light][whatsapp-light] | `whatsapp-dark` ![whatsapp-dark][whatsapp-dark] | `buefy` ![buefy][buefy] |
-| `buefy-dark` ![buefy-dark][buefy-dark] | `solarized-light` ![solarized-light][solarized-light] | `solarized-dark` ![solarized-dark][solarized-dark] |
-| `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark] | `deuteranopia-friendly-dark` ![deuteranopia-friendly-dark][deuteranopia-friendly-dark] | `garden` ![garden][garden] |
-| `shadow_red` ![shadow_red][shadow_red] | `shadow_green` ![shadow_green][shadow_green] | `shadow_blue` ![shadow_blue][shadow_blue] |
-| `shadow_orange` ![shadow_orange][shadow_orange] | `shadow_purple` ![shadow_purple][shadow_purple] | `shadow_brown` ![shadow_brown][shadow_brown] |
-| `gruvbox` ![gruvbox][gruvbox] | `gruvbox_light` ![gruvbox_light][gruvbox_light] | `apprentice` ![apprentice][apprentice] |
-| `radical` ![radical][radical] | `tokyonight` ![tokyonight][tokyonight] | `shades-of-purple` ![shades-of-purple][shades-of-purple] |
-| `ayu` ![ayu][ayu] | `ayu-light` ![ayu-light][ayu-light] | `ayu-mirage` ![ayu-mirage][ayu-mirage] |
-| `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] |
-| `siny-gradient` ![siny-gradient][siny-gradient] |
+| `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed] | `github_dark_tritanopia` ![github_dark_tritanopia][github_dark_tritanopia] | `github_light` ![github_light][github_light] |
+| `github_light_highcontrast` ![github_light_highcontrast][github_light_highcontrast] | `github_light_tritanopia` ![github_light_tritanopia][github_light_tritanopia] | `whatsapp-light` ![whatsapp-light][whatsapp-light] |
+| `whatsapp-dark` ![whatsapp-dark][whatsapp-dark] | `buefy` ![buefy][buefy] | `buefy-dark` ![buefy-dark][buefy-dark] |
+| `solarized-light` ![solarized-light][solarized-light] | `solarized-dark` ![solarized-dark][solarized-dark] | `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark] |
+| `deuteranopia-friendly-dark` ![deuteranopia-friendly-dark][deuteranopia-friendly-dark] | `garden` ![garden][garden] | `shadow_red` ![shadow_red][shadow_red] |
+| `shadow_green` ![shadow_green][shadow_green] | `shadow_blue` ![shadow_blue][shadow_blue] | `shadow_orange` ![shadow_orange][shadow_orange] |
+| `shadow_purple` ![shadow_purple][shadow_purple] | `shadow_brown` ![shadow_brown][shadow_brown] | `gruvbox` ![gruvbox][gruvbox] |
+| `gruvbox_light` ![gruvbox_light][gruvbox_light] | `apprentice` ![apprentice][apprentice] | `radical` ![radical][radical] |
+| `tokyonight` ![tokyonight][tokyonight] | `shades-of-purple` ![shades-of-purple][shades-of-purple] | `ayu` ![ayu][ayu] |
+| `ayu-light` ![ayu-light][ayu-light] | `ayu-mirage` ![ayu-mirage][ayu-mirage] | `sunset-gradient` ![sunset-gradient][sunset-gradient] |
+| `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
@@ -45,8 +45,10 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [github_dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_dark
 [github_dark_highcontrast]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_dark_highcontrast
 [github_dark_dimmed]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_dark_dimmed
+[github_dark_tritanopia]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_dark_tritanopia
 [github_light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_light
 [github_light_highcontrast]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_light_highcontrast
+[github_light_tritanopia]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=github_light_tritanopia
 [whatsapp-light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=whatsapp-light
 [whatsapp-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=whatsapp-dark
 [buefy]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=buefy
