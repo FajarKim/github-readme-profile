@@ -109,6 +109,14 @@ export const themes: Themes = {
     bg_color: "21262D",
     border_color: "57AB5A",
   },
+  github_dark_tritanopia: {
+    title_color: "1F6FEA",
+    icon_color: "1585FD",
+    text_color: "F1F6FC",
+    bg_color: "161B22",
+    border_color: "484F58",
+    stroke_color: "FA4549",
+  },
   github_light: {
     title_color: "0969DA",
     icon_color: "34D058",
@@ -123,6 +131,14 @@ export const themes: Themes = {
     bg_color: "FFFFFF",
     border_color: "272B34",
     stroke_color: "055D20",
+  },
+  github_light_tritanopia: {
+    title_color: "0969DA",
+    icon_color: "0088FF",
+    text_color: "24292F",
+    bg_color: "FFFFFF",
+    border_color: "D1D5DA",
+    stroke_color: "FA4549",
   },
   "whatsapp-light": {
     title_color: "1DAB61",
