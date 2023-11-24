@@ -22,9 +22,9 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `solarized-dark` ![solarized-dark][solarized-dark] | `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark] | `deuteranopia-friendly-dark` ![deuteranopia-friendly-dark][deuteranopia-friendly-dark] |
 | `garden` ![garden][garden] | `shadow_red` ![shadow_red][shadow_red] | `shadow_green` ![shadow_green][shadow_green] |
 | `shadow_blue` ![shadow_blue][shadow_blue] | `shadow_orange` ![shadow_orange][shadow_orange] | `shadow_purple` ![shadow_purple][shadow_purple] |
-| `shadow_brown` ![shadow_brown][shadow_brown] | `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] |
-| `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] | `gruvbox` ![gruvbox][gruvbox] |
-| `gruvbox_light` ![gruvbox_light][gruvbox_light] |
+| `shadow_brown` ![shadow_brown][shadow_brown] | `gruvbox` ![gruvbox][gruvbox] | `gruvbox_light` ![gruvbox_light][gruvbox_light] |
+| `apprentice` ![apprentice][apprentice] | `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] |
+| `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
@@ -57,9 +57,10 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [shadow_orange]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_orange
 [shadow_purple]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_purple
 [shadow_brown]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=shadow_brown
+[gruvbox]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=gruvbox
+[gruvbox_light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=gruvbox_light
+[apprentice]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=apprentice
 [sunset-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=sunset-gradient
 [ocean-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ocean-gradient
 [ambient-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ambient-gradient
 [siny-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=siny-gradient
-[gruvbox]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=gruvbox
-[gruvbox_light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=gruvbox_light
