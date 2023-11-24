@@ -94,6 +94,14 @@ export const themes: Themes = {
     bg_color: "161B22",
     border_color: "3FB950",
   },
+  github_dark_highcontrast: {
+    title_color: "409EFE",
+    icon_color: "2EA043",
+    text_color: "FFFFFF",
+    bg_color: "0A0C10",
+    border_color: "FFFFFF",
+    stroke_color: "2EA043",
+  },
   github_dark_dimmed: {
     title_color: "316ECB",
     icon_color: "57AB5A",
@@ -107,6 +115,14 @@ export const themes: Themes = {
     text_color: "1F2227",
     bg_color: "FFFFFF",
     border_color: "34D058",
+  },
+  github_light_highcontrast: {
+    title_color: "0249B3",
+    icon_color: "055D20",
+    text_color: "0E1116",
+    bg_color: "FFFFFF",
+    border_color: "272B34",
+    stroke_color: "055D20",
   },
   "whatsapp-light": {
     title_color: "1DAB61",
