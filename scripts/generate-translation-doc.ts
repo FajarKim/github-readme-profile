@@ -33,7 +33,7 @@ function generateReadme(): string {
     <td><p align="center"><code>${row}</code></p></td>
     <td><p align="left">${languageNames[row]}</p></td>
     <td><p align="center">${Object.keys(locales[row]).length / 16 * 100}%</p></td>
-  </tr>`;
+  </tr>\n`;
   }
 
   // Final README content with locales and progress
@@ -53,8 +53,7 @@ Use \`?locale=LOCALE_CODE\` parameter like so :-
     <td><p align="center"><b>Locale</b></p></td>
     <td><p align="center"><b>Progress</b></p></td>
   </tr>
-  ${localesListTable}
-</table>
+${localesListTable}</table>
 
 Want to add new translations? Consider reading the [contribution guidelines](https://github.com/FajarKim/github-readme-profile/blob/master/CONTRIBUTING.md#%EF%B8%8F-translations-contribution) :D
 `;
