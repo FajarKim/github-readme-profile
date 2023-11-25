@@ -1,12 +1,9 @@
 import readmeStats from "../api/index";
-import escapeHTML from "escape-html";
-import svg2img from "@fajarkim/svg2img";
 import getData from "../src/getData";
 import cardStyle from "../src/card";
 import { themes } from "../themes/index";
 import { locales } from "../src/translations";
 
-jest.mock("@fajarkim/svg2img");
 jest.mock("../src/getData");
 jest.mock("../src/card");
 jest.mock("express");
