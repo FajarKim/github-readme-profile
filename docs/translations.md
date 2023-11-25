@@ -46,6 +46,10 @@ Use `?locale=LOCALE_CODE` parameter like so :-
     <td><p align="center"><code>ms</code></p></td>
     <td><p align="left">Malay</p></td>
     <td><p align="center">100%</p></td>
+  </tr>  <tr>
+    <td><p align="center"><code>su</code></p></td>
+    <td><p align="left">Sundanese</p></td>
+    <td><p align="center">100%</p></td>
   </tr>
 </table>
 
