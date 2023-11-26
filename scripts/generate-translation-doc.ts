@@ -21,7 +21,7 @@ function generateTranslationsMarkdown(locale: string): string {
  *
  * @returns {string} README content string.
  */
-function generateReadme(): string {
+export function generateReadmeLocales(): string {
   const availableLocales = Object.keys(locales);
 
   // Generate table rows with locale details
@@ -62,7 +62,7 @@ Want to add new translations? Consider reading the [contribution guidelines](htt
 }
 
 // Generate the README content
-const generatedReadme = generateReadme();
+const generatedReadme = generateReadmeLocales();
 
 // Write the README content to the specified file
 fs.writeFileSync(TARGET_FILE, generatedReadme);

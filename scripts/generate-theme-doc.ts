@@ -33,7 +33,7 @@ function generateThemeLink(username: string, theme: string): string {
  * @param {string} username GitHub username.
  * @returns {string} README content string.
  */
-function generateReadme(username: string): string {
+export function generateReadmeThemes(username: string): string {
   const availableThemes = Object.keys(themes);
   const itemsPerRow = 3;
 
@@ -82,7 +82,7 @@ ${themesPreviewLink}`;
 const username = "FajarKim";
 
 // Generate the README content
-const generatedReadme = generateReadme(username);
+const generatedReadme = generateReadmeThemes(username);
 
 // Write the README content to the specified file
 fs.writeFileSync(TARGET_FILE, generatedReadme);
