@@ -40,7 +40,7 @@ export const themes: Themes = {
     title_color: "e7f216",
     icon_color: "00ffff",
     text_color: "fff",
-    stroke_color: "191919",
+    stroke_color: "022f2b",
     bg_color: "000",
   },
   "catppuccin-latte": {
