@@ -23,6 +23,7 @@ Changes strictly related to documentation can skip this section.
 
 - [ ] Tested locally with a valid username
 - [ ] Tested locally with an invalid username
+- [ ] Ran tests with `npm test`
 - [ ] Added or updated test cases to test new features
 
 ## Checklist:
@@ -31,7 +32,6 @@ Changes strictly related to documentation can skip this section.
 - [ ] The code is properly formatted and is consistent with the existing code style
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have made corresponding changes to the documentation
-- [ ] I have checked this code with command `npm run build`
 - [ ] My changes generate no new warnings
 
 ## Screenshots
