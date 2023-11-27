@@ -311,6 +311,13 @@ export const themes: Themes = {
     bg_color: "212733",
     border_color: "5C6773",
   },
+  merko: {
+    title_color: "abd200",
+    icon_color: "b7d364",
+    text_color: "68b587",
+    bg_color: "0a0f0b",
+    stroke_color: "253829",
+  },
 
   // Gradient themes
   "sunset-gradient": {
