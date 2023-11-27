@@ -26,8 +26,9 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `shadow_purple` ![shadow_purple][shadow_purple] | `shadow_brown` ![shadow_brown][shadow_brown] | `gruvbox` ![gruvbox][gruvbox] |
 | `gruvbox_light` ![gruvbox_light][gruvbox_light] | `apprentice` ![apprentice][apprentice] | `radical` ![radical][radical] |
 | `tokyonight` ![tokyonight][tokyonight] | `shades-of-purple` ![shades-of-purple][shades-of-purple] | `ayu` ![ayu][ayu] |
-| `ayu-light` ![ayu-light][ayu-light] | `ayu-mirage` ![ayu-mirage][ayu-mirage] | `sunset-gradient` ![sunset-gradient][sunset-gradient] |
-| `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] |
+| `ayu-light` ![ayu-light][ayu-light] | `ayu-mirage` ![ayu-mirage][ayu-mirage] | `merko` ![merko][merko] |
+| `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] |
+| `siny-gradient` ![siny-gradient][siny-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
@@ -73,6 +74,7 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [ayu]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ayu
 [ayu-light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ayu-light
 [ayu-mirage]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ayu-mirage
+[merko]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=merko
 [sunset-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=sunset-gradient
 [ocean-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ocean-gradient
 [ambient-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ambient-gradient
