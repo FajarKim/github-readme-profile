@@ -52,8 +52,11 @@ jobs:
       - name: Run Script
         uses: skx/github-action-tester@e29768ff4ff67be9d1fdbccd8836ab83233bebb1 # v0.10.0
         with:
-          script: ./scripts/push-theme-readme.sh
+          script: ./scripts/push-commit.sh
         env:
           CI: true
+          AUTHOR_NAME: GitHub Actions
+          AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
           PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           GH_REPO: ${{ secrets.GH_REPO }}
+          MESSAGE: "docs(theme): auto update theme readme"
