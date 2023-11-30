@@ -367,6 +367,13 @@ export const themes: Themes = {
     border_color: "2F3239",
     bg_color: "152528",
   },
+  humoris: {
+    title_color: "191419",
+    text_color: "393c3c",
+    icon_color: "683c2c",
+    border_color: "e8e6e4",
+    bg_color: "dfaf77",
+  },
 
   // Gradient themes
   "sunset-gradient": {
