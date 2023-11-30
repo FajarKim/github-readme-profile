@@ -1,0 +1,68 @@
+name: Auto Build All Dependencies and DevDependencies
+on:
+  schedule:
+    #        ┌───────────── minute (0 - 59)
+    #        │ ┌───────────── hour (0 - 23)
+    #        │ │  ┌───────────── day of the month (1 - 31)
+    #        │ │  │  ┌───────────── month (1 - 12 or JAN-DEC)
+    #        │ │  │  │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
+    #        │ │  │  │ │
+    #        │ │  │  │ │
+    #        │ │  │  │ │
+    #        * *  *  * *
+    - cron: "0 0 */7 * *"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  checks: read
+  contents: write
+  deployments: read
+  issues: read
+  discussions: read
+  packages: read
+  pages: read
+  pull-requests: read
+  repository-projects: read
+  security-events: read
+  statuses: read
+
+jobs:
+  autoBuildDeps:
+    runs-on: ubuntu-latest
+    name: Auto build deps
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      - name: Setup Node
+        uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      # Fix the unsafe repo error which was introduced by the CVE-2022-24765 git patches.
+      - name: Fix unsafe repo error
+        run: git config --global --add safe.directory ${{ github.workspace }}
+
+      - name: npm install, generate readme
+        run: |
+          npm ci
+          npm update --save
+        env:
+          CI: true
+
+      - name: Run Script
+        uses: skx/github-action-tester@e29768ff4ff67be9d1fdbccd8836ab83233bebb1 # v0.10.0
+        with:
+          script: ./scripts/push-commit.sh
+        env:
+          CI: true
+          AUTHOR_NAME: GitHub Actions
+          AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          GH_REPO: ${{ secrets.GH_REPO }}
+          MESSAGE: "build(deps): bump all dependencies and devDependencies"
