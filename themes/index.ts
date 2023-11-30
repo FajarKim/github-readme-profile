@@ -318,6 +318,55 @@ export const themes: Themes = {
     bg_color: "0a0f0b",
     stroke_color: "253829",
   },
+  carbonfox: {
+    title_color: "33B1FF",
+    text_color: "DFDFE0",
+    icon_color: "25BE6A",
+    border_color: "282828",
+    bg_color: "161616",
+  },
+  dawnfox: {
+    title_color: "56949F",
+    text_color: "575279",
+    icon_color: "618774",
+    border_color: "E5E9F0",
+    bg_color: "FAF4ED",
+  },
+  dayfox: {
+    title_color: "287980",
+    text_color: "352C24",
+    icon_color: "396847",
+    border_color: "F2E9E1",
+    bg_color: "F6F2EE",
+  },
+  duskfox: {
+    title_color: "9CCFD8",
+    text_color: "E0DEF4",
+    icon_color: "A3BE8C",
+    border_color: "393552",
+    bg_color: "232136",
+  },
+  nightfox: {
+    title_color: "63CDCF",
+    text_color: "DFDFE0",
+    icon_color: "81B29A",
+    border_color: "393B44",
+    bg_color: "192330",
+  },
+  nordfox: {
+    title_color: "88C0D0",
+    text_color: "E5E9F0",
+    icon_color: "A3BE8C",
+    border_color: "3B4252",
+    bg_color: "2E3440",
+  },
+  terafox: {
+    title_color: "A1CDD8",
+    text_color: "EBEBEB",
+    icon_color: "7AA4A1",
+    border_color: "2F3239",
+    bg_color: "152528",
+  },
 
   // Gradient themes
   "sunset-gradient": {
