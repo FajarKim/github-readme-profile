@@ -373,6 +373,7 @@ export const themes: Themes = {
     icon_color: "683c2c",
     border_color: "e8e6e4",
     bg_color: "dfaf77",
+    stroke_color: "683c2c",
   },
 
   // Gradient themes
