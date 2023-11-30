@@ -14,41 +14,54 @@ Use `?locale=LOCALE_CODE` parameter like so :-
     <td><p align="center"><b>Locale</b></p></td>
     <td><p align="center"><b>Progress</b></p></td>
   </tr>
-    <tr>
+  <tr>
     <td><p align="center"><code>en</code></p></td>
     <td><p align="left">English</p></td>
     <td><p align="center">100%</p></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td><p align="center"><code>id</code></p></td>
     <td><p align="left">Indonesian</p></td>
     <td><p align="center">100%</p></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td><p align="center"><code>ko</code></p></td>
     <td><p align="left">Korean</p></td>
     <td><p align="center">100%</p></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td><p align="center"><code>ar</code></p></td>
     <td><p align="left">Arabic</p></td>
     <td><p align="center">100%</p></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td><p align="center"><code>ja</code></p></td>
     <td><p align="left">Japanese</p></td>
     <td><p align="center">100%</p></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td><p align="center"><code>fr</code></p></td>
     <td><p align="left">French</p></td>
     <td><p align="center">100%</p></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td><p align="center"><code>fa</code></p></td>
     <td><p align="left">Persian</p></td>
     <td><p align="center">100%</p></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td><p align="center"><code>ms</code></p></td>
     <td><p align="left">Malay</p></td>
     <td><p align="center">100%</p></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td><p align="center"><code>su</code></p></td>
     <td><p align="left">Sundanese</p></td>
+    <td><p align="center">100%</p></td>
+  </tr>
+  <tr>
+    <td><p align="center"><code>pt</code></p></td>
+    <td><p align="left">Portuguese</p></td>
     <td><p align="center">100%</p></td>
   </tr>
 </table>
