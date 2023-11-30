@@ -27,8 +27,10 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `gruvbox_light` ![gruvbox_light][gruvbox_light] | `apprentice` ![apprentice][apprentice] | `radical` ![radical][radical] |
 | `tokyonight` ![tokyonight][tokyonight] | `shades-of-purple` ![shades-of-purple][shades-of-purple] | `ayu` ![ayu][ayu] |
 | `ayu-light` ![ayu-light][ayu-light] | `ayu-mirage` ![ayu-mirage][ayu-mirage] | `merko` ![merko][merko] |
-| `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] |
-| `siny-gradient` ![siny-gradient][siny-gradient] |
+| `carbonfox` ![carbonfox][carbonfox] | `dawnfox` ![dawnfox][dawnfox] | `dayfox` ![dayfox][dayfox] |
+| `duskfox` ![duskfox][duskfox] | `nightfox` ![nightfox][nightfox] | `nordfox` ![nordfox][nordfox] |
+| `terafox` ![terafox][terafox] | `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] |
+| `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
@@ -75,6 +77,13 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [ayu-light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ayu-light
 [ayu-mirage]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ayu-mirage
 [merko]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=merko
+[carbonfox]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=carbonfox
+[dawnfox]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=dawnfox
+[dayfox]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=dayfox
+[duskfox]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=duskfox
+[nightfox]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=nightfox
+[nordfox]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=nordfox
+[terafox]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=terafox
 [sunset-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=sunset-gradient
 [ocean-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ocean-gradient
 [ambient-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ambient-gradient
