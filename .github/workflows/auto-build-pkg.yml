@@ -65,4 +65,4 @@ jobs:
           AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
           PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           GH_REPO: ${{ secrets.GH_REPO }}
-          MESSAGE: "build(deps): bump all dependencies and devDependencies"
+          MESSAGE: "build(deps): bump all dependencies and devDependencies version"
