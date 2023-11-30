@@ -22,9 +22,9 @@ permissions:
   statuses: read
 
 jobs:
-  generateThemeDoc:
+  generateLocaleDoc:
     runs-on: ubuntu-latest
-    name: Generate theme doc
+    name: Generate locale doc
     strategy:
       matrix:
         node-version: [18.x]
