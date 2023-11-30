@@ -30,7 +30,7 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `carbonfox` ![carbonfox][carbonfox] | `dawnfox` ![dawnfox][dawnfox] | `dayfox` ![dayfox][dayfox] |
 | `duskfox` ![duskfox][duskfox] | `nightfox` ![nightfox][nightfox] | `nordfox` ![nordfox][nordfox] |
 | `terafox` ![terafox][terafox] | `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] |
-| `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] |
+| `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] | `purple-gradient` ![purple-gradient][purple-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
@@ -88,3 +88,4 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [ocean-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ocean-gradient
 [ambient-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ambient-gradient
 [siny-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=siny-gradient
+[purple-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=purple-gradient
