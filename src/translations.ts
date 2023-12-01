@@ -202,7 +202,7 @@ export const locales: Locales = {
     contributedToText: "Contribuiu em (ano passado)",
     rtlDirection: false,
   },
-  pt-BR: {
+  "pt-BR": {
      titleCard: "Estatísticas do GitHub de {name}",
      followersText: "Seguidores",
      followingText: "Seguindo",
