@@ -405,7 +405,7 @@ export const themes: Themes = {
   },
   "bluloco-dark": {
     title_color: "3375fe",
-    text_color: "cdd3e0",
+    text_color: "ff9369",
     icon_color: "25a45c",
     border_color: "21242D",
     bg_color: "282C34",
