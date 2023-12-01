@@ -1,6 +1,6 @@
 {
   "name": "@fajarkim/github-readme-profile",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "🙀 Generate your Stats GitHub Profile in SVG",
   "main": "api/index.ts",
   "dependencies": {
