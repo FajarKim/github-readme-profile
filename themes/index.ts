@@ -396,6 +396,20 @@ export const themes: Themes = {
     bg_color: "484848",
     stroke_color: "41363c",
   },
+  bluloco: {
+    title_color: "275fe4",
+    text_color: "df621b",
+    icon_color: "239749",
+    border_color: "ECEDEE",
+    bg_color: "F9F9F9",
+  },
+  "bluloco-dark": {
+    title_color: "3375fe",
+    text_color: "cdd3e0",
+    icon_color: "25a45c",
+    border_color: "21242D",
+    bg_color: "282C34",
+  },
 
   // Gradient themes
   "sunset-gradient": {
