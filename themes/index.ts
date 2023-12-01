@@ -375,6 +375,13 @@ export const themes: Themes = {
     bg_color: "dfaf77",
     stroke_color: "683c2c",
   },
+  iceberg: {
+    title_color: "84A0C6",
+    text_color: "D2D4DE",
+    icon_color: "3987AE",
+    border_color: "33374C",
+    bg_color: "1E2132",
+  },
 
   // Gradient themes
   "sunset-gradient": {
