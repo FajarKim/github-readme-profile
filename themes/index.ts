@@ -389,6 +389,13 @@ export const themes: Themes = {
     border_color: "e8f6f2",
     bg_color: "f8f6f2",
   },
+  zenburn: {
+    title_color: "efefef",
+    text_color: "f0dfaf",
+    icon_color: "cc9393",
+    bg_color: "484848",
+    stroke_color: "41363c",
+  },
 
   // Gradient themes
   "sunset-gradient": {
