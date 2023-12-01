@@ -382,6 +382,13 @@ export const themes: Themes = {
     border_color: "33374C",
     bg_color: "1E2132",
   },
+  laederon: {
+    title_color: "4a5d23",
+    text_color: "08457e",
+    icon_color: "817027",
+    border_color: "e8f6f2",
+    bg_color: "f8f6f2",
+  },
 
   // Gradient themes
   "sunset-gradient": {
