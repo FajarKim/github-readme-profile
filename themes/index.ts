@@ -266,6 +266,7 @@ export const themes: Themes = {
     title_color: "ffffff",
     icon_color: "ffffaf",
     text_color: "bcbcbc",
+    stroke_color: "444444",
     bg_color: "262626",
     username_color: "ffffaf",
   },
