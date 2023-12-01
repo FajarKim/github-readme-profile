@@ -64,6 +64,11 @@ Use `?locale=LOCALE_CODE` parameter like so :-
     <td><p align="left">Portuguese</p></td>
     <td><p align="center">100%</p></td>
   </tr>
+  <tr>
+    <td><p align="center"><code>pt-BR</code></p></td>
+    <td><p align="left">Portuguese (Brazil)</p></td>
+    <td><p align="center">100%</p></td>
+  </tr>
 </table>
 
 Want to add new translations? Consider reading the [contribution guidelines](https://github.com/FajarKim/github-readme-profile/blob/master/CONTRIBUTING.md#%EF%B8%8F-translations-contribution) :D
