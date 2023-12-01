@@ -29,9 +29,9 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `ayu-light` ![ayu-light][ayu-light] | `ayu-mirage` ![ayu-mirage][ayu-mirage] | `merko` ![merko][merko] |
 | `carbonfox` ![carbonfox][carbonfox] | `dawnfox` ![dawnfox][dawnfox] | `dayfox` ![dayfox][dayfox] |
 | `duskfox` ![duskfox][duskfox] | `nightfox` ![nightfox][nightfox] | `nordfox` ![nordfox][nordfox] |
-| `terafox` ![terafox][terafox] | `humoris` ![humoris][humoris] | `sunset-gradient` ![sunset-gradient][sunset-gradient] |
-| `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] |
-| `purple-gradient` ![purple-gradient][purple-gradient] |
+| `terafox` ![terafox][terafox] | `humoris` ![humoris][humoris] | `iceberg` ![iceberg][iceberg] |
+| `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] |
+| `siny-gradient` ![siny-gradient][siny-gradient] | `purple-gradient` ![purple-gradient][purple-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
@@ -86,6 +86,7 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [nordfox]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=nordfox
 [terafox]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=terafox
 [humoris]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=humoris
+[iceberg]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=iceberg
 [sunset-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=sunset-gradient
 [ocean-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ocean-gradient
 [ambient-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ambient-gradient
