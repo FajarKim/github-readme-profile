@@ -4,7 +4,7 @@
   "description": "🙀 Generate your Stats GitHub Profile in SVG",
   "main": "api/index.ts",
   "dependencies": {
-    "@fajarkim/svg2img": "^0.0.2",
+    "@resvg/resvg-js": "^2.6.0",
     "@types/escape-html": "^1.0.4",
     "@types/express": "^4.17.21",
     "axios": "^1.6.2",

@@ -1,6 +1,6 @@
 // Importing necessary libraries and modules
 import escapeHTML from "escape-html";
-import svg2img from "@fajarkim/svg2img";
+import { Resvg } from "@resvg/resvg-js";
 import getData from "../src/getData";
 import cardStyle from "../src/card";
 import { themes, Themes } from "../themes/index";
@@ -94,25 +94,14 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
     if (uiConfig.Format === "json") {
       res.json(fetchStats);
     } else if (uiConfig.Format === "png") {
-      // Converting SVG to PNG and sending the image in the response
-      const svgBuffer = Buffer.from(cardStyle(fetchStats, uiConfig));
-      const options = {
-        resvg: {
-          font: { defaultFontFamily: 'Segoe UI' },
-          background: 'rgba(0, 0, 0, .0)',
-        },
-        format: 'png' as any,
-      };
-      svg2img(svgBuffer as any, options, (error: Error | null, buffer: Buffer | null) => {
-        if (error) {
-          res.status(500).send(escapeHTML(error.message));
-        } else {
-          res.setHeader("Content-Type", "image/png");
-          if (buffer) {
-            res.send(buffer);
-          }
-        }
-      });
+      // Converting SVG to PNG using @resvg/resvg-js
+      const svgString = cardStyle(fetchStats, uiConfig);
+      const resvg = new Resvg(svgString, { font: { defaultFontFamily: "Segoe UI" }});
+      const pngBuffer = await resvg.render().asPng();
+
+      // Sending PNG in the response
+      res.setHeader("Content-Type", "image/png");
+      res.send(pngBuffer);
     } else {
       // Sending SVG in the response
       res.setHeader("Content-Type", "image/svg+xml");
