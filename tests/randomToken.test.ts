@@ -1,6 +1,6 @@
 import getRandomToken from "../src/getRandomToken";
 
-describe("getRandomToken", () => {
+describe("Test Get Random Token", () => {
   it("should generate a random token without Bearer prefix by default", () => {
     const token = getRandomToken(false);
 

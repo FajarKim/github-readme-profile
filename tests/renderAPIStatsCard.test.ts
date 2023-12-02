@@ -1,4 +1,3 @@
-// __tests__/readmeStats.test.ts
 import readmeStats from "../api/index";
 import getData from "../src/getData";
 import cardStyle from "../src/card";
