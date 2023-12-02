@@ -10,7 +10,7 @@ on:
     #        │ │  │  │ │
     #        │ │  │  │ │
     #        * *  *  * *
-    - cron: "0 0 */3 * *"
+    - cron: "0 0 */10 * *"
   workflow_dispatch:
 
 permissions:
