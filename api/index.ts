@@ -96,7 +96,7 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
     } else if (uiConfig.Format === "png") {
       // Converting SVG to PNG using @resvg/resvg-js
       const svgString = cardStyle(fetchStats, uiConfig);
-      const resvg = new Resvg(svgString, {});
+      const resvg = new Resvg(svgString, { font: { defaultFontFamily: "Segoe UI" }});
       const pngBuffer = await resvg.render().asPng();
 
       // Sending PNG in the response
