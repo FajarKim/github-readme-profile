@@ -72,23 +72,116 @@ You can look at a preview for [all available themes](./themes). You can also con
 You can customize the appearance of all your cards however you wish with URL parameters.
 
 #### Options
-- `title_color` - Card's title color (_hex color_). Default: `2f80ed`.
-- `text_color` - Body text color (_hex color_). Default: `434d58`.
-- `icon_color` - Icons color if available (_hex color_). Default: `4c71f2`.
-- `border_color` - Card's border color (_hex color_). Default: `e4e2e2`.
-- `bg_color` - Card's background color (_hex color_) or a gradient in the form of _angle,start,end_. Default: `fffefe`.
-- `stroke_color` - Profile image border color (_hex color_). Default: `e4e2e2` or `border_color` query.
-- `username_color` - Username text color (_hex color_). Deafult: `434d58` or `text_color` query.
-- `theme` - Name of the theme, choose from [all available themes](./themes). Default: `default` theme.
-- `locale` - Sets the language in the card, you can check full list of available locales [here](#available-locales). Default: `en`.
-- `border_width` - Sets the border's width manually (_number_). Default: `1`.
-- `border_radius` - Corner rounding on the card. Default: `4.5`.
-- `format` - Output format card option (`svg`, `png`, and `json`). Default: `svg`.
-- `disabled_animations` - Disables all animations in the card (_boolean_). Default: `false`.
-- `hide` - Hides the [specified items](#hiding-individual-stats) from stats (_Comma-separated values_). Default: `[] (blank array)`.
-- `show` - Shows [additional items](#showing-additional-individual-stats) on stats card (_Comma-separated values_). Default: `[] (blank array)`.
-- `hide_border` - Hides the card's border (_boolean_). Default: `false`.
-- `hide_stroke` - Hides the image's profile stroke in the card (_boolean_). Default: `false`.
+<table>
+  <tr>
+    <td><p align="center"><b>Name</b></p></td>
+    <td><p align="center"><b>Description</b></p></td>
+    <td><p align="center"><b>Type</b></p></td>
+    <td><p align="center"><b>Default value</b></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>title_color</code></p></td>
+    <td><p align="left">Card's title color.</p></td>
+    <td><p align="left">string (hex color)</p></td>
+    <td><p align="left"><code>2f80ed</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>text_color</code></p></td>
+    <td><p align="left">Body text color.</p></td>
+    <td><p align="left">string (hex color)</p></td>
+    <td><p align="left"><code>434d58</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>icon_color</code></p></td>
+    <td><p align="left">Icons color.</p></td>
+    <td><p align="left">string (hex color)</p></td>
+    <td><p align="left"><code>4c71f2</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>border_color</code></p></td>
+    <td><p align="left">Card's border color. Does not apply when <code>hide_border</code> is enabled.</p></td>
+    <td><p align="left">string (hex color)</p></td>
+    <td><p align="left"><code>e4e2e2</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>bg_color</code></p></td>
+    <td><p align="left">Card's background color.</p></td>
+    <td><p align="left">string (hex color or a gradient in the form of <i>angle,start,end</i>)</p></td>
+    <td><p align="left"><code>fffefe</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>stroke_color</code></p></td>
+    <td><p align="left">Profile image border color. Does not apply when <code>hide_stroke</code> is enabled.</p></td>
+    <td><p align="left">string (hex color)</p></td>
+    <td><p align="left"><code>e4e2e2</code> or <code>border_color</code> query</p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>username_color</code></p></td>
+    <td><p align="left">Username text color.</p></td>
+    <td><p align="left">string (hex color)</p></td>
+    <td><p align="left"><code>434d58</code> or <code>text_color</code> query</p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>theme</code></p></td>
+    <td><p align="left">Name of the theme, choose from <a href="/themes">all available themes</a>.</p></td>
+    <td><p align="left">enum</p></td>
+    <td><p align="left"><code>default</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>locale</code></p></td>
+    <td><p align="left">Sets the language in the card, you can check full list of available locales <a href="/docs/translations.md">here</a>.</p></td>
+    <td><p align="left">enum</p></td>
+    <td><p align="left"><code>en</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>border_width</code></p></td>
+    <td><p align="left">Sets the border's width manually.</p></td>
+    <td><p align="left">number</p></td>
+    <td><p align="left"><code>1</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>border_radius</code></p></td>
+    <td><p align="left">Corner rounding on the card.</p></td>
+    <td><p align="left">number</td>
+    <td><p align="left"><code>4.5</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>hide</code></p></td>
+    <td><p align="left">Hides the <a href="#hiding-individual-stats">specified items</a> from stats.</p></td>
+    <td><p align="left">string (comma-separated values)</td>
+    <td><p align="left"><code>null</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>show</code></p></td>
+    <td><p align="left">Shows <a href="#showing-additional-individual-stats">additional items</a> on stats card.</p></td>
+    <td><p align="left">string (comma-separated values)</td>
+    <td><p align="left"><code>null</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>format</code></p></td>
+    <td><p align="left">Output format card option (i.e. <code>svg</code>, <code>png</code>, or <code>json</code>).</p></td>
+    <td><p align="left">enum</td>
+    <td><p align="left"><code>svg</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>disabled_animations</code></p></td>
+    <td><p align="left">Disables all animations in the card.</p></td>
+    <td><p align="left">boolean</td>
+    <td><p align="left"><code>false</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>hide_border</code></p></td>
+    <td><p align="left">Hides the card's border.</p></td>
+    <td><p align="left">boolean</td>
+    <td><p align="left"><code>false</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>hide_stroke</code></p></td>
+    <td><p align="left">Hides the image's profile stroke in the card.</p></td>
+    <td><p align="left">boolean</td>
+    <td><p align="left"><code>false</code></p></td>
+  </tr>
+</table>
 
 #### Use the transparent theme
 We have included a `transparent` theme that has a transparent background. This theme is optimized to look good on GitHub's dark and light default themes. You can enable this theme using the `&theme=transparent` parameter like so:
@@ -246,10 +339,10 @@ This repository contains forked from [tuhinpal/readme-stats-github](https://gith
 ## 💰 Donate
 Love the project? Please consider donating to help it improve!
 <div align="left">
-    <a href="https://github.com/sponsors/FajarKim/"><img src="https://img.shields.io/badge/GitHub-Sponsor-blue?labelColor=302d41&color=f5bde6&logo=github&logoColor=d9e0ee&style=for-the-badge" alt="GitHub Sponsor"></a>
-    <a href="https://paypal.me/agusbirawan/"><img src="https://img.shields.io/badge/PayPal-Donate-blue?labelColor=302d41&color=f4dbd6&logo=paypal&logoColor=d9e0ee&style=for-the-badge" alt="PayPal Donate"></a>
-    <a href="https://buymeacoffee.com/fajarkim/"><img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-blue?labelColor=302d41&color=eed49f&logo=buymeacoffee&logoColor=d9e0ee&style=for-the-badge" alt="Buy Me a Coffee"></a>
-    <a href="https://trakteer.id/FajarKim/"><img src="https://custom-icon-badges.demolab.com/badge/Trakteer-Donate-blue?labelColor=302d41&color=ed8796&logo=trakteerid&logoColor=d9e0ee&style=for-the-badge" alt="Trakteer.id Donate"></a>
+  <a href="https://github.com/sponsors/FajarKim/"><img src="https://img.shields.io/badge/GitHub-Sponsor-blue?labelColor=302d41&color=f5bde6&logo=github&logoColor=d9e0ee&style=for-the-badge" alt="GitHub Sponsor"></a>
+  <a href="https://paypal.me/agusbirawan/"><img src="https://img.shields.io/badge/PayPal-Donate-blue?labelColor=302d41&color=f4dbd6&logo=paypal&logoColor=d9e0ee&style=for-the-badge" alt="PayPal Donate"></a>
+  <a href="https://buymeacoffee.com/fajarkim/"><img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-blue?labelColor=302d41&color=eed49f&logo=buymeacoffee&logoColor=d9e0ee&style=for-the-badge" alt="Buy Me a Coffee"></a>
+  <a href="https://trakteer.id/FajarKim/"><img src="https://custom-icon-badges.demolab.com/badge/Trakteer-Donate-blue?labelColor=302d41&color=ed8796&logo=trakteerid&logoColor=d9e0ee&style=for-the-badge" alt="Trakteer.id Donate"></a>
 </div>
 
 Are you considering supporting the project by donating to me? Please DO NOT!!
