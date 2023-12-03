@@ -31,8 +31,9 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `duskfox` ![duskfox][duskfox] | `nightfox` ![nightfox][nightfox] | `nordfox` ![nordfox][nordfox] |
 | `terafox` ![terafox][terafox] | `humoris` ![humoris][humoris] | `iceberg` ![iceberg][iceberg] |
 | `laederon` ![laederon][laederon] | `zenburn` ![zenburn][zenburn] | `bluloco` ![bluloco][bluloco] |
-| `bluloco-dark` ![bluloco-dark][bluloco-dark] | `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] |
-| `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] | `purple-gradient` ![purple-gradient][purple-gradient] |
+| `bluloco-dark` ![bluloco-dark][bluloco-dark] | `aura` ![aura][aura] | `sunset-gradient` ![sunset-gradient][sunset-gradient] |
+| `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] |
+| `purple-gradient` ![purple-gradient][purple-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
@@ -92,6 +93,7 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [zenburn]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=zenburn
 [bluloco]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=bluloco
 [bluloco-dark]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=bluloco-dark
+[aura]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=aura
 [sunset-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=sunset-gradient
 [ocean-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ocean-gradient
 [ambient-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ambient-gradient
