@@ -2,6 +2,7 @@
   <img src="https://raw.githubusercontent.com/FajarKim/github-readme-profile/master/logo.svg" alt="GitHub Readme Profile" width="120"/>
   <h2>GitHub Readme Profile</h2>
   <p>🙀 Generate your Stats GitHub Profile in SVG</p>
+  <p><a href="https://irusa.org/middle-east/palestine/"><img src="https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg" width="100%" alt="Support Palestine"/></a></p>
   <p><a href="https://github.com/FajarKim/github-readme-profile/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml">Report Bugs</a> · <a href="https://github.com/FajarKim/github-readme-profile/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml">Request Feature</a> · <a href="https://github.com/FajarKim/github-readme-profile/discussions/new?category=q-a">Ask Question</a></p>
   <a href="https://github.com/FajarKim/github-readme-profile/releases"><img src="https://custom-icon-badges.demolab.com/github/v/tag/FajarKim/github-readme-profile?label=Version&labelColor=302d41&color=f2cdcd&logoColor=d9e0ee&logo=tag&style=for-the-badge" alt="GitHub Readme Profile Version"/></a>
   <a href="https://www.codefactor.io/repository/github/fajarkim/github-readme-profile"><img src="https://img.shields.io/codefactor/grade/github/FajarKim/github-readme-profile?label=CodeFactor&labelColor=302d41&color=8bd5ca&logoColor=d9e0ee&logo=codefactor&style=for-the-badge" alt="GitHub Readme Profile Code Quality"/></a>
@@ -265,6 +266,8 @@ Specially thanks ❤️ for contributors bellow:
 </a>
 
 Want to contribute? Please note our contribution guidelines [here](/CONTRIBUTING.md).
+
+[![StandWithPalestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/StandWithPalestine.svg)](https://irusa.org/middle-east/palestine/)
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/FajarKim/FajarKim/master/images/line.svg?sanitize=true"/>
