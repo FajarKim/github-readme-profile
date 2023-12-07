@@ -70,6 +70,6 @@ jobs:
 
       - name: Create Pull Request
         run: |
-          gh pr create --title "${message}" --body ""
+          gh pr create --title "docs(translation): auto update translation readme" --body ""
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

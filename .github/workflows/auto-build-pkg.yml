@@ -76,6 +76,6 @@ jobs:
 
       - name: Create Pull Request
         run: |
-          gh pr create --title "${message}" --body ""
+          gh pr create --title "build(deps): bump all dependencies and devDependencies version" --body ""
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
