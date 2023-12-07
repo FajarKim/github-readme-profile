@@ -433,6 +433,14 @@ export const themes: Themes = {
     border_color: "933547",
     bg_color: "090b0c",
   },
+  neon: {
+    title_color: "00EAD3",
+    text_color: "FF449F",
+    icon_color: "00EAD3",
+    border_color: "FFFFFF",
+    bg_color: "000000",
+    stroke_color: "444444",
+  },
 
   // Gradient themes
   "sunset-gradient": {
