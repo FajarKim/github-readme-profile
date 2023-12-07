@@ -57,8 +57,8 @@ jobs:
 
       - name: Push commit to a new branch
         run: |
-          branch="auto_update_theme_readme"
-          message="docs(theme): auto update theme readme"
+          export branch="auto_update_theme_readme"
+          export message="docs(theme): auto update theme readme"
           if [[ "$(git status --porcelain)" != "" ]]; then
             git branch -D ${branch} || true
             git checkout -b ${branch}

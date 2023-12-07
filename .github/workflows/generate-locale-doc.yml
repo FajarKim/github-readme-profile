@@ -57,8 +57,8 @@ jobs:
 
       - name: Push commit to a new branch
         run: |
-          branch="auto_update_locale_readme"
-          message="docs(translation): auto update translation readme"
+          export branch="auto_update_locale_readme"
+          export message="docs(translation): auto update translation readme"
           if [[ "$(git status --porcelain)" != "" ]]; then
             git branch -D ${branch} || true
             git checkout -b ${branch}
