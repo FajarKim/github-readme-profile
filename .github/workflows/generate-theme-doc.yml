@@ -57,16 +57,19 @@ jobs:
 
       - name: Push commit to a new branch
         run: |
+          branch="auto_update_theme_readme"
           message="docs(theme): auto update theme readme"
           if [[ "$(git status --porcelain)" != "" ]]; then
-            git branch -D auto-update-theme-readme || true
-            git checkout -b auto-update-theme-readme
+            git branch -D ${branch} || true
+            git checkout -b ${branch}
             git add themes/README.md
             git commit --message "${message}"
-            git remote add origin-auto-update-theme-readme "https://github.com/FajarKim/github-readme-profile.git"
-            git push --force --quiet --set-upstream origin-auto-update-theme-readme auto-update-theme-readme
+            git remote add origin-${branch} "https://github.com/FajarKim/github-readme-profile.git"
+            git push --force --quiet --set-upstream origin-${branch} ${branch}
           fi
 
       - name: Create Pull Request
         run: |
           gh pr create --title "${message}" --body ""
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

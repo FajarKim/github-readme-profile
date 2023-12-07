@@ -57,16 +57,19 @@ jobs:
 
       - name: Push commit to a new branch
         run: |
+          branch="auto_update_locale_readme"
           message="docs(translation): auto update translation readme"
           if [[ "$(git status --porcelain)" != "" ]]; then
-            git branch -D auto-update-locale-readme || true
-            git checkout -b auto-update-locale-readme
+            git branch -D ${branch} || true
+            git checkout -b ${branch}
             git add docs/translations.md
             git commit --message "${message}"
-            git remote add origin-auto-update-locale-readme "https://github.com/FajarKim/github-readme-profile.git"
-            git push --force --quiet --set-upstream origin-auto-update-locale-readme auto-update-locale-readme
+            git remote add origin-${branch} "https://github.com/FajarKim/github-readme-profile.git"
+            git push --force --quiet --set-upstream origin-${branch} ${branch}
           fi
 
       - name: Create Pull Request
         run: |
           gh pr create --title "${message}" --body ""
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
