@@ -1,3 +1,12 @@
+queue_rules:
+  # If you have other queues defined, add this at the end so it is processed last
+  - name: dep-update
+    batch_size: 10
+    # Wait for up to 30 minutes for the batch to fill up
+    batch_max_wait_time: 30 min
+    queue_conditions:
+      - author = dependabot[bot]
+
 pull_request_rules:
   - name: Automatic approve for Dependabot pull requests
     conditions:
@@ -10,4 +19,4 @@ pull_request_rules:
       - author = dependabot[bot]
       - "#approved-reviews-by>=1"
     actions:
-      merge:
+      queue:
