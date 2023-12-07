@@ -22,7 +22,7 @@ permissions:
   discussions: read
   packages: read
   pages: read
-  pull-requests: read
+  pull-requests: write
   repository-projects: read
   security-events: read
   statuses: read
@@ -48,21 +48,34 @@ jobs:
       - name: Fix unsafe repo error
         run: git config --global --add safe.directory ${{ github.workspace }}
 
-      - name: npm install, update
+      - name: Run npm install and update
         run: |
           npm ci
           npm update --save
         env:
           CI: true
 
-      - name: Run Script
-        uses: skx/github-action-tester@e29768ff4ff67be9d1fdbccd8836ab83233bebb1 # v0.10.0
-        with:
-          script: ./scripts/push-commit.sh
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global --add safe.directory ${GITHUB_WORKSPACE}
+
+      - name: Push commit to a new branch
+        run: |
+          export branch="auto_build_and_bump"
+          export message="build(deps): bump all dependencies and devDependencies version"
+          if [[ "$(git status --porcelain)" != "" ]]; then
+            git branch -D ${branch} || true
+            git checkout -b ${branch}
+            git add docs/translations.md
+            git commit --message "${message}"
+            git remote add origin-${branch} "https://github.com/FajarKim/github-readme-profile.git"
+            git push --force --quiet --set-upstream origin-${branch} ${branch}
+          fi
+
+      - name: Create Pull Request
+        run: |
+          gh pr create --title "${message}" --body ""
         env:
-          CI: true
-          AUTHOR_NAME: GitHub Actions
-          AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-          GH_REPO: ${{ secrets.GH_REPO }}
-          MESSAGE: "build(deps): bump all dependencies and devDependencies version"
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
