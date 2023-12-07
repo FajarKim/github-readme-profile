@@ -20,3 +20,8 @@ pull_request_rules:
       - "#approved-reviews-by>=1"
     actions:
       queue:
+  - name: Automatic merge for GitHub Actions pull requests
+    conditions:
+      - author = github-actions[bot]
+    actions:
+      merged:
