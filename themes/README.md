@@ -33,8 +33,9 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `laederon` ![laederon][laederon] | `zenburn` ![zenburn][zenburn] | `bluloco` ![bluloco][bluloco] |
 | `bluloco-dark` ![bluloco-dark][bluloco-dark] | `aura` ![aura][aura] | `lava-light` ![lava-light][lava-light] |
 | `lava-dark` ![lava-dark][lava-dark] | `neon` ![neon][neon] | `neon-palenight` ![neon-palenight][neon-palenight] |
-| `neon-blurange` ![neon-blurange][neon-blurange] | `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] |
-| `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] | `purple-gradient` ![purple-gradient][purple-gradient] |
+| `neon-blurange` ![neon-blurange][neon-blurange] | `kacho_ga` ![kacho_ga][kacho_ga] | `sunset-gradient` ![sunset-gradient][sunset-gradient] |
+| `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] |
+| `purple-gradient` ![purple-gradient][purple-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
@@ -100,6 +101,7 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [neon]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=neon
 [neon-palenight]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=neon-palenight
 [neon-blurange]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=neon-blurange
+[kacho_ga]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=kacho_ga
 [sunset-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=sunset-gradient
 [ocean-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ocean-gradient
 [ambient-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ambient-gradient
