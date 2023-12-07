@@ -455,6 +455,7 @@ export const themes: Themes = {
     icon_color: "FB750B",
     border_color: "C7CCFF",
     bg_color: "030D6B",
+    stroke_color: "2130BB",
   },
 
   // Gradient themes
