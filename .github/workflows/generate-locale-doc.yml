@@ -16,7 +16,7 @@ permissions:
   discussions: read
   packages: read
   pages: read
-  pull-requests: read
+  pull-requests: write
   repository-projects: read
   security-events: read
   statuses: read
@@ -42,21 +42,31 @@ jobs:
       - name: Fix unsafe repo error
         run: git config --global --add safe.directory ${{ github.workspace }}
 
-      - name: npm install, generate readme
+      - name: Run npm install and generate readme
         run: |
           npm ci
           npm run locale-readme-gen
         env:
           CI: true
 
-      - name: Run Script
-        uses: skx/github-action-tester@e29768ff4ff67be9d1fdbccd8836ab83233bebb1 # v0.10.0
-        with:
-          script: ./scripts/push-commit.sh
-        env:
-          CI: true
-          AUTHOR_NAME: GitHub Actions
-          AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-          GH_REPO: ${{ secrets.GH_REPO }}
-          MESSAGE: "docs(translation): auto update translation readme"
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global --add safe.directory ${GITHUB_WORKSPACE}
+
+      - name: Push commit to a new branch
+        run: |
+          message="docs(translation): auto update translation readme"
+          if [[ "$(git status --porcelain)" != "" ]]; then
+            git branch -D auto-update-locale-readme || true
+            git checkout -b auto-update-locale-readme
+            git add docs/translations.md
+            git commit --message "${message}"
+            git remote add origin-auto-update-locale-readme "https://github.com/FajarKim/github-readme-profile.git"
+            git push --force --quiet --set-upstream origin-auto-update-locale-readme auto-update-locale-readme
+          fi
+
+      - name: Create Pull Request
+        run: |
+          gh pr create --title "${message}" --body ""
