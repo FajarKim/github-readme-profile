@@ -1,6 +1,9 @@
-themes: themes/index.ts
-doc-translation: docs/*
-card: src/card.ts
+themes:
+  - themes/index.ts
+doc-translation:
+  - docs/*
+card:
+  - src/card.ts
 card-i18n:
   - src/translations.ts
 documentation:
