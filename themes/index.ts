@@ -441,6 +441,14 @@ export const themes: Themes = {
     bg_color: "000000",
     stroke_color: "444444",
   },
+  "neon-palenight": {
+    title_color: "F9DD3C",
+    text_color: "5CADC0",
+    icon_color: "E41D44",
+    border_color: "A8A8A8",
+    bg_color: "212237",
+    stroke_color: "666666",
+  },
 
   // Gradient themes
   "sunset-gradient": {
