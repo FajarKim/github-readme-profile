@@ -449,6 +449,14 @@ export const themes: Themes = {
     bg_color: "212237",
     stroke_color: "3B3D62",
   },
+  "neon-blurange": {
+    title_color: "25FB88",
+    text_color: "C7CCFF",
+    icon_color: "FB750B",
+    border_color: "C7CCFF",
+    bg_color: "030D6B",
+    stroke_color: "2130BB",
+  },
 
   // Gradient themes
   "sunset-gradient": {
