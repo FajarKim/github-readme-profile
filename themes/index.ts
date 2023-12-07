@@ -457,6 +457,13 @@ export const themes: Themes = {
     bg_color: "030D6B",
     stroke_color: "2130BB",
   },
+  kacho_ga: {
+    title_color: "bf4a3f",
+    text_color: "d9c8a9",
+    icon_color: "a64833",
+    bg_color: "402b23",
+    stroke_color: "bf4a3f",
+  },
 
   // Gradient themes
   "sunset-gradient": {
