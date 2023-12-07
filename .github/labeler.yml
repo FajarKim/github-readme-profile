@@ -1,27 +1,27 @@
-themes:
-  - themes/index.ts
-doc-translation:
-  - docs/*
 card:
   - src/card.ts
 card-i18n:
   - src/translations.ts
+ci:
+  - .github/workflows/*
+  - scripts/*
+dependencies:
+  - package.json
+  - package-lock.json
+  - tsconfig.ts
+doc-translation:
+  - docs/*
 documentation:
   - README.md
   - CONTRIBUTING.md
   - CODE_OF_CONDUCT.md
   - SECURITY.md
-dependencies:
-  - package.json
-  - package-lock.json
-  - tsconfig.ts
+github_actions:
+  - .github/*.yml
+  - .github/workflows/*
 stats-card:
   - api/index.ts
   - src/fetcher/apiFetch.ts
   - src/fetcher/repositoryFetch.ts
-ci:
-  - .github/workflows/*
-  - scripts/*
-github_actions:
-  - .github/*.yml
-  - .github/workflows/*
+themes:
+  - themes/index.ts
