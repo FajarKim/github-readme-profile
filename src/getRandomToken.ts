@@ -1,5 +1,6 @@
 // Importing necessary module
 import dotenv from "dotenv";
+import { getInput } from "@actions/core";
 
 // Loads environment variables from a .env file if present
 dotenv.config();
@@ -19,9 +20,19 @@ function getRandomToken(bearerHeader: boolean): string {
   const getRandomEnv: string =
     getGhEnv[Math.floor(Math.random() * getGhEnv.length)];
 
+  if (!getRandomEnv) {
+    // Use GitHub Actions core module to get the token
+    const getRandomEnv = getInput("github_token");
+
+    if (!getRandomEnv) {
+      throw new Error("Could not find github token");
+    }
+  }
+
   if (bearerHeader) {
     return `Bearer ${getRandomEnv}`;
   }
+
   return getRandomEnv;
 }
 
