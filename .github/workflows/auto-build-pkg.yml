@@ -75,6 +75,8 @@ jobs:
 
       - name: Create Pull Request
         run: |
-          gh pr create --title "build(deps): bump all dependencies and devDependencies version" --body ""
+          if [[ "$(git status --porcelain)" != "" ]]; then
+            gh pr create --title "build(deps): bump all dependencies and devDependencies version" --body ""
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
