@@ -34,9 +34,9 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `bluloco-dark` ![bluloco-dark][bluloco-dark] | `aura` ![aura][aura] | `lava-light` ![lava-light][lava-light] |
 | `lava-dark` ![lava-dark][lava-dark] | `neon` ![neon][neon] | `neon-dark` ![neon-dark][neon-dark] |
 | `neon-palenight` ![neon-palenight][neon-palenight] | `neon-blurange` ![neon-blurange][neon-blurange] | `kacho_ga` ![kacho_ga][kacho_ga] |
-| `kanagawa` ![kanagawa][kanagawa] | `kanagawa_light` ![kanagawa_light][kanagawa_light] | `sunset-gradient` ![sunset-gradient][sunset-gradient] |
-| `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] |
-| `purple-gradient` ![purple-gradient][purple-gradient] |
+| `kanagawa` ![kanagawa][kanagawa] | `kanagawa_light` ![kanagawa_light][kanagawa_light] | `space` ![space][space] |
+| `space_light` ![space_light][space_light] | `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] |
+| `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] | `purple-gradient` ![purple-gradient][purple-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
@@ -106,6 +106,8 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [kacho_ga]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=kacho_ga
 [kanagawa]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=kanagawa
 [kanagawa_light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=kanagawa_light
+[space]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=space
+[space_light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=space_light
 [sunset-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=sunset-gradient
 [ocean-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ocean-gradient
 [ambient-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ambient-gradient
