@@ -1,2 +1,6 @@
+.env.example
 .github/
+.tests/
 scripts/
+coverage/
+public/
