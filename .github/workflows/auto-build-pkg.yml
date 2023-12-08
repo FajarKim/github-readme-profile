@@ -64,12 +64,11 @@ jobs:
       - name: Push commit to a new branch
         run: |
           export branch="auto_build_and_bump"
-          export message="build(deps): bump all dependencies and devDependencies version"
           if [[ "$(git status --porcelain)" != "" ]]; then
             git branch -D ${branch} || true
             git checkout -b ${branch}
             git add docs/translations.md
-            git commit --message "${message}"
+            git commit --message "build(deps): bump all dependencies and devDependencies version"
             git remote add origin-${branch} "https://github.com/FajarKim/github-readme-profile.git"
             git push --force --quiet --set-upstream origin-${branch} ${branch}
           fi
