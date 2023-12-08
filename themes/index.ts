@@ -472,6 +472,20 @@ export const themes: Themes = {
     bg_color: "402b23",
     stroke_color: "bf4a3f",
   },
+  kanagawa: {
+    title_color: "E82424",
+    text_color: "DCD7BA",
+    icon_color: "938AA9",
+    border_color: "393836",
+    bg_color: "1F1F28",
+  },
+  kanagawa_light: {
+    title_color: "d7474b",
+    text_color: "1F1F28",
+    icon_color: "624c83",
+    border_color: "d5cea3",
+    bg_color: "f2ecbc",
+  },
 
   // Gradient themes
   "sunset-gradient": {
