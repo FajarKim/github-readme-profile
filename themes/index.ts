@@ -486,6 +486,20 @@ export const themes: Themes = {
     border_color: "d5cea3",
     bg_color: "f2ecbc",
   },
+  space: {
+    title_color: "4f97d7",
+    text_color: "ffc8c8",
+    icon_color: "9f8766",
+    border_color: "292b2e",
+    bg_color: "212026",
+  },
+  space_light: {
+    title_color: "3a81c3",
+    text_color: "655370",
+    icon_color: "da8b55",
+    border_color: "fbf8ef",
+    bg_color: "efeae9",
+  },
 
   // Gradient themes
   "sunset-gradient": {
