@@ -9,6 +9,7 @@
   <a href="https://github.com/FajarKim/github-readme-profile/issues"><img src="https://custom-icon-badges.demolab.com/github/issues/FajarKim/github-readme-profile?label=Issue&labelColor=302d41&color=f5a97f&logoColor=d9e0ee&logo=issue&style=for-the-badge" alt="GitHub Readme Profile Issues"/></a>
   <a href="https://github.com/FajarKim/github-readme-profile/pull"><img src="https://custom-icon-badges.demolab.com/github/issues-pr/FajarKim/bz2-shell?&label=Pull%20requests&labelColor=302d41&color=ddb6f2&logoColor=d9e0ee&logo=git-pull-request&style=for-the-badge" alt="GitHub Readme Profile PRs"/></a>
   <a href="https://github.com/FajarKim/github-readme-profile/graphs/contributors"><img src="https://custom-icon-badges.demolab.com/github/contributors/FajarKim/github-readme-profile?label=Contributors&labelColor=302d41&color=c9cbff&logoColor=d9e0ee&logo=people&style=for-the-badge"/></a>
+  <a href="https://chat.whatsapp.com/DM6WaaTQ4IJ3VOe2ly6KJD"><img src="https://img.shields.io/badge/Join%20To%20Community-blue?style=for-the-badge&logo=whatsapp&color=ddb6f2&logoColor=a6da95"/></a>
 </div>
 
 </br>
