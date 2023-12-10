@@ -58,7 +58,7 @@ jobs:
       - name: Push commit to a new branch and create prs
         run: |
           branch="auto_update_locale_readme"
-          message="docs(translation): auto update translation readme"
+          message="docs(i18n): auto update translation readme"
           body=$(printf "## Changes File\n\n\`\`\`diff\n$(git diff)\n\`\`\`\n\n> Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>")
           if [[ "$(git status --porcelain)" != "" ]]; then
             git branch -D ${branch} || true
