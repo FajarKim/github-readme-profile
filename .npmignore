@@ -1,6 +1,6 @@
 .env.example
 .github/
-.tests/
+tests/
 scripts/
 coverage/
 public/
