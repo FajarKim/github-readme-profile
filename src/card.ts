@@ -29,7 +29,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     titleYAngle: isDisabledAnimations ? 0 : -10,
     textXAngle: isRtlDirection ? 215 : 20,
     dataXAngle: isRtlDirection ? 15 : 220,
-    iconXAngle: isRtlDirection ? 220 : -5,
+    iconXAngle: isRtlDirection ? 225 : -5,
     imageXAngle: isDisabledAnimations ? 120 : 125,
     imageYAngle: isDisabledAnimations ? 70 : 65,
     userXAngle: isDisabledAnimations ? 119.9 : 109.9,
