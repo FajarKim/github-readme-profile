@@ -27,7 +27,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   const angle = {
     titleXAngle: isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5),
     titleYAngle: isDisabledAnimations ? 0 : -10,
-    textXAngle: isRtlDirection ? 210 : 25,
+    textXAngle: isRtlDirection ? 205 : 20,
     dataXAngle: isRtlDirection ? 15 : 220,
     iconXAngle: isRtlDirection ? 215 : -5,
     imageXAngle: isDisabledAnimations ? 120 : 125,
