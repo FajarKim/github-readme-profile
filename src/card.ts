@@ -28,7 +28,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
     titleXAngle: isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5),
     titleYAngle: isDisabledAnimations ? 0 : -10,
     textXAngle: isRtlDirection ? 210 : 25,
-    dataXAngle: isRtlDirection ? 5 : 230,
+    dataXAngle: isRtlDirection ? 15 : 220,
     iconXAngle: isRtlDirection ? 220 : 0,
     imageXAngle: isDisabledAnimations ? 120 : 125,
     imageYAngle: isDisabledAnimations ? 70 : 65,
