@@ -1,6 +1,10 @@
 .env.example
+coverage.yml
+jest.config.json
+
 .github/
 tests/
 scripts/
+node_modules/
 coverage/
 public/
