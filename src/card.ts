@@ -25,17 +25,17 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
   // Setting angles and positions for SVG elements
   const direction = isRtlDirection ? "rtl" : "ltr";
   const angle = {
-    titleXAngle: isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5);
-    titleYAngle: isDisabledAnimations ? 0 : -10;
-    textXAngle: isRtlDirection ? 210 : 25;
-    dataXAngle: isRtlDirection ? 5 : 230;
-    iconXAngle: isRtlDirection ? 220 : 0;
-    imageXAngle: isDisabledAnimations ? 120 : 125;
-    imageYAngle: isDisabledAnimations ? 70 : 65;
-    userXAngle: isDisabledAnimations ? 119.9 : 109.9;
-    userYAngle: isDisabledAnimations ? 140 : 130;
-    follXAngle: isDisabledAnimations ? 120 : 110;
-    follYAngle: isDisabledAnimations ? 161 : 151;
+    titleXAngle: isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5),
+    titleYAngle: isDisabledAnimations ? 0 : -10,
+    textXAngle: isRtlDirection ? 210 : 25,
+    dataXAngle: isRtlDirection ? 5 : 230,
+    iconXAngle: isRtlDirection ? 220 : 0,
+    imageXAngle: isDisabledAnimations ? 120 : 125,
+    imageYAngle: isDisabledAnimations ? 70 : 65,
+    userXAngle: isDisabledAnimations ? 119.9 : 109.9,
+    userYAngle: isDisabledAnimations ? 140 : 130,
+    follXAngle: isDisabledAnimations ? 120 : 110,
+    follYAngle: isDisabledAnimations ? 161 : 151,
   };
 
   // Setting styles for hiding stroke and border based on UI configuration
