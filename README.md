@@ -368,7 +368,7 @@ Want to contribute? Please note our contribution guidelines [here](/CONTRIBUTING
 </div>
 
 <p align="center">Made with ❤️ and TypeScript</p>
-<p align="center">Copyright © 2023 Rangga Fajar Oktariansyah</p>
+<p align="center">Copyright © 2023-present Rangga Fajar Oktariansyah</p>
 <div align="center">
   <a href="LICENSE"><img src="https://custom-icon-badges.demolab.com/github/license/FajarKim/github-readme-profile?label=License&labelColor=302d41&color=91d7e3&logo=law&logoColor=d9e0ee&style=for-the-badge" alt="GitHub Readme Profile License"></a>
 </div>
