@@ -58,10 +58,10 @@ async function getData(username: string): Promise<GetData> {
     total_prs: millify(user.pullRequests.totalCount),
     total_prs_merged: millify(user.mergedPullRequests.totalCount),
     total_commits: millify(
-      user.contributionsCollection.restrictedContributionsCount +
-        user.contributionsCollection.totalCommitContributions
+      user.restrictedContributionsCount +
+        user.totalCommitContributions
     ),
-    total_review: millify(user.contributionsCollection.totalPullRequestReviewContributions),
+    total_review: millify(user.totalPullRequestReviewContributions),
     total_discussion_answered: millify(user.discussionAnswered.totalCount),
     total_discussion_started: millify(user.discussionStarted.totalCount),
     total_contributed_to: millify(user.repositoriesContributedTo.totalCount),

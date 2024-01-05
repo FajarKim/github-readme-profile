@@ -10,7 +10,6 @@ export interface User {
   repositories: Repositories;
   followers: Followers;
   following: Following;
-  contributionsCollection: ContributionsCollection;
   openedIssues: OpenedIssues;
   closedIssues: ClosedIssues;
   pullRequests: PullRequests;
@@ -18,6 +17,9 @@ export interface User {
   discussionStarted: DiscussionStarted;
   discussionAnswered: DiscussionAnswered;
   repositoriesContributedTo: RepositoriesContributedTo;
+  totalCommitContributions: number;
+  restrictedContributionsCount: number;
+  totalPullRequestReviewContributions: number;
 }
 
 // Represents the total count of repositories
@@ -77,6 +79,80 @@ export interface RepositoriesContributedTo {
   totalCount: number;
 }
 
+async function getUserJoinYear(username: string): Promise<number> {
+  const data = await axios({
+    method: "post",
+    url: "https://api.github.com/graphql",
+    headers: {
+      "User-Agent": "FajarKim/github-readme-profile",
+      Authorization: getRandomToken(true),
+    },
+    data: {
+      query: `query userInfo($username: String!) {
+        user(login: $username) {
+          createdAt
+        }
+      }`,
+      variables: {
+        username,
+      },
+    },
+  });
+
+  if (data.data.errors?.length > 0) {
+    throw new Error(data.data.errors[0].message);
+  }
+
+  const user = data.data.data.user;
+  if (!user || !user.createdAt) {
+    throw new Error("User data is missing.");
+  }
+
+  const joinDate = new Date(user.createdAt);
+  return joinDate.getFullYear();
+}
+
+async function fetchContributions(username: string, year: number): Promise<ContributionsCollection> {
+  const from = `${year}-01-01T00:00:00Z`;
+  const to = `${year}-12-31T23:59:59Z`;
+
+  const data = await axios({
+    method: "post",
+    url: "https://api.github.com/graphql",
+    headers: {
+      "User-Agent": "FajarKim/github-readme-profile",
+      Authorization: getRandomToken(true),
+    },
+    data: {
+      query: `query userInfo($username: String!, $from: DateTime!, $to: DateTime!) {
+        user(login: $username) {
+          contributionsCollection(from: $from, to: $to) {
+            totalCommitContributions
+            restrictedContributionsCount
+            totalPullRequestReviewContributions
+          }
+        }
+      }`,
+      variables: {
+        username,
+        from,
+        to,
+      },
+    },
+  });
+
+  if (data.data.errors?.length > 0) {
+    throw new Error(data.data.errors[0].message);
+  }
+
+  const contributions = data.data.data.user.contributionsCollection;
+  return {
+    totalCommitContributions: contributions.totalCommitContributions,
+    restrictedContributionsCount: contributions.restrictedContributionsCount,
+    totalPullRequestReviewContributions: contributions.totalPullRequestReviewContributions,
+  };
+}
+
 /**
  * Fetches user data from the GitHub GraphQL API.
  *
@@ -84,6 +160,20 @@ export interface RepositoriesContributedTo {
  * @returns {Promise<User>} Promise representing the user data obtained from the GitHub Graphql API.
  */
 export default async function apiFetch(username: string): Promise<User> {
+  const startYear = await getUserJoinYear(username);
+  const endYear = new Date().getFullYear();
+
+  let TotalCommitContributions = 0;
+  let RestrictedContributionsCount = 0;
+  let TotalPullRequestReviewContributions = 0;
+
+  for (let year = startYear; year <= endYear; year++) {
+    const contributions = await fetchContributions(username, year);
+    TotalCommitContributions += contributions.totalCommitContributions;
+    RestrictedContributionsCount += contributions.restrictedContributionsCount;
+    TotalPullRequestReviewContributions += contributions.totalPullRequestReviewContributions;
+  }
+
   const data = await axios({
     method: "post",
     url: "https://api.github.com/graphql",
@@ -105,11 +195,6 @@ export default async function apiFetch(username: string): Promise<User> {
           }
           following {
             totalCount
-          }
-          contributionsCollection {
-            totalCommitContributions
-            restrictedContributionsCount
-            totalPullRequestReviewContributions
           }
           openedIssues: issues(states: OPEN) {
             totalCount
@@ -143,5 +228,24 @@ export default async function apiFetch(username: string): Promise<User> {
   if (data.data.errors?.length > 0)
     throw new Error(data.data.errors[0].message);
 
-  return data.data.data.user;
+  const user = data.data.data.user;
+
+  return {
+    name: user.name,
+    login: user.login,
+    avatarUrl: user.avatarUrl,
+    repositories: user.repositories,
+    followers: user.followers,
+    following: user.following,
+    openedIssues: user.openedIssues,
+    closedIssues: user.closedIssues,
+    pullRequests: user.pullRequests,
+    mergedPullRequests: user.mergedPullRequests,
+    discussionStarted: user.discussionStarted,
+    discussionAnswered: user.discussionAnswered,
+    repositoriesContributedTo: user.repositoriesContributedTo,
+    totalCommitContributions: TotalCommitContributions,
+    restrictedContributionsCount: RestrictedContributionsCount,
+    totalPullRequestReviewContributions: TotalPullRequestReviewContributions,
+  };
 }
