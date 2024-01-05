@@ -1,7 +1,19 @@
+/**
+ * Type representing a collection of language names based on language codes.
+ *
+ * @typedef {Object} LanguageNames
+ * @property {string} [key] - Language code.
+ * @property {string} [value] - Language name.
+ */
 type LanguageNames = {
   [key: string]: string;
 };
 
+/**
+ * LanguageNames object stores language code and language name.
+ *
+ * @type {LanguageNames}
+ */
 const languageNames: LanguageNames = {
   "af": "Afrikaans",
   "af-NA": "Afrikaans (Namibia)",
