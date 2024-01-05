@@ -118,8 +118,9 @@ async function readmeStats(req: any, res: any): Promise<any> {
       res.send(svg);
     }
   } catch (error: any) {
+    const message = error.message;
     res.setHeader("Cache-Control", "s-maxage=7200, stale-while-revalidate");
-    res.status(500).send(escapeHTML(error.message));
+    res.status(500).send(escapeHTML(message));
   }
 }
 
