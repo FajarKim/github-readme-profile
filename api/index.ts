@@ -20,7 +20,7 @@ import { isValidHexColor, isValidGradient, parseBoolean } from "../src/common/ut
  * @property {number|string} borderWidth - Width of borders.
  * @property {number|string} borderRadius - Radius of borders.
  * @property {boolean|string} disabledAnimations - Toggle for disabling animations.
- * @property {string} Format - Output format (e.g., "svg" or "png").
+ * @property {string} Format - Output format (e.g., "svg", "png", or "json").
  * @property {string|undefined} hiddenItems - Items to hide.
  * @property {string|undefined} showItems - Items to show.
  * @property {boolean|string} hideStroke - Toggle for hiding strokes.

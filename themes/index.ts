@@ -1,3 +1,15 @@
+/**
+ * Type representing a theme configuration.
+ *
+ * @typedef {Object} Theme
+ * @property {string|undefined} titleColor - Color for the title text.
+ * @property {string|undefined} textColor - Color for the main text.
+ * @property {string|undefined} iconColor - Color for icons.
+ * @property {string|undefined} borderColor - Color for borders.
+ * @property {string|undefined} bgColor - Background color.
+ * @property {string|undefined} strokeColor - Color for strokes.
+ * @property {string|undefined} usernameColor - Color for the username.
+ */
 type Themes = {
   [key: string]: {
     title_color?: string;
@@ -10,7 +22,13 @@ type Themes = {
   };
 };
 
+/**
+ * Themes object stores theme collection for the card.
+ *
+ * @type {Themes}
+ */
 const themes: Themes = {
+  // Solid themes
   default: {
     title_color: "2f80ed",
     text_color: "434d58",
