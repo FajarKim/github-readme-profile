@@ -9,7 +9,7 @@ const base64ImageFetcher = require("node-base64-image");
  * @typedef {Object} GetData
  * @property {string} username - GitHub username.
  * @property {string} name - GitHub user's name.
- * @property {string|Buffer} pic - Base64-encoded image or Buffer representing the user's profile picture.
+ * @property {string|Buffer} picture - Base64-encoded image or Buffer representing the user's profile picture.
  * @property {string|number} public_repos - Formatted count of public repositories.
  * @property {string|number} followers - Formatted count of followers.
  * @property {string|number} following - Formatted count of users being followed.
@@ -28,7 +28,7 @@ const base64ImageFetcher = require("node-base64-image");
 type GetData = {
   username: string;
   name: string;
-  pic: string | Buffer;
+  picture: string | Buffer;
   public_repos: string | number;
   followers: string | number;
   following: string | number;
@@ -61,7 +61,7 @@ async function getData(username: string): Promise<GetData> {
   const output = {
     username: user.login,
     name: user.name,
-    pic: await base64ImageFetcher.encode(`${user.avatarUrl}&s=200`, {
+    picture: await base64ImageFetcher.encode(`${user.avatarUrl}&s=200`, {
       string: true,
     }),
     public_repos: millify(user.repositories.totalCount),

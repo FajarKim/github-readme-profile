@@ -201,7 +201,7 @@ ${backgroundSVG}
     <g class="image-profile-animation">
       <defs>
         <pattern id="image" x="0%" y="0%" height="100%" width="100%" viewBox="0 0 512 512">
-          <image x="0%" y="0%" width="512" height="512" href="data:image/jpeg;base64,${data.pic}"></image>
+          <image x="0%" y="0%" width="512" height="512" href="data:image/jpeg;base64,${data.picture}"></image>
         </pattern>
       </defs>
       <circle cx="${angle.imageXAngle}" cy="${angle.imageYAngle}" r="50" fill="url(#image)" ${hideStroke}/>
