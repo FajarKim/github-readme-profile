@@ -17,10 +17,6 @@ jest.mock("express", () => ({
   },
 }));
 
-function valueReturn(value: string): string {
-  return `${value}`;
-}
-
 const exampleUserData: User = {
   name: "Fajar",
   login: "FajarKim",
