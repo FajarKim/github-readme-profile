@@ -1,5 +1,5 @@
 /**
- * Type definition for localization strings.
+ * Type representing for local translation card strings.
  *
  * @typedef {Object} Locales
  * @property {string} titleCard - Title for the GitHub stats card.

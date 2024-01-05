@@ -2,7 +2,7 @@ import axios from "axios";
 import getToken from "../getToken";
 
 /**
- * Represents the data associated with a user's repository.
+ * Type representing the data associated with a user's repository stats.
  *
  * @typedef {Object} RepositoryData
  * @property {number} stars - The total count of stars across repositories.

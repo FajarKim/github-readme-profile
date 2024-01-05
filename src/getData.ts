@@ -4,7 +4,7 @@ import repositoryStats from "./fetcher/repositoryStats";
 const base64ImageFetcher = require("node-base64-image");
 
 /**
- * Data structure representing GitHub user information.
+ * Type representing GitHub user information.
  *
  * @typedef {Object} GetData
  * @property {string} username - GitHub username.

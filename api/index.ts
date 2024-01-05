@@ -6,7 +6,7 @@ import { themes, Themes } from "../themes/index";
 import { isValidHexColor, isValidGradient, parseBoolean } from "../src/common/utils";
 
 /**
- * Configuration type for the user interface.
+ * Type representing the configuration for the card options.
  *
  * @typedef {Object} UiConfig
  * @property {string} titleColor - Color for the title text.

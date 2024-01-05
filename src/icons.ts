@@ -1,5 +1,5 @@
 /**
- * Type represents an object storing SVG icons for various categories.
+ * Type representing an object storing SVG icons for various categories.
  *
  * @typedef {Object} Icons
  * @property {string} repository - SVG icon for the repository category.
