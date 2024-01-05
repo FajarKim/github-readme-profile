@@ -143,7 +143,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
       ${gradientStops}
     </linearGradient>
   </defs>
-  <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.6%" width="99.8%" fill="url(#${gradientId})" ${hideBorder}/>`;
+  <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.4%" width="99.8%" fill="url(#${gradientId})" ${hideBorder}/>`;
   }
 
   // Generating SVG code for the background based on background color or gradient
@@ -158,7 +158,7 @@ export default function cardStyle(data: GetData, uiConfig: UiConfig): string {
         backgroundSVG = generateGradient(gradientColors);
       } else {
         backgroundSVG = `
-  <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.6%" width="99.8%" fill="#${uiConfig.bgColor}" ${hideBorder}/>`;
+  <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.4%" width="99.8%" fill="#${uiConfig.bgColor}" ${hideBorder}/>`;
       }
     }
   }
