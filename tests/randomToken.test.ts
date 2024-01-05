@@ -1,10 +1,10 @@
-import getRandomToken from "../src/getRandomToken";
+import getToken from "../src/getToken";
 
 // Mock the dependencies
 jest.mock("dotenv");
 jest.mock("@actions/core");
 
-describe("getRandomToken function", () => {
+describe("getToken function", () => {
   // Mock process.env values
   const originalEnv = process.env;
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe("getRandomToken function", () => {
     process.env.GH_TOKEN_1 = "token1";
     process.env.GH_TOKEN_2 = "token2";
 
-    const token = getRandomToken(false);
+    const token = getToken(false);
 
     expect(token).toEqual(expect.stringMatching(/^token\d$/));
   });
@@ -29,7 +29,7 @@ describe("getRandomToken function", () => {
     process.env.GH_TOKEN_1 = "token1";
     process.env.GH_TOKEN_2 = "token2";
 
-    const token = getRandomToken(true);
+    const token = getToken(true);
 
     expect(token).toEqual(expect.stringMatching(/^Bearer token\d$/));
   });
@@ -40,6 +40,6 @@ describe("getRandomToken function", () => {
       getInput: jest.fn().mockReturnValue(""),
     }));
 
-    expect(() => getRandomToken(false)).toThrowError("Could not find github token");
+    expect(() => getToken(false)).toThrowError("Could not find github token");
   });
 });

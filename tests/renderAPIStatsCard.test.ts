@@ -1,8 +1,8 @@
 import readmeStats from "../api/index";
 import getData from "../src/getData";
-import cardStyle from "../src/card";
-import { themes } from "../themes/index";
-import { locales } from "../src/translations";
+import card from "../src/card";
+import themes from "../themes/index";
+import locales from "../src/translations";
 
 jest.mock("../src/getData");
 jest.mock("../src/card");
@@ -51,7 +51,7 @@ describe("Test GitHub Readme Profile API", () => {
     await readmeStats(mockRequest, mockResponse);
 
     expect(getData).toHaveBeenCalledWith(mockRequest.query.username);
-    expect(cardStyle).toHaveBeenCalledWith(await getData(mockRequest.query.username), expect.any(Object));
+    expect(card).toHaveBeenCalledWith(await getData(mockRequest.query.username), expect.any(Object));
     expect(mockResponse.send).toHaveBeenCalled();
     expect(mockResponse.json).not.toHaveBeenCalled();
     expect(mockResponse.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
@@ -64,7 +64,7 @@ describe("Test GitHub Readme Profile API", () => {
     await readmeStats(mockRequest, mockResponse);
 
     expect(getData).toHaveBeenCalledWith(mockRequest.query.username);
-    expect(cardStyle).toHaveBeenCalledWith(await getData(mockRequest.query.username), expect.any(Object));
+    expect(card).toHaveBeenCalledWith(await getData(mockRequest.query.username), expect.any(Object));
     expect(mockResponse.send).toHaveBeenCalled();
     expect(mockResponse.json).not.toHaveBeenCalled();
     expect(mockResponse.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
@@ -77,7 +77,7 @@ describe("Test GitHub Readme Profile API", () => {
     await readmeStats(mockRequest, mockResponse);
 
     expect(getData).toHaveBeenCalledWith(mockRequest.query.username);
-    expect(cardStyle).toHaveBeenCalledWith(await getData(mockRequest.query.username), expect.any(Object));
+    expect(card).toHaveBeenCalledWith(await getData(mockRequest.query.username), expect.any(Object));
     expect(mockResponse.send).toHaveBeenCalled();
     expect(mockResponse.json).not.toHaveBeenCalled();
     expect(mockResponse.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
@@ -90,7 +90,7 @@ describe("Test GitHub Readme Profile API", () => {
     await readmeStats(mockRequest, mockResponse);
 
     expect(getData).toHaveBeenCalledWith(mockRequest.query.username);
-    expect(cardStyle).toHaveBeenCalledWith(await getData(mockRequest.query.username), expect.any(Object));
+    expect(card).toHaveBeenCalledWith(await getData(mockRequest.query.username), expect.any(Object));
     expect(mockResponse.send).toHaveBeenCalled();
     expect(mockResponse.json).not.toHaveBeenCalled();
     expect(mockResponse.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
@@ -103,7 +103,7 @@ describe("Test GitHub Readme Profile API", () => {
     await readmeStats(mockRequest, mockResponse);
 
     expect(getData).toHaveBeenCalledWith(mockRequest.query.username);
-    expect(cardStyle).toHaveBeenCalledWith(await getData(mockRequest.query.username), expect.any(Object));
+    expect(card).toHaveBeenCalledWith(await getData(mockRequest.query.username), expect.any(Object));
     expect(mockResponse.send).toHaveBeenCalled();
     expect(mockResponse.json).not.toHaveBeenCalled();
     expect(mockResponse.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
@@ -113,7 +113,7 @@ describe("Test GitHub Readme Profile API", () => {
     await readmeStats(mockRequest, mockResponse);
 
     expect(getData).not.toHaveBeenCalledWith();
-    expect(cardStyle).not.toHaveBeenCalledWith();
+    expect(card).not.toHaveBeenCalledWith();
     expect(mockResponse.send).toHaveBeenCalled();
     expect(mockResponse.json).not.toHaveBeenCalled();
     expect(mockResponse.setHeader).toHaveBeenCalledWith("Cache-Control", "s-maxage=3600, stale-while-revalidate");

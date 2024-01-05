@@ -1,13 +1,32 @@
-// Importing necessary libraries and modules
 import escapeHTML from "escape-html";
 import { Resvg } from "@resvg/resvg-js";
 import getData from "../src/getData";
-import cardStyle from "../src/card";
+import card from "../src/card";
 import { themes, Themes } from "../themes/index";
 import { isValidHexColor, isValidGradient, parseBoolean } from "../src/common/utils";
 
-// User interface configuration type
-export type UiConfig = {
+/**
+ * Configuration type for the user interface.
+ *
+ * @typedef {Object} UiConfig
+ * @property {string} titleColor - Color for the title text.
+ * @property {string} textColor - Color for the main text.
+ * @property {string} iconColor - Color for icons.
+ * @property {string} borderColor - Color for borders.
+ * @property {string} strokeColor - Color for strokes.
+ * @property {string} usernameColor - Color for the username.
+ * @property {any} bgColor - Background color or gradient.
+ * @property {string} Locale - Locale setting.
+ * @property {number|string} borderWidth - Width of borders.
+ * @property {number|string} borderRadius - Radius of borders.
+ * @property {boolean|string} disabledAnimations - Toggle for disabling animations.
+ * @property {string} Format - Output format (e.g., "svg" or "png").
+ * @property {string|undefined} hiddenItems - Items to hide.
+ * @property {string|undefined} showItems - Items to show.
+ * @property {boolean|string} hideStroke - Toggle for hiding strokes.
+ * @property {boolean|string} hideBorder - Toggle for hiding borders.
+ */
+type UiConfig = {
   titleColor: string;
   textColor: string;
   iconColor: string;
@@ -27,23 +46,20 @@ export type UiConfig = {
 };
 
 /**
- * Generates readme stats based on user input.
+ * Handles the generation card of a GitHub stats based on user data and specified options.
  *
- * @param {any} req HTTP request object.
- * @param {any} res HTTP response object.
- * @returns {Promise<any>} Promise representing the response.
+ * @param {any} req - The request object from the client.
+ * @param {any} res - The response object to send data back to the client.
+ * @returns {Promise<any>} - A promise that resolves when the photo profile is generated and sent.
  */
-export default async function readmeStats(req: any, res: any): Promise<any> {
+async function readmeStats(req: any, res: any): Promise<any> {
   try {
-    // Extracting and escaping username from the request
     const username = escapeHTML(req.query.username);
 
-    // Setting fallback and default themes
     const fallbackTheme = "default";
     const defaultTheme: Themes[keyof Themes] = themes[fallbackTheme];
     const selectTheme: Themes[keyof Themes] = themes[req.query.theme] || defaultTheme;
 
-    // Configuring UI based on request parameters or using default values
     const uiConfig: UiConfig = {
       titleColor: escapeHTML(req.query.title_color || selectTheme.title_color || defaultTheme.title_color),
       textColor: escapeHTML(req.query.text_color || selectTheme.text_color || defaultTheme.text_color),
@@ -63,7 +79,6 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       hideBorder: parseBoolean(escapeHTML(req.query.hide_border)) || false,
     };
 
-    // Validating username and color codes
     if (!username) {
       throw new Error("Username is required");
     }
@@ -79,38 +94,34 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
       throw new Error("Enter a valid hex color code");
     }
 
-    // Validating background color or gradient
     if (!isValidGradient(uiConfig.bgColor)) {
       if (!isValidHexColor(uiConfig.bgColor)) {
         throw new Error("Enter a valid hex color code");
       }
     }
 
-    // Fetching user stats data
     const fetchStats = await getData(username);
     res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");
 
-    // Handling different response formats (JSON, PNG, SVG)
     if (uiConfig.Format === "json") {
       res.json(fetchStats);
     } else if (uiConfig.Format === "png") {
-      // Converting SVG to PNG using @resvg/resvg-js
-      const svgString = cardStyle(fetchStats, uiConfig);
+      const svgString = card(fetchStats, uiConfig);
       const resvg = new Resvg(svgString, { font: { defaultFontFamily: "Segoe UI" }});
       const pngBuffer = await resvg.render().asPng();
 
-      // Sending PNG in the response
       res.setHeader("Content-Type", "image/png");
       res.send(pngBuffer);
     } else {
-      // Sending SVG in the response
       res.setHeader("Content-Type", "image/svg+xml");
-      const svg = cardStyle(fetchStats, uiConfig);
+      const svg = card(fetchStats, uiConfig);
       res.send(svg);
     }
   } catch (error: any) {
-    // Handling and logging errors in the response
     res.setHeader("Cache-Control", "s-maxage=7200, stale-while-revalidate");
     res.status(500).send(escapeHTML(error.message));
   }
 }
+
+export { UiConfig, readmeStats };
+export default readmeStats;

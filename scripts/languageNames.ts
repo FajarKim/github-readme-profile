@@ -1,10 +1,8 @@
-// Represents the structure of localized code languages name in English
-export type LanguageNames = {
+type LanguageNames = {
   [key: string]: string;
 };
 
-// Object containing localized strings for different languages name in English
-export const languageNames: LanguageNames = {
+const languageNames: LanguageNames = {
   "af": "Afrikaans",
   "af-NA": "Afrikaans (Namibia)",
   "af-ZA": "Afrikaans (South Africa)",
@@ -810,4 +808,7 @@ export const languageNames: LanguageNames = {
   "zh-Hant-TW": "Chinese (Traditional, Taiwan)",
   "zu": "Zulu",
   "zu-ZA": "Zulu (South Africa)",
-}
+};
+
+export { LanguageNames, languageNames };
+export default languageNames;

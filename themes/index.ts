@@ -1,5 +1,4 @@
-// Represents the available themes for GitHub stats cards
-export type Themes = {
+type Themes = {
   [key: string]: {
     title_color?: string;
     text_color?: string;
@@ -11,9 +10,7 @@ export type Themes = {
   };
 };
 
-// Object containing various predefined themes for GitHub stats cards
-export const themes: Themes = {
-  // Solid themes
+const themes: Themes = {
   default: {
     title_color: "2f80ed",
     text_color: "434d58",
@@ -535,4 +532,7 @@ export const themes: Themes = {
     icon_color: "EFFA4B",
     bg_color: "50,4A1133,0B1133",
   },
-}
+};
+
+export { Themes, themes };
+export default themes;
