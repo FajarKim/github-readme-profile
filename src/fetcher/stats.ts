@@ -1,9 +1,28 @@
-// Importing necessary libraries and modules
 import axios from "axios";
-import getRandomToken from "../getRandomToken";
+import getToken from "../getToken";
 
-// Represents the user data obtained from the GitHub GraphQL API
-export interface User {
+/**
+ * Represents a user's information and statistics.
+ *
+ * @interface User
+ * @property {string} name - The name of the user.
+ * @property {string} login - The login username of the user.
+ * @property {string} avatarUrl - The URL of the user's avatar.
+ * @property {Repositories} repositories - Information about user repositories.
+ * @property {Followers} followers - Information about user followers.
+ * @property {Following} following - Information about users being followed by the user.
+ * @property {OpenedIssues} openedIssues - Information about opened issues by the user.
+ * @property {ClosedIssues} closedIssues - Information about closed issues by the user.
+ * @property {PullRequests} pullRequests - Information about user pull requests.
+ * @property {MergedPullRequests} mergedPullRequests - Information about merged pull requests by the user.
+ * @property {DiscussionStarted} discussionStarted - Information about discussions started by the user.
+ * @property {DiscussionAnswered} discussionAnswered - Information about discussions answered by the user.
+ * @property {RepositoriesContributedTo} repositoriesContributedTo - Information about repositories contributed to by the user.
+ * @property {number} totalCommitContributions - The total count of commit contributions by the user.
+ * @property {number} restrictedContributionsCount - The count of restricted contributions by the user.
+ * @property {number} totalPullRequestReviewContributions - The total count of pull request review contributions by the user.
+ */
+interface User {
   name: string;
   login: string;
   avatarUrl: string;
@@ -22,70 +41,133 @@ export interface User {
   totalPullRequestReviewContributions: number;
 }
 
-// Represents the total count of repositories
-export interface Repositories {
+/**
+ * Represents information about user repositories.
+ *
+ * @interface Repositories
+ * @property {number} totalCount - The total count of repositories.
+ */
+interface Repositories {
   totalCount: number;
 }
 
-// Represents the total count of followers
-export interface Followers {
+/**
+ * Represents information about user followers.
+ *
+ * @interface Followers
+ * @property {number} totalCount - The total count of followers.
+ */
+interface Followers {
   totalCount: number;
 }
 
-// Represents the total count of following
-export interface Following {
+/**
+ * Represents information about user following.
+ *
+ * @interface Following
+ * @property {number} totalCount - The total count of following.
+ */
+interface Following {
   totalCount: number;
 }
 
-// Represents contribution data
-export interface ContributionsCollection {
+/**
+ * Represents contributions data collected over a specific time period.
+ *
+ * @interface ContributionsCollection
+ * @property {number} totalCommitContributions - The total count of commit contributions.
+ * @property {number} restrictedContributionsCount - The count of restricted contributions.
+ * @property {number} totalPullRequestReviewContributions - The total count of pull request review contributions.
+ */
+interface ContributionsCollection {
   totalCommitContributions: number;
   restrictedContributionsCount: number;
   totalPullRequestReviewContributions: number;
 }
 
-// Represents the total count of opened issues
-export interface OpenedIssues {
+/**
+ * Represents information about user opened issues.
+ *
+ * @interface OpenedIssues
+ * @property {number} totalCount - The total count of opened issues.
+ */
+interface OpenedIssues {
   totalCount: number;
 }
 
-// Represents the total count of closed issues
-export interface ClosedIssues {
+/**
+ * Represents information about user closed issues.
+ *
+ * @interface ClosedIssues
+ * @property {number} totalCount - The total count of closed issues.
+ */
+interface ClosedIssues {
   totalCount: number;
 }
 
-// Represents the total count of pull requests
-export interface PullRequests {
+/**
+ * Represents information about user pull requests.
+ *
+ * @interface PullRequests
+ * @property {number} totalCount - The total count of pull requests.
+ */
+interface PullRequests {
   totalCount: number;
 }
 
-// Represents the total count of merged pull requests
-export interface MergedPullRequests {
+/**
+ * Represents information about user merged pull requests.
+ *
+ * @interface MergedPullRequests
+ * @property {number} totalCount - The total count of merged pull requests.
+ */
+interface MergedPullRequests {
   totalCount: number;
 }
 
-// Represents the total count of started discussions
-export interface DiscussionStarted {
+/**
+ * Represents information about user discussion started.
+ *
+ * @interface DiscussionStarted
+ * @property {number} totalCount - The total count of discussion started.
+ */
+interface DiscussionStarted {
   totalCount: number;
 }
 
-// Represents the total count of answered discussions
-export interface DiscussionAnswered {
+/**
+ * Represents information about user discussion answered.
+ *
+ * @interface DiscussionAnswered
+ * @property {number} totalCount - The total count of discussion answered.
+ */
+interface DiscussionAnswered {
   totalCount: number;
 }
 
-// Represents the total count of repositories contributed to
-export interface RepositoriesContributedTo {
+/**
+ * Represents information about user repositories contributed to.
+ *
+ * @interface RepositoriesContributedTo
+ * @property {number} totalCount - The total count of repositories contributed to.
+ */
+interface RepositoriesContributedTo {
   totalCount: number;
 }
 
+/**
+ * Fetches the user's join year based on the provided username.
+ *
+ * @param {string} username - The GitHub username of the user.
+ * @returns {Promise<number>} - A promise that resolves with the user's join year.
+ */
 async function getUserJoinYear(username: string): Promise<number> {
   const data = await axios({
     method: "post",
     url: "https://api.github.com/graphql",
     headers: {
       "User-Agent": "FajarKim/github-readme-profile",
-      Authorization: getRandomToken(true),
+      Authorization: getToken(true),
     },
     data: {
       query: `query userInfo($username: String!) {
@@ -112,6 +194,13 @@ async function getUserJoinYear(username: string): Promise<number> {
   return joinDate.getFullYear();
 }
 
+/**
+ * Fetches the contributions data for the specified year.
+ *
+ * @param {string} username - The GitHub username of the user.
+ * @param {number} year - The year for which contributions data is fetched.
+ * @returns {Promise<ContributionsCollection>} - A promise that resolves with contributions data.
+ */
 async function fetchContributions(username: string, year: number): Promise<ContributionsCollection> {
   const from = `${year}-01-01T00:00:00Z`;
   const to = `${year}-12-31T23:59:59Z`;
@@ -121,7 +210,7 @@ async function fetchContributions(username: string, year: number): Promise<Contr
     url: "https://api.github.com/graphql",
     headers: {
       "User-Agent": "FajarKim/github-readme-profile",
-      Authorization: getRandomToken(true),
+      Authorization: getToken(true),
     },
     data: {
       query: `query userInfo($username: String!, $from: DateTime!, $to: DateTime!) {
@@ -154,12 +243,12 @@ async function fetchContributions(username: string, year: number): Promise<Contr
 }
 
 /**
- * Fetches user data from the GitHub GraphQL API.
+ * Fetches various statistics and information about the user.
  *
- * @param {string} username GitHub username.
- * @returns {Promise<User>} Promise representing the user data obtained from the GitHub Graphql API.
+ * @param {string} username - The GitHub username of the user.
+ * @returns {Promise<User>} - A promise that resolves with the user's information and statistics.
  */
-export default async function apiFetch(username: string): Promise<User> {
+async function stats(username: string): Promise<User> {
   const startYear = await getUserJoinYear(username);
   const endYear = new Date().getFullYear();
 
@@ -179,7 +268,7 @@ export default async function apiFetch(username: string): Promise<User> {
     url: "https://api.github.com/graphql",
     headers: {
       "User-Agent": "FajarKim/github-readme-profile",
-      Authorization: getRandomToken(true),
+      Authorization: getToken(true),
     },
     data: {
       query: `query userInfo($username: String!) {
@@ -249,3 +338,22 @@ export default async function apiFetch(username: string): Promise<User> {
     totalPullRequestReviewContributions: TotalPullRequestReviewContributions,
   };
 }
+
+export {
+  User,
+  Repositories,
+  Followers,
+  Following,
+  ContributionsCollection,
+  OpenedIssues,
+  ClosedIssues,
+  PullRequests,
+  MergedPullRequests,
+  DiscussionStarted,
+  DiscussionAnswered,
+  RepositoriesContributedTo,
+  getUserJoinYear,
+  fetchContributions,
+  stats
+};
+export default stats;

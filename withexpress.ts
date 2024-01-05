@@ -5,7 +5,7 @@ import readmeStats from "./api/index";
 dotenv.config();
 const app = express();
 
-app.use("/api", readmeStats);
+app.use("/", readmeStats);
 
 const port: number = Number(process.env.PORT) || 3000;
 

@@ -1,5 +1,25 @@
-// Represents the structure of localized strings
-export type Locales = {
+/**
+ * Type representing for local translation card strings.
+ *
+ * @typedef {Object} Locales
+ * @property {string} titleCard - Title for the GitHub stats card.
+ * @property {string} [followersText] - Text for followers count.
+ * @property {string} [followingText] - Text for following count.
+ * @property {string} [totalReposText] - Text for total repository count.
+ * @property {string} [starsCountText] - Text for stars count.
+ * @property {string} [forksCountText] - Text for forks count.
+ * @property {string} [commitsCountText] - Text for commits count.
+ * @property {string} [totalPRText] - Text for total pull requests count.
+ * @property {string} [totalPRMergedText] - Text for total merged pull requests count.
+ * @property {string} [totalPRReviewedText] - Text for total pull requests reviewed count.
+ * @property {string} [totalIssuesText] - Text for total issues count.
+ * @property {string} [totalIssuesClosedText] - Text for total closed issues count.
+ * @property {string} [totalDiscussionStartedText] - Text for total discussions started count.
+ * @property {string} [totalDiscussionAnsweredText] - Text for total discussions answered count.
+ * @property {string} [contributedToText] - Text for contributed repositories (last year).
+ * @property {boolean|string} rtlDirection - Flag indicating right-to-left direction or a string specifying direction.
+ */
+type Locales = {
   [key: string]: {
     titleCard: string;
     followersText?: string;
@@ -20,8 +40,12 @@ export type Locales = {
   };
 };
 
-// Object containing localized strings for different languages
-export const locales: Locales = {
+/**
+ * Localization strings for different languages.
+ *
+ * @type {Locales}
+ */
+const locales: Locales = {
   en: {
     titleCard: "{name}'s GitHub Stats",
     followersText: "Followers",
@@ -221,3 +245,6 @@ export const locales: Locales = {
      rtlDirection: false,
   },
 }
+
+export { Locales, locales };
+export default locales;

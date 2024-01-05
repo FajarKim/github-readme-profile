@@ -1,8 +1,8 @@
 /**
- * Checks if the provided value is a valid hexadecimal color code.
+ * Checks whether the provided value is a valid hexadecimal color.
  *
- * @param {any} hexColor Value to be checked.
- * @returns {boolean} True if the value is a valid hexadecimal color code, false otherwise.
+ * @param {any} hexColor - The input value to check for valid hexadecimal color.
+ * @returns {boolean} - True if the input is a valid hexadecimal color, false otherwise.
  */
 function isValidHexColor(hexColor: any): boolean {
   return new RegExp(
@@ -11,10 +11,10 @@ function isValidHexColor(hexColor: any): boolean {
 }
 
 /**
- * Checks if the provided array of color codes represents a valid gradient.
+ * Checks whether the provided array of hexadecimal colors is a valid gradient.
  *
- * @param {string[]} hexColors Array of color codes to be checked.
- * @returns {boolean} True if the array represents a valid gradient, false otherwise.
+ * @param {string[]} hexColors - The array of hexadecimal colors to check for a valid gradient.
+ * @returns {boolean} - True if the array represents a valid gradient, false otherwise.
  */
 function isValidGradient(hexColors: string[]): boolean {
   const colors = [hexColors];
@@ -27,10 +27,10 @@ function isValidGradient(hexColors: string[]): boolean {
 }
 
 /**
- * Parses a boolean value or string representation of a boolean.
+ * Parses a boolean value from either a boolean or string representation.
  *
- * @param {boolean | string} value Value to be parsed.
- * @returns {boolean | undefined} Parsed boolean value or undefined if parsing fails.
+ * @param {boolean | string} value - The input value to parse as a boolean.
+ * @returns {boolean | undefined} - The parsed boolean value, or undefined if parsing fails.
  */
 function parseBoolean(value: boolean | string): boolean | undefined {
   if (typeof value === "boolean") {

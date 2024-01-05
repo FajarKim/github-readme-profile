@@ -1,14 +1,34 @@
-// Importing necessary libraries and modules
 import millify from "millify";
-import apiFetch from "./fetcher/apiFetch";
-import repositoryFetch from "./fetcher/repositoryFetch";
+import stats from "./fetcher/stats";
+import repositoryStats from "./fetcher/repositoryStats";
 const base64ImageFetcher = require("node-base64-image");
 
-// Represents the data structure returned by the getData function
-export type GetData = {
+/**
+ * Type representing GitHub user information.
+ *
+ * @typedef {Object} GetData
+ * @property {string} username - GitHub username.
+ * @property {string} name - GitHub user's name.
+ * @property {string|Buffer} picture - Base64-encoded image or Buffer representing the user's profile picture.
+ * @property {string|number} public_repos - Formatted count of public repositories.
+ * @property {string|number} followers - Formatted count of followers.
+ * @property {string|number} following - Formatted count of users being followed.
+ * @property {string|number} total_stars - Formatted count of total stars received on repositories.
+ * @property {string|number} total_forks - Formatted count of total forks received on repositories.
+ * @property {string|number} total_issues - Formatted count of total issues (both open and closed).
+ * @property {string|number} total_closed_issues - Formatted count of closed issues.
+ * @property {string|number} total_prs - Formatted count of total pull requests.
+ * @property {string|number} total_prs_merged - Formatted count of total merged pull requests.
+ * @property {string|number} total_commits - Formatted count of total commits.
+ * @property {string|number} total_review - Formatted count of pull request reviews.
+ * @property {string|number} total_discussion_answered - Formatted count of discussions answered.
+ * @property {string|number} total_discussion_started - Formatted count of discussions started.
+ * @property {string|number} total_contributed_to - Formatted count of repositories contributed to.
+ */
+type GetData = {
   username: string;
   name: string;
-  pic: string | Buffer;
+  picture: string | Buffer;
   public_repos: string | number;
   followers: string | number;
   following: string | number;
@@ -26,24 +46,22 @@ export type GetData = {
 };
 
 /**
- * Fetches and processes data for a given GitHub user.
+ * Fetches and formats GitHub user data based on the provided username.
  *
- * @param {string} username GitHub username.
- * @returns Promise<GetData> Promise representing the data structure returned.
+ * @param {string} username - GitHub username.
+ * @returns {Promise<GetData>} - A promise that resolves with formatted GitHub user data.
  */
 async function getData(username: string): Promise<GetData> {
-  const user = await apiFetch(username);
+  const user = await stats(username);
   const totalRepoPages = Math.ceil(user.repositories.totalCount / 100);
-  const userRepositories = await repositoryFetch(username, totalRepoPages);
+  const userRepositories = await repositoryStats(username, totalRepoPages);
 
-  // If user.name is not available, use user.login as name
   if (!user.name) user.name = user.login;
 
-  // Creating output object
   const output = {
     username: user.login,
     name: user.name,
-    pic: await base64ImageFetcher.encode(`${user.avatarUrl}&s=200`, {
+    picture: await base64ImageFetcher.encode(`${user.avatarUrl}&s=200`, {
       string: true,
     }),
     public_repos: millify(user.repositories.totalCount),
@@ -58,8 +76,7 @@ async function getData(username: string): Promise<GetData> {
     total_prs: millify(user.pullRequests.totalCount),
     total_prs_merged: millify(user.mergedPullRequests.totalCount),
     total_commits: millify(
-      user.restrictedContributionsCount +
-        user.totalCommitContributions
+      user.restrictedContributionsCount + user.totalCommitContributions
     ),
     total_review: millify(user.totalPullRequestReviewContributions),
     total_discussion_answered: millify(user.discussionAnswered.totalCount),
@@ -70,4 +87,5 @@ async function getData(username: string): Promise<GetData> {
   return output;
 }
 
+export { GetData, getData };
 export default getData;

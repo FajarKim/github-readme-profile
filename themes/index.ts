@@ -1,5 +1,16 @@
-// Represents the available themes for GitHub stats cards
-export type Themes = {
+/**
+ * Type representing a theme configuration.
+ *
+ * @typedef {Object} Theme
+ * @property {string|undefined} titleColor - Color for the title text.
+ * @property {string|undefined} textColor - Color for the main text.
+ * @property {string|undefined} iconColor - Color for icons.
+ * @property {string|undefined} borderColor - Color for borders.
+ * @property {string|undefined} bgColor - Background color.
+ * @property {string|undefined} strokeColor - Color for strokes.
+ * @property {string|undefined} usernameColor - Color for the username.
+ */
+type Themes = {
   [key: string]: {
     title_color?: string;
     text_color?: string;
@@ -11,8 +22,12 @@ export type Themes = {
   };
 };
 
-// Object containing various predefined themes for GitHub stats cards
-export const themes: Themes = {
+/**
+ * Themes object stores theme collection for the card.
+ *
+ * @type {Themes}
+ */
+const themes: Themes = {
   // Solid themes
   default: {
     title_color: "2f80ed",
@@ -535,4 +550,7 @@ export const themes: Themes = {
     icon_color: "EFFA4B",
     bg_color: "50,4A1133,0B1133",
   },
-}
+};
+
+export { Themes, themes };
+export default themes;
