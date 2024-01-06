@@ -1,4 +1,5 @@
 .env.example
+.eslintrc
 coverage.yml
 jest.config.json
 
