@@ -1,5 +1,5 @@
 import axios from "axios";
-import getToken from "../getToken";
+import { getToken3 } from "../getToken";
 
 /**
  * Type representing the data associated with a user's repository stats.
@@ -68,7 +68,7 @@ async function getPerPageRepositoryData(
     url: `https://api.github.com/users/${sanitizedUsername}/repos?page=${pageno}&per_page=100`,
     headers: {
       "User-Agent": "FajarKim/github-readme-profile",
-      Authorization: getToken(true),
+      Authorization: getToken3(true),
     },
   });
 
