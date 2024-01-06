@@ -52,7 +52,6 @@ describe("Test getToken function", () => {
 
   it("should return an personal token 2 if no token 2 available without Bearer prefix", () => {
     process.env.GH_TOKEN_1 = "ghp_token";
-//    process.env.GH_TOKEN_2 = "";
 
     const token = getToken2(false);
 
@@ -61,7 +60,6 @@ describe("Test getToken function", () => {
 
   it("should return an personal token 2 if no token 2 available with Bearer prefix", () => {
     process.env.GH_TOKEN_1 = "ghp_token";
-  //  process.env.GH_TOKEN_2 = "";
 
     const token = getToken2(true);
 
@@ -86,7 +84,6 @@ describe("Test getToken function", () => {
 
   it("should return an personal token 3 if no token 3 available without Bearer prefix", () => {
     process.env.GH_TOKEN_1 = "ghp_token";
-    //process.env.GH_TOKEN_3 = "";
 
     const token = getToken3(false);
 
@@ -95,7 +92,6 @@ describe("Test getToken function", () => {
 
   it("should return an personal token 3 if no token 3 available with Bearer prefix", () => {
     process.env.GH_TOKEN_1 = "ghp_token";
-//    process.env.GH_TOKEN_3 = "";
 
     const token = getToken3(true);
 
