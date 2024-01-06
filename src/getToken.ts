@@ -17,12 +17,12 @@ const getEnvirontment: any = process.env;
   getGHEnvirontment = getGHEnvirontment.map((key: string) => getEnvirontment[key]);
 
   // Select a random GitHub environment variable
-  var getGHToken: string =
+  let getGHToken: string =
     getGHEnvirontment[Math.floor(Math.random() * getGHEnvirontment.length)];
 
   // If no GitHub environment variable is found, get the token from GitHub Actions inputs
   if (!getGHToken) {
-    var getGHToken = getInput("github_token");
+    getGHToken = getInput("github_token");
 
     if (!getGHToken) {
       throw new Error("Could not find github token");
@@ -50,12 +50,12 @@ const getEnvirontment: any = process.env;
   getGHEnvirontment = getGHEnvirontment.map((key: string) => getEnvirontment[key]);
 
   // Select a random GitHub environment variable
-  var getGHToken: string =
+  let getGHToken: string =
     getGHEnvirontment[Math.floor(Math.random() * getGHEnvirontment.length)];
 
   // If no GitHub environment variable is found, get the token from GitHub Actions inputs
   if (!getGHToken) {
-    var getGHToken = getToken(false);
+    getGHToken = getToken(false);
   }
 
   if (bearerHeader) {
@@ -79,12 +79,12 @@ const getEnvirontment: any = process.env;
   getGHEnvirontment = getGHEnvirontment.map((key: string) => getEnvirontment[key]);
 
   // Select a random GitHub environment variable
-  var getGHToken: string =
+  let getGHToken: string =
     getGHEnvirontment[Math.floor(Math.random() * getGHEnvirontment.length)];
 
   // If no GitHub environment variable is found, get the token from GitHub Actions inputs
   if (!getGHToken) {
-    var getGHToken = getToken(false);
+    getGHToken = getToken(false);
   }
 
   if (bearerHeader) {
