@@ -4,7 +4,7 @@
  * @param {any} hexColor - The input value to check for valid hexadecimal color.
  * @returns {boolean} - True if the input is a valid hexadecimal color, false otherwise.
  */
-function isValidHexColor(hexColor: any): boolean {
+function isValidHexColor(hexColor: string): boolean {
   return new RegExp(
     /^([A-Fa-f0-9]{8}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{3}|[A-Fa-f0-9]{4})$/
   ).test(hexColor);
@@ -16,8 +16,8 @@ function isValidHexColor(hexColor: any): boolean {
  * @param {string[]} hexColors - The array of hexadecimal colors to check for a valid gradient.
  * @returns {boolean} - True if the array represents a valid gradient, false otherwise.
  */
-function isValidGradient(hexColors: string[]): boolean {
-  const colors = [hexColors];
+function isValidGradient(hexColors: string): boolean {
+  const colors = hexColors.split(",");
   for (let i = 1; i < colors.length; i++) {
     if (!isValidHexColor(colors[i])) {
       return false;
