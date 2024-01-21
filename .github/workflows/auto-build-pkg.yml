@@ -48,6 +48,9 @@ jobs:
       - name: Fix unsafe repo error
         run: git config --global --add safe.directory ${{ github.workspace }}
 
+      - name: Update git repository
+        run: git pull
+
       - name: Run npm install and update
         run: |
           npm ci
