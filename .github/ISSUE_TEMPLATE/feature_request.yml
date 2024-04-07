@@ -3,6 +3,10 @@ description: Suggest an idea for this project.
 labels:
   - "enhancement"
 body:
+  - type: markdown
+    atributes:
+      value: |
+        :information_source: You can join my community and request features in the dedicated group. [Join now](https://chat.whatsapp.com/DM6WaaTQ4IJ3VOe2ly6KJD)!
   - type: textarea
     attributes:
       label: Is your feature request related to a problem? Please describe.
