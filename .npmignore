@@ -1,5 +1,7 @@
 coverage.yml
 jest.config.json
+.npmrc
+.npmrc.bak
 
 .github/
 tests/
