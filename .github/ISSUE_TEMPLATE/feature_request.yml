@@ -4,7 +4,7 @@ labels:
   - "enhancement"
 body:
   - type: markdown
-    atributes:
+    attributes:
       value: |
         :information_source: You can join my community and request features in the dedicated group. [Join now](https://chat.whatsapp.com/DM6WaaTQ4IJ3VOe2ly6KJD)!
   - type: textarea
