@@ -8,7 +8,7 @@
     "@resvg/resvg-js": "^2.6.2",
     "@types/escape-html": "^1.0.4",
     "@types/express": "^4.17.21",
-    "axios": "^1.7.2",
+    "axios": "^1.7.4",
     "dotenv": "^16.4.5",
     "escape-html": "^1.0.3",
     "express": "^4.19.2",
@@ -52,14 +52,14 @@
   "devDependencies": {
     "@markdoc/markdoc": "^0.4.0",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.14.10",
-    "@typescript-eslint/eslint-plugin": "^7.16.1",
-    "@typescript-eslint/parser": "^7.16.1",
+    "@types/node": "^20.14.15",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.0",
     "jest": "^29.7.0",
     "nodemon": "^3.1.4",
-    "ts-jest": "^29.2.2",
+    "ts-jest": "^29.2.4",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   }
 }
