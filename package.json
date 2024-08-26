@@ -8,7 +8,7 @@
     "@resvg/resvg-js": "^2.6.2",
     "@types/escape-html": "^1.0.4",
     "@types/express": "^4.17.21",
-    "axios": "^1.7.4",
+    "axios": "^1.7.5",
     "dotenv": "^16.4.5",
     "escape-html": "^1.0.3",
     "express": "^4.19.2",
