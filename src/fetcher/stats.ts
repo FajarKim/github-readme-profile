@@ -252,16 +252,25 @@ async function stats(username: string): Promise<User> {
   const startYear = await getUserJoinYear(username);
   const endYear = new Date().getFullYear();
 
-  let TotalCommitContributions = 0;
-  let RestrictedContributionsCount = 0;
-  let TotalPullRequestReviewContributions = 0;
-
+  const contributionPromises = [];
   for (let year = startYear; year <= endYear; year++) {
-    const contributions = await fetchContributions(username, year);
-    TotalCommitContributions += contributions.totalCommitContributions;
-    RestrictedContributionsCount += contributions.restrictedContributionsCount;
-    TotalPullRequestReviewContributions += contributions.totalPullRequestReviewContributions;
+    contributionPromises.push(fetchContributions(username, year));
   }
+
+  const contributions = await Promise.all(contributionPromises);
+
+  const TotalCommitContributions = contributions.reduce(
+    (total, contribution) => total + contribution.totalCommitContributions,
+    0
+  );
+  const RestrictedContributionsCount = contributions.reduce(
+    (total, contribution) => total + contribution.restrictedContributionsCount,
+    0
+  );
+  const TotalPullRequestReviewContributions = contributions.reduce(
+    (total, contribution) => total + contribution.totalPullRequestReviewContributions,
+    0
+  );
 
   const data = await axios({
     method: "post",
