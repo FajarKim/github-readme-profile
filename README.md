@@ -343,7 +343,7 @@ Love the project? Please consider donating to help it improve!
 
 <div align="left">
   <a href="https://github.com/sponsors/FajarKim/" target="_blank"><img src="https://img.shields.io/badge/GitHub-Sponsor-blue?labelColor=302d41&color=f5bde6&logo=github&logoColor=d9e0ee&style=for-the-badge" alt="GitHub Sponsor"></a>
-  <a href="https://buymeacoffee.com/fajarkim/" target="_blank"><img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-blue?labelColor=302d41&color=eed49f&logo=buymeacoffee&logoColor=d9e0ee&style=for-the-badge" alt="Buy Me a Coffee"></a>
+  <a href="https://ko-fi.com/fajarkim/" target="_blank"><img src="https://img.shields.io/badge/Ko%e2%80%91fi-Donate-blue?labelColor=302d41&color=94e2d5&logo=ko-fi&logoColor=d9e0ee&style=for-the-badge" alt="Ko-fi"></a>
   <a href="https://trakteer.id/fajarkim/" target="_blank"><img src="https://custom-icon-badges.demolab.com/badge/Trakteer-Donate-blue?labelColor=302d41&color=ed8796&logo=trakteerid&logoColor=d9e0ee&style=for-the-badge" alt="Trakteer.id Donate"></a>
 </div>
 
