@@ -62,7 +62,7 @@ GitHub Readme Profile comes with several built-in themes (e.g. `transparent`, `d
 |        `dark`        |       ![image][dark]        |
 |    `highcontrast`    |   ![image][highcontrast]    |
 
-You can look at a preview for [all available themes](./themes). You can also contribute new themes if you like, contributing guidelines can be found [here](./CONTRIBUTING.md#-themes-contribution).
+You can look at a preview for [all available themes](./themes/README.md). You can also contribute new themes if you like, contributing guidelines can be found [here](./CONTRIBUTING.md#-themes-contribution).
 
 [default]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default
 [transparent]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=transparent
@@ -362,7 +362,7 @@ Specially thanks ❤️ for contributors bellow:
 
 Want to contribute? Please note our contribution guidelines [here](/CONTRIBUTING.md).
 
-[![StandWithPalestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/StandWithPalestine.svg)](https://irusa.org/middle-east/palestine/)
+[![StandWithPalestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/StandWithPalestine.svg)](https://techforpalestine.org/learn-more)
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/FajarKim/FajarKim/master/images/line.svg?sanitize=true"/>
