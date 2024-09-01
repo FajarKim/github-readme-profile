@@ -8,7 +8,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "https://github.com/FajarKim/github-readme-profile"
+      "destination": "https://gh-readme-profile-generator.vercel.app/"
     }
   ]
 }
