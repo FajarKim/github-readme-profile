@@ -244,6 +244,24 @@ const locales: Locales = {
      contributedToText: "Contribuiu para (ano passado)",
      rtlDirection: false,
   },
+  es: {
+    titleCard: "Estadísticas de GitHub de {name}",
+    followersText: "Seguidores",
+    followingText: "Siguiendo",
+    totalReposText: "Total de Repositorios",
+    starsCountText: "Cantidad de Estrellas",
+    forksCountText: "Cantidad de Forks",
+    commitsCountText: "Cantidad de Commits",
+    totalPRText: "Total de PRs",
+    totalPRMergedText: "Total de PRs Fusionados",
+    totalPRReviewedText: "Total de PRs Revisados",
+    totalIssuesText: "Total de Issues",
+    totalIssuesClosedText: "Total de Issues Cerrados",
+    totalDiscussionStartedText: "Discusiones Iniciadas",
+    totalDiscussionAnsweredText: "Discusiones Respondidas",
+    contributedToText: "Contribuciones (último año)",
+    rtlDirection: false,
+  },
 }
 
 export { Locales, locales };
