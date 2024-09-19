@@ -68,10 +68,7 @@ jobs:
         run: |
           branch="auto_build_and_bump"
           message="build(deps): bump all dependencies and devDependencies version"
-          body=$(printf "## Changes File\n\n\`\`\`diff\n$(git diff)\n\`\`\`\n\n> Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>")
-          if (( ${#body} >= 65000 )); then
-            body="⚠️ The text diff is too longer, [view changes](https://github.com/FajarKim/github-readme-profile/pull/${{ github.event.pull_request.number }}/files)."
-          fi
+          body="_This pull request was created automatically._"
           if [[ "$(git status --porcelain)" != "" ]]; then
             git branch -D ${branch} || true
             git checkout -b ${branch}

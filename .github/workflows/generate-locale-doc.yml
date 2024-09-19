@@ -59,7 +59,7 @@ jobs:
         run: |
           branch="auto_update_locale_readme"
           message="docs(i18n): auto update translation readme"
-          body=$(printf "## Changes File\n\n\`\`\`diff\n$(git diff)\n\`\`\`\n\n> Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>")
+          body="_This pull request was created automatically._"
           if [[ "$(git status --porcelain)" != "" ]]; then
             git branch -D ${branch} || true
             git checkout -b ${branch}
