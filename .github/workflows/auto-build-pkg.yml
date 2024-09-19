@@ -55,6 +55,7 @@ jobs:
         run: |
           npm ci
           npm update --save
+          npm audit fix
         env:
           CI: true
 
