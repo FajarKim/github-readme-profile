@@ -1,27 +1,51 @@
 card:
-- changed-files:
-  - any-glob-to-any-file: ["src/card.ts"]
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/card.ts"
+
 card-i18n:
-- changed-files:
-  - any-glob-to-any-file: ["src/translations.ts"]
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/translations.ts"
+
 ci:
-- changed-files:
-  - any-glob-to-any-file: [".github/workflows/*", "scripts/*"]
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/workflows/*"
+          - "scripts/*"
+
 dependencies:
-- changed-files:
-  - any-glob-to-any-file: ["package.json", "package-lock.json"]
+  - changed-files:
+      - any-glob-to-any-file:
+          - "package.json"
+          - "package-lock.json"
+
 doc-translation:
-- changed-files:
-  - any-glob-to-any-file: ["docs/*"]
+  - changed-files:
+      - any-glob-to-any-file:
+          - "docs/*"
+
 documentation:
-- changed-files:
-  - any-glob-to-any-file: ["README.md", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "SECURITY.md"]
+  - changed-files:
+      - any-glob-to-any-file:
+          - "README.md"
+          - "CONTRIBUTING.md"
+          - "CODE_OF_CONDUCT.md"
+          - "SECURITY.md"
+
 github_actions:
-- changed-files:
-  - any-glob-to-any-file: [".github/*.yml", ".github/workflows/*"]
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/*.yml"
+          - ".github/workflows/*"
+
 stats-card:
-- changed-files:
-  - any-glob-to-any-file: ["api/index.ts", "src/fetcher/*"]
+  - changed-files:
+      - any-glob-to-any-file:
+          - "api/index.ts"
+          - "src/fetcher/*"
+
 themes:
-- changed-files:
-  - any-glob-to-any-file: ["themes/index.ts"]
+  - changed-files:
+      - any-glob-to-any-file:
+          - "themes/index.ts"
