@@ -1,3 +1,10 @@
+queue_rules:
+  - name: dep-update
+    batch_size: 100
+    batch_max_wait_time: 30 min
+    queue_conditions:
+      - author=dependabot[bot]
+
 pull_request_rules:
   - name: Automatic approve for Dependabot pull requests
     conditions:
@@ -6,6 +13,14 @@ pull_request_rules:
       review:
         type: APPROVE
 
+  - name: Automatic merge for Dependabot pull requests
+    conditions:
+      - author=dependabot[bot]
+      - "#approved-reviews-by>=1"
+      - check-success=test
+    actions:
+      queue:
+
   - name: Automatic approve for GitHub Actions Bot pull requests
     conditions:
       - author=github-actions[bot]
@@ -13,17 +28,24 @@ pull_request_rules:
       review:
         type: APPROVE
 
-  - name: Automatic merge for GitHub Actions Bot pull requests with label "doc-theme"
+  - name: Automatic approve for GitHub Readme Profile pull requests
     conditions:
-      - author=github-actions[bot]
+      - author=gh-readme-profile
+    actions:
+      review:
+        type: APPROVE
+
+  - name: Automatic merge for GitHub Readme Profile pull requests with label "doc-theme"
+    conditions:
+      - author=gh-readme-profile
       - "#approved-reviews-by>=1"
       - label=doc-theme
     actions:
       merge:
 
-  - name: Automatic merge for GitHub Actions Bot pull requests with label "doc-translation"
+  - name: Automatic merge for GitHub Readme Profile pull requests with label "doc-translation"
     conditions:
-      - author=github-actions[bot]
+      - author=gh-readme-profile
       - "#approved-reviews-by>=1"
       - label=doc-translation
     actions:
