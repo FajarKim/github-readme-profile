@@ -517,7 +517,7 @@ const themes: Themes = {
   },
   lavender_breeze: {
     title_color: "a99e68",
-    text_color: "ab788e",
+    text_color: "896072",
     icon_color: "a99e68",
     border_color: "d8c4f4",
     username_color: "a99e68",
