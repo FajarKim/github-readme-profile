@@ -13,6 +13,20 @@ on:
     - cron: "0 0 */7 * *"
   workflow_dispatch:
 
+permissions:
+  actions: read
+  checks: read
+  contents: write
+  deployments: read
+  issues: read
+  discussions: read
+  packages: read
+  pages: read
+  pull-requests: write
+  repository-projects: read
+  security-events: read
+  statuses: read
+
 jobs:
   auto-build:
     runs-on: ubuntu-latest
