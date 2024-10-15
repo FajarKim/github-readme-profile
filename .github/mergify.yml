@@ -1,0 +1,30 @@
+pull_request_rules:
+  - name: Automatic approve for Dependabot pull requests
+    conditions:
+      - author=dependabot[bot]
+    actions:
+      review:
+        type: APPROVE
+
+  - name: Automatic approve for GitHub Actions Bot pull requests
+    conditions:
+      - author=github-actions[bot]
+    actions:
+      review:
+        type: APPROVE
+
+  - name: Automatic merge for GitHub Actions Bot pull requests with label "doc-theme"
+    conditions:
+      - author=github-actions[bot]
+      - "#approved-reviews-by>=1"
+      - label=doc-theme
+    actions:
+      merge:
+
+  - name: Automatic merge for GitHub Actions Bot pull requests with label "doc-translation"
+    conditions:
+      - author=github-actions[bot]
+      - "#approved-reviews-by>=1"
+      - label=doc-translation
+    actions:
+      merge:
