@@ -10,12 +10,8 @@ on:
 permissions: read-all
 
 jobs:
-  build:
-    name: Perform check
+  test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [22.x]
 
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
@@ -23,13 +19,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 # v4.0.4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "22.x"
           cache: npm
 
       - name: Install, Build, and Test Package
         run: |
-          npm ci
-          npm i typescript
+          npm install
+          npm install typescript
           npm run build
           npm run test
 
