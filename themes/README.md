@@ -35,8 +35,9 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `lava-dark` ![lava-dark][lava-dark] | `neon` ![neon][neon] | `neon-dark` ![neon-dark][neon-dark] |
 | `neon-palenight` ![neon-palenight][neon-palenight] | `neon-blurange` ![neon-blurange][neon-blurange] | `kacho_ga` ![kacho_ga][kacho_ga] |
 | `kanagawa` ![kanagawa][kanagawa] | `kanagawa_light` ![kanagawa_light][kanagawa_light] | `space` ![space][space] |
-| `space_light` ![space_light][space_light] | `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] |
-| `ambient-gradient` ![ambient-gradient][ambient-gradient] | `siny-gradient` ![siny-gradient][siny-gradient] | `purple-gradient` ![purple-gradient][purple-gradient] |
+| `space_light` ![space_light][space_light] | `lavender_breeze` ![lavender_breeze][lavender_breeze] | `lavender_dream` ![lavender_dream][lavender_dream] |
+| `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] |
+| `siny-gradient` ![siny-gradient][siny-gradient] | `purple-gradient` ![purple-gradient][purple-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
@@ -108,6 +109,8 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [kanagawa_light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=kanagawa_light
 [space]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=space
 [space_light]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=space_light
+[lavender_breeze]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=lavender_breeze
+[lavender_dream]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=lavender_dream
 [sunset-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=sunset-gradient
 [ocean-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ocean-gradient
 [ambient-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=ambient-gradient
