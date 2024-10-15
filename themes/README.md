@@ -38,7 +38,7 @@ Use `?theme=THEME_NAME` parameter like so :-
 | `space_light` ![space_light][space_light] | `lavender_breeze` ![lavender_breeze][lavender_breeze] | `lavender_dream` ![lavender_dream][lavender_dream] |
 | `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] |
 | `siny-gradient` ![siny-gradient][siny-gradient] | `purple-gradient` ![purple-gradient][purple-gradient] | `monochrome-light-gradient` ![monochrome-light-gradient][monochrome-light-gradient] |
-| `monochrome-dark-gradient` ![monochrome-dark-gradient][monochrome-dark-gradient] |
+| `monochrome-dark-gradient` ![monochrome-dark-gradient][monochrome-dark-gradient] | `endless-gradient` ![endless-gradient][endless-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
@@ -119,3 +119,4 @@ Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIB
 [purple-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=purple-gradient
 [monochrome-light-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=monochrome-light-gradient
 [monochrome-dark-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=monochrome-dark-gradient
+[endless-gradient]: https://github-readme-profile-alpha.vercel.app/api?username=FajarKim&theme=endless-gradient
