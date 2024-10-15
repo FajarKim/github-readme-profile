@@ -566,6 +566,20 @@ const themes: Themes = {
     icon_color: "EFFA4B",
     bg_color: "50,4A1133,0B1133",
   },
+  "monochrome-light-gradient": {
+    title_color: "000000",
+    text_color: "000000",
+    icon_color: "49494b",
+    border_color: "e1d9d9",
+    bg_color: "4,f0f0f0,dfdbdb",
+  },
+  "monochrome-dark-gradient": {
+    title_color: "ffffff",
+    text_color: "ffffff",
+    icon_color: "e1d9d9",
+    border_color: "444242",
+    bg_color: "4,1d1d1e,4a4a4a",
+  },
 };
 
 export { Themes, themes };
