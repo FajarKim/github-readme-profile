@@ -525,7 +525,7 @@ const themes: Themes = {
   },
   lavender_dream: {
     title_color: "e6d9a2",
-    text_color: "d687b4",
+    text_color: "e893c4",
     icon_color: "e6d9a2",
     border_color: "6b518d",
     username_color: "e6d9a2",
