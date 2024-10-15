@@ -588,6 +588,13 @@ const themes: Themes = {
     username_color: "cfe6ff",
     bg_color: "5,43cea2,185a9d",
   },
+  "twitch-gradient": {
+    title_color: "e0d4f7",
+    text_color: "f0e6ff",
+    icon_color: "bbafd9",
+    border_color: "8c7bbf",
+    bg_color: "20,6441a5,2a0845",
+  },
 };
 
 export { Themes, themes };
