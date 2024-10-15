@@ -580,6 +580,14 @@ const themes: Themes = {
     border_color: "444242",
     bg_color: "4,1d1d1e,4a4a4a",
   },
+  "endless-gradient": {
+    title_color: "cfe6ff",
+    text_color: "f2f2f2",
+    icon_color: "b0c4d9",
+    border_color: "5dc4a0",
+    username_color: "cfe6ff",
+    bg_color: "5,43cea2,185a9d",
+  },
 };
 
 export { Themes, themes };
