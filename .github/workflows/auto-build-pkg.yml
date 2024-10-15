@@ -13,27 +13,9 @@ on:
     - cron: "0 0 */7 * *"
   workflow_dispatch:
 
-permissions:
-  actions: read
-  checks: read
-  contents: write
-  deployments: read
-  issues: read
-  discussions: read
-  packages: read
-  pages: read
-  pull-requests: write
-  repository-projects: read
-  security-events: read
-  statuses: read
-
 jobs:
-  autoBuildDeps:
+  auto-build:
     runs-on: ubuntu-latest
-    name: Auto build deps
-    strategy:
-      matrix:
-        node-version: [22.x]
 
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
@@ -41,7 +23,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 # v4.0.4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "22.x"
           cache: npm
 
       # Fix the unsafe repo error which was introduced by the CVE-2022-24765 git patches.
@@ -61,8 +43,8 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "gh-readme-profile"
+          git config user.email "githubreadmeprofile@gmail.com"
           git config --global --add safe.directory ${GITHUB_WORKSPACE}
 
       - name: Push commit to a new branch
@@ -80,4 +62,4 @@ jobs:
             gh pr create --title "${message}" --body "${body}"
           fi
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
