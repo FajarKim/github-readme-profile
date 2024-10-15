@@ -515,6 +515,22 @@ const themes: Themes = {
     border_color: "fbf8ef",
     bg_color: "efeae9",
   },
+  lavender_breeze: {
+    title_color: "a99e68",
+    text_color: "ab788e",
+    icon_color: "a99e68",
+    border_color: "d8c4f4",
+    username_color: "a99e68",
+    bg_color: "eee7fd",
+  },
+  lavender_dream: {
+    title_color: "e6d9a2",
+    text_color: "d687b4",
+    icon_color: "e6d9a2",
+    border_color: "6b518d",
+    username_color: "e6d9a2",
+    bg_color: "4a3b66",
+  },
 
   // Gradient themes
   "sunset-gradient": {
