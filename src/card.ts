@@ -1,8 +1,8 @@
+import parseBoolean from "@barudakrosul/parse-boolean";
 import type { GetData } from "./getData";
 import type { UiConfig } from "../api/index";
 import { locales, Locales } from "./translations";
 import icons from "./icons";
-import { parseBoolean } from "./common/utils";
 
 /**
  * Generates the SVG markup for the GitHub stats card.

@@ -1,4 +1,4 @@
-import { isValidHexColor, isValidGradient, parseBoolean } from "../src/common/utils";
+import { isValidHexColor, isValidGradient } from "../src/common/utils";
 
 describe("isValidHexColor function", () => {
   it("should return true for valid hexadecimal colors", () => {
@@ -23,19 +23,5 @@ describe("isValidGradient function", () => {
 
   it("should return false for invalid gradients", () => {
     expect(isValidGradient("45,invalid,green")).toBe(false);
-  });
-});
-
-describe("parseBoolean function", () => {
-  it("should parse boolean values correctly", () => {
-    expect(parseBoolean(true)).toBe(true);
-    expect(parseBoolean(false)).toBe(false);
-    expect(parseBoolean("true")).toBe(true);
-    expect(parseBoolean("false")).toBe(false);
-  });
-
-  it("should return undefined for invalid input", () => {
-    expect(parseBoolean("invalid")).toBe(undefined);
-    expect(parseBoolean("123")).toBe(undefined);
   });
 });
