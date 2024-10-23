@@ -78,7 +78,8 @@ function card(data: GetData, uiConfig: UiConfig): string {
     .single-item-animation {
       opacity: 0;
       animation: fadeInAnimation 0.3s ease-in-out forwards;
-    }`;
+    }
+  `;
 
   const hiddenItems = uiConfig.hiddenItems || "";
   const hiddenItemsArray = hiddenItems.split(",");
@@ -111,7 +112,8 @@ function card(data: GetData, uiConfig: UiConfig): string {
         <text class="text" x="${angle.textXAngle}" y="12.5">${item.text}:</text>
         <text class="text text-bold" x="${angle.dataXAngle}" y="12.5">${item.value}</text>
       </g>
-    </g>`).join("\n");
+    </g>
+  `).join("\n");
 
   function generateGradient(colors: string[]): string {
     const gradientId = "gradient";
@@ -122,12 +124,13 @@ function card(data: GetData, uiConfig: UiConfig): string {
       return `<stop offset="${offset}%" stop-color="#${color}"/>`;
     }).join("");
     return `
-  <defs>
-    <linearGradient id="${gradientId}" gradientTransform="rotate(${gradientAngle})" gradientUnits="userSpaceOnUse">
-      ${gradientStops}
-    </linearGradient>
-  </defs>
-  <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.4%" width="99.8%" fill="url(#${gradientId})" ${hideBorder}/>`;
+      <defs>
+        <linearGradient id="${gradientId}" gradientTransform="rotate(${gradientAngle})" gradientUnits="userSpaceOnUse">
+          ${gradientStops}
+        </linearGradient>
+      </defs>
+      <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.4%" width="99.8%" fill="url(#${gradientId})" ${hideBorder}/>
+    `;
   }
 
   let backgroundSVG;
@@ -141,78 +144,80 @@ function card(data: GetData, uiConfig: UiConfig): string {
         backgroundSVG = generateGradient(gradientColors);
       } else {
         backgroundSVG = `
-  <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.4%" width="99.8%" fill="#${uiConfig.bgColor}" ${hideBorder}/>`;
+          <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.4%" width="99.8%" fill="#${uiConfig.bgColor}" ${hideBorder}/>
+        `;
       }
     }
   }
 
   return `
-<svg width="535" height="${Math.max(220, 45 + cardItemsToShow.length * 25)}"  direction="${direction}" viewBox="0 0 535 ${Math.max(220, 45 + cardItemsToShow.length * 25)}" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <style>
-${animations}
-    .text {
-      font-family: "Segoe UI", Ubuntu, sans-serif;
-      fill: #${uiConfig.textColor};
-      font-size: 14px;
-    }
+    <svg width="535" height="${Math.max(220, 45 + cardItemsToShow.length * 25)}"  direction="${direction}" viewBox="0 0 535 ${Math.max(220, 45 + cardItemsToShow.length * 25)}" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <style>
+        ${animations}
+        .text {
+          font-family: "Segoe UI", Ubuntu, sans-serif;
+          fill: #${uiConfig.textColor};
+          font-size: 14px;
+        }
 
-    .text-bold {
-      font-weight: 700;
-    }
+        .text-bold {
+          font-weight: 700;
+        }
 
-    .text-middle {
-      alignment-baseline: middle;
-      text-anchor: middle;
-    }
+        .text-middle {
+          alignment-baseline: middle;
+          text-anchor: middle;
+        }
 
-    .text-followers {
-      font-family: "Segoe UI", Ubuntu, sans-serif;
-      fill: #${uiConfig.textColor};
-      font-size: 13px;
-    }
+        .text-followers {
+          font-family: "Segoe UI", Ubuntu, sans-serif;
+          fill: #${uiConfig.textColor};
+          font-size: 13px;
+        }
 
-    .text-username {
-      font-family: "Segoe UI", Ubuntu, sans-serif;
-      fill: #${uiConfig.usernameColor};
-      font-weight: 750;
-      font-size: 14.6px;
-      alignment-baseline: middle;
-      text-anchor: middle;
-    }
+        .text-username {
+          font-family: "Segoe UI", Ubuntu, sans-serif;
+          fill: #${uiConfig.usernameColor};
+          font-weight: 750;
+          font-size: 14.6px;
+          alignment-baseline: middle;
+          text-anchor: middle;
+        }
 
-    .text-title {
-      font-family: "Segoe UI", Ubuntu, sans-serif;
-      fill: #${uiConfig.titleColor};
-      font-size: 17px;
-      font-weight: 600;
-    }
+        .text-title {
+          font-family: "Segoe UI", Ubuntu, sans-serif;
+          fill: #${uiConfig.titleColor};
+          font-size: 17px;
+          font-weight: 600;
+        }
 
-    .icon {
-      fill: #${uiConfig.iconColor};
-      display: block;
-    }
-  </style>
-  <title id="titleId">${selectLocale.titleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</title>
-${backgroundSVG}
-  <g transform="translate(0, 25)">
-    <g class="div-animation">
-      <text x="${angle.titleXAngle}" y="${angle.titleYAngle}" class="text-title">${selectLocale.titleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</text>
-    </g>
-    <g class="image-profile-animation">
-      <defs>
-        <pattern id="image" x="0%" y="0%" height="100%" width="100%" viewBox="0 0 512 512">
-          <image x="0%" y="0%" width="512" height="512" href="data:image/jpeg;base64,${data.picture}"></image>
-        </pattern>
-      </defs>
-      <circle cx="${angle.imageXAngle}" cy="${angle.imageYAngle}" r="50" fill="url(#image)" ${hideStroke}/>
-    </g>
-    <text x="${angle.userXAngle}" y="${angle.userYAngle}" direction="ltr" class="text-username div-animation">@${data.username}</text>
-    <g class="div-animation text-middle">
-      <text x="${angle.follXAngle}" y="${angle.follYAngle}" class="text-followers"><tspan class="text-bold">${data.followers}</tspan> ${selectLocale.followersText || defaultLocale.followersText} · <tspan class="text-bold">${data.following}</tspan> ${selectLocale.followingText || defaultLocale.followingText}</text>
-    </g>
-${cardItemsSVG}
-  </g>
-</svg>`;
+        .icon {
+          fill: #${uiConfig.iconColor};
+          display: block;
+        }
+      </style>
+      <title id="titleId">${selectLocale.titleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</title>
+      ${backgroundSVG}
+      <g transform="translate(0, 25)">
+        <g class="div-animation">
+          <text x="${angle.titleXAngle}" y="${angle.titleYAngle}" class="text-title">${selectLocale.titleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</text>
+        </g>
+        <g class="image-profile-animation">
+          <defs>
+            <pattern id="image" x="0%" y="0%" height="100%" width="100%" viewBox="0 0 512 512">
+              <image x="0%" y="0%" width="512" height="512" href="data:image/jpeg;base64,${data.picture}"></image>
+            </pattern>
+          </defs>
+          <circle cx="${angle.imageXAngle}" cy="${angle.imageYAngle}" r="50" fill="url(#image)" ${hideStroke}/>
+        </g>
+        <text x="${angle.userXAngle}" y="${angle.userYAngle}" direction="ltr" class="text-username div-animation">@${data.username}</text>
+        <g class="div-animation text-middle">
+          <text x="${angle.follXAngle}" y="${angle.follYAngle}" class="text-followers"><tspan class="text-bold">${data.followers}</tspan> ${selectLocale.followersText || defaultLocale.followersText} · <tspan class="text-bold">${data.following}</tspan> ${selectLocale.followingText || defaultLocale.followingText}</text>
+        </g>
+        ${cardItemsSVG}
+      </g>
+    </svg>
+  `;
 }
 
 export default card;
