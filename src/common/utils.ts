@@ -5,9 +5,8 @@
  * @returns {boolean} - True if the input is a valid hexadecimal color, false otherwise.
  */
 function isValidHexColor(hexColor: string): boolean {
-  return new RegExp(
-    /^([A-Fa-f0-9]{8}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{3}|[A-Fa-f0-9]{4})$/
-  ).test(hexColor);
+  const re = new RegExp("^([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$", "g");
+  return re.test(hexColor);
 }
 
 /**
