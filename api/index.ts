@@ -1,9 +1,10 @@
 import escapeHTML from "escape-html";
 import { Resvg } from "@resvg/resvg-js";
+import parseBoolean from "@barudakrosul/parse-boolean";
 import getData from "../src/getData";
 import card from "../src/card";
 import { themes, Themes } from "../themes/index";
-import { isValidHexColor, isValidGradient, parseBoolean } from "../src/common/utils";
+import { isValidHexColor, isValidGradient } from "../src/common/utils";
 
 /**
  * Type representing the configuration for the card options.
