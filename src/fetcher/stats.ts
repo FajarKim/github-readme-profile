@@ -1,6 +1,8 @@
 import axios from "axios";
 import getToken from "../getToken";
 
+const TOKEN = getToken(true);
+
 /**
  * Represents a user's information and statistics.
  *
@@ -167,7 +169,7 @@ async function getUserJoinYear(username: string): Promise<number> {
     url: "https://api.github.com/graphql",
     headers: {
       "User-Agent": "FajarKim/github-readme-profile",
-      Authorization: getToken(true),
+      Authorization: TOKEN,
     },
     data: {
       query: `query userInfo($username: String!) {
@@ -210,7 +212,7 @@ async function fetchContributions(username: string, year: number): Promise<Contr
     url: "https://api.github.com/graphql",
     headers: {
       "User-Agent": "FajarKim/github-readme-profile",
-      Authorization: getToken(true),
+      Authorization: TOKEN,
     },
     data: {
       query: `query userInfo($username: String!, $from: DateTime!, $to: DateTime!) {
@@ -277,7 +279,7 @@ async function stats(username: string): Promise<User> {
     url: "https://api.github.com/graphql",
     headers: {
       "User-Agent": "FajarKim/github-readme-profile",
-      Authorization: getToken(true),
+      Authorization: TOKEN,
     },
     data: {
       query: `query userInfo($username: String!) {
