@@ -23,7 +23,7 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
     ? parseInt(uiConfig.photoQuality, 10)
     : uiConfig.photoQuality;
   const outputBuffer = await sharp(imageBuffer)
-    .resize({ width: 100 })
+    .resize({ width: 150 })
     .jpeg({ quality: photoQuality })
     .toBuffer();
   const dataPicture = outputBuffer.toString("base64");
