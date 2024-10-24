@@ -13,7 +13,12 @@ import icons from "./icons";
  * @returns {Promise<string>} - SVG markup for the GitHub stats card.
  */
 async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
-  const imageBuffer = Buffer.from(data.picture, "base64");
+  let imageBuffer: Buffer;
+  if (typeof data.picture === "string") {
+    imageBuffer = Buffer.from(data.picture, "base64");
+  } else {
+    imageBuffer = data.picture;
+  }
   const outputBuffer = await sharp(imageBuffer)
     .resize({ width: 100 })
     .jpeg({ quality: uiConfig.photoQuality })
