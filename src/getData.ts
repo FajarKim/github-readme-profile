@@ -63,7 +63,7 @@ async function getData(username: string): Promise<GetData> {
     name: user.name,
     picture: await base64ImageFetcher.encode(`${user.avatarUrl}&s=200`, {
       string: true
-    });
+    }),
     public_repos: millify(user.repositories.totalCount),
     followers: millify(user.followers.totalCount),
     following: millify(user.following.totalCount),
