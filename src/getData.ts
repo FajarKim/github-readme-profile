@@ -57,8 +57,8 @@ async function getData(username: string): Promise<GetData> {
   const totalRepoPages = Math.ceil(user.repositories.totalCount / 100);
   const userRepositories = await repositoryStats(username, totalRepoPages);
   const base64Data = await base64ImageFetcher.encode(`${user.avatarUrl}&s=200`, {
-    string: true,
-  }),
+    string: true
+  });
   const imageBuffer = Buffer.from(base64Data, "base64");
 
   let outputBuffer = await sharp(imageBuffer)
