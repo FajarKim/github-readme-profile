@@ -62,6 +62,7 @@ async function getData(username: string): Promise<GetData> {
   const imageBuffer = Buffer.from(base64Data, "base64");
 
   let outputBuffer = await sharp(imageBuffer)
+    .resize({ width: 100 })
     .jpeg({ quality: 15 })
     .toBuffer();
 
