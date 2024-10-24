@@ -27,6 +27,7 @@ import { isValidHexColor, isValidGradient } from "../src/common/utils";
  * @property {boolean|string} hideStroke - Toggle for hiding strokes.
  * @property {boolean|string} hideBorder - Toggle for hiding borders.
  * @property {number|string} photoQuality - Photo image quality.
+ * @property {number|string} photoResize - Photo image resize.
  */
 type UiConfig = {
   titleColor: string;
@@ -46,6 +47,7 @@ type UiConfig = {
   hideStroke: boolean | string;
   hideBorder: boolean | string;
   photoQuality: number | string;
+  photoResize: number | string;
 };
 
 /**
@@ -59,6 +61,7 @@ async function readmeStats(req: any, res: any): Promise<any> {
   try {
     const username = escapeHTML(req.query.username);
     const photoQuality = Math.max(0, Math.min(parseInt(escapeHTML(req.query.photo_quality || "15")), 100));
+    const photoResize = Math.max(10, parseInt(escapeHTML(req.query.photo_resize || "150")));
 
     const fallbackTheme = "default";
     const defaultTheme: Themes[keyof Themes] = themes[fallbackTheme];
@@ -82,6 +85,7 @@ async function readmeStats(req: any, res: any): Promise<any> {
       hideStroke: parseBoolean(escapeHTML(req.query.hide_stroke)) || false,
       hideBorder: parseBoolean(escapeHTML(req.query.hide_border)) || false,
       photoQuality: photoQuality,
+      photoResize: photoResize,
     };
 
     if (!username) {
