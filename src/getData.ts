@@ -62,12 +62,12 @@ async function getData(username: string): Promise<GetData> {
   const imageBuffer = Buffer.from(base64Data, "base64");
 
   let outputBuffer = await sharp(imageBuffer)
-    .jpeg({ quality: 80 })
+    .jpeg({ quality: 15 })
     .toBuffer();
 
-  while (outputBuffer.length / 1024 >= 300) {
+  while (outputBuffer.length / 1024 >= 30) {
     outputBuffer = await sharp(outputBuffer)
-      .jpeg({ quality: 60 })
+      .jpeg({ quality: 5 })
       .toBuffer();
   }
 
