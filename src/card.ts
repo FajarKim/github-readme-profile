@@ -1,3 +1,4 @@
+import sharp from "sharp";
 import parseBoolean from "@barudakrosul/parse-boolean";
 import type { GetData } from "./getData";
 import type { UiConfig } from "../api/index";
@@ -9,9 +10,16 @@ import icons from "./icons";
  *
  * @param {GetData} data - GitHub user data stats.
  * @param {UiConfig} uiConfig - Configuration for the UI card options.
- * @returns {string} - SVG markup for the GitHub stats card.
+ * @returns {Promise<string>} - SVG markup for the GitHub stats card.
  */
-function card(data: GetData, uiConfig: UiConfig): string {
+async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
+  const imageBuffer = Buffer.from(data.picture, "base64");
+  const outputBuffer = await sharp(imageBuffer)
+    .resize({ width: 100 })
+    .jpeg({ quality: uiConfig.photoQuality })
+    .toBuffer();
+  const dataPicture = outputBuffer.toString("base64");
+
   const fallbackLocale = "en";
   const defaultLocale: Locales[keyof Locales] = locales[fallbackLocale];
   const selectLocale: Locales[keyof Locales] = locales[uiConfig.Locale] || defaultLocale;
@@ -205,7 +213,7 @@ function card(data: GetData, uiConfig: UiConfig): string {
         <g class="image-profile-animation">
           <defs>
             <pattern id="image" x="0%" y="0%" height="100%" width="100%" viewBox="0 0 512 512">
-              <image x="0%" y="0%" width="512" height="512" href="data:image/jpeg;base64,${data.picture}"></image>
+              <image x="0%" y="0%" width="512" height="512" href="data:image/jpeg;base64,${dataPicture}"></image>
             </pattern>
           </defs>
           <circle cx="${angle.imageXAngle}" cy="${angle.imageYAngle}" r="50" fill="url(#image)" ${hideStroke}/>

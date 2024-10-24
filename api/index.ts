@@ -111,7 +111,7 @@ async function readmeStats(req: any, res: any): Promise<any> {
     if (uiConfig.Format === "json") {
       res.json(fetchStats);
     } else if (uiConfig.Format === "png") {
-      const svgString = card(fetchStats, uiConfig);
+      const svgString = await card(fetchStats, uiConfig);
       const resvg = new Resvg(svgString, { font: { defaultFontFamily: "Segoe UI" }});
       const pngBuffer = await resvg.render().asPng();
 
@@ -119,7 +119,7 @@ async function readmeStats(req: any, res: any): Promise<any> {
       res.send(pngBuffer);
     } else {
       res.setHeader("Content-Type", "image/svg+xml");
-      const svg = card(fetchStats, uiConfig);
+      const svg = await card(fetchStats, uiConfig);
       res.send(svg);
     }
   } catch (error: any) {

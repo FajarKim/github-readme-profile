@@ -1,5 +1,4 @@
 import millify from "millify";
-import sharp from "sharp";
 import stats from "./fetcher/stats";
 import repositoryStats from "./fetcher/repositoryStats";
 const base64ImageFetcher = require("node-base64-image");
@@ -56,28 +55,15 @@ async function getData(username: string): Promise<GetData> {
   const user = await stats(username);
   const totalRepoPages = Math.ceil(user.repositories.totalCount / 100);
   const userRepositories = await repositoryStats(username, totalRepoPages);
-  const base64Data = await base64ImageFetcher.encode(`${user.avatarUrl}&s=200`, {
-    string: true
-  });
-  const imageBuffer = Buffer.from(base64Data, "base64");
-
-  let outputBuffer = await sharp(imageBuffer)
-    .resize({ width: 100 })
-    .jpeg({ quality: 15 })
-    .toBuffer();
-
-  while (outputBuffer.length / 1024 >= 30) {
-    outputBuffer = await sharp(outputBuffer)
-      .jpeg({ quality: 5 })
-      .toBuffer();
-  }
 
   if (!user.name) user.name = user.login;
 
   const output = {
     username: user.login,
     name: user.name,
-    picture: outputBuffer.toString("base64"),
+    picture: await base64ImageFetcher.encode(`${user.avatarUrl}&s=200`, {
+      string: true
+    });
     public_repos: millify(user.repositories.totalCount),
     followers: millify(user.followers.totalCount),
     following: millify(user.following.totalCount),
