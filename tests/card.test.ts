@@ -40,6 +40,7 @@ describe("Test card function", () => {
     showItems: "reviews,issues_closed",
     hiddenItems: "forks,commits",
     photoQuality: 15,
+    photoResize: 150,
   };
 
   it("should generate SVG markup with default values", async () => {
