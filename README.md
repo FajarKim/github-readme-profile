@@ -83,104 +83,116 @@ You can customize the appearance of all your cards however you wish with URL par
   <tr>
     <td><p align="left"><code>title_color</code></p></td>
     <td><p align="left">Card's title color.</p></td>
-    <td><p align="left">string (hex color)</p></td>
-    <td><p align="left"><code>2f80ed</code></p></td>
+    <td><p align="center"><code>string</code></br>(hex color)</p></td>
+    <td><p align="center"><code>2f80ed</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>text_color</code></p></td>
     <td><p align="left">Body text color.</p></td>
-    <td><p align="left">string (hex color)</p></td>
-    <td><p align="left"><code>434d58</code></p></td>
+    <td><p align="center"><code>string</code></br>(hex color)</p></td>
+    <td><p align="center"><code>434d58</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>icon_color</code></p></td>
     <td><p align="left">Icons color.</p></td>
-    <td><p align="left">string (hex color)</p></td>
-    <td><p align="left"><code>4c71f2</code></p></td>
+    <td><p align="center"><code>string</code></br>(hex color)</p></td>
+    <td><p align="center"><code>4c71f2</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>border_color</code></p></td>
     <td><p align="left">Card's border color. Does not apply when <code>hide_border</code> is enabled.</p></td>
-    <td><p align="left">string (hex color)</p></td>
-    <td><p align="left"><code>e4e2e2</code></p></td>
+    <td><p align="center"><code>string</code></br>(hex color)</p></td>
+    <td><p align="center"><code>e4e2e2</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>bg_color</code></p></td>
     <td><p align="left">Card's background color.</p></td>
-    <td><p align="left">string (hex color or a gradient in the form of <i>angle,start,end</i>)</p></td>
-    <td><p align="left"><code>fffefe</code></p></td>
+    <td><p align="center"><code>string</code></br>(hex color or a gradient in the form of <i>angle,start,end</i>)</p></td>
+    <td><p align="center"><code>fffefe</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>stroke_color</code></p></td>
     <td><p align="left">Profile image border color. Does not apply when <code>hide_stroke</code> is enabled.</p></td>
-    <td><p align="left">string (hex color)</p></td>
-    <td><p align="left"><code>e4e2e2</code> or <code>border_color</code> query</p></td>
+    <td><p align="center"><code>string</code></br>(hex color)</p></td>
+    <td><p align="center"><code>e4e2e2</code> or <code>border_color</code> query</p></td>
   </tr>
   <tr>
     <td><p align="left"><code>username_color</code></p></td>
     <td><p align="left">Username text color.</p></td>
-    <td><p align="left">string (hex color)</p></td>
-    <td><p align="left"><code>434d58</code> or <code>text_color</code> query</p></td>
+    <td><p align="center"><code>string</code></br>(hex color)</p></td>
+    <td><p align="center"><code>434d58</code> or <code>text_color</code> query</p></td>
   </tr>
   <tr>
     <td><p align="left"><code>theme</code></p></td>
     <td><p align="left">Name of the theme, choose from <a href="/themes">all available themes</a>.</p></td>
-    <td><p align="left">enum</p></td>
-    <td><p align="left"><code>default</code></p></td>
+    <td><p align="center"><code>enum</code></p></td>
+    <td><p align="center"><code>default</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>locale</code></p></td>
     <td><p align="left">Sets the language in the card, you can check full list of available locales <a href="/docs/translations.md">here</a>.</p></td>
-    <td><p align="left">enum</p></td>
-    <td><p align="left"><code>en</code></p></td>
+    <td><p align="center"><code>enum</code></p></td>
+    <td><p align="center"><code>en</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>border_width</code></p></td>
     <td><p align="left">Sets the border's width manually.</p></td>
-    <td><p align="left">number</p></td>
-    <td><p align="left"><code>1</code></p></td>
+    <td><p align="center"><code>number</code></p></td>
+    <td><p align="center"><code>1</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>border_radius</code></p></td>
     <td><p align="left">Corner rounding on the card.</p></td>
-    <td><p align="left">number</td>
-    <td><p align="left"><code>4.5</code></p></td>
+    <td><p align="center"><code>number</code></td>
+    <td><p align="center"><code>4.5</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>hide</code></p></td>
     <td><p align="left">Hides the <a href="#hiding-individual-stats">specified items</a> from stats.</p></td>
-    <td><p align="left">string (comma-separated values)</td>
-    <td><p align="left"><code>null</code></p></td>
+    <td><p align="center"><code>string</code></br>(comma-separated values)</td>
+    <td><p align="center"><code>null</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>show</code></p></td>
     <td><p align="left">Shows <a href="#showing-additional-individual-stats">additional items</a> on stats card.</p></td>
-    <td><p align="left">string (comma-separated values)</td>
-    <td><p align="left"><code>null</code></p></td>
+    <td><p align="center"><code>string</code></br>(comma-separated values)</td>
+    <td><p align="center"><code>null</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>format</code></p></td>
     <td><p align="left">Output format card option (i.e. <code>svg</code>, <code>png</code>, or <code>json</code>).</p></td>
-    <td><p align="left">enum</td>
-    <td><p align="left"><code>svg</code></p></td>
+    <td><p align="center"><code>enum</code></td>
+    <td><p align="center"><code>svg</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>disabled_animations</code></p></td>
     <td><p align="left">Disables all animations in the card.</p></td>
-    <td><p align="left">boolean</td>
-    <td><p align="left"><code>false</code></p></td>
+    <td><p align="center"><code>boolean</code></td>
+    <td><p align="center"><code>false</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>hide_border</code></p></td>
     <td><p align="left">Hides the card's border.</p></td>
-    <td><p align="left">boolean</td>
-    <td><p align="left"><code>false</code></p></td>
+    <td><p align="center"><code>boolean</code></td>
+    <td><p align="center"><code>false</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>hide_stroke</code></p></td>
     <td><p align="left">Hides the image's profile stroke in the card.</p></td>
-    <td><p align="left">boolean</td>
-    <td><p align="left"><code>false</code></p></td>
+    <td><p align="center"><code>boolean</code></td>
+    <td><p align="center"><code>false</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>photo_quality</code></p></td>
+    <td><p align="left">Quality of the profile image, represented as a percentage (1-100).</p></td>
+    <td><p align="center"><code>number</code></br>(percentage)</p></td>
+    <td><p align="center"><code>15</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>photo_resize</code></p></td>
+    <td><p align="left">Resize the profile image to a specific width, in pixels. Minimum allowed value is 10px.</p></td>
+    <td><p align="center"><code>number</code></br>(pixels)</p></td>
+    <td><p align="center"><code>150</code></p></td>
   </tr>
 </table>
 
