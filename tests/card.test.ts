@@ -39,6 +39,7 @@ describe("Test card function", () => {
     disabledAnimations: false,
     showItems: "reviews,issues_closed",
     hiddenItems: "forks,commits",
+    photoQuality: 15,
   };
 
   it("should generate SVG markup with default values", () => {
