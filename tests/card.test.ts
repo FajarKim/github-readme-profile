@@ -5,7 +5,7 @@ describe("Test card function", () => {
   const mockData = {
     username: "FajarKim",
     name: "Rangga Fajar Oktariansyah",
-    picture: "avatar",
+    picture: "/9j/2wBDADUlKC8oITUvKy88OTU/UIVXUElJUKN1e2GFwarLyL6qurfV8P//1eL/5re6////////////zv//////////////2wBDATk8PFBGUJ1XV53/3Lrc////////////////////////////////////////////////////////////////////wAARCABLAEsDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAQQAAgMF/8QAKhAAAQMDAwMEAQUAAAAAAAAAAQACEQMhMRJBUQQTYSJxkaGxFDIzNIH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AHFJQS/VmzW7G6yq3fJ6jQ0SOZTCQpHTVZCeQFRBRUFVc4MaXOMAIpbq6rmAMbFxdBenWZUcdJPsVqkaDywgkEg7AJ1QEmBJSVV+uoScCwTVX+MpHVczypVi5/bIy0p1jtTQeQkAc+VZupl2kTwpKuH1EmOpdIBaJKua5aASLHyrsTDKSqnu1jGMLT9RchwcAZgrASBwlpIs21Rh22TiTYwPOkm26bbZoHCQqPEsIXNeYqOHldNLVaAfLcOF2nnwqhYPAIVi8ECSCBxkrItgkE3GwQsIGOVMXVwfUSdgSgXQGo0zFURecoPcHmY0jFgrgs2o4ySSSPwtDUbpJAgHAWDW21Q7/ETc+qZ5JTEbUXkO97J0YSVJpc4abiYTosFItRBzdQ/CKi0hHqpbU9W4wN0uTPAHATfVsL6ovgcLDtefpBVr2gixxHsqkjAwFp2Dz9I9h0Z+kGUtjdXpUjVcdNgMkoigTv8ASY6OmWy4OtMEEINqFLRnay1UwggCKCiBTqamivbJF7rI1vB+Ues/sH2CwUG4rTkGEHVr+kfKx2U2VFzVd4+E/wBID2ASMmVzcuAPK61MBrABgILoKKIP/9k=",
     public_repos: 20,
     followers: 20,
     following: 10,
