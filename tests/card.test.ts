@@ -42,17 +42,17 @@ describe("Test card function", () => {
     photoQuality: 15,
   };
 
-  it("should generate SVG markup with default values", () => {
-    const svgMarkup = card(mockData, mockUiConfig);
+  it("should generate SVG markup with default values", async () => {
+    const svgMarkup = await card(mockData, mockUiConfig);
 
     expect(svgMarkup).toContain("<svg");
     expect(svgMarkup).toContain(mockData.name);
     expect(svgMarkup).toContain(`@${mockData.username}`);
   });
 
-  it("should generate SVG markup with hidden and shown items", () => {
+  it("should generate SVG markup with hidden and shown items", async () => {
     const customUiConfig = { ...mockUiConfig, showItems: "reviews,issues_closed,discussions_started,discussions_answered", hiddenItems: "stars,forks,commits,prs" };
-    const svgMarkup = card(mockData, customUiConfig);
+    const svgMarkup = await card(mockData, customUiConfig);
 
     expect(svgMarkup).toContain("Total PRs Reviewed:");
     expect(svgMarkup).toContain("Total Issues Closed:");
@@ -63,27 +63,27 @@ describe("Test card function", () => {
     expect(svgMarkup).not.toContain("Commit's Count:");
   });
 
-  it("should generate SVG markup with hidden and shown undefined items", () => {
+  it("should generate SVG markup with hidden and shown undefined items", async () => {
     const customUiConfig = { ...mockUiConfig, showItems: undefined, hiddenItems: undefined };
-    const svgMarkup = card(mockData, customUiConfig);
+    const svgMarkup = await card(mockData, customUiConfig);
 
     expect(svgMarkup).toContain("Star's Count:");
     expect(svgMarkup).toContain("Fork's Count:");
     expect(svgMarkup).toContain("Commit's Count:");
   });
 
-  it.each(Object.keys(locales))("should generate SVG markup with locales '%s'", (locale) => {
+  it.each(Object.keys(locales))("should generate SVG markup with locales '%s'", async (locale) => {
     const customUiConfig = { ...mockUiConfig, Locale: locale };
-    const svgMarkup = card(mockData, customUiConfig);
+    const svgMarkup = await card(mockData, customUiConfig);
 
     expect(svgMarkup).toContain("<svg");
     expect(svgMarkup).toContain(mockData.name);
     expect(svgMarkup).toContain(`@${mockData.username}`);
   });
 
-  it.each(Object.keys(locales))("should generate SVG markup with locales '%s' and disabled animations", (locale) => {
+  it.each(Object.keys(locales))("should generate SVG markup with locales '%s' and disabled animations", async (locale) => {
     const customUiConfig = { ...mockUiConfig, Locale: locale, disabledAnimations: true };
-    const svgMarkup = card(mockData, customUiConfig);
+    const svgMarkup = await card(mockData, customUiConfig);
 
     expect(svgMarkup).toContain("<svg");
     expect(svgMarkup).toContain(mockData.name);
@@ -91,48 +91,48 @@ describe("Test card function", () => {
     expect(svgMarkup).not.toContain("@keyframes");
   });
 
-  it("should generate SVG markup with invalid locales", () => {
+  it("should generate SVG markup with invalid locales", async () => {
     const customUiConfig = { ...mockUiConfig, Locale: "abc123" };
-    const svgMarkup = card(mockData, customUiConfig);
+    const svgMarkup = await card(mockData, customUiConfig);
 
     expect(svgMarkup).toContain("<svg");
     expect(svgMarkup).toContain(mockData.name);
     expect(svgMarkup).toContain(`@${mockData.username}`);
   });
 
-  it("should generate SVG markup with custom background color", () => {
+  it("should generate SVG markup with custom background color", async () => {
     const customUiConfig = { ...mockUiConfig, bgColor: "ff5733" };
-    const svgMarkup = card(mockData, customUiConfig);
+    const svgMarkup = await card(mockData, customUiConfig);
 
     expect(svgMarkup).toContain("<rect");
     expect(svgMarkup).toContain("fill=\"#ff5733\"");
   });
 
-  it("should generate SVG markup with gradient background color", () => {
+  it("should generate SVG markup with gradient background color", async () => {
     const customUiConfig = { ...mockUiConfig, bgColor: "45,ff5733,00ccff" };
-    const svgMarkup = card(mockData, customUiConfig);
+    const svgMarkup = await card(mockData, customUiConfig);
 
     expect(svgMarkup).toContain("<linearGradient");
   });
 
-  it("should generate SVG markup with gradient background color (array)", () => {
+  it("should generate SVG markup with gradient background color (array)", async () => {
     const customUiConfig = { ...mockUiConfig, bgColor: ["45", "ff5733", "00ccff"] };
-    const svgMarkup = card(mockData, customUiConfig);
+    const svgMarkup = await card(mockData, customUiConfig);
 
     expect(svgMarkup).toContain("<linearGradient");
   });
 
-  it("should generate SVG markup with hidden border and stroke", () => {
+  it("should generate SVG markup with hidden border and stroke", async () => {
     const customUiConfig = { ...mockUiConfig, hideBorder: true, hideStroke: true };
-    const svgMarkup = card(mockData, customUiConfig);
+    const svgMarkup = await card(mockData, customUiConfig);
 
     expect(svgMarkup).not.toContain("stroke=\"#e4e2e2\"");
     expect(svgMarkup).not.toContain("stroke-width=\"5\"");
   });
 
-  it("should generate SVG markup with disabled animations", () => {
+  it("should generate SVG markup with disabled animations", async () => {
     const customUiConfig = { ...mockUiConfig, disabledAnimations: true };
-    const svgMarkup = card(mockData, customUiConfig);
+    const svgMarkup = await card(mockData, customUiConfig);
 
     expect(svgMarkup).not.toContain("@keyframes");
   });
