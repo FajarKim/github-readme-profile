@@ -1,8 +1,8 @@
 import fs from "fs";
-import locales from "../src/translations";
-import languageNames from "./languageNames";
+import locales from "../i18n/index";
+import languageNames from "../i18n/languageNames";
 
-const TARGET_FILE = "./docs/translations.md";
+const TARGET_FILE = "./i18n/README.md";
 
 function generateTranslationsMarkdown(locale: string): string {
   return `${locale}`;

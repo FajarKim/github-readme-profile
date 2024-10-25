@@ -15,6 +15,6 @@ describe("Test Generate Readme Docs", () => {
   it("should generate the README content locales correctly", () => {
     const generatedReadme = generateReadmeLocales();
 
-    expect(fs.writeFileSync).toHaveBeenCalledWith("./docs/translations.md", generatedReadme);
+    expect(fs.writeFileSync).toHaveBeenCalledWith("./i18n/README.md", generatedReadme);
   });
 });
