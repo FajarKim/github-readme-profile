@@ -17,6 +17,7 @@ import { isValidHexColor, isValidGradient } from "../src/common/utils";
  * @property {string} strokeColor - Color for strokes.
  * @property {string} usernameColor - Color for the username.
  * @property {any} bgColor - Background color or gradient.
+ * @property {string} Title - Add custom title (optional).
  * @property {string} Locale - Locale setting.
  * @property {number|string} borderWidth - Width of borders.
  * @property {number|string} borderRadius - Radius of borders.
@@ -37,6 +38,7 @@ type UiConfig = {
   strokeColor: string;
   usernameColor: string;
   bgColor: any;
+  Title: string | undefined;
   Locale: string;
   borderWidth: number | string;
   borderRadius: number | string;
@@ -75,6 +77,7 @@ async function readmeStats(req: any, res: any): Promise<any> {
       strokeColor: escapeHTML(req.query.stroke_color || req.query.border_color || selectTheme.stroke_color || selectTheme.border_color || defaultTheme.border_color),
       usernameColor: escapeHTML(req.query.username_color || req.query.text_color || selectTheme.username_color || selectTheme.text_color || defaultTheme.text_color),
       bgColor: escapeHTML(req.query.bg_color || selectTheme.bg_color || defaultTheme.bg_color),
+      Title: escapeHTML(req.query.title),
       Locale: escapeHTML(req.query.locale || "en"),
       borderWidth: escapeHTML(req.query.border_width || 1),
       borderRadius: escapeHTML(req.query.border_radius || 4.5),

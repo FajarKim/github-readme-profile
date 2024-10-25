@@ -1,5 +1,6 @@
 import sharp from "sharp";
 import parseBoolean from "@barudakrosul/parse-boolean";
+import textwrap from "@barudakrosul/textwrap";
 import type { GetData } from "./getData";
 import type { UiConfig } from "../api/index";
 import { locales, Locales } from "./translations";
@@ -37,6 +38,8 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
 
   const isRtlDirection = parseBoolean(selectLocale.rtlDirection);
   const isDisabledAnimations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png");
+
+  const customTitleCard = uiConfig.Title || selectLocale.titleCard;
 
   const direction = isRtlDirection ? "rtl" : "ltr";
   const angle = {
@@ -215,11 +218,11 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
           display: block;
         }
       </style>
-      <title id="titleId">${selectLocale.titleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</title>
+      <title id="titleId">${customTitleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</title>
       ${backgroundSVG}
       <g transform="translate(0, 25)">
         <g class="div-animation">
-          <text x="${angle.titleXAngle}" y="${angle.titleYAngle}" class="text-title">${selectLocale.titleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</text>
+          <text x="${angle.titleXAngle}" y="${angle.titleYAngle}" class="text-title">${textwrap.shorten(customTitleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name), 56, { placeholder: "..." })}</text>
         </g>
         <g class="image-profile-animation">
           <defs>
