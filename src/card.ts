@@ -65,7 +65,7 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
     userYPosition: isDisabledAnimations ? 140 : 130,
     follXPosition: isDisabledAnimations ? (isRevert ? 412 : 122) : (isRevert ? 402 : 112),
     follYPosition: isDisabledAnimations ? 161 : 151,
-    itemStatsXTransform: isRevert ? 0 : 230,
+    itemStatsXTransform: isRevert ? (isRtlDirection ? 10 : 0) : 230,
   };
 
   const hideStroke = parseBoolean(uiConfig.hideStroke) ? `` : `stroke="#${uiConfig.strokeColor}" stroke-width="5"`;
