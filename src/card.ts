@@ -58,11 +58,11 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
     textXAngle: isRtlDirection ? 215 : 20,
     dataXAngle: isRtlDirection ? 15 : 220,
     iconXAngle: isRtlDirection ? 225 : -5,
-    imageXAngle: isDisabledAnimations ? 120 : 125,
+    imageXAngle: isDisabledAnimations ? 122 : 127,
     imageYAngle: isDisabledAnimations ? 70 : 65,
-    userXAngle: isDisabledAnimations ? 119.9 : 109.9,
+    userXAngle: isDisabledAnimations ? 122 : 112,
     userYAngle: isDisabledAnimations ? 140 : 130,
-    follXAngle: isDisabledAnimations ? 120 : 110,
+    follXAngle: isDisabledAnimations ? 122 : 112,
     follYAngle: isDisabledAnimations ? 161 : 151,
   };
 
