@@ -136,7 +136,7 @@ You can customize the appearance of all your cards however you wish with URL par
   </tr>
   <tr>
     <td><p align="left"><code>locale</code></p></td>
-    <td><p align="left">Sets the language in the card, you can check full list of available locales <a href="/docs/translations.md">here</a>.</p></td>
+    <td><p align="left">Sets the language in the card, you can check full list of available locales <a href="/i18n/README.md">here</a>.</p></td>
     <td><p align="center"><code>enum</code></p></td>
     <td><p align="center"><code>en</code></p></td>
   </tr>
@@ -321,7 +321,7 @@ You can pass a query parameter `&show=` to show any specific additional stats wi
   </tr>
 </table>
 
-See [more](/docs/translations.md) available locale. The locale code added to file should be a 2-letter abbreviation from [ISO 639-1](https://www.andiamo.co.uk/resources/iso-language-codes/) or a 4-letter code with a language and country code (eg. `id` or `pt-BR`). Anything appearing in [the list](https://gist.github.com/FajarKim/91516c2aecbfc8bf65f584d528d5f2b1) should be fine. You can also contribute new translations if you like, contributing guidelines can be found [here](/CONTRIBUTING.md#%EF%B8%8F-translations-contribution).
+See [more](/i18n/README.md) available locale. The locale code added to file should be a 2-letter abbreviation from [ISO 639-1](https://www.andiamo.co.uk/resources/iso-language-codes/) or a 4-letter code with a language and country code (eg. `id` or `pt-BR`). Anything appearing in [the list](https://gist.github.com/FajarKim/91516c2aecbfc8bf65f584d528d5f2b1) should be fine. You can also contribute new translations if you like, contributing guidelines can be found [here](/CONTRIBUTING.md#%EF%B8%8F-translations-contribution).
 
 ```markdown
 ![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&locale=id)

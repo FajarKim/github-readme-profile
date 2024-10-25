@@ -35,7 +35,7 @@ To contribute your theme you need to edit the [themes/index.ts](/themes/index.ts
 ## 🗣️ Translations Contribution
 GitHub Readme Profile supports multiple languages, if we are missing your language, you can contribute it! You can check the currently supported languages [here](/README.md#available-locales).
 
-To contribute your language you need to edit the [src/translations.ts](/src/translations.ts) file and add new property to each object where the key is the language code in ISO 639-1 standard and the value is the translated string. Anything appearing in [the list](https://gist.github.com/FajarKim/91516c2aecbfc8bf65f584d528d5f2b1) should be fine.
+To contribute your language you need to edit the [i18n/index.ts](/i18n/index.ts) file and add new property to each object where the key is the language code in ISO 639-1 standard and the value is the translated string. Anything appearing in [the list](https://gist.github.com/FajarKim/91516c2aecbfc8bf65f584d528d5f2b1) should be fine.
 
 ## 📑 Any contributions you make will be under the MIT Software License
 
