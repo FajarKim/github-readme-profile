@@ -3,7 +3,7 @@ import getData from "../src/getData";
 import type { User } from "../src/fetcher/stats";
 import card from "../src/card";
 import themes from "../themes/index";
-import locales from "../src/translations";
+import locales from "../i18n/index";
 
 jest.mock("../src/getData");
 jest.mock("../src/card");

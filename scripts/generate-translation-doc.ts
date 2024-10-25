@@ -1,5 +1,5 @@
 import fs from "fs";
-import locales from "../src/translations";
+import locales from "../i18n/index";
 import languageNames from "./languageNames";
 
 const TARGET_FILE = "./docs/translations.md";

@@ -1,5 +1,5 @@
 import card from "../src/card";
-import locales from "../src/translations";
+import locales from "../i18n/index";
 
 describe("Test card function", () => {
   const mockData = {

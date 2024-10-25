@@ -2,7 +2,7 @@ import sharp from "sharp";
 import parseBoolean from "@barudakrosul/parse-boolean";
 import type { GetData } from "./getData";
 import type { UiConfig } from "../api/index";
-import { locales, Locales } from "./translations";
+import { locales, Locales } from "../i18n/index";
 import icons from "./icons";
 
 /**
