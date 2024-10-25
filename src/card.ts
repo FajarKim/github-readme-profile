@@ -1,6 +1,6 @@
 import sharp from "sharp";
 import parseBoolean from "@barudakrosul/parse-boolean";
-import textwrap from "@barudakrosul/textwrap":
+import textwrap from "@barudakrosul/textwrap";
 import type { GetData } from "./getData";
 import type { UiConfig } from "../api/index";
 import { locales, Locales } from "./translations";
