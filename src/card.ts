@@ -1,6 +1,5 @@
 import sharp from "sharp";
 import parseBoolean from "@barudakrosul/parse-boolean";
-import textwrap from "@barudakrosul/textwrap";
 import type { GetData } from "./getData";
 import type { UiConfig } from "../api/index";
 import { locales, Locales } from "./translations";
@@ -222,7 +221,7 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
       ${backgroundSVG}
       <g transform="translate(0, 25)">
         <g class="div-animation">
-          <text x="${angle.titleXAngle}" y="${angle.titleYAngle}" class="text-title">${textwrap.shorten(customTitleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name), 56, { placeholder: "..." })}</text>
+          <text x="${angle.titleXAngle}" y="${angle.titleYAngle}" class="text-title">${customTitleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</text>
         </g>
         <g class="image-profile-animation">
           <defs>
