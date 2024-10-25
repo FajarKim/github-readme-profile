@@ -6,6 +6,7 @@
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@barudakrosul/parse-boolean": "^0.0.2",
+    "@barudakrosul/textwrap": "^0.0.3",
     "@resvg/resvg-js": "^2.6.2",
     "@types/escape-html": "^1.0.4",
     "@types/express": "^5.0.0",
@@ -52,6 +53,9 @@
       "url": "https://buymeacoffee.com/fajarkim"
     }
   ],
+  "engines": {
+    "node": ">=20"
+  },
   "devDependencies": {
     "@markdoc/markdoc": "^0.4.0",
     "@types/jest": "^29.5.13",
