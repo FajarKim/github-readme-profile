@@ -129,6 +129,12 @@ You can customize the appearance of all your cards however you wish with URL par
     <td><p align="center"><code>default</code></p></td>
   </tr>
   <tr>
+    <td><p align="left"><code>title</code></p></td>
+    <td><p align="left">Custom title text for the card. Before use, encode the text to URL format using a tool like <a href="https://www.urlencoder.org/" target="_blank">URL Encoder</a>.</p></td>
+    <td><p align="center"><code>string</code></p></td>
+    <td><p align="center"><code>null</code></p></td>
+  </tr>
+  <tr>
     <td><p align="left"><code>locale</code></p></td>
     <td><p align="left">Sets the language in the card, you can check full list of available locales <a href="/docs/translations.md">here</a>.</p></td>
     <td><p align="center"><code>enum</code></p></td>
@@ -180,6 +186,12 @@ You can customize the appearance of all your cards however you wish with URL par
     <td><p align="left"><code>hide_stroke</code></p></td>
     <td><p align="left">Hides the image's profile stroke in the card.</p></td>
     <td><p align="center"><code>boolean</code></td>
+    <td><p align="center"><code>false</code></p></td>
+  </tr>
+  <tr>
+    <td><p align="left"><code>revert</code></p></td>
+    <td><p align="left">Inverts the display order, positioning stats to the left and the image to the right.</p></td>
+    <td><p align="center"><code>boolean</code></p></td>
     <td><p align="center"><code>false</code></p></td>
   </tr>
   <tr>
