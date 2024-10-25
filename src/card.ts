@@ -38,7 +38,18 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
   const isRtlDirection = parseBoolean(selectLocale.rtlDirection);
   const isDisabledAnimations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png");
 
-  const customTitleCard = uiConfig.Title || selectLocale.titleCard;
+  let titleCard = defaultLocale.titleCard.split("{name}").join(data.name);
+  if (uiConfig.Title ||
+      uiConfig.Title.length ||
+      uiConfig.Title !== "undefined" ||
+      uiConfig.Title !== "") {
+    titleCard = uiConfig.Title.split("{name}").join(data.name);
+  } else if (selectLocale.titleCard ||
+             selectLocale.titleCard.length ||
+             selectLocale.titleCard !== "undefined" ||
+             selectLocale.titleCard !== "") {
+    titleCard = selectLocale.titleCard.split("{name}").join(data.name);
+  }    
 
   const direction = isRtlDirection ? "rtl" : "ltr";
   const angle = {
@@ -217,11 +228,11 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
           display: block;
         }
       </style>
-      <title id="titleId">${customTitleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</title>
+      <title id="titleId">${titleCard}</title>
       ${backgroundSVG}
       <g transform="translate(0, 25)">
         <g class="div-animation">
-          <text x="${angle.titleXAngle}" y="${angle.titleYAngle}" class="text-title">${customTitleCard.split("{name}").join(data.name) || defaultLocale.titleCard.split("{name}").join(data.name)}</text>
+          <text x="${angle.titleXAngle}" y="${angle.titleYAngle}" class="text-title">${titleCard}</text>
         </g>
         <g class="image-profile-animation">
           <defs>
