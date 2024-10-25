@@ -39,14 +39,14 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
   const isDisabledAnimations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png");
 
   let titleCard = defaultLocale.titleCard.split("{name}").join(data.name);
-  if (uiConfig.Title ||
-      uiConfig.Title.length ||
-      uiConfig.Title !== "undefined" ||
+  if (uiConfig.Title &&
+      uiConfig.Title.length &&
+      uiConfig.Title !== "undefined" &&
       uiConfig.Title !== "") {
     titleCard = uiConfig.Title.split("{name}").join(data.name);
-  } else if (selectLocale.titleCard ||
-             selectLocale.titleCard.length ||
-             selectLocale.titleCard !== "undefined" ||
+  } else if (selectLocale.titleCard &&
+             selectLocale.titleCard.length &&
+             selectLocale.titleCard !== "undefined" &&
              selectLocale.titleCard !== "") {
     titleCard = selectLocale.titleCard.split("{name}").join(data.name);
   }    
