@@ -23,6 +23,7 @@ describe("Test card function", () => {
   };
 
   const mockUiConfig = {
+    Title: "Rangga Fajar Oktariansyah's GitHub Stats",
     Locale: "en",
     Format: "svg",
     titleColor: "2f80ed",
