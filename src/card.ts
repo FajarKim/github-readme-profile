@@ -55,9 +55,9 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
   const angle = {
     titleXAngle: isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5),
     titleYAngle: isDisabledAnimations ? 0 : -10,
-    textXAngle: isRtlDirection ? 215 : 20,
-    dataXAngle: isRtlDirection ? 15 : 220,
-    iconXAngle: isRtlDirection ? 225 : -5,
+    textXAngle: isRtlDirection ? 225 : 20,
+    dataXAngle: isRtlDirection ? 25 : 220,
+    iconXAngle: isRtlDirection ? 235 : -5,
     imageXAngle: isDisabledAnimations ? 122 : 127,
     imageYAngle: isDisabledAnimations ? 70 : 65,
     userXAngle: isDisabledAnimations ? 122 : 112,
