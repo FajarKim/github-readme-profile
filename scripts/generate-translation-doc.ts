@@ -1,6 +1,6 @@
 import fs from "fs";
 import locales from "../i18n/index";
-import languageNames from "./languageNames";
+import languageNames from "../i18n/languageNames";
 
 const TARGET_FILE = "./i18n/README.md";
 
