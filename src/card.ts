@@ -37,6 +37,7 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
 
   const isRtlDirection = parseBoolean(selectLocale.rtlDirection);
   const isDisabledAnimations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png");
+  const isRevert = parseBoolean(uiConfig.Revert);
 
   let titleCard = defaultLocale.titleCard.split("{name}").join(data.name);
   if (uiConfig.Title &&
@@ -58,12 +59,13 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
     textXPosition: isRtlDirection ? 225 : 20,
     dataXPosition: isRtlDirection ? 25 : 220,
     iconXPosition: isRtlDirection ? 235 : -5,
-    imageXPosition: isDisabledAnimations ? 122 : 127,
+    imageXPosition: isDisabledAnimations ? (isRevert ? 412 : 122) : (isRevert ? 417 : 127),
     imageYPosition: isDisabledAnimations ? 70 : 65,
-    userXPosition: isDisabledAnimations ? 122 : 112,
+    userXPosition: isDisabledAnimations ? (isRevert ? 412 : 122) : (isRevert ? 402 : 112),
     userYPosition: isDisabledAnimations ? 140 : 130,
-    follXPosition: isDisabledAnimations ? 122 : 112,
+    follXPosition: isDisabledAnimations ? (isRevert ? 412 : 122) : (isRevert ? 402 : 112),
     follYPosition: isDisabledAnimations ? 161 : 151,
+    itemStatsXTransform: isRevert ? (isRtlDirection ? 10 : 0) : 230,
   };
 
   const hideStroke = parseBoolean(uiConfig.hideStroke) ? `` : `stroke="#${uiConfig.strokeColor}" stroke-width="5"`;
@@ -136,7 +138,7 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
   const cardItemsToShow = cardItems.filter(item => !item.hidden);
 
   const cardItemsSVG = cardItemsToShow.map((item, index) => `
-    <g transform="translate(230, ${15 + index * 25})">
+    <g transform="translate(${position.itemStatsXTransform}, ${15 + index * 25})">
       <g class="single-item-animation" style="animation-delay: ${210 + index * 100}ms" transform="translate(25, 0)">
         <svg x="${position.iconXPosition}" y="0" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
           ${item.icon}

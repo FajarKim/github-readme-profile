@@ -40,6 +40,7 @@ describe("Test card function", () => {
     disabledAnimations: false,
     showItems: "reviews,issues_closed",
     hiddenItems: "forks,commits",
+    Revert: false,
     photoQuality: 15,
     photoResize: 150,
   };

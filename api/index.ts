@@ -27,6 +27,7 @@ import { isValidHexColor, isValidGradient } from "../src/common/utils";
  * @property {string|undefined} showItems - Items to show.
  * @property {boolean|string} hideStroke - Toggle for hiding strokes.
  * @property {boolean|string} hideBorder - Toggle for hiding borders.
+ * @property {boolean|string} Revert - Invert display order, stats to left and image to right.
  * @property {number|string} photoQuality - Photo image quality.
  * @property {number|string} photoResize - Photo image resize.
  */
@@ -48,6 +49,7 @@ type UiConfig = {
   showItems: string | undefined;
   hideStroke: boolean | string;
   hideBorder: boolean | string;
+  Revert: boolean | string;
   photoQuality: number | string;
   photoResize: number | string;
 };
@@ -87,6 +89,7 @@ async function readmeStats(req: any, res: any): Promise<any> {
       showItems: escapeHTML(req.query.show),
       hideStroke: parseBoolean(escapeHTML(req.query.hide_stroke)) || false,
       hideBorder: parseBoolean(escapeHTML(req.query.hide_border)) || false,
+      Revert: parseBoolean(escapeHTML(req.query.revert)) || false,
       photoQuality: photoQuality,
       photoResize: photoResize,
     };
