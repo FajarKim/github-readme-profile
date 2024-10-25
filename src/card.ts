@@ -52,18 +52,18 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
   }    
 
   const direction = isRtlDirection ? "rtl" : "ltr";
-  const angle = {
-    titleXAngle: isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5),
-    titleYAngle: isDisabledAnimations ? 0 : -10,
-    textXAngle: isRtlDirection ? 225 : 20,
-    dataXAngle: isRtlDirection ? 25 : 220,
-    iconXAngle: isRtlDirection ? 235 : -5,
-    imageXAngle: isDisabledAnimations ? 122 : 127,
-    imageYAngle: isDisabledAnimations ? 70 : 65,
-    userXAngle: isDisabledAnimations ? 122 : 112,
-    userYAngle: isDisabledAnimations ? 140 : 130,
-    follXAngle: isDisabledAnimations ? 122 : 112,
-    follYAngle: isDisabledAnimations ? 161 : 151,
+  const position = {
+    titleXPosition: isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5),
+    titleYPosition: isDisabledAnimations ? 0 : -10,
+    textXPosition: isRtlDirection ? 225 : 20,
+    dataXPosition: isRtlDirection ? 25 : 220,
+    iconXPosition: isRtlDirection ? 235 : -5,
+    imageXPosition: isDisabledAnimations ? 122 : 127,
+    imageYPosition: isDisabledAnimations ? 70 : 65,
+    userXPosition: isDisabledAnimations ? 122 : 112,
+    userYPosition: isDisabledAnimations ? 140 : 130,
+    follXPosition: isDisabledAnimations ? 122 : 112,
+    follYPosition: isDisabledAnimations ? 161 : 151,
   };
 
   const hideStroke = parseBoolean(uiConfig.hideStroke) ? `` : `stroke="#${uiConfig.strokeColor}" stroke-width="5"`;
@@ -104,7 +104,7 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
 
     .image-profile-animation {
       animation: scaleInAnimation 1.2s ease-in-out forwards;
-      transform-origin: ${angle.imageXAngle}px ${angle.imageYAngle}px;
+      transform-origin: ${position.imageXPosition}px ${position.imageYPosition}px;
     }
 
     .single-item-animation {
@@ -138,11 +138,11 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
   const cardItemsSVG = cardItemsToShow.map((item, index) => `
     <g transform="translate(230, ${15 + index * 25})">
       <g class="single-item-animation" style="animation-delay: ${210 + index * 100}ms" transform="translate(25, 0)">
-        <svg x="${angle.iconXAngle}" y="0" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+        <svg x="${position.iconXPosition}" y="0" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
           ${item.icon}
         </svg>
-        <text class="text" x="${angle.textXAngle}" y="12.5">${item.text}:</text>
-        <text class="text text-bold" x="${angle.dataXAngle}" y="12.5">${item.value}</text>
+        <text class="text" x="${position.textXPosition}" y="12.5">${item.text}:</text>
+        <text class="text text-bold" x="${position.dataXPosition}" y="12.5">${item.value}</text>
       </g>
     </g>
   `).join("\n");
@@ -232,7 +232,7 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
       ${backgroundSVG}
       <g transform="translate(0, 25)">
         <g class="div-animation">
-          <text x="${angle.titleXAngle}" y="${angle.titleYAngle}" class="text-title">${titleCard}</text>
+          <text x="${position.titleXPosition}" y="${position.titleYPosition}" class="text-title">${titleCard}</text>
         </g>
         <g class="image-profile-animation">
           <defs>
@@ -240,11 +240,11 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
               <image x="0%" y="0%" width="512" height="512" href="data:image/jpeg;base64,${dataPicture}"></image>
             </pattern>
           </defs>
-          <circle cx="${angle.imageXAngle}" cy="${angle.imageYAngle}" r="50" fill="url(#image)" ${hideStroke}/>
+          <circle cx="${position.imageXPosition}" cy="${position.imageYPosition}" r="50" fill="url(#image)" ${hideStroke}/>
         </g>
-        <text x="${angle.userXAngle}" y="${angle.userYAngle}" direction="ltr" class="text-username div-animation">@${data.username}</text>
+        <text x="${position.userXPosition}" y="${position.userYPosition}" direction="ltr" class="text-username div-animation">@${data.username}</text>
         <g class="div-animation text-middle">
-          <text x="${angle.follXAngle}" y="${angle.follYAngle}" class="text-followers"><tspan class="text-bold">${data.followers}</tspan> ${selectLocale.followersText || defaultLocale.followersText} · <tspan class="text-bold">${data.following}</tspan> ${selectLocale.followingText || defaultLocale.followingText}</text>
+          <text x="${position.follXPosition}" y="${position.follYPosition}" class="text-followers"><tspan class="text-bold">${data.followers}</tspan> ${selectLocale.followersText || defaultLocale.followersText} · <tspan class="text-bold">${data.following}</tspan> ${selectLocale.followingText || defaultLocale.followingText}</text>
         </g>
         ${cardItemsSVG}
       </g>
