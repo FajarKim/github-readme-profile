@@ -166,7 +166,7 @@ You can customize the appearance of all your cards however you wish with URL par
   </tr>
   <tr>
     <td><p align="left"><code>format</code></p></td>
-    <td><p align="left">Output format card option (i.e. <code>svg</code>, <code>png</code>, or <code>json</code>).</p></td>
+    <td><p align="left">Output format card option (i.e. <code>svg</code>, <code>png</code>, <code>json</code>, or <code>xml</code>).</p></td>
     <td><p align="center"><code>enum</code></td>
     <td><p align="center"><code>svg</code></p></td>
   </tr>
