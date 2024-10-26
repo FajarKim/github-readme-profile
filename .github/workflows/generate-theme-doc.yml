@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - "themes/index.ts"
+      - "scripts/generate-theme-doc.ts"
 
 permissions:
   actions: read
