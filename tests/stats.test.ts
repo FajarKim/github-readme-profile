@@ -5,142 +5,187 @@ jest.mock("axios");
 
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
-describe("GitHub Stats Fetcher Test", () => {
-  const username = "FajarKim";
+describe("GitHub Stats Module", () => {
+  const username = "testuser";
 
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
-  it("should fetch the correct join year for the user", async () => {
-    mockedAxios.post.mockResolvedValueOnce({
-      data: {
+    it("should fetch the correct join year for the user", async () => {
+      const mockResponse: axios.AxiosResponse = {
         data: {
-          user: {
-            createdAt: "2015-06-15T00:00:00Z",
-          },
-        },
-      },
-    });
-
-    const joinYear = await getUserJoinYear(username);
-    expect(joinYear).toBe(2015);
-    expect(mockedAxios.post).toHaveBeenCalledTimes(1);
-  });
-
-  it("should throw an error if user data is missing", async () => {
-    mockedAxios.post.mockResolvedValueOnce({
-      data: {
-        data: {
-          user: null,
-        },
-      },
-    });
-
-    await expect(getUserJoinYear(username)).rejects.toThrow("User data is missing.");
-  });
-
-  it("should throw an error if there are errors in the API response", async () => {
-    mockedAxios.post.mockResolvedValueOnce({
-      data: {
-        errors: [{ message: "Some error occurred" }],
-      },
-    });
-
-    await expect(getUserJoinYear(username)).rejects.toThrow("Some error occurred");
-  });
-
-  it("should fetch contributions for the specified year", async () => {
-    mockedAxios.post.mockResolvedValueOnce({
-      data: {
-        data: {
-          user: {
-            contributionsCollection: {
-              totalCommitContributions: 100,
-              restrictedContributionsCount: 10,
-              totalPullRequestReviewContributions: 5,
+          data: {
+            user: {
+              createdAt: "2015-06-15T00:00:00Z",
             },
           },
         },
-      },
+        status: 200,
+        statusText: "OK",
+        headers: {},
+        config: {},
+      };
+
+      mockedAxios.post.mockResolvedValueOnce(mockResponse);
+
+      const joinYear = await getUserJoinYear(username);
+      expect(joinYear).toBe(2015);
+      expect(mockedAxios.post).toHaveBeenCalledTimes(1);
     });
 
-    const contributions = await fetchContributions(username, 2022);
-    expect(contributions.totalCommitContributions).toBe(100);
-    expect(contributions.restrictedContributionsCount).toBe(10);
-    expect(contributions.totalPullRequestReviewContributions).toBe(5);
-    expect(mockedAxios.post).toHaveBeenCalledTimes(1);
-  });
-
-  it("should throw an error if there are errors in the API response", async () => {
-    mockedAxios.post.mockResolvedValueOnce({
-      data: {
-        errors: [{ message: "Some error occurred" }],
-      },
-    });
-
-    await expect(fetchContributions(username, 2022)).rejects.toThrow("Some error occurred");
-  });
-
-  it("should fetch user stats with aggregated contributions", async () => {
-    mockedAxios.post.mockImplementation((config) => {
-      if (config.data.query.includes("createdAt")) {
-        return Promise.resolve({
+    it("should throw an error if user data is missing", async () => {
+      const mockResponse: axios.AxiosResponse = {
+        data: {
           data: {
-            data: {
-              user: {
-                createdAt: "2019-01-01T00:00:00Z",
+            user: null,
+          },
+        },
+        status: 200,
+        statusText: "OK",
+        headers: {},
+        config: {},
+      };
+
+      mockedAxios.post.mockResolvedValueOnce(mockResponse);
+
+      await expect(getUserJoinYear(username)).rejects.toThrow("User data is missing.");
+    });
+
+    it("should throw an error if there are errors in the API response", async () => {
+      const mockErrorResponse: axios.AxiosResponse = {
+        data: {
+          errors: [{ message: "Some error occurred" }],
+        },
+        status: 400,
+        statusText: "Bad Request",
+        headers: {},
+        config: {},
+      };
+
+      mockedAxios.post.mockResolvedValueOnce(mockErrorResponse);
+
+      await expect(getUserJoinYear(username)).rejects.toThrow("Some error occurred");
+    });
+
+    it("should fetch contributions for the specified year", async () => {
+      const mockResponse: axios.AxiosResponse = {
+        data: {
+          data: {
+            user: {
+              contributionsCollection: {
+                totalCommitContributions: 100,
+                restrictedContributionsCount: 10,
+                totalPullRequestReviewContributions: 5,
               },
             },
           },
-        });
-      } else if (config.data.query.includes("contributionsCollection")) {
-        return Promise.resolve({
-          data: {
+        },
+        status: 200,
+        statusText: "OK",
+        headers: {},
+        config: {},
+      };
+
+      mockedAxios.post.mockResolvedValueOnce(mockResponse);
+
+      const contributions = await fetchContributions(username, 2022);
+      expect(contributions.totalCommitContributions).toBe(100);
+      expect(contributions.restrictedContributionsCount).toBe(10);
+      expect(contributions.totalPullRequestReviewContributions).toBe(5);
+      expect(mockedAxios.post).toHaveBeenCalledTimes(1);
+    });
+
+    it("should throw an error if there are errors in the API response", async () => {
+      const mockErrorResponse: axios.AxiosResponse = {
+        data: {
+          errors: [{ message: "Some error occurred" }],
+        },
+        status: 400,
+        statusText: "Bad Request",
+        headers: {},
+        config: {},
+      };
+
+      mockedAxios.post.mockResolvedValueOnce(mockErrorResponse);
+
+      await expect(fetchContributions(username, 2022)).rejects.toThrow("Some error occurred");
+    });
+
+    it("should fetch user stats with aggregated contributions", async () => {
+      mockedAxios.post.mockImplementation((config) => {
+        if (config.data.query.includes("createdAt")) {
+          const mockResponse: axios.AxiosResponse = {
             data: {
-              user: {
-                contributionsCollection: {
-                  totalCommitContributions: 50,
-                  restrictedContributionsCount: 5,
-                  totalPullRequestReviewContributions: 2,
+              data: {
+                user: {
+                  createdAt: "2019-01-01T00:00:00Z",
                 },
               },
             },
-          },
-        });
-      } else {
-        return Promise.resolve({
-          data: {
+            status: 200,
+            statusText: "OK",
+            headers: {},
+            config: {},
+          };
+          return Promise.resolve(mockResponse);
+        } else if (config.data.query.includes("contributionsCollection")) {
+          const mockResponse: axios.AxiosResponse = {
             data: {
-              user: {
-                name: "Rangga Fajar Oktariansyah",
-                login: "FajarKim",
-                avatarUrl: "https://example.com/avatar.jpg",
-                repositories: { totalCount: 10 },
-                followers: { totalCount: 100 },
-                following: { totalCount: 50 },
-                openedIssues: { totalCount: 20 },
-                closedIssues: { totalCount: 30 },
-                pullRequests: { totalCount: 15 },
-                mergedPullRequests: { totalCount: 10 },
-                discussionStarted: { totalCount: 5 },
-                discussionAnswered: { totalCount: 3 },
-                repositoriesContributedTo: { totalCount: 7 },
+              data: {
+                user: {
+                  contributionsCollection: {
+                    totalCommitContributions: 50,
+                    restrictedContributionsCount: 5,
+                    totalPullRequestReviewContributions: 2,
+                  },
+                },
               },
             },
-          },
-        });
-      }
+            status: 200,
+            statusText: "OK",
+            headers: {},
+            config: {},
+          };
+          return Promise.resolve(mockResponse);
+        } else {
+          const mockResponse: axios.AxiosResponse = {
+            data: {
+              data: {
+                user: {
+                  name: "Test User",
+                  login: "testuser",
+                  avatarUrl: "https://example.com/avatar.jpg",
+                  repositories: { totalCount: 10 },
+                  followers: { totalCount: 100 },
+                  following: { totalCount: 50 },
+                  openedIssues: { totalCount: 20 },
+                  closedIssues: { totalCount: 30 },
+                  pullRequests: { totalCount: 15 },
+                  mergedPullRequests: { totalCount: 10 },
+                  discussionStarted: { totalCount: 5 },
+                  discussionAnswered: { totalCount: 3 },
+                  repositoriesContributedTo: { totalCount: 7 },
+                },
+              },
+            },
+            status: 200,
+            statusText: "OK",
+            headers: {},
+            config: {},
+          };
+          return Promise.resolve(mockResponse);
+        }
+      });
+
+      const userStats = await stats(username);
+
+      expect(userStats.name).toBe("Test User");
+      expect(userStats.totalCommitContributions).toBe(100); // 50 + 50
+      expect(userStats.restrictedContributionsCount).toBe(10); // 5 + 5
+      expect(userStats.totalPullRequestReviewContributions).toBe(4); // 2 + 2
+      expect(userStats.repositories.totalCount).toBe(10);
+      expect(userStats.followers.totalCount).toBe(100);
+      expect(userStats.following.totalCount).toBe(50);
     });
-
-    const userStats = await stats(username);
-
-    expect(userStats.name).toBe("Rangga Fajar Oktariansyah");
-    expect(userStats.totalCommitContributions).toBe(100); // 50 + 50
-    expect(userStats.restrictedContributionsCount).toBe(10); // 5 + 5
-    expect(userStats.totalPullRequestReviewContributions).toBe(4); // 2 + 2
-    expect(userStats.repositories.totalCount).toBe(10);
-    expect(userStats.followers.totalCount).toBe(100);
-    expect(userStats.following.totalCount).toBe(50);
-  });
 });
