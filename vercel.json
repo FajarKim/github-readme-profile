@@ -10,5 +10,16 @@
       "source": "/",
       "destination": "https://gh-readme-profile-generator.vercel.app/"
     }
+  ],
+  "headers": [
+    {
+      "source": "/api",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=7200, stale-while-revalidate"
+        }
+      ]
+    }
   ]
 }
