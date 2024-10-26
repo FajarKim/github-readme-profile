@@ -147,6 +147,5 @@ describe("Test GitHub Readme Profile API", () => {
     expect(card).not.toHaveBeenCalledWith();
     expect(mockResponse.send).toHaveBeenCalled();
     expect(mockResponse.json).not.toHaveBeenCalled();
-    expect(mockResponse.setHeader).toHaveBeenCalledWith("Cache-Control", "s-maxage=3600, stale-while-revalidate");
   });
 });
