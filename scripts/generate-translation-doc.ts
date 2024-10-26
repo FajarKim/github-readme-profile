@@ -5,11 +5,11 @@ import languageNames from "../i18n/languageNames";
 const TARGET_FILE = "./i18n/README.md";
 
 function getProgressColor(progress: number): string {
-  if (progress <= 20) return "#FF0000";
-  if (progress <= 40) return "#FF7F00";
-  if (progress <= 60) return "#FFFF00";
-  if (progress <= 80) return "#7FFF00";
-  return "#00FF00";
+  if (progress <= 20) return "FF0000";
+  if (progress <= 40) return "FF7F00";
+  if (progress <= 60) return "FFFF00";
+  if (progress <= 80) return "7FFF00";
+  return "00FF00";
 }
 
 function generateTranslationsMarkdown(locale: string): string {
