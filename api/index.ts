@@ -137,7 +137,7 @@ async function readmeStats(req: any, res: any): Promise<any> {
       fetchStats.picture = `data:image/png;base64,${fetchStats.picture}`;
       res.json(fetchStats);
     } else if (uiConfig.Format === "xml") {
-      fetchStats.picture = `data:image/png;base64,${String(fetchStats.picture).replace("\n", "")}`;
+      fetchStats.picture = `data:image/png;base64,${fetchStats.picture}`;
       const xmlData = generateXML(fetchStats);
       res.setHeader("Content-Type", "application/xml");
       res.send(xmlData);
