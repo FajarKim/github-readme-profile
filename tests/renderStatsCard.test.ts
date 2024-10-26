@@ -65,7 +65,7 @@ describe("Test GitHub Readme Profile API", () => {
     expect(getData).toHaveBeenCalledWith(mockRequest.query.username);
     expect(mockResponse.json).toHaveBeenCalledWith(exampleUserData);
     expect(mockResponse.send).not.toHaveBeenCalled();
-    expect(mockResponse.setHeader).toHaveBeenCalledWith("Cache-Control", "s-maxage=3600, stale-while-revalidate");
+    expect(mockResponse.setHeader).toHaveBeenCalledWith("Cache-Control", "s-maxage=7200, stale-while-revalidate");
   });
 
   it("should handle request and generate SVG response", async () => {
