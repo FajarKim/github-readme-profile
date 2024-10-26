@@ -126,7 +126,6 @@ async function readmeStats(req: any, res: any): Promise<any> {
       const pngBuffer = await resvg.render().asPng();
 
       res.setHeader("Content-Type", "image/png");
-      res.setHeader("Content-Disposition", `attachment; filename="${fetchStats.name}'s GitHub Stats.png"`);
       res.send(pngBuffer);
     } else {
       res.setHeader("Content-Type", "image/svg+xml");
