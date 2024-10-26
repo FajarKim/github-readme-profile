@@ -55,6 +55,21 @@ type UiConfig = {
 };
 
 /**
+ * Generates an XML string representation of the provided data.
+ *
+ * @param {any} data - The data to be converted into XML format.
+ * @returns {string} - A string containing the XML representation of the data.
+ */
+function generateXML(data: any): string {
+  let xml = `<stats>\n`;
+  for (const key in data) {
+    xml += `  <${key}>${escapeHTML(data[key])}</${key}>\n`;
+  }
+  xml += `</stats>`;
+  return xml;
+}
+
+/**
  * Handles the generation card of a GitHub stats based on user data and specified options.
  *
  * @param {any} req - The request object from the client.
@@ -119,7 +134,13 @@ async function readmeStats(req: any, res: any): Promise<any> {
     res.setHeader("Cache-Control", "s-maxage=7200, stale-while-revalidate");
 
     if (uiConfig.Format === "json") {
+      fetchStats.picture = `data:image/png;base64,${fetchStats.picture}`;
       res.json(fetchStats);
+    } else if (uiConfig.Format === "xml") {
+      fetchStats.picture = `data:image/png;base64,${fetchStats.picture}`;
+      const xmlData = generateXML(fetchStats);
+      res.setHeader("Content-Type", "application/xml");
+      res.send(xmlData);
     } else if (uiConfig.Format === "png") {
       const svgString = await card(fetchStats, uiConfig);
       const resvg = new Resvg(svgString, { font: { defaultFontFamily: "Segoe UI" }});
