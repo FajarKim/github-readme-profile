@@ -134,7 +134,6 @@ async function readmeStats(req: any, res: any): Promise<any> {
     }
   } catch (error: any) {
     const message = error.message;
-    res.setHeader("Cache-Control", "s-maxage=7200, stale-while-revalidate");
     res.status(500).send(escapeHTML(message));
   }
 }
