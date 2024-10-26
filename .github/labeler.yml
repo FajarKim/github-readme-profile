@@ -23,7 +23,7 @@ dependencies:
 doc-translation:
   - changed-files:
       - any-glob-to-any-file:
-          - "docs/translations.md"
+          - "i18n/README.md"
 
 doc-theme:
   - changed-files:
