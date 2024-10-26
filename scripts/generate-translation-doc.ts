@@ -1,5 +1,4 @@
 import fs from "fs";
-import millify from "millify";
 import locales from "../i18n/index";
 import languageNames from "../i18n/languageNames";
 
@@ -31,7 +30,7 @@ export function generateReadmeLocales() {
     localesListTable += `  <tr>
     <td><p align="center"><code>${row}</code></p></td>
     <td><p align="left">${languageNames[row]}</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=${progressColor}"/> ${millify.millify(progress)}%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=${progressColor}"/> ${progress.toFixed(0)}%</p></td>
   </tr>\n`;
   }
 
