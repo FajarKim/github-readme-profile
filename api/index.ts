@@ -134,6 +134,7 @@ async function readmeStats(req: any, res: any): Promise<any> {
     res.setHeader("Cache-Control", "s-maxage=7200, stale-while-revalidate");
 
     if (uiConfig.Format === "json") {
+      fetchStats.picture = `data:image/png;base64,${fetchStats.picture}`;
       res.json(fetchStats);
     } else if (uiConfig.Format === "xml") {
       const xmlData = generateXML(fetchStats);
