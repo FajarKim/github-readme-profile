@@ -43,8 +43,6 @@ const exampleUserData: ExtendUser = {
   totalCommitsSinceJoined: 1500,
 };
 
-(getData as jest.Mock).mockResolvedValueOnce(exampleUserData);
-
 describe("Test GitHub Readme Profile API", () => {
   let mockRequest: any;
   let mockResponse: any;
@@ -60,6 +58,8 @@ describe("Test GitHub Readme Profile API", () => {
       setHeader: jest.fn(),
       status: jest.fn(),
     };
+
+    (getData as jest.Mock).mockResolvedValue(exampleUserData);
 
     jest.clearAllMocks();
   });
