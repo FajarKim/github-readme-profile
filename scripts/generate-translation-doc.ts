@@ -17,7 +17,7 @@ function generateTranslationsMarkdown(locale: string): string {
 }
 
 export function generateReadmeLocales() {
-  const availableLocales = Object.keys(locales);
+  const availableLocales = Object.keys(locales).sort();
 
   let localesListTable = "";
   for (let i = 0; i < availableLocales.length; i += 1) {
