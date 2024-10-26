@@ -116,7 +116,7 @@ async function readmeStats(req: any, res: any): Promise<any> {
     }
 
     const fetchStats = await getData(username);
-    res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");
+    res.setHeader("Cache-Control", "s-maxage=7200, stale-while-revalidate");
 
     if (uiConfig.Format === "json") {
       res.json(fetchStats);
