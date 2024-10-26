@@ -13,32 +13,32 @@ Use `?theme=THEME_NAME` parameter like so :-
 
 |                   |                   |                   |
 | :---------------: | :---------------: | :---------------: |
-| `default` ![default][default] | `transparent` ![transparent][transparent] | `dark` ![dark][dark] |
-| `highcontrast` ![highcontrast][highcontrast] | `catppuccin-latte` ![catppuccin-latte][catppuccin-latte] | `catppuccin-frappe` ![catppuccin-frappe][catppuccin-frappe] |
-| `catppuccin-macchiato` ![catppuccin-macchiato][catppuccin-macchiato] | `catppuccin-mocha` ![catppuccin-mocha][catppuccin-mocha] | `vue` ![vue][vue] |
-| `vue-dark` ![vue-dark][vue-dark] | `github_dark` ![github_dark][github_dark] | `github_dark_highcontrast` ![github_dark_highcontrast][github_dark_highcontrast] |
-| `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed] | `github_dark_tritanopia` ![github_dark_tritanopia][github_dark_tritanopia] | `github_light` ![github_light][github_light] |
-| `github_light_highcontrast` ![github_light_highcontrast][github_light_highcontrast] | `github_light_tritanopia` ![github_light_tritanopia][github_light_tritanopia] | `whatsapp-light` ![whatsapp-light][whatsapp-light] |
-| `whatsapp-dark` ![whatsapp-dark][whatsapp-dark] | `buefy` ![buefy][buefy] | `buefy-dark` ![buefy-dark][buefy-dark] |
-| `solarized-light` ![solarized-light][solarized-light] | `solarized-dark` ![solarized-dark][solarized-dark] | `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark] |
-| `deuteranopia-friendly-dark` ![deuteranopia-friendly-dark][deuteranopia-friendly-dark] | `garden` ![garden][garden] | `shadow_red` ![shadow_red][shadow_red] |
-| `shadow_green` ![shadow_green][shadow_green] | `shadow_blue` ![shadow_blue][shadow_blue] | `shadow_orange` ![shadow_orange][shadow_orange] |
-| `shadow_purple` ![shadow_purple][shadow_purple] | `shadow_brown` ![shadow_brown][shadow_brown] | `gruvbox` ![gruvbox][gruvbox] |
-| `gruvbox_light` ![gruvbox_light][gruvbox_light] | `apprentice` ![apprentice][apprentice] | `radical` ![radical][radical] |
-| `tokyonight` ![tokyonight][tokyonight] | `shades-of-purple` ![shades-of-purple][shades-of-purple] | `ayu` ![ayu][ayu] |
-| `ayu-light` ![ayu-light][ayu-light] | `ayu-mirage` ![ayu-mirage][ayu-mirage] | `merko` ![merko][merko] |
-| `carbonfox` ![carbonfox][carbonfox] | `dawnfox` ![dawnfox][dawnfox] | `dayfox` ![dayfox][dayfox] |
-| `duskfox` ![duskfox][duskfox] | `nightfox` ![nightfox][nightfox] | `nordfox` ![nordfox][nordfox] |
-| `terafox` ![terafox][terafox] | `humoris` ![humoris][humoris] | `iceberg` ![iceberg][iceberg] |
-| `laederon` ![laederon][laederon] | `zenburn` ![zenburn][zenburn] | `bluloco` ![bluloco][bluloco] |
-| `bluloco-dark` ![bluloco-dark][bluloco-dark] | `aura` ![aura][aura] | `lava-light` ![lava-light][lava-light] |
-| `lava-dark` ![lava-dark][lava-dark] | `neon` ![neon][neon] | `neon-dark` ![neon-dark][neon-dark] |
-| `neon-palenight` ![neon-palenight][neon-palenight] | `neon-blurange` ![neon-blurange][neon-blurange] | `kacho_ga` ![kacho_ga][kacho_ga] |
-| `kanagawa` ![kanagawa][kanagawa] | `kanagawa_light` ![kanagawa_light][kanagawa_light] | `space` ![space][space] |
-| `space_light` ![space_light][space_light] | `lavender_breeze` ![lavender_breeze][lavender_breeze] | `lavender_dream` ![lavender_dream][lavender_dream] |
-| `sunset-gradient` ![sunset-gradient][sunset-gradient] | `ocean-gradient` ![ocean-gradient][ocean-gradient] | `ambient-gradient` ![ambient-gradient][ambient-gradient] |
-| `siny-gradient` ![siny-gradient][siny-gradient] | `purple-gradient` ![purple-gradient][purple-gradient] | `monochrome-light-gradient` ![monochrome-light-gradient][monochrome-light-gradient] |
-| `monochrome-dark-gradient` ![monochrome-dark-gradient][monochrome-dark-gradient] | `endless-gradient` ![endless-gradient][endless-gradient] | `twitch-gradient` ![twitch-gradient][twitch-gradient] |
+| `default`</br>![default][default] | `transparent`</br>![transparent][transparent] | `dark`</br>![dark][dark] |
+| `highcontrast`</br>![highcontrast][highcontrast] | `catppuccin-latte`</br>![catppuccin-latte][catppuccin-latte] | `catppuccin-frappe`</br>![catppuccin-frappe][catppuccin-frappe] |
+| `catppuccin-macchiato`</br>![catppuccin-macchiato][catppuccin-macchiato] | `catppuccin-mocha`</br>![catppuccin-mocha][catppuccin-mocha] | `vue`</br>![vue][vue] |
+| `vue-dark`</br>![vue-dark][vue-dark] | `github_dark`</br>![github_dark][github_dark] | `github_dark_highcontrast`</br>![github_dark_highcontrast][github_dark_highcontrast] |
+| `github_dark_dimmed`</br>![github_dark_dimmed][github_dark_dimmed] | `github_dark_tritanopia`</br>![github_dark_tritanopia][github_dark_tritanopia] | `github_light`</br>![github_light][github_light] |
+| `github_light_highcontrast`</br>![github_light_highcontrast][github_light_highcontrast] | `github_light_tritanopia`</br>![github_light_tritanopia][github_light_tritanopia] | `whatsapp-light`</br>![whatsapp-light][whatsapp-light] |
+| `whatsapp-dark`</br>![whatsapp-dark][whatsapp-dark] | `buefy`</br>![buefy][buefy] | `buefy-dark`</br>![buefy-dark][buefy-dark] |
+| `solarized-light`</br>![solarized-light][solarized-light] | `solarized-dark`</br>![solarized-dark][solarized-dark] | `vision-friendly-dark`</br>![vision-friendly-dark][vision-friendly-dark] |
+| `deuteranopia-friendly-dark`</br>![deuteranopia-friendly-dark][deuteranopia-friendly-dark] | `garden`</br>![garden][garden] | `shadow_red`</br>![shadow_red][shadow_red] |
+| `shadow_green`</br>![shadow_green][shadow_green] | `shadow_blue`</br>![shadow_blue][shadow_blue] | `shadow_orange`</br>![shadow_orange][shadow_orange] |
+| `shadow_purple`</br>![shadow_purple][shadow_purple] | `shadow_brown`</br>![shadow_brown][shadow_brown] | `gruvbox`</br>![gruvbox][gruvbox] |
+| `gruvbox_light`</br>![gruvbox_light][gruvbox_light] | `apprentice`</br>![apprentice][apprentice] | `radical`</br>![radical][radical] |
+| `tokyonight`</br>![tokyonight][tokyonight] | `shades-of-purple`</br>![shades-of-purple][shades-of-purple] | `ayu`</br>![ayu][ayu] |
+| `ayu-light`</br>![ayu-light][ayu-light] | `ayu-mirage`</br>![ayu-mirage][ayu-mirage] | `merko`</br>![merko][merko] |
+| `carbonfox`</br>![carbonfox][carbonfox] | `dawnfox`</br>![dawnfox][dawnfox] | `dayfox`</br>![dayfox][dayfox] |
+| `duskfox`</br>![duskfox][duskfox] | `nightfox`</br>![nightfox][nightfox] | `nordfox`</br>![nordfox][nordfox] |
+| `terafox`</br>![terafox][terafox] | `humoris`</br>![humoris][humoris] | `iceberg`</br>![iceberg][iceberg] |
+| `laederon`</br>![laederon][laederon] | `zenburn`</br>![zenburn][zenburn] | `bluloco`</br>![bluloco][bluloco] |
+| `bluloco-dark`</br>![bluloco-dark][bluloco-dark] | `aura`</br>![aura][aura] | `lava-light`</br>![lava-light][lava-light] |
+| `lava-dark`</br>![lava-dark][lava-dark] | `neon`</br>![neon][neon] | `neon-dark`</br>![neon-dark][neon-dark] |
+| `neon-palenight`</br>![neon-palenight][neon-palenight] | `neon-blurange`</br>![neon-blurange][neon-blurange] | `kacho_ga`</br>![kacho_ga][kacho_ga] |
+| `kanagawa`</br>![kanagawa][kanagawa] | `kanagawa_light`</br>![kanagawa_light][kanagawa_light] | `space`</br>![space][space] |
+| `space_light`</br>![space_light][space_light] | `lavender_breeze`</br>![lavender_breeze][lavender_breeze] | `lavender_dream`</br>![lavender_dream][lavender_dream] |
+| `sunset-gradient`</br>![sunset-gradient][sunset-gradient] | `ocean-gradient`</br>![ocean-gradient][ocean-gradient] | `ambient-gradient`</br>![ambient-gradient][ambient-gradient] |
+| `siny-gradient`</br>![siny-gradient][siny-gradient] | `purple-gradient`</br>![purple-gradient][purple-gradient] | `monochrome-light-gradient`</br>![monochrome-light-gradient][monochrome-light-gradient] |
+| `monochrome-dark-gradient`</br>![monochrome-dark-gradient][monochrome-dark-gradient] | `endless-gradient`</br>![endless-gradient][endless-gradient] | `twitch-gradient`</br>![twitch-gradient][twitch-gradient] |
 
 
 Want to add a new theme? Consider reading the [contribution guidelines](/CONTRIBUTING.md#-themes-contribution) :D
