@@ -4,7 +4,7 @@ import themes from "../themes/index";
 const TARGET_FILE = "./themes/README.md";
 
 function generateThemeMarkdown(theme: string): string {
-  return `\`${theme}\` ![${theme}][${theme}]`;
+  return `\`${theme}\`</br>![${theme}][${theme}]`;
 }
 
 function generateThemeLink(username: string, theme: string): string {
