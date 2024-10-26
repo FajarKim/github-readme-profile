@@ -17,62 +17,62 @@ Use `?locale=LOCALE_CODE` parameter like so :-
   <tr>
     <td><p align="center"><code>ar</code></p></td>
     <td><p align="left">Arabic</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=#00FF00"/> 100%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=00FF00"/> 100%</p></td>
   </tr>
   <tr>
     <td><p align="center"><code>en</code></p></td>
     <td><p align="left">English</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=#00FF00"/> 100%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=00FF00"/> 100%</p></td>
   </tr>
   <tr>
     <td><p align="center"><code>es</code></p></td>
     <td><p align="left">Spanish</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=#00FF00"/> 100%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=00FF00"/> 100%</p></td>
   </tr>
   <tr>
     <td><p align="center"><code>fa</code></p></td>
     <td><p align="left">Persian</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=#00FF00"/> 100%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=00FF00"/> 100%</p></td>
   </tr>
   <tr>
     <td><p align="center"><code>fr</code></p></td>
     <td><p align="left">French</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=#00FF00"/> 100%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=00FF00"/> 100%</p></td>
   </tr>
   <tr>
     <td><p align="center"><code>id</code></p></td>
     <td><p align="left">Indonesian</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=#00FF00"/> 100%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=00FF00"/> 100%</p></td>
   </tr>
   <tr>
     <td><p align="center"><code>ja</code></p></td>
     <td><p align="left">Japanese</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=#00FF00"/> 100%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=00FF00"/> 100%</p></td>
   </tr>
   <tr>
     <td><p align="center"><code>ko</code></p></td>
     <td><p align="left">Korean</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=#00FF00"/> 100%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=00FF00"/> 100%</p></td>
   </tr>
   <tr>
     <td><p align="center"><code>ms</code></p></td>
     <td><p align="left">Malay</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=#00FF00"/> 100%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=00FF00"/> 100%</p></td>
   </tr>
   <tr>
     <td><p align="center"><code>pt</code></p></td>
     <td><p align="left">Portuguese</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=#00FF00"/> 100%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=00FF00"/> 100%</p></td>
   </tr>
   <tr>
     <td><p align="center"><code>pt-BR</code></p></td>
     <td><p align="left">Portuguese (Brazil)</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=#00FF00"/> 100%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=00FF00"/> 100%</p></td>
   </tr>
   <tr>
     <td><p align="center"><code>su</code></p></td>
     <td><p align="left">Sundanese</p></td>
-    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=#00FF00"/> 100%</p></td>
+    <td><p align="center"><img src="https://shapecolor.vercel.app/?width=14&height=14&radius=7&color=00FF00"/> 100%</p></td>
   </tr>
 </table>
 
