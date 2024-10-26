@@ -13,7 +13,7 @@ describe("GitHub Stats Module", () => {
   });
 
     it("should fetch the correct join year for the user", async () => {
-      const mockResponse: axios.AxiosResponse = {
+      const mockResponse: any = {
         data: {
           data: {
             user: {
@@ -35,7 +35,7 @@ describe("GitHub Stats Module", () => {
     });
 
     it("should throw an error if user data is missing", async () => {
-      const mockResponse: axios.AxiosResponse = {
+      const mockResponse: any = {
         data: {
           data: {
             user: null,
@@ -53,7 +53,7 @@ describe("GitHub Stats Module", () => {
     });
 
     it("should throw an error if there are errors in the API response", async () => {
-      const mockErrorResponse: axios.AxiosResponse = {
+      const mockErrorResponse: any = {
         data: {
           errors: [{ message: "Some error occurred" }],
         },
@@ -69,7 +69,7 @@ describe("GitHub Stats Module", () => {
     });
 
     it("should fetch contributions for the specified year", async () => {
-      const mockResponse: axios.AxiosResponse = {
+      const mockResponse: any = {
         data: {
           data: {
             user: {
@@ -97,7 +97,7 @@ describe("GitHub Stats Module", () => {
     });
 
     it("should throw an error if there are errors in the API response", async () => {
-      const mockErrorResponse: axios.AxiosResponse = {
+      const mockErrorResponse: any = {
         data: {
           errors: [{ message: "Some error occurred" }],
         },
@@ -115,7 +115,7 @@ describe("GitHub Stats Module", () => {
     it("should fetch user stats with aggregated contributions", async () => {
       mockedAxios.post.mockImplementation((config) => {
         if (config.data.query.includes("createdAt")) {
-          const mockResponse: axios.AxiosResponse = {
+          const mockResponse: any = {
             data: {
               data: {
                 user: {
@@ -130,7 +130,7 @@ describe("GitHub Stats Module", () => {
           };
           return Promise.resolve(mockResponse);
         } else if (config.data.query.includes("contributionsCollection")) {
-          const mockResponse: axios.AxiosResponse = {
+          const mockResponse: any = {
             data: {
               data: {
                 user: {
@@ -149,7 +149,7 @@ describe("GitHub Stats Module", () => {
           };
           return Promise.resolve(mockResponse);
         } else {
-          const mockResponse: axios.AxiosResponse = {
+          const mockResponse: any = {
             data: {
               data: {
                 user: {
