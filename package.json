@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@markdoc/markdoc": "^0.4.0",
-    "@types/jest": "^29.5.13",
+    "@types/jest": "^29.5.14",
     "@typescript-eslint/eslint-plugin": "^8.11.0",
     "@typescript-eslint/parser": "^8.11.0",
     "eslint": "^9.13.0",
