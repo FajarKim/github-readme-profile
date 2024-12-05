@@ -13,7 +13,7 @@
     "axios": "^1.7.8",
     "dotenv": "^16.4.5",
     "escape-html": "^1.0.3",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "millify": "^6.1.0",
     "node-base64-image": "^2.0.7",
     "sharp": "^0.33.5"
