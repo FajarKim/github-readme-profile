@@ -9,7 +9,7 @@
     "@resvg/resvg-js": "^2.6.2",
     "@types/escape-html": "^1.0.4",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.10.1",
+    "@types/node": "^22.10.2",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "escape-html": "^1.0.3",
