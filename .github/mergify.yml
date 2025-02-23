@@ -50,3 +50,12 @@ pull_request_rules:
       - label=doc-translation
     actions:
       merge:
+
+  - name: Automatic merge for GitHub Readme Profile pull requests with label "dependencies"
+    conditions:
+      - author=gh-readme-profile
+      - "#approved-reviews-by>=1"
+      - label=dependencies
+      - check-success=test
+    actions:
+      merge:
