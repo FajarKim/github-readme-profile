@@ -10,7 +10,7 @@
     "@types/escape-html": "^1.0.4",
     "@types/express": "^5.0.1",
     "@types/node": "^22.14.1",
-    "axios": "^1.8.4",
+    "axios": "^1.9.0",
     "dotenv": "^16.5.0",
     "escape-html": "^1.0.3",
     "express": "^5.1.0",
