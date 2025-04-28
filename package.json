@@ -15,7 +15,7 @@
     "escape-html": "^1.0.3",
     "express": "^5.1.0",
     "millify": "^6.1.0",
-    "node-base64-image": "^2.1.0",
+    "node-base64-image": "^2.2.0",
     "sharp": "^0.34.1"
   },
   "scripts": {
