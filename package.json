@@ -9,14 +9,14 @@
     "@resvg/resvg-js": "^2.6.2",
     "@types/escape-html": "^1.0.4",
     "@types/express": "^5.0.3",
-    "@types/node": "^24.4.0",
+    "@types/node": "^24.5.2",
     "axios": "^1.12.2",
     "dotenv": "^17.2.2",
     "escape-html": "^1.0.3",
     "express": "^5.1.0",
     "millify": "^6.1.0",
     "node-base64-image": "^2.2.0",
-    "sharp": "^0.34.3"
+    "sharp": "^0.34.4"
   },
   "scripts": {
     "test": "jest",
@@ -59,11 +59,11 @@
     "@markdoc/markdoc": "^0.5.4",
     "@types/jest": "^29.5.14",
     "@typescript-eslint/eslint-plugin": "^8.44.0",
-    "@typescript-eslint/parser": "^8.42.0",
-    "eslint": "^9.35.0",
+    "@typescript-eslint/parser": "^8.44.0",
+    "eslint": "^9.36.0",
     "jest": "^29.7.0",
     "nodemon": "^3.1.10",
-    "ts-jest": "^29.4.2",
+    "ts-jest": "^29.4.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   }
