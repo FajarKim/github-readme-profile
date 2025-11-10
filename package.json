@@ -16,7 +16,7 @@
     "express": "^5.1.0",
     "millify": "^6.1.0",
     "node-base64-image": "^2.2.0",
-    "sharp": "^0.34.4"
+    "sharp": "^0.34.5"
   },
   "scripts": {
     "test": "jest",
