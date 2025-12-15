@@ -4,7 +4,7 @@
   "description": "🙀 Generate your Stats GitHub Profile in SVG",
   "main": "api/index.ts",
   "dependencies": {
-    "@actions/core": "^1.11.1",
+    "@actions/core": "^2.0.1",
     "@barudakrosul/parse-boolean": "^0.0.2",
     "@resvg/resvg-js": "^2.6.2",
     "@types/escape-html": "^1.0.4",
