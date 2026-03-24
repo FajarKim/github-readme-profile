@@ -64,7 +64,7 @@ The appearance of the card can be changed instantly by selecting one of the buil
 </details>
 
 #### Available Built-in Themes
-The project includes several pre-defined themes. You can see a preview of each below. For a complete list, refer to [themes/README.md](./themes/README.md).
+The project includes several pre-defined themes. You can see a preview of each below. For a complete list, refer to [`themes/README.md`](./themes/README.md).
 
 |        Themes        |           Preview           |
 | :------------------: | :-------------------------: |
@@ -301,7 +301,7 @@ Beyond the default stats, you can enable extra metrics like code reviews, closed
 Available values for `show`: `reviews`, `issues_closed`, `discussions_started`, `discussions_answered`.
 
 ### Available Locales
-The card can display text in multiple languages. Use the `locale` parameter to change the language. Below are some of the supported locales; for a complete list, see [i18n/README.md](./i18n/README.md).
+The card can display text in multiple languages. Use the `locale` parameter to change the language. Below are some of the supported locales; for a complete list, see [`i18n/README.md`](./i18n/README.md).
 
 <table>
   <tr>
@@ -346,7 +346,7 @@ If your language is missing, you can contribute a new translation by following t
 </details>
 
 ## License
-This project is open-source and distributed under the MIT License. You are free to use, modify, and distribute it, subject to the terms of the license. For more details, see the [LICENSE](./LICENSE) file.
+This project is open-source and distributed under the MIT License. You are free to use, modify, and distribute it, subject to the terms of the license. For more details, see the [`LICENSE`](./LICENSE) file.
 
 ## Deploy on Vercel
 You can host your own instance of the GitHub Readme Profile API on Vercel. This gives you full control over the endpoint and allows you to customize the behavior or add new features.
