@@ -1,15 +1,19 @@
 // Configuration for Vercel Edge Middleware (same as original)
 export const config = {
-  // Matcher: all paths except those starting with /api
-  matcher: ['/((?!api/).*)'],
+  // Matcher: all paths except those starting with '/api', '/themes', and '/i18n'
+  matcher: ['/((?!api/|themes/|i18n/).*)'],
 };
 
 export default async function middleware(request: Request): Promise<Response | void> {
   const url = new URL(request.url);
   const { pathname, search } = url;
 
-  // Additional check to ensure /api paths don't pass through
-  if (pathname.startsWith('/api')) {
+  // Excludes paths that should be taken from the API project (not rewritten)
+  if (
+    pathname.startsWith('/api') ||
+    pathname.startsWith('/themes/') ||
+    pathname.startsWith('/i18n/')
+  ) {
     return; // let the request proceed to the serverless function
   }
 
