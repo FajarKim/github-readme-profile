@@ -34,6 +34,7 @@ When the security team receives a security bug report, they will assign it to a 
 - **Environment Variables**: The project uses a `GH_TOKEN` environment variable to authenticate with the GitHub API. This token should be kept secret and never exposed in client‑side code.
 - **Proxy Middleware**: The application includes a middleware that proxies all requests (except those to `/api`, `/themes`, and `/i18n`) to an external generator. This middleware is carefully configured to avoid leaking sensitive headers or internal paths.
 - **Input Sanitization**: User‑supplied parameters (e.g., `username`, `title`, `theme`, colors) are sanitized to prevent injection attacks in the generated SVG.
+- **Generator CAPTCHA Security**: The external generator service (`https://gh-readme-profile-generator.vercel.app`) implements CAPTCHA verification before allowing access to the generation form. This helps prevent automated abuse and protects the infrastructure from excessive load.
 - **Content Security Policy (CSP)**: The API responds with appropriate headers to reduce the risk of XSS and other client‑side attacks.
 
 ## Scope of Vulnerabilities
