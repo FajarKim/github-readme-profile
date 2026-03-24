@@ -1,37 +1,49 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/FajarKim/github-readme-profile/master/logo.svg" alt="GitHub Readme Profile" width="120"/>
+  <img src="https://raw.githubusercontent.com/FajarKim/github-readme-profile/master/logo.svg" alt="GitHub Readme Profile" width="120">
   <h2>GitHub Readme Profile</h2>
-  <p>🙀 Generate your Stats GitHub Profile in SVG</p>
+  <p>🙀 Generate dynamic GitHub stats cards in SVG format. Fast, customizable, and ready to embed in your profile README.</p>
   <p><a href="https://techforpalestine.org/learn-more"><img src="https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg" width="100%" alt="Support Palestine"/></a></p>
-  <p><a href="https://github.com/FajarKim/github-readme-profile/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml">Report Bugs</a> · <a href="https://github.com/FajarKim/github-readme-profile/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml">Request Feature</a> · <a href="https://github.com/FajarKim/github-readme-profile/discussions/new?category=q-a">Ask Question</a></p>
-  <a href="https://github.com/FajarKim/github-readme-profile/releases"><img src="https://custom-icon-badges.demolab.com/github/v/tag/FajarKim/github-readme-profile?label=Version&labelColor=302d41&color=f2cdcd&logoColor=d9e0ee&logo=tag&style=for-the-badge" alt="GitHub Readme Profile Version"/></a>
-  <a href="https://www.codefactor.io/repository/github/fajarkim/github-readme-profile"><img src="https://img.shields.io/codefactor/grade/github/FajarKim/github-readme-profile?label=CodeFactor&labelColor=302d41&color=8bd5ca&logoColor=d9e0ee&logo=codefactor&style=for-the-badge" alt="GitHub Readme Profile Code Quality"/></a>
-  <a href="https://github.com/FajarKim/github-readme-profile/issues"><img src="https://custom-icon-badges.demolab.com/github/issues/FajarKim/github-readme-profile?label=Issues&labelColor=302d41&color=f5a97f&logoColor=d9e0ee&logo=issue&style=for-the-badge" alt="GitHub Readme Profile Issues"/></a>
-  <a href="https://github.com/FajarKim/github-readme-profile/pull"><img src="https://custom-icon-badges.demolab.com/github/issues-pr/FajarKim/github-readme-profile?&label=Pull%20requests&labelColor=302d41&color=ddb6f2&logoColor=d9e0ee&logo=git-pull-request&style=for-the-badge" alt="GitHub Readme Profile PRs"/></a>
-  <a href="https://github.com/FajarKim/github-readme-profile/graphs/contributors"><img src="https://custom-icon-badges.demolab.com/github/contributors/FajarKim/github-readme-profile?label=Contributors&labelColor=302d41&color=c9cbff&logoColor=d9e0ee&logo=people&style=for-the-badge"/></a>
-  <a href="https://chat.whatsapp.com/DM6WaaTQ4IJ3VOe2ly6KJD"><img src="https://img.shields.io/badge/Join%20To%20Community-blue?style=for-the-badge&logo=whatsapp&color=302d41&logoColor=a6da95" alt="Join to Community"/></a>
+  <p>
+    <a href="https://github.com/FajarKim/github-readme-profile/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml">Report Bug</a> ·
+    <a href="https://github.com/FajarKim/github-readme-profile/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml">Request Feature</a> ·
+    <a href="https://github.com/FajarKim/github-readme-profile/discussions/new?category=q-a">Ask Question</a>
+  </p>
+  <a href="https://github.com/FajarKim/github-readme-profile/releases"><img src="https://custom-icon-badges.demolab.com/github/v/tag/FajarKim/github-readme-profile?label=Version&labelColor=302d41&color=f2cdcd&logoColor=d9e0ee&logo=tag&style=for-the-badge" alt="Version"></a>
+  <a href="https://www.codefactor.io/repository/github/fajarkim/github-readme-profile"><img src="https://img.shields.io/codefactor/grade/github/FajarKim/github-readme-profile?label=CodeFactor&labelColor=302d41&color=8bd5ca&logoColor=d9e0ee&logo=codefactor&style=for-the-badge" alt="Code Quality"></a>
+  <a href="https://github.com/FajarKim/github-readme-profile/issues"><img src="https://custom-icon-badges.demolab.com/github/issues/FajarKim/github-readme-profile?label=Issues&labelColor=302d41&color=f5a97f&logoColor=d9e0ee&logo=issue&style=for-the-badge" alt="Issues"></a>
+  <a href="https://github.com/FajarKim/github-readme-profile/pull"><img src="https://custom-icon-badges.demolab.com/github/issues-pr/FajarKim/github-readme-profile?label=Pull%20requests&labelColor=302d41&color=ddb6f2&logoColor=d9e0ee&logo=git-pull-request&style=for-the-badge" alt="Pull Requests"></a>
+  <a href="https://github.com/FajarKim/github-readme-profile/graphs/contributors"><img src="https://custom-icon-badges.demolab.com/github/contributors/FajarKim/github-readme-profile?label=Contributors&labelColor=302d41&color=c9cbff&logoColor=d9e0ee&logo=people&style=for-the-badge" alt="Contributors"></a>
+  <a href="https://chat.whatsapp.com/DM6WaaTQ4IJ3VOe2ly6KJD"><img src="https://img.shields.io/badge/Join%20To%20Community-blue?style=for-the-badge&logo=whatsapp&color=302d41&logoColor=a6da95" alt="Join Community"></a>
 </div>
 
-</br>
+<br>
 
 <div align="center">
-  <a href="https://vercel.com"><img src="https://raw.githubusercontent.com/FajarKim/FajarKim/master/images/powered-by-vercel.svg" alt="Powered by Vercel"/></a>
+  <a href="https://vercel.com"><img src="https://raw.githubusercontent.com/FajarKim/FajarKim/master/images/powered-by-vercel.svg" alt="Powered by Vercel"></a>
 </div>
 
-# 📌 Features
-- [🎴 Getting Started](#-getting-started)
-  - [🎨 Themes](#-themes)
-  - [✏️ Customization](#%EF%B8%8F-customization)
-- [📑 License](#-license)
-- [Deploy on ▲ Vercel](#deploy-on--vercel)
-- [💳 Credits](#-credits)
-- [💰 Donate](#-donate)
-- [👥 Contributions](#-contributions)
+## Table of Contents
+- [Getting Started](#getting-started)
+  - [Basic Usage](#basic-usage)
+  - [Themes](#themes)
+  - [Customization](#customization)
+- [Advanced Usage](#advanced-usage)
+  - [Gradient Backgrounds](#gradient-backgrounds)
+  - [Transparent Theme & Alpha Channel](#transparent-theme--alpha-channel)
+  - [GitHub Theme Context](#github-theme-context)
+  - [Hiding Individual Stats](#hiding-individual-stats)
+  - [Showing Additional Stats](#showing-additional-stats)
+  - [Available Locales](#available-locales)
+- [License](#license)
+- [Deploy on Vercel](#deploy-on-vercel)
+- [Credits](#credits)
+- [Donate](#donate)
+- [Contributions](#contributions)
 
-# 🎴 Getting Started
-Copy-paste this into your markdown content, and that is it. Simple!
+## Getting Started
 
-Change the `?username=` value to your GitHub username.
+### Basic Usage
+To display your GitHub stats in your profile README, simply copy and paste the following Markdown snippet. Replace `FajarKim` with your own GitHub username. The card will automatically fetch your latest public statistics and render them as a clean SVG image.
 
 ```markdown
 [![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim)](https://github.com/FajarKim/github-readme-profile)
@@ -39,21 +51,20 @@ Change the `?username=` value to your GitHub username.
 
 [![GitHub Stats](https://github-readme-profile-theta.vercel.app/api?username=FajarKim)](https://github.com/FajarKim/github-readme-profile)
 
-## 🎨 Themes
-With inbuilt themes, you can customize the look of the card without doing any [manual customization](#%EF%B8%8F-customization).
-
-Use `&theme=THEME_NAME` parameter like so:
+### Themes
+The appearance of the card can be changed instantly by selecting one of the built-in themes. Themes control the color palette for backgrounds, text, icons, and borders. To apply a theme, add the `&theme=THEME_NAME` parameter to the image URL.
 
 ```markdown
 ![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark)
 ```
+
 <details>
   <summary>Show Example</summary>
-  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark" alt="GitHub Stats"/></a>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark" alt="GitHub Stats"></a>
 </details>
 
-#### All inbuilt themes
-GitHub Readme Profile comes with several built-in themes (e.g. `transparent`, `dark`, `highcontarst`).
+#### Available Built-in Themes
+The project includes several pre-defined themes. You can see a preview of each below. For a complete list, refer to [themes/README.md](./themes/README.md).
 
 |        Themes        |           Preview           |
 | :------------------: | :-------------------------: |
@@ -62,17 +73,19 @@ GitHub Readme Profile comes with several built-in themes (e.g. `transparent`, `d
 |        `dark`        |       ![image][dark]        |
 |    `highcontrast`    |   ![image][highcontrast]    |
 
-You can look at a preview for [all available themes](./themes/README.md). You can also contribute new themes if you like, contributing guidelines can be found [here](./CONTRIBUTING.md#-themes-contribution).
-
 [default]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default
 [transparent]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=transparent
 [dark]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark
 [highcontrast]: https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=highcontrast
 
-## ✏️ Customization
-You can customize the appearance of all your cards however you wish with URL parameters.
+If you would like to contribute a new theme, please see our [contribution guidelines](./CONTRIBUTING.md#-themes-contribution).
+
+### Customization
+Beyond the built-in themes, you have fine-grained control over every visual aspect of the card using URL parameters. Each parameter is optional and can be combined freely.
 
 #### Options
+The following table lists all available customization parameters, their descriptions, data types, and default values.
+
 <table>
   <tr>
     <td><p align="center"><b>Name</b></p></td>
@@ -82,172 +95,136 @@ You can customize the appearance of all your cards however you wish with URL par
   </tr>
   <tr>
     <td><p align="left"><code>title_color</code></p></td>
-    <td><p align="left">Card's title color.</p></td>
-    <td><p align="center"><code>string</code></br>(hex color)</p></td>
+    <td><p align="left">Defines the color of the card title.</p></td>
+    <td><p align="center"><code>string</code><br>(hex color)</p></td>
     <td><p align="center"><code>2f80ed</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>text_color</code></p></td>
-    <td><p align="left">Body text color.</p></td>
-    <td><p align="center"><code>string</code></br>(hex color)</p></td>
+    <td><p align="left">Sets the color for all body text inside the card, including stat labels and numbers.</p></td>
+    <td><p align="center"><code>string</code><br>(hex color)</p></td>
     <td><p align="center"><code>434d58</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>icon_color</code></p></td>
-    <td><p align="left">Icons color.</p></td>
-    <td><p align="center"><code>string</code></br>(hex color)</p></td>
+    <td><p align="left">Controls the color of the icons displayed next to each stat.</p></td>
+    <td><p align="center"><code>string</code><br>(hex color)</p></td>
     <td><p align="center"><code>4c71f2</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>border_color</code></p></td>
-    <td><p align="left">Card's border color. Does not apply when <code>hide_border</code> is enabled.</p></td>
-    <td><p align="center"><code>string</code></br>(hex color)</p></td>
+    <td><p align="left">Specifies the color of the card border. This parameter is ignored if <code>hide_border</code> is set to <code>true</code>.</p></td>
+    <td><p align="center"><code>string</code><br>(hex color)</p></td>
     <td><p align="center"><code>e4e2e2</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>bg_color</code></p></td>
-    <td><p align="left">Card's background color.</p></td>
-    <td><p align="center"><code>string</code></br>(hex color or a gradient in the form of <i>angle,start,end</i>)</p></td>
+    <td><p align="left">Background color of the card. Can be a solid hex color or a gradient defined as <i>angle,start,end</i> (e.g., <code>30,e96443,904e95</code>).</p></td>
+    <td><p align="center"><code>string</code><br>(hex color or gradient)</p></td>
     <td><p align="center"><code>fffefe</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>stroke_color</code></p></td>
-    <td><p align="left">Profile image border color. Does not apply when <code>hide_stroke</code> is enabled.</p></td>
-    <td><p align="center"><code>string</code></br>(hex color)</p></td>
-    <td><p align="center"><code>e4e2e2</code> or <code>border_color</code> query</p></td>
+    <td><p align="left">Determines the color of the border around the profile image. Does not apply when <code>hide_stroke</code> is enabled.</p></td>
+    <td><p align="center"><code>string</code><br>(hex color)</p></td>
+    <td><p align="center"><code>e4e2e2</code> or <code>border_color</code> value</p></td>
   </tr>
   <tr>
     <td><p align="left"><code>username_color</code></p></td>
-    <td><p align="left">Username text color.</p></td>
-    <td><p align="center"><code>string</code></br>(hex color)</p></td>
-    <td><p align="center"><code>434d58</code> or <code>text_color</code> query</p></td>
+    <td><p align="left">Color for the username text displayed above the photo profile.</p></td>
+    <td><p align="center"><code>string</code><br>(hex color)</p></td>
+    <td><p align="center"><code>434d58</code> or <code>text_color</code> value</p></td>
   </tr>
   <tr>
     <td><p align="left"><code>theme</code></p></td>
-    <td><p align="left">Name of the theme, choose from <a href="/themes">all available themes</a>.</p></td>
+    <td><p align="left">Name of a pre-defined theme. Overrides individual color parameters if set. Choose from <a href="/themes">all available themes</a>.</p></td>
     <td><p align="center"><code>enum</code></p></td>
     <td><p align="center"><code>default</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>title</code></p></td>
-    <td><p align="left">Custom title text for the card. Before use, encode the text to URL format using a tool like <a href="https://www.urlencoder.org/" target="_blank">URL Encoder</a>.</p></td>
+    <td><p align="left">Custom title text for the card. Must be URL-encoded (use a tool like <a href="https://www.urlencoder.org/" target="_blank">URL Encoder</a>).</p></td>
     <td><p align="center"><code>string</code></p></td>
     <td><p align="center"><code>null</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>locale</code></p></td>
-    <td><p align="left">Sets the language in the card, you can check full list of available locales <a href="/i18n/README.md">here</a>.</p></td>
+    <td><p align="left">Sets the language of the card text. Full list of available locales can be found <a href="/i18n/README.md">here</a>.</p></td>
     <td><p align="center"><code>enum</code></p></td>
     <td><p align="center"><code>en</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>border_width</code></p></td>
-    <td><p align="left">Sets the border's width manually.</p></td>
+    <td><p align="left">Explicitly sets the width of the card border in pixels.</p></td>
     <td><p align="center"><code>number</code></p></td>
     <td><p align="center"><code>1</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>border_radius</code></p></td>
-    <td><p align="left">Corner rounding on the card.</p></td>
-    <td><p align="center"><code>number</code></td>
+    <td><p align="left">Controls the rounding of the card corners, measured in pixels.</p></td>
+    <td><p align="center"><code>number</code></p></td>
     <td><p align="center"><code>4.5</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>hide</code></p></td>
-    <td><p align="left">Hides the <a href="#hiding-individual-stats">specified items</a> from stats.</p></td>
-    <td><p align="center"><code>string</code></br>(comma-separated values)</td>
+    <td><p align="left">Comma-separated list of stats to hide. Options: <code>repos</code>, <code>stars</code>, <code>forks</code>, <code>commits</code>, <code>prs</code>, <code>prs_merged</code>, <code>issues</code>, <code>contributed</code>.</p></td>
+    <td><p align="center"><code>string</code><br>(comma-separated values)</p></td>
     <td><p align="center"><code>null</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>show</code></p></td>
-    <td><p align="left">Shows <a href="#showing-additional-individual-stats">additional items</a> on stats card.</p></td>
-    <td><p align="center"><code>string</code></br>(comma-separated values)</td>
+    <td><p align="left">Comma-separated list of additional stats to show. Options: <code>reviews</code>, <code>issues_closed</code>, <code>discussions_started</code>, <code>discussions_answered</code>.</p></td>
+    <td><p align="center"><code>string</code><br>(comma-separated values)</p></td>
     <td><p align="center"><code>null</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>format</code></p></td>
-    <td><p align="left">Output format card option (i.e. <code>svg</code>, <code>png</code>, <code>json</code>, or <code>xml</code>).</p></td>
-    <td><p align="center"><code>enum</code></td>
+    <td><p align="left">Output format of the card. Available options: <code>svg</code> (default), <code>png</code>, <code>json</code>, <code>xml</code>.</p></td>
+    <td><p align="center"><code>enum</code></p></td>
     <td><p align="center"><code>svg</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>disabled_animations</code></p></td>
-    <td><p align="left">Disables all animations in the card.</p></td>
-    <td><p align="center"><code>boolean</code></td>
+    <td><p align="left">If set to <code>true</code>, disables all CSS animations.</p></td>
+    <td><p align="center"><code>boolean</code></p></td>
     <td><p align="center"><code>false</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>hide_border</code></p></td>
-    <td><p align="left">Hides the card's border.</p></td>
-    <td><p align="center"><code>boolean</code></td>
+    <td><p align="left">Removes the outer border of the card when set to <code>true</code>.</p></td>
+    <td><p align="center"><code>boolean</code></p></td>
     <td><p align="center"><code>false</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>hide_stroke</code></p></td>
-    <td><p align="left">Hides the image's profile stroke in the card.</p></td>
-    <td><p align="center"><code>boolean</code></td>
+    <td><p align="left">Removes the stroke around the profile image when set to <code>true</code>.</p></td>
+    <td><p align="center"><code>boolean</code></p></td>
     <td><p align="center"><code>false</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>revert</code></p></td>
-    <td><p align="left">Inverts the display order, positioning stats to the left and the image to the right.</p></td>
+    <td><p align="left">Flips the layout: the stats column moves to the left, and the profile image moves to the right.</p></td>
     <td><p align="center"><code>boolean</code></p></td>
     <td><p align="center"><code>false</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>photo_quality</code></p></td>
-    <td><p align="left">Quality of the profile image, represented as a percentage (1-100).</p></td>
-    <td><p align="center"><code>number</code></br>(percentage)</p></td>
+    <td><p align="left">Quality of the profile image, expressed as a percentage (1–100). Lower values reduce file size but may decrease sharpness.</p></td>
+    <td><p align="center"><code>number</code><br>(percentage)</p></td>
     <td><p align="center"><code>15</code></p></td>
   </tr>
   <tr>
     <td><p align="left"><code>photo_resize</code></p></td>
-    <td><p align="left">Resize the profile image to a specific width, in pixels. Minimum allowed value is 10px.</p></td>
-    <td><p align="center"><code>number</code></br>(pixels)</p></td>
+    <td><p align="left">Resizes the profile image to the specified width in pixels. Minimum allowed value is 10px.</p></td>
+    <td><p align="center"><code>number</code><br>(pixels)</p></td>
     <td><p align="center"><code>150</code></p></td>
   </tr>
 </table>
 
-#### Use the transparent theme
-We have included a `transparent` theme that has a transparent background. This theme is optimized to look good on GitHub's dark and light default themes. You can enable this theme using the `&theme=transparent` parameter like so:
+## Advanced Usage
 
-```markdown
-![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=transparent)
-```
-
-<details>
-  <summary>Show Example</summary>
-  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=transparent" alt="GitHub Stats"/></a>
-</details>
-
-#### Add transparent alpha channel to a themes `bg_color`
-You can use the `bg_color` parameter to make any of the available themes transparent. This is done by setting the `bg_color` to a color with a transparent alpha channel (i.e. `bg_color=00000000`):
-
-```markdown
-![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&bg_color=00000000)
-```
-
-<details>
-  <summary>Show Example</summary>
-  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=00000000" alt="GitHub Stats"/></a>
-</details>
-
-#### Use GitHub's theme context tag
-You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-specify-theme-context-for-images-in-markdown/) tags to switch the theme based on the user GitHub theme automatically. This is done by appending `#gh-dark-mode-only` or `#gh-light-mode-only` to the end of an image URL. This tag will define whether the image specified in the markdown is only shown to viewers using a light or a dark GitHub theme:
-
-```markdown
-[![GitHub Stats-Dark](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only)
-[![GitHub Stats-Light](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-light-mode-only)
-```
-
-<details>
-  <summary>Show Example</summary>
-  <a href="https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only" alt="GitHub Stats-Dark"/></a>
-  <a href="https://github.com/FajarKim/github-readme-profile#gh-light-mode-only"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only" alt="GitHub Stats-Light"/></a>
-</details>
-
-#### Use gradient color
-You can use the `bg_color` parameter to make gradient color. This is done by setting the `bg_color` with format _angle,start,end_ (comma-separated value).
+### Gradient Backgrounds
+You can create a smooth gradient background by using the `bg_color` parameter with the format `angle,start,end`. The angle is in degrees (0–360), and the colors are given as hex codes without the `#`. For example:
 
 ```markdown
 ![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&icon_color=fff)
@@ -255,15 +232,48 @@ You can use the `bg_color` parameter to make gradient color. This is done by s
 
 <details>
   <summary>Show Example</summary>
-  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&icon_color=fff" alt="GitHub Stats"/></a>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&icon_color=fff" alt="GitHub Stats"></a>
 </details>
 
-#### Hiding individual stats
-You can pass a query parameter `&hide=` to hide any specific stats with comma-separated values.
+### Transparent Theme & Alpha Channel
+The `transparent` theme removes the background entirely, making the card blend with any page background. This is especially useful if you want to embed the card in a GitHub README without a white box.
 
-> Options:
-> `&hide=repos,stars,forks,commits,prs,prs_merged,issues,
-contributed`
+```markdown
+![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=transparent)
+```
+
+<details>
+  <summary>Show Example</summary>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=transparent" alt="GitHub Stats"></a>
+</details>
+
+You can also achieve a transparent background with any theme by setting `bg_color` to a fully transparent hex code (e.g., `bg_color=00000000`). This leaves the theme’s other colors intact.
+
+```markdown
+![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&bg_color=00000000)
+```
+
+<details>
+  <summary>Show Example</summary>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&bg_color=00000000" alt="GitHub Stats"></a>
+</details>
+
+### GitHub Theme Context
+GitHub allows you to specify different images for light and dark themes using the `#gh-dark-mode-only` and `#gh-light-mode-only` tags. This lets you serve a card that automatically adapts to the viewer’s theme preference.
+
+```markdown
+[![GitHub Stats - Dark](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only)
+[![GitHub Stats - Light](https://gh-readme-profile.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only)](https://github.com/FajarKim/github-readme-profile#gh-light-mode-only)
+```
+
+<details>
+  <summary>Show Example</summary>
+  <a href="https://github.com/FajarKim/github-readme-profile#gh-dark-mode-only"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=dark#gh-dark-mode-only" alt="GitHub Stats - Dark"></a>
+  <a href="https://github.com/FajarKim/github-readme-profile#gh-light-mode-only"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&theme=default#gh-light-mode-only" alt="GitHub Stats - Light"></a>
+</details>
+
+### Hiding Individual Stats
+If you want to keep the card compact or focus on specific metrics, you can hide certain stats using the `hide` parameter. The value is a comma-separated list without spaces.
 
 ```markdown
 ![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&hide=repos,forks,prs_merged)
@@ -271,14 +281,13 @@ contributed`
 
 <details>
   <summary>Show Example</summary>
-  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-beta.vercel.app/api?username=FajarKim&hide=repos,forks,prs_merged" alt="GitHub Stats"/></a>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-beta.vercel.app/api?username=FajarKim&hide=repos,forks,prs_merged" alt="GitHub Stats"></a>
 </details>
 
-#### Showing additional individual stats
-You can pass a query parameter `&show=` to show any specific additional stats with comma-separated values
+Available values for `hide`: `repos`, `stars`, `forks`, `commits`, `prs`, `prs_merged`, `issues`, `contributed`.
 
-> Options:
-> `&show=reviews,issues_closed,discussions_started,discussions_answered`
+### Showing Additional Stats
+Beyond the default stats, you can enable extra metrics like code reviews, closed issues, or discussions using the `show` parameter.
 
 ```markdown
 ![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&show=reviews,issues_closed,discussions_started,discussions_answered)
@@ -286,10 +295,14 @@ You can pass a query parameter `&show=` to show any specific additional stats wi
 
 <details>
   <summary>Show Example</summary>
-  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-beta.vercel.app/api?username=FajarKim&show=reviews,issues_closed,discussions_started,discussions_answered" alt="GitHub Stats"/></a>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-beta.vercel.app/api?username=FajarKim&show=reviews,issues_closed,discussions_started,discussions_answered" alt="GitHub Stats"></a>
 </details>
 
-#### Available locales
+Available values for `show`: `reviews`, `issues_closed`, `discussions_started`, `discussions_answered`.
+
+### Available Locales
+The card can display text in multiple languages. Use the `locale` parameter to change the language. Below are some of the supported locales; for a complete list, see [i18n/README.md](./i18n/README.md).
+
 <table>
   <tr>
     <td><p align="center"><b>Code</b></p></td>
@@ -321,7 +334,7 @@ You can pass a query parameter `&show=` to show any specific additional stats wi
   </tr>
 </table>
 
-See [more](/i18n/README.md) available locale. The locale code added to file should be a 2-letter abbreviation from [ISO 639-1](https://www.andiamo.co.uk/resources/iso-language-codes/) or a 4-letter code with a language and country code (eg. `id` or `pt-BR`). Anything appearing in [the list](https://gist.github.com/FajarKim/91516c2aecbfc8bf65f584d528d5f2b1) should be fine. You can also contribute new translations if you like, contributing guidelines can be found [here](/CONTRIBUTING.md#%EF%B8%8F-translations-contribution).
+If your language is missing, you can contribute a new translation by following the [guidelines](./CONTRIBUTING.md#%EF%B8%8F-translations-contribution).
 
 ```markdown
 ![GitHub Stats](https://gh-readme-profile.vercel.app/api?username=FajarKim&locale=id)
@@ -329,40 +342,32 @@ See [more](/i18n/README.md) available locale. The locale code added to file shou
 
 <details>
   <summary>Show Example</summary>
-  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&locale=id" alt="GitHub Stats"/></a>
+  <a href="https://github.com/FajarKim/github-readme-profile"><img src="https://github-readme-profile-theta.vercel.app/api?username=FajarKim&locale=id" alt="GitHub Stats"></a>
 </details>
 
-## 📑 License
-GitHub Readme Profile is released under the MIT license, which grants the following permissions:
-- Commercial use
-- Modification
-- Distribution
-- Private use
+## License
+This project is open-source and distributed under the MIT License. You are free to use, modify, and distribute it, subject to the terms of the license. For more details, see the [LICENSE](./LICENSE) file.
 
-For more convoluted language, see the [LICENSE](/LICENSE).
+## Deploy on Vercel
+You can host your own instance of the GitHub Readme Profile API on Vercel. This gives you full control over the endpoint and allows you to customize the behavior or add new features.
 
-## Deploy on ▲ Vercel
-Step-by-step guide on setting up your own Vercel instance.
-1. Go to [vercel.com](https://vercel.com).
-2. Click on `Log In`.
-3. Sign in with GitHub by pressing `Continue with GitHub`.
-4. Sign in to GitHub and allow access to all repositories if prompted.
-5. Fork this repository.
-6. Go back to your [Vercel dashboard](https://vercel.com/dashboard).
-7. To import a project, click the `Add New...` or `+` button and select the `Project` option.
-8. Click the Continue with GitHub button, search for the required Git Repository and import it by clicking the `Import` button. Alternatively, you can import a Third-Party Git Repository using the `Import Third-Party Git Repository` link at the bottom of the page.
-9. Create a personal access token (PAT) [here](https://github.com/settings/tokens/new) and enable the `repo` and `user` permissions (this allows access to see private repo and user stats).
-10. Add the PAT as an environment variable named `GH_TOKEN`.
-11. In build and output settings, you set install command toggle and add command `npm install typescript`.
-12. Click deploy, and you're good to go. See your domains to use the API!
+1. **Sign up / log in** at [vercel.com](https://vercel.com) using your GitHub account.
+2. **Fork** this repository to your GitHub account.
+3. **Create a personal access token** from [GitHub Settings](https://github.com/settings/tokens/new). Enable the `repo` and `user` permissions. This token allows the API to fetch your private and public repository data.
+4. **Import the project** in Vercel:
+   - Click “Add New…” → “Project”.
+   - Import your forked repository.
+   - Add an environment variable named `GH_TOKEN` with your personal access token as its value.
+   - In the **Build & Output Settings**, enable the install command and add `npm install typescript` (this ensures TypeScript dependencies are installed).
+5. **Deploy** – Vercel will automatically build and deploy your instance. Once finished, you will get a unique URL (e.g., `https://your-project.vercel.app`) that you can use in place of `gh-readme-profile.vercel.app`.
 
 [![Deploy](https://raw.githubusercontent.com/FajarKim/FajarKim/master/images/deploy-on-vercel.svg)](https://vercel.com/import/project?template=https://github.com/FajarKim/github-readme-profile)
 
-## 💳 Credits
-This repository contains forked from [tuhinpal/readme-stats-github](https://github.com/tuhinpal/readme-stats-github) and inspired from [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats).
+## Credits
+This project is a fork of [tuhinpal/readme-stats-github](https://github.com/tuhinpal/readme-stats-github). Many design ideas and additional features were inspired by [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats). We thank the original authors and all contributors who have helped improve this tool.
 
-## 💰 Donate
-Love the project? Please consider donating to help it improve!
+## Donate
+If this project has been helpful to you, please consider supporting humanitarian causes instead of donating to the author. Every contribution, no matter how small, can make a real difference.
 
 <div align="left">
   <a href="https://ko-fi.com/fajarkim/" target="_blank"><img src="https://img.shields.io/badge/Ko%e2%80%91fi-Donate-blue?labelColor=302d41&color=94e2d5&logo=ko-fi&logoColor=d9e0ee&style=for-the-badge" alt="Ko-fi"></a>
@@ -371,29 +376,24 @@ Love the project? Please consider donating to help it improve!
   <a href="https://saweria.co/FajarKim/" target="_blank"><img src="https://custom-icon-badges.demolab.com/badge/Saweria-Donate-blue?labelColor=302d41&color=eed49f&logo=saweria&logoColor=d9e0ee&style=for-the-badge" alt="Saweria Donate"></a>
 </div>
 
-Are you considering supporting the project by donating to me? Please DO NOT!!
+Alternatively, you can star this repository and share it with others. That helps the project gain visibility and motivates further development.
 
-Please visit [this link](https://fajarkim.github.io/donate) and make a small donation to help the people in need. A small donation goes a long way. ❤️
-
-### 👥 Contributions
-> Contributions are welcome!
-
-Specially thanks ❤️ for contributors bellow:
+## Contributions
+Contributions of all kinds are welcome! Whether you want to fix a bug, add a new theme, improve translations, or suggest a feature, please read our [contribution guidelines](./CONTRIBUTING.md) to get started.
 
 <a href="https://github.com/FajarKim/github-readme-profile/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=FajarKim/github-readme-profile" />
+  <img src="https://contrib.rocks/image?repo=FajarKim/github-readme-profile" alt="Contributors">
 </a>
-
-Want to contribute? Please note our contribution guidelines [here](/CONTRIBUTING.md).
 
 [![StandWithPalestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/StandWithPalestine.svg)](https://techforpalestine.org/learn-more)
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/FajarKim/FajarKim/master/images/line.svg?sanitize=true"/>
+  <img src="https://raw.githubusercontent.com/FajarKim/FajarKim/master/images/line.svg?sanitize=true">
 </div>
 
 <p align="center">Made with ❤️ and TypeScript</p>
-<p align="center">Copyright © 2023-present Rangga Fajar Oktariansyah</p>
+<p align="center">Copyright © 2023–present Rangga Fajar Oktariansyah</p>
+
 <div align="center">
-  <a href="LICENSE"><img src="https://custom-icon-badges.demolab.com/github/license/FajarKim/github-readme-profile?label=License&labelColor=302d41&color=91d7e3&logo=law&logoColor=d9e0ee&style=for-the-badge" alt="GitHub Readme Profile License"></a>
+  <a href="LICENSE"><img src="https://custom-icon-badges.demolab.com/github/license/FajarKim/github-readme-profile?label=License&labelColor=302d41&color=91d7e3&logo=law&logoColor=d9e0ee&style=for-the-badge" alt="License"></a>
 </div>
