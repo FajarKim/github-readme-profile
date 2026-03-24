@@ -65,7 +65,7 @@ We use GitHub issues to track public bugs. Report a bug by [opening a new issue]
 - What you expected to happen
 - Notes (possible causes, things you tried that didn't work)
 
-People ❤️ thorough bug reports, we’re not even kidding.
+People ❤️ thorough bug reports, we're not even kidding.
 
 ### Feature Requests
 
