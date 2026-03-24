@@ -5,6 +5,12 @@
       "maxDuration": 10
     }
   },
+  "rewrites": [
+    {
+      "source": "/((?!api/|themes/|i18n/).*)",
+      "destination": "https://gh-readme-profile-generator.vercel.app/$1"
+    }
+  ],
   "headers": [
     {
       "source": "/api",
