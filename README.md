@@ -131,7 +131,7 @@ The following table lists all available customization parameters, their descript
   </tr>
   <tr>
     <td><p align="left"><code>username_color</code></p></td>
-    <td><p align="left">Color for the username text displayed above the photo profile.</p></td>
+    <td><p align="left">Color for the username text displayed under the photo profile.</p></td>
     <td><p align="center"><code>string</code><br>(hex color)</p></td>
     <td><p align="center"><code>434d58</code> or <code>text_color</code> value</p></td>
   </tr>
