@@ -1,7 +1,7 @@
 // Configuration for Vercel Edge Middleware (same as original)
 export const config = {
-  // Matcher: all paths except those starting with /api
-  matcher: ['/((?!api/).*)'],
+  // Matcher: all paths except those starting with '/api', '/themes', and '/i18n'
+  matcher: ['/((?!api/|themes/|i18n/).*)'],
 };
 
 export default async function middleware(request: Request): Promise<Response | void> {
