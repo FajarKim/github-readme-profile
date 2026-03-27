@@ -23,12 +23,11 @@ type Themes = {
 };
 
 /**
- * Themes object stores theme collection for the card.
+ * List of solid themes collection for the card.
  *
  * @type {Themes}
  */
-const themes: Themes = {
-  // Solid themes
+const solidThemes: Themes = {
   default: {
     title_color: "2f80ed",
     text_color: "434d58",
@@ -530,9 +529,15 @@ const themes: Themes = {
     border_color: "6b518d",
     username_color: "e6d9a2",
     bg_color: "4a3b66",
-  },
+  }
+};
 
-  // Gradient themes
+/**
+ * List of gradient themes collection for the card.
+ *
+ * @type {Themes}
+ */
+const gradientThemes: Themes = {
   "sunset-gradient": {
     title_color: "FFFFFF",
     text_color: "FFFFFF",
@@ -594,8 +599,15 @@ const themes: Themes = {
     icon_color: "bbafd9",
     border_color: "8c7bbf",
     bg_color: "20,6441a5,2a0845",
-  },
+  }
 };
 
-export { Themes, themes };
+/**
+ * Themes object stores theme collection for the card.
+ *
+ * @type {Themes}
+ */
+const themes: Themes = { ...solidThemes, ...gradientThemes };
+
+export { Themes, solidThemes, gradientThemes, themes };
 export default themes;
