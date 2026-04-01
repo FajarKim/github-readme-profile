@@ -2,213 +2,255 @@ import sharp from "sharp";
 import parseBoolean from "@barudakrosul/parse-boolean";
 import type { GetData } from "./getData";
 import type { UiConfig } from "../api/index";
-import { locales, Locales } from "../i18n/index";
+import locales from "../i18n/index";
 import icons from "./icons";
 
 /**
- * Generates the SVG markup for the GitHub stats card.
+ * Processes a profile picture: resizes it, converts it to JPEG, and returns the base64 encoding.
  *
- * @param {GetData} data - GitHub user data stats.
- * @param {UiConfig} uiConfig - Configuration for the UI card options.
- * @returns {Promise<string>} - SVG markup for the GitHub stats card.
+ * @param {Buffer | string} picture - A Buffer or base64 string representing the image.
+ * @param {number} quality - JPEG quality (0-100).
+ * @param {number} size - Image width.
+ * @returns {Promise<string>} - Base64 string of the processed image.
  */
-async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
-  let imageBuffer: Buffer;
-  if (typeof data.picture === "string") {
-    imageBuffer = Buffer.from(data.picture, "base64");
-  } else {
-    imageBuffer = data.picture;
-  }
-  const photoQuality = typeof uiConfig.photoQuality === "string"
-    ? parseInt(uiConfig.photoQuality, 10)
-    : uiConfig.photoQuality;
-  const photoResize = typeof uiConfig.photoResize === "string"
-    ? parseInt(uiConfig.photoResize, 10)
-    : uiConfig.photoResize;
+async function processProfilePicture(
+  picture: Buffer | string,
+  quality: number,
+  size: number
+): Promise<string> {
+  const imageBuffer = typeof picture === "string" ? Buffer.from(picture, "base64") : picture;
   const outputBuffer = await sharp(imageBuffer)
-    .resize({ width: photoResize })
-    .jpeg({ quality: photoQuality })
+    .resize({ width: size })
+    .jpeg({ quality })
     .toBuffer();
-  const dataPicture = outputBuffer.toString("base64");
+  return outputBuffer.toString("base64");
+}
 
-  const fallbackLocale = "en";
-  const defaultLocale: Locales[keyof Locales] = locales[fallbackLocale];
-  const selectLocale: Locales[keyof Locales] = locales[uiConfig.Locale] || defaultLocale;
+/**
+ * Generates an SVG linear gradient element based on an array of colors.
+ * The first element is the rotation angle (e.g., “45”), and the rest are hex color codes.
+ *
+ * @param {string[]} colors - An array containing the angles and colors of the gradient.
+ * @param {UiConfig} uiConfig - UI configuration for obtaining the borderRadius.
+ * @param {string} hideBorder - Border attribute string or empty.
+ * @returns {string} - SVG markup for a linear gradient.
+ */
+function generateGradient(colors: string[], uiConfig: UiConfig, hideBorder: string): string {
+  const [angle, ...colorStops] = colors;
+  const stops = colorStops.map((color, i) => {
+    const offset = (i * 100) / (colorStops.length - 1);
+    return `<stop offset="${offset}%" stop-color="#${color}"/>`;
+  }).join("");
+  return `
+    <defs>
+      <linearGradient id="gradient" gradientTransform="rotate(${angle})" gradientUnits="userSpaceOnUse">
+        ${stops}
+      </linearGradient>
+    </defs>
+    <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius || 20}" height="99.4%" width="99.8%" fill="url(#gradient)" ${hideBorder}/>
+  `;
+}
 
-  const isRtlDirection = parseBoolean(selectLocale.rtlDirection);
-  const isDisabledAnimations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png");
-  const isRevert = parseBoolean(uiConfig.Revert);
+/**
+ * Creates an SVG background based on the uiConfig.bgColor configuration.
+ * Supports solid colors or linear gradients (with angles and colors).
+ *
+ * @param {UiConfig} uiConfig - UI configuration.
+ * @param {string} hideBorder - Border attribute string or empty.
+ * @param {number} borderRadius - Border radius.
+ * @returns {string} - SVG markup for the background.
+ */
+function buildBackground(
+  uiConfig: UiConfig,
+  hideBorder: string,
+  borderRadius: number
+): string {
+  const { bgColor } = uiConfig;
+  if (!bgColor) return "";
 
-  let titleCard = defaultLocale.titleCard.split("{name}").join(data.name);
-  if (uiConfig.Title &&
-      uiConfig.Title.length &&
-      uiConfig.Title !== "undefined" &&
-      uiConfig.Title !== "") {
-    titleCard = uiConfig.Title.split("{name}").join(data.name);
-  } else if (selectLocale.titleCard &&
-             selectLocale.titleCard.length &&
-             selectLocale.titleCard !== "undefined" &&
-             selectLocale.titleCard !== "") {
-    titleCard = selectLocale.titleCard.split("{name}").join(data.name);
-  }    
+  if (Array.isArray(bgColor)) {
+    return generateGradient(bgColor, uiConfig, hideBorder);
+  }
 
-  const direction = isRtlDirection ? "rtl" : "ltr";
-  const position = {
-    titleXPosition: isDisabledAnimations ? (isRtlDirection ? 520 : 15) : (isRtlDirection ? 510 : 5),
-    titleYPosition: isDisabledAnimations ? 0 : -10,
-    textXPosition: isRtlDirection ? 225 : 20,
-    dataXPosition: isRtlDirection ? 25 : 220,
-    iconXPosition: isRtlDirection ? 235 : -5,
-    imageXPosition: isDisabledAnimations ? (isRevert ? 412 : 122) : (isRevert ? 417 : 127),
-    imageYPosition: isDisabledAnimations ? 70 : 65,
-    userXPosition: isDisabledAnimations ? (isRevert ? 412 : 122) : (isRevert ? 402 : 112),
-    userYPosition: isDisabledAnimations ? 140 : 130,
-    follXPosition: isDisabledAnimations ? (isRevert ? 412 : 122) : (isRevert ? 402 : 112),
-    follYPosition: isDisabledAnimations ? 161 : 151,
-    itemStatsXTransform: isRevert ? (isRtlDirection ? 10 : 0) : 230,
-  };
+  const gradientParts = bgColor.split(",").map((c: string) => c.trim());
+  if (gradientParts.length >= 2) {
+    return generateGradient(gradientParts, uiConfig, hideBorder);
+  }
 
-  const hideStroke = parseBoolean(uiConfig.hideStroke) ? `` : `stroke="#${uiConfig.strokeColor}" stroke-width="5"`;
-  const hideBorder = parseBoolean(uiConfig.hideBorder) ? `` : `stroke="#${uiConfig.borderColor}" stroke-opacity="1" stroke-width="${uiConfig.borderWidth}"`;
+  return `
+    <rect x="0.5" y="0.5" rx="${borderRadius}" height="99.4%" width="99.8%" fill="#${bgColor}" ${hideBorder}/>
+  `;
+}
 
-  const animations = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png") ? `` : `
-    /* Animations */
+/**
+ * Calculates the position of all elements within a card based on direction (RTL/LTR),
+ * animation status, and revert mode.
+ *
+ * @param {boolean|undefined} isRtl - Whether to use right-to-left direction.
+ * @param {boolean|undefined} isAnimDisabled - Whether animation is disabled.
+ * @param {boolean|undefined} isRevert - Whether the layout is reversed (revert).
+ * @returns {Object} An object containing the X/Y coordinates for each element.
+ */
+function getPositions(
+  isRtl: boolean | undefined,
+  isAnimDisabled: boolean | undefined,
+  isRevert: boolean | undefined
+) {
+  const titleX = isAnimDisabled ? (isRtl ? 520 : 15) : (isRtl ? 510 : 5);
+  const titleY = isAnimDisabled ? 0 : -10;
+  const textX = isRtl ? 225 : 20;
+  const dataX = isRtl ? 25 : 220;
+  const iconX = isRtl ? 235 : -5;
+  const imageX = isAnimDisabled ? (isRevert ? 412 : 122) : (isRevert ? 417 : 127);
+  const imageY = isAnimDisabled ? 70 : 65;
+  const userX = isAnimDisabled ? (isRevert ? 412 : 122) : (isRevert ? 402 : 112);
+  const userY = isAnimDisabled ? 140 : 130;
+  const follX = isAnimDisabled ? (isRevert ? 412 : 122) : (isRevert ? 402 : 112);
+  const follY = isAnimDisabled ? 161 : 151;
+  const itemStatsX = isRevert ? (isRtl ? 10 : 0) : 230;
+
+  return { titleX, titleY, textX, dataX, iconX, imageX, imageY, userX, userY, follX, follY, itemStatsX };
+}
+
+/**
+ * Creates a CSS animation block if animations are enabled.
+ *
+ * @param {boolean|undefined} isAnimDisabled - Whether animations are disabled.
+ * @param {number} imageX - The X coordinate of the profile image (relative to the transform origin).
+ * @param {number} imageY - The Y coordinate of the profile image (relative to the transform origin).
+ * @returns {string} - The CSS animation or an empty string.
+ */
+function getAnimationStyles(
+  isAnimDisabled: boolean | undefined,
+  imageX: number,
+  imageY: number
+): string {
+  if (isAnimDisabled) return "";
+  return `
     @keyframes scaleInAnimation {
-      from {
-        transform: translate(-5px, 5px) scale(0);
-      }
-      to {
-        transform: translate(-5px, 5px) scale(1);
-      }
+      from { transform: translate(-5px, 5px) scale(0); }
+      to { transform: translate(-5px, 5px) scale(1); }
     }
     @keyframes fadeInAnimation {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     @keyframes fadeLeftInAnimation {
-      from {
-        opacity: 0;
-        transform: translate(-90px, 10px);
-      }
-      to {
-        opacity: 1;
-        transform: translate(10px, 10px);
-      }
+      from { opacity: 0; transform: translate(-90px, 10px); }
+      to { opacity: 1; transform: translate(10px, 10px); }
     }
-
     .div-animation {
       animation: fadeLeftInAnimation 0.7s ease-in-out forwards;
     }
-
     .image-profile-animation {
       animation: scaleInAnimation 1.2s ease-in-out forwards;
-      transform-origin: ${position.imageXPosition}px ${position.imageYPosition}px;
+      transform-origin: ${imageX}px ${imageY}px;
     }
-
     .single-item-animation {
       opacity: 0;
       animation: fadeInAnimation 0.3s ease-in-out forwards;
     }
   `;
+}
 
-  const hiddenItems = uiConfig.hiddenItems || "";
-  const hiddenItemsArray = hiddenItems.split(",");
-  const showItems = uiConfig.showItems || "";
-  const showItemsArray = showItems.split(",");
+/**
+ * Generates SVG markup for a GitHub statistics card.
+ *
+ * @param {GetData} data - GitHub user statistics data.
+ * @param {UiConfig} uiConfig - Card display configuration.
+ * @returns {Promise<string>} - SVG markup for the statistics card.
+ */
+export default async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
+  const getLocale = (locale: string): string => {
+    return Object.keys(locales).includes(locale) ? locale : "en";
+  };
+  const activeLocale = getLocale(uiConfig.Locale);
+  const selectedLocale = locales[activeLocale];
 
-  const cardItems = [
-    { text: selectLocale.totalReposText || defaultLocale.totalReposText, value: data.public_repos, icon: icons.repository, hidden: hiddenItemsArray.includes("repos") },
-    { text: selectLocale.starsCountText || defaultLocale.starsCountText, value: data.total_stars, icon: icons.star, hidden: hiddenItemsArray.includes("stars") },
-    { text: selectLocale.forksCountText || defaultLocale.forksCountText, value: data.total_forks, icon: icons.fork, hidden: hiddenItemsArray.includes("forks") },
-    { text: selectLocale.commitsCountText || defaultLocale.commitsCountText, value: data.total_commits, icon: icons.commit, hidden: hiddenItemsArray.includes("commits") },
-    { text: selectLocale.totalPRText || defaultLocale.totalPRText, value: data.total_prs, icon: icons.pull_request, hidden: hiddenItemsArray.includes("prs") },
-    { text: selectLocale.totalPRMergedText || defaultLocale.totalPRMergedText, value: data.total_prs_merged, icon: icons.pull_request_merged, hidden: hiddenItemsArray.includes("prs_merged") },
-    { text: selectLocale.totalPRReviewedText || defaultLocale.totalPRReviewedText, value: data.total_review, icon: icons.review, hidden: !showItemsArray.includes("reviews") },
-    { text: selectLocale.totalIssuesText || defaultLocale.totalIssuesText, value: data.total_issues, icon: icons.issue, hidden: hiddenItemsArray.includes("issues") },
-    { text: selectLocale.totalIssuesClosedText || defaultLocale.totalIssuesClosedText, value: data.total_closed_issues, icon: icons.issue_closed, hidden: !showItemsArray.includes("issues_closed") },
-    { text: selectLocale.totalDiscussionStartedText || defaultLocale.totalDiscussionStartedText, value: data.total_discussion_started, icon: icons.discussion_started, hidden: !showItemsArray.includes("discussions_started") },
-    { text: selectLocale.totalDiscussionAnsweredText || defaultLocale.totalDiscussionAnsweredText, value: data.total_discussion_answered, icon: icons.discussion_answered, hidden: !showItemsArray.includes("discussions_answered") },
-    { text: selectLocale.contributedToText || defaultLocale.contributedToText, value: data.total_contributed_to, icon: icons.contributed_to, hidden: hiddenItemsArray.includes("contributed") },
+  const isRtl = parseBoolean(selectedLocale.rtlDirection || false);
+  const isAnimDisabled = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png");
+  const isRevert = parseBoolean(uiConfig.Revert || false);
+
+  // Card title
+  let titleCard = (uiConfig.Title && uiConfig.Title !== "undefined")
+    ? uiConfig.Title.split("{name}").join(data.name)
+    : (selectedLocale.titleCard).split("{name}").join(data.name);
+
+  // Profile picture process
+  const photoQuality = Number(uiConfig.photoQuality || 80);
+  const photoResize = Number(uiConfig.photoResize || 512);
+  const pictureBase64 = await processProfilePicture(data.picture, photoQuality, photoResize);
+
+  // Element position
+  const positions = getPositions(isRtl, isAnimDisabled, isRevert);
+
+  // Stroke and border
+  const hideStroke = parseBoolean(uiConfig.hideStroke || false) ? "" : `stroke="#${uiConfig.strokeColor}" stroke-width="5"`;
+  const hideBorder = parseBoolean(uiConfig.hideBorder || false) ? "" : `stroke="#${uiConfig.borderColor}" stroke-opacity="1" stroke-width="${uiConfig.borderWidth}"`;
+  const borderRadius = Number(uiConfig.borderRadius || 20);
+
+  // Background
+  const backgroundSVG = buildBackground(uiConfig, hideBorder, borderRadius);
+
+  // CSS animations
+  const animationsCSS = getAnimationStyles(isAnimDisabled, positions.imageX, positions.imageY);
+
+  // Statistical item
+  const hiddenSet = new Set((uiConfig.hiddenItems || "").split(",").filter(Boolean));
+  const showSet = new Set((uiConfig.showItems || "").split(",").filter(Boolean));
+
+  // List of all items that may be displayed
+  const itemsConfig = [
+    { key: "repos", labelKey: "totalReposText", valueKey: "public_repos", icon: icons.repository, visible: !hiddenSet.has("repos") },
+    { key: "stars", labelKey: "starsCountText", valueKey: "total_stars", icon: icons.star, visible: !hiddenSet.has("stars") },
+    { key: "forks", labelKey: "forksCountText", valueKey: "total_forks", icon: icons.fork, visible: !hiddenSet.has("forks") },
+    { key: "commits", labelKey: "commitsCountText", valueKey: "total_commits", icon: icons.commit, visible: !hiddenSet.has("commits") },
+    { key: "prs", labelKey: "totalPRText", valueKey: "total_prs", icon: icons.pull_request, visible: !hiddenSet.has("prs") },
+    { key: "prs_merged", labelKey: "totalPRMergedText", valueKey: "total_prs_merged", icon: icons.pull_request_merged, visible: !hiddenSet.has("prs_merged") },
+    { key: "reviews", labelKey: "totalPRReviewedText", valueKey: "total_review", icon: icons.review, visible: showSet.has("reviews") },
+    { key: "issues", labelKey: "totalIssuesText", valueKey: "total_issues", icon: icons.issue, visible: !hiddenSet.has("issues") },
+    { key: "issues_closed", labelKey: "totalIssuesClosedText", valueKey: "total_closed_issues", icon: icons.issue_closed, visible: showSet.has("issues_closed") },
+    { key: "discussions_started", labelKey: "totalDiscussionStartedText", valueKey: "total_discussion_started", icon: icons.discussion_started, visible: showSet.has("discussions_started") },
+    { key: "discussions_answered", labelKey: "totalDiscussionAnsweredText", valueKey: "total_discussion_answered", icon: icons.discussion_answered, visible: showSet.has("discussions_answered") },
+    { key: "contributed", labelKey: "contributedToText", valueKey: "total_contributed_to", icon: icons.contributed_to, visible: !hiddenSet.has("contributed") },
   ];
 
-  const cardItemsToShow = cardItems.filter(item => !item.hidden);
-
-  const cardItemsSVG = cardItemsToShow.map((item, index) => `
-    <g transform="translate(${position.itemStatsXTransform}, ${15 + index * 25})">
-      <g class="single-item-animation" style="animation-delay: ${210 + index * 100}ms" transform="translate(25, 0)">
-        <svg x="${position.iconXPosition}" y="0" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-          ${item.icon}
-        </svg>
-        <text class="text" x="${position.textXPosition}" y="12.5">${item.text}:</text>
-        <text class="text text-bold" x="${position.dataXPosition}" y="12.5">${item.value}</text>
-      </g>
-    </g>
-  `).join("\n");
-
-  function generateGradient(colors: string[]): string {
-    const gradientId = "gradient";
-    const gradientAngle = colors[0];
-    const getColors = colors.slice(1);
-    const gradientStops = getColors.map((color, index) => {
-      const offset = (index * 100) / (getColors.length - 1);
-      return `<stop offset="${offset}%" stop-color="#${color}"/>`;
-    }).join("");
+  const visibleItems = itemsConfig.filter(item => item.visible);
+  const cardItemsSVG = visibleItems.map((item, idx) => {
+    const label = (selectedLocale as any)[item.labelKey];
+    const value = data[item.valueKey as keyof GetData];
     return `
-      <defs>
-        <linearGradient id="${gradientId}" gradientTransform="rotate(${gradientAngle})" gradientUnits="userSpaceOnUse">
-          ${gradientStops}
-        </linearGradient>
-      </defs>
-      <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.4%" width="99.8%" fill="url(#${gradientId})" ${hideBorder}/>
+      <g transform="translate(${positions.itemStatsX}, ${15 + idx * 25})">
+        <g class="single-item-animation" style="animation-delay: ${210 + idx * 100}ms" transform="translate(25, 0)">
+          <svg x="${positions.iconX}" y="0" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+            ${item.icon}
+          </svg>
+          <text class="text" x="${positions.textX}" y="12.5">${label}:</text>
+          <text class="text text-bold" x="${positions.dataX}" y="12.5">${value}</text>
+        </g>
+      </g>
     `;
-  }
+  }).join("\n");
 
-  let backgroundSVG;
-  if (uiConfig.bgColor) {
-    if (Array.isArray(uiConfig.bgColor)) {
-      backgroundSVG = generateGradient(uiConfig.bgColor);
-    } else if (typeof uiConfig.bgColor === 'string') {
-      const gradientHexArray = uiConfig.bgColor.split(',');
-      if (gradientHexArray.length >= 2) {
-        const gradientColors = gradientHexArray.map(color => color.trim());
-        backgroundSVG = generateGradient(gradientColors);
-      } else {
-        backgroundSVG = `
-          <rect x="0.5" y="0.5" rx="${uiConfig.borderRadius}" height="99.4%" width="99.8%" fill="#${uiConfig.bgColor}" ${hideBorder}/>
-        `;
-      }
-    }
-  }
+  // Dynamic SVG height based on the number of items
+  const svgHeight = Math.max(220, 45 + visibleItems.length * 25);
 
   return `
-    <svg width="535" height="${Math.max(220, 45 + cardItemsToShow.length * 25)}"  direction="${direction}" viewBox="0 0 535 ${Math.max(220, 45 + cardItemsToShow.length * 25)}" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="535" height="${svgHeight}" direction="${isRtl ? "rtl" : "ltr"}" viewBox="0 0 535 ${svgHeight}" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <style>
-        ${animations}
+        ${animationsCSS}
         .text {
           font-family: "Segoe UI", Ubuntu, sans-serif;
           fill: #${uiConfig.textColor};
           font-size: 14px;
         }
-
-        .text-bold {
-          font-weight: 700;
-        }
-
-        .text-middle {
-          alignment-baseline: middle;
-          text-anchor: middle;
-        }
-
+        .text-bold { font-weight: 700; }
+        .text-middle { alignment-baseline: middle; text-anchor: middle; }
         .text-followers {
           font-family: "Segoe UI", Ubuntu, sans-serif;
           fill: #${uiConfig.textColor};
           font-size: 13px;
         }
-
         .text-username {
           font-family: "Segoe UI", Ubuntu, sans-serif;
           fill: #${uiConfig.usernameColor};
@@ -217,14 +259,12 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
           alignment-baseline: middle;
           text-anchor: middle;
         }
-
         .text-title {
           font-family: "Segoe UI", Ubuntu, sans-serif;
           fill: #${uiConfig.titleColor};
           font-size: 17px;
           font-weight: 600;
         }
-
         .icon {
           fill: #${uiConfig.iconColor};
           display: block;
@@ -234,24 +274,25 @@ async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
       ${backgroundSVG}
       <g transform="translate(0, 25)">
         <g class="div-animation">
-          <text x="${position.titleXPosition}" y="${position.titleYPosition}" class="text-title">${titleCard}</text>
+          <text x="${positions.titleX}" y="${positions.titleY}" class="text-title">${titleCard}</text>
         </g>
         <g class="image-profile-animation">
           <defs>
             <pattern id="image" x="0%" y="0%" height="100%" width="100%" viewBox="0 0 512 512">
-              <image x="0%" y="0%" width="512" height="512" href="data:image/jpeg;base64,${dataPicture}"></image>
+              <image x="0%" y="0%" width="512" height="512" href="data:image/jpeg;base64,${pictureBase64}" />
             </pattern>
           </defs>
-          <circle cx="${position.imageXPosition}" cy="${position.imageYPosition}" r="50" fill="url(#image)" ${hideStroke}/>
+          <circle cx="${positions.imageX}" cy="${positions.imageY}" r="50" fill="url(#image)" ${hideStroke} />
         </g>
-        <text x="${position.userXPosition}" y="${position.userYPosition}" direction="ltr" class="text-username div-animation">@${data.username}</text>
+        <text x="${positions.userX}" y="${positions.userY}" direction="ltr" class="text-username div-animation">@${data.username}</text>
         <g class="div-animation text-middle">
-          <text x="${position.follXPosition}" y="${position.follYPosition}" class="text-followers"><tspan class="text-bold">${data.followers}</tspan> ${selectLocale.followersText || defaultLocale.followersText} · <tspan class="text-bold">${data.following}</tspan> ${selectLocale.followingText || defaultLocale.followingText}</text>
+          <text x="${positions.follX}" y="${positions.follY}" class="text-followers">
+            <tspan class="text-bold">${data.followers}</tspan> ${selectedLocale.followersText} · 
+            <tspan class="text-bold">${data.following}</tspan> ${selectedLocale.followingText}
+          </text>
         </g>
         ${cardItemsSVG}
       </g>
     </svg>
   `;
 }
-
-export default card;
