@@ -161,9 +161,11 @@ function getAnimationStyles(
  * @returns {Promise<string>} - SVG markup for the statistics card.
  */
 export default async function card(data: GetData, uiConfig: UiConfig): Promise<string> {
-  const fallbackLocale = "en";
-  const defaultLocale = locales[fallbackLocale];
-  const selectedLocale = locales[uiConfig.Locale] || defaultLocale;
+  const getLocale = (locale: string): string => {
+    return Object.keys(locales).includes(locale) ? locale : "en";
+  };
+  const activeLocale = getLocale(uiConfig.Locale);
+  const selectedLocale = locales[activeLocale];
 
   const isRtl = parseBoolean(selectedLocale.rtlDirection || false);
   const isAnimDisabled = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png");
@@ -172,7 +174,7 @@ export default async function card(data: GetData, uiConfig: UiConfig): Promise<s
   // Card title
   let titleCard = (uiConfig.Title && uiConfig.Title !== "undefined")
     ? uiConfig.Title.split("{name}").join(data.name)
-    : (selectedLocale.titleCard || defaultLocale.titleCard).split("{name}").join(data.name);
+    : (selectedLocale.titleCard).split("{name}").join(data.name);
 
   // Profile picture process
   const photoQuality = Number(uiConfig.photoQuality || 80);
@@ -215,7 +217,7 @@ export default async function card(data: GetData, uiConfig: UiConfig): Promise<s
 
   const visibleItems = itemsConfig.filter(item => item.visible);
   const cardItemsSVG = visibleItems.map((item, idx) => {
-    const label = (selectedLocale as any)[item.labelKey] || (defaultLocale as any)[item.labelKey];
+    const label = (selectedLocale as any)[item.labelKey];
     const value = data[item.valueKey as keyof GetData];
     return `
       <g transform="translate(${positions.itemStatsX}, ${15 + idx * 25})">
@@ -285,8 +287,8 @@ export default async function card(data: GetData, uiConfig: UiConfig): Promise<s
         <text x="${positions.userX}" y="${positions.userY}" direction="ltr" class="text-username div-animation">@${data.username}</text>
         <g class="div-animation text-middle">
           <text x="${positions.follX}" y="${positions.follY}" class="text-followers">
-            <tspan class="text-bold">${data.followers}</tspan> ${selectedLocale.followersText || defaultLocale.followersText} · 
-            <tspan class="text-bold">${data.following}</tspan> ${selectedLocale.followingText || defaultLocale.followingText}
+            <tspan class="text-bold">${data.followers}</tspan> ${selectedLocale.followersText} · 
+            <tspan class="text-bold">${data.following}</tspan> ${selectedLocale.followingText}
           </text>
         </g>
         ${cardItemsSVG}
