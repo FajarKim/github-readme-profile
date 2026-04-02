@@ -10,15 +10,15 @@ dotenv.config();
  * @returns {string} - The GitHub token.
  */
 function getToken(bearerHeader: boolean): string {
-const getEnvirontment: any = process.env;
-  let getGHEnvirontment: any = Object.keys(getEnvirontment).filter((key) =>
+  const getEnvironment = process.env as Record<string, string | undefined>;
+  const getGHEnvironmentKeys = Object.keys(getEnvironment).filter((key) =>
     key.startsWith("GH_TOKEN")
   );
-  getGHEnvirontment = getGHEnvirontment.map((key: string) => getEnvirontment[key]);
+  const getGHEnvironmentValues = getGHEnvironmentKeys.map((key: string) => getEnvironment[key]);
 
   // Select a random GitHub environment variable
   let getGHToken: string =
-    getGHEnvirontment[Math.floor(Math.random() * getGHEnvirontment.length)];
+    getGHEnvironmentValues[Math.floor(Math.random() * getGHEnvironmentValues.length)] || "";
 
   // If no GitHub environment variable is found, get the token from GitHub Actions inputs
   if (!getGHToken) {
