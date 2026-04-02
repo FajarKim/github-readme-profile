@@ -97,20 +97,38 @@ function getPositions(
   isAnimDisabled: boolean | undefined,
   isRevert: boolean | undefined
 ) {
-  const titleX = isAnimDisabled ? (isRtl ? 520 : 15) : (isRtl ? 510 : 5);
-  const titleY = isAnimDisabled ? 0 : -10;
-  const textX = isRtl ? 225 : 20;
-  const dataX = isRtl ? 25 : 220;
-  const iconX = isRtl ? 235 : -5;
-  const imageX = isAnimDisabled ? (isRevert ? 412 : 122) : (isRevert ? 417 : 127);
-  const imageY = isAnimDisabled ? 70 : 65;
-  const userX = isAnimDisabled ? (isRevert ? 412 : 122) : (isRevert ? 402 : 112);
-  const userY = isAnimDisabled ? 140 : 130;
-  const follX = isAnimDisabled ? (isRevert ? 412 : 122) : (isRevert ? 402 : 112);
-  const follY = isAnimDisabled ? 161 : 151;
-  const itemStatsX = isRevert ? (isRtl ? 10 : 0) : 230;
+  const configs = {
+    animated: {
+      title: { x: isRtl ? 510 : 5, y: -10 },
+      image: { x: isRevert ? 417 : 127, y: 65 },
+      user: { x: isRevert ? 402 : 112, y: 130 },
+      foll: { x: isRevert ? 402 : 112, y: 151 },
+    },
+    static: {
+      title: { x: isRtl ? 520 : 15, y: 0 },
+      image: { x: isRevert ? 412 : 122, y: 70 },
+      user: { x: isRevert ? 412 : 122, y: 140 },
+      foll: { x: isRevert ? 412 : 122, y: 161 },
+    },
+  };
 
-  return { titleX, titleY, textX, dataX, iconX, imageX, imageY, userX, userY, follX, follY, itemStatsX };
+  const mode = isAnimDisabled ? "static" : "animated";
+  const config = configs[mode];
+
+  return {
+    titleX: config.title.x,
+    titleY: config.title.y,
+    textX: isRtl ? 225 : 20,
+    dataX: isRtl ? 25 : 220,
+    iconX: isRtl ? 235 : -5,
+    imageX: config.image.x,
+    imageY: config.image.y,
+    userX: config.user.x,
+    userY: config.user.y,
+    follX: config.foll.x,
+    follY: config.foll.y,
+    itemStatsX: isRevert ? (isRtl ? 10 : 0) : 230,
+  };
 }
 
 /**
