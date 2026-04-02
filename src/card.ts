@@ -183,8 +183,13 @@ export default async function card(data: GetData, uiConfig: UiConfig): Promise<s
   const getLocale = (locale: string): string => {
     return Object.keys(locales).includes(locale) ? locale : "en";
   };
+  const createLocalizedLocale = (primaryLocale: string, fallbackLocale: string = "en") => {
+    const primary = locales[primaryLocale] || {};
+    const fallback = locales[fallbackLocale] || locales.en || {};
+    return { ...fallback, ...primary };
+  };
   const activeLocale = getLocale(uiConfig.Locale);
-  const selectedLocale = locales[activeLocale];
+  const selectedLocale = createLocalizedLocale(activeLocale);
 
   const isRtl = parseBoolean(selectedLocale.rtlDirection || false);
   const isAnimDisabled = parseBoolean(uiConfig.disabledAnimations || uiConfig.Format === "png");
