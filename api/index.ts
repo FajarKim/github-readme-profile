@@ -1,3 +1,4 @@
+import { Request, Response } from "express";
 import escapeHTML from "escape-html";
 import { Resvg } from "@resvg/resvg-js";
 import parseBoolean from "@barudakrosul/parse-boolean";
@@ -16,7 +17,7 @@ import { isValidHexColor, isValidGradient } from "../src/common/utils";
  * @property {string} borderColor - Color for borders.
  * @property {string} strokeColor - Color for strokes.
  * @property {string} usernameColor - Color for the username.
- * @property {any} bgColor - Background color or gradient.
+ * @property {string} bgColor - Background color or gradient.
  * @property {string} Title - Add custom title (optional).
  * @property {string} Locale - Locale setting.
  * @property {number|string} borderWidth - Width of borders.
@@ -38,7 +39,7 @@ type UiConfig = {
   borderColor: string;
   strokeColor: string;
   usernameColor: string;
-  bgColor: any;
+  bgColor: string;
   Title: string | undefined;
   Locale: string;
   borderWidth: number | string;
@@ -57,10 +58,10 @@ type UiConfig = {
 /**
  * Generates an XML string representation of the provided data.
  *
- * @param {any} data - The data to be converted into XML format.
+ * @param {Record<string, unknown>} data - The data to be converted into XML format.
  * @returns {string} - A string containing the XML representation of the data.
  */
-function generateXML(data: any): string {
+function generateXML(data: Record<string, unknown>): string {
   let xml = `<stats>\n`;
   for (const key in data) {
     xml += `  <${key}>${escapeHTML(data[key])}</${key}>\n`;
@@ -72,11 +73,11 @@ function generateXML(data: any): string {
 /**
  * Handles the generation card of a GitHub stats based on user data and specified options.
  *
- * @param {any} req - The request object from the client.
- * @param {any} res - The response object to send data back to the client.
- * @returns {Promise<any>} - A promise that resolves when the photo profile is generated and sent.
+ * @param {Request} req - The request object from the client.
+ * @param {Response} res - The response object to send data back to the client.
+ * @returns {Promise<void>} - A promise that resolves when the photo profile is generated and sent.
  */
-async function readmeStats(req: any, res: any): Promise<any> {
+async function readmeStats(req: Request, res: Response): Promise<void> {
   try {
     const username = escapeHTML(req.query.username);
     const photoQuality = Math.max(0, Math.min(parseInt(escapeHTML(req.query.photo_quality || "15")), 100));
@@ -130,7 +131,7 @@ async function readmeStats(req: any, res: any): Promise<any> {
       }
     }
 
-    const fetchStats = await getData(username);
+    const fetchStats: GetData = await getData(username);
     res.setHeader("Cache-Control", "s-maxage=7200, stale-while-revalidate");
 
     if (uiConfig.Format === "json") {
@@ -153,7 +154,7 @@ async function readmeStats(req: any, res: any): Promise<any> {
       const svg = await card(fetchStats, uiConfig);
       res.send(svg);
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     const message = error.message;
     res.status(500).send(escapeHTML(message));
   }

@@ -2,6 +2,15 @@ import axios from "axios";
 import getToken from "../getToken";
 
 /**
+ * Represents the structure of a GitHub repository object returned from API.
+ */
+interface Repository {
+  stargazers_count: number;
+  forks_count: number;
+  open_issues: number;
+}
+
+/**
  * Type representing the data associated with a user's repository stats.
  *
  * @typedef {Object} RepositoryData
@@ -35,8 +44,8 @@ async function repositoryStats(
       { length: totalpage },
       async (_, i) => await getPerPageRepositoryData(username, i + 1)
     )
-  ).then((data: object[]) => {
-    data.forEach((repo: any) => {
+  ).then((data: RepositoryData[]) => {
+    data.forEach((repo: RepositoryData) => {
       stars += repo.stars;
       forks += repo.forks;
       openedIssues += repo.openedIssues;
@@ -76,7 +85,8 @@ async function getPerPageRepositoryData(
   let forks = 0;
   let openedIssues = 0;
 
-  data.data.forEach((repo: any) => {
+  // Iterate over each repository in the response and accumulate stats
+  data.data.forEach((repo: Repository) => {
     stars += repo.stargazers_count;
     forks += repo.forks_count;
     openedIssues += repo.open_issues;

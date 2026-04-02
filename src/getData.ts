@@ -75,17 +75,14 @@ async function getData(username: string): Promise<GetData> {
     total_closed_issues: millify(user.closedIssues.totalCount),
     total_prs: millify(user.pullRequests.totalCount),
     total_prs_merged: millify(user.mergedPullRequests.totalCount),
-    total_commits: millify(
-      user.restrictedContributionsCount + user.totalCommitContributions
-    ),
+    total_commits: millify(user.totalCommitContributions + user.restrictedContributionsCount),
     total_review: millify(user.totalPullRequestReviewContributions),
     total_discussion_answered: millify(user.discussionAnswered.totalCount),
     total_discussion_started: millify(user.discussionStarted.totalCount),
     total_contributed_to: millify(user.repositoriesContributedTo.totalCount),
-  };
+  } as GetData;
 
   return output;
 }
-
 export { GetData, getData };
 export default getData;

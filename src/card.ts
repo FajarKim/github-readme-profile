@@ -241,7 +241,7 @@ export default async function card(data: GetData, uiConfig: UiConfig): Promise<s
 
   const visibleItems = itemsConfig.filter(item => item.visible);
   const cardItemsSVG = visibleItems.map((item, idx) => {
-    const label = (selectedLocale as any)[item.labelKey];
+    const label = (selectedLocale as Record<string, string>)[item.labelKey];
     const value = data[item.valueKey as keyof GetData];
     return `
       <g transform="translate(${positions.itemStatsX}, ${15 + idx * 25})">
