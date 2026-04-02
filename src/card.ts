@@ -1,4 +1,5 @@
 import sharp from "sharp";
+import { minify } from "html-minifier-terser";
 import parseBoolean from "@barudakrosul/parse-boolean";
 import type { GetData } from "./getData";
 import type { UiConfig } from "../api/index";
@@ -235,7 +236,7 @@ export default async function card(data: GetData, uiConfig: UiConfig): Promise<s
   // Dynamic SVG height based on the number of items
   const svgHeight = Math.max(220, 45 + visibleItems.length * 25);
 
-  return `
+  const rawSVG = `
     <svg width="535" height="${svgHeight}" direction="${isRtl ? "rtl" : "ltr"}" viewBox="0 0 535 ${svgHeight}" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <style>
         ${animationsCSS}
@@ -295,4 +296,19 @@ export default async function card(data: GetData, uiConfig: UiConfig): Promise<s
       </g>
     </svg>
   `;
+
+  // Minify SVG
+  const minifiedSVG = await minify(rawSVG, {
+    collapseWhitespace: true,
+    removeComments: true,
+    removeEmptyAttributes: true,
+    removeRedundantAttributes: true,
+    useShortDoctype: true,
+    removeOptionalTags: false,
+    removeAttributeQuotes: false,
+    minifyCSS: true,
+    minifyJS: false,
+  });
+
+  return minifiedSVG;
 }

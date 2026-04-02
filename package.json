@@ -9,11 +9,13 @@
     "@resvg/resvg-js": "^2.6.2",
     "@types/escape-html": "^1.0.4",
     "@types/express": "^5.0.6",
+    "@types/html-minifier-terser": "^7.0.2",
     "@types/node": "^25.5.0",
     "axios": "^1.14.0",
     "dotenv": "^17.3.1",
     "escape-html": "^1.0.3",
     "express": "^5.2.1",
+    "html-minifier-terser": "^7.2.0",
     "millify": "^6.1.0",
     "node-base64-image": "^2.2.0",
     "sharp": "^0.34.5"
