@@ -196,7 +196,7 @@ export default async function card(data: GetData, uiConfig: UiConfig): Promise<s
   const isRevert = parseBoolean(uiConfig.Revert || false);
 
   // Card title
-  let titleCard = (uiConfig.Title && uiConfig.Title !== "undefined")
+  const titleCard = (uiConfig.Title && uiConfig.Title !== "undefined")
     ? uiConfig.Title.split("{name}").join(data.name)
     : (selectedLocale.titleCard).split("{name}").join(data.name);
 
