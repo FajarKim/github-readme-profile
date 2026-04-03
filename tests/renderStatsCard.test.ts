@@ -5,17 +5,6 @@ import card from "../src/card";
 import themes from "../themes/index";
 import locales from "../i18n/index";
 
-interface MockRequest extends Partial<Request> {
-  query: Record<string, string | undefined>;
-}
-
-interface MockResponse extends Partial<Response> {
-  json: jest.Mock;
-  send: jest.Mock;
-  setHeader: jest.Mock;
-  status: jest.Mock;
-}
-
 jest.mock("../src/getData");
 jest.mock("../src/card");
 
@@ -48,8 +37,8 @@ const exampleUserData: User = {
 };
 
 describe("Test GitHub Readme Profile API", () => {
-  let mockRequest: MockRequest;
-  let mockResponse: MockResponse;
+  let mockRequest: any;
+  let mockResponse: any;
 
   beforeEach(() => {
     mockRequest = {
@@ -60,7 +49,7 @@ describe("Test GitHub Readme Profile API", () => {
       json: jest.fn(),
       send: jest.fn(),
       setHeader: jest.fn(),
-      status: jest.fn(() => mockResponse),
+      status: jest.fn(),
     };
 
     jest.clearAllMocks();
