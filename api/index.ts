@@ -1,7 +1,7 @@
 import escapeHTML from "escape-html";
 import { Resvg } from "@resvg/resvg-js";
 import parseBoolean from "@barudakrosul/parse-boolean";
-import getData from "../src/getData";
+import { getData,GetData } from "../src/getData";
 import card from "../src/card";
 import { themes, Themes } from "../themes/index";
 import { isValidHexColor, isValidGradient } from "../src/common/utils";
@@ -16,7 +16,7 @@ import { isValidHexColor, isValidGradient } from "../src/common/utils";
  * @property {string} borderColor - Color for borders.
  * @property {string} strokeColor - Color for strokes.
  * @property {string} usernameColor - Color for the username.
- * @property {any} bgColor - Background color or gradient.
+ * @property {string|string[]} bgColor - Background color or gradient.
  * @property {string} Title - Add custom title (optional).
  * @property {string} Locale - Locale setting.
  * @property {number|string} borderWidth - Width of borders.
@@ -38,7 +38,7 @@ type UiConfig = {
   borderColor: string;
   strokeColor: string;
   usernameColor: string;
-  bgColor: any;
+  bgColor: string|string[];
   Title: string | undefined;
   Locale: string;
   borderWidth: number | string;
@@ -74,9 +74,9 @@ function generateXML(data: any): string {
  *
  * @param {any} req - The request object from the client.
  * @param {any} res - The response object to send data back to the client.
- * @returns {Promise<any>} - A promise that resolves when the photo profile is generated and sent.
+ * @returns {Promise<void>} - A promise that resolves when the photo profile is generated and sent.
  */
-async function readmeStats(req: any, res: any): Promise<any> {
+async function readmeStats(req: any, res: any): Promise<void> {
   try {
     const username = escapeHTML(req.query.username);
     const photoQuality = Math.max(0, Math.min(parseInt(escapeHTML(req.query.photo_quality || "15")), 100));
@@ -130,7 +130,7 @@ async function readmeStats(req: any, res: any): Promise<any> {
       }
     }
 
-    const fetchStats = await getData(username);
+    const fetchStats: GetData = await getData(username);
     res.setHeader("Cache-Control", "s-maxage=7200, stale-while-revalidate");
 
     if (uiConfig.Format === "json") {
