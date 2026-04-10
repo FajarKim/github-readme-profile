@@ -323,6 +323,7 @@ export default async function card(data: GetData, uiConfig: UiConfig): Promise<s
   // Minify SVG
   const minifiedSVG = await minify(rawSVG, {
     collapseWhitespace: true,
+    conservativeCollapse: true,
     removeComments: true,
     removeEmptyAttributes: true,
     removeRedundantAttributes: true,
