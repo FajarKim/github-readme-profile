@@ -1,6 +1,6 @@
 {
   "name": "@fajarkim/github-readme-profile",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "🙀 Generate dynamic GitHub stats cards in SVG format. Fast, customizable, and ready to embed in your profile README.",
   "main": "api/index.ts",
   "dependencies": {
