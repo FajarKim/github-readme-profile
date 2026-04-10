@@ -311,8 +311,7 @@ export default async function card(data: GetData, uiConfig: UiConfig): Promise<s
         <text x="${positions.userX}" y="${positions.userY}" direction="ltr" class="text-username div-animation">@${data.username}</text>
         <g class="div-animation text-middle">
           <text x="${positions.follX}" y="${positions.follY}" class="text-followers">
-            <tspan class="text-bold">${data.followers}</tspan> ${selectedLocale.followersText} · 
-            <tspan class="text-bold">${data.following}</tspan> ${selectedLocale.followingText}
+            <tspan class="text-bold">${data.followers}</tspan> ${selectedLocale.followersText} · <tspan class="text-bold">${data.following}</tspan> ${selectedLocale.followingText}
           </text>
         </g>
         ${cardItemsSVG}
