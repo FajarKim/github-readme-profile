@@ -349,7 +349,7 @@ If your language is missing, you can contribute a new translation by following t
 This project is open-source and distributed under the MIT License. You are free to use, modify, and distribute it, subject to the terms of the license. For more details, see the [`LICENSE`](./LICENSE) file.
 
 ## Deploy on Vercel
-You can host your own instance of the GitHub Readme Profile API on Vercel. This gives you full control over the endpoint and allows you to customize the behavior or add new features.
+You can host your own instance of the GitHub Readme Profile on Vercel. This gives you full control over the endpoint and allows you to customize the behavior or add new features.
 
 1. **Sign up / log in** at [vercel.com](https://vercel.com) using your GitHub account.
 2. **Fork** this repository to your GitHub account.
@@ -358,7 +358,6 @@ You can host your own instance of the GitHub Readme Profile API on Vercel. This 
    - Click “Add New…” → “Project”.
    - Import your forked repository.
    - Add an environment variable named `GH_TOKEN` with your personal access token as its value.
-   - In the **Build & Output Settings**, enable the install command and add `npm install typescript` (this ensures TypeScript dependencies are installed).
 5. **Deploy** – Vercel will automatically build and deploy your instance. Once finished, you will get a unique URL (e.g., `https://your-project.vercel.app`) that you can use in place of `gh-readme-profile.vercel.app`.
 
 [![Deploy](https://raw.githubusercontent.com/FajarKim/FajarKim/master/images/deploy-on-vercel.svg)](https://vercel.com/import/project?template=https://github.com/FajarKim/github-readme-profile)
