@@ -4,7 +4,7 @@
   "description": "🙀 Generate dynamic GitHub stats cards in SVG format. Fast, customizable, and ready to embed in your profile README.",
   "main": "api/index.ts",
   "dependencies": {
-    "@actions/core": "^2.0.3",
+    "@actions/core": "^3.0.1",
     "@barudakrosul/parse-boolean": "^0.0.2",
     "@resvg/resvg-js": "^2.6.2",
     "@types/escape-html": "^1.0.4",
