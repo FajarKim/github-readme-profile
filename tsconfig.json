@@ -6,7 +6,9 @@
     "rootDir": "./",
     "strict": true,
     "moduleResolution": "nodenext",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    "types": ["node", "jest"]
   },
   "exclude": ["node_modules"]
 }
