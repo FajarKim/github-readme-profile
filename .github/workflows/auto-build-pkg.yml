@@ -74,7 +74,7 @@ jobs:
             git commit --message "${message}"
             git remote add origin-${branch} "https://github.com/FajarKim/github-readme-profile.git"
             git push --force --quiet --set-upstream origin-${branch} ${branch}
-            gh pr create --title "${message}" --body "${body}"
+            gh pr create --title "${message}" --body "${body}" --head "${branch}"
           fi
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
