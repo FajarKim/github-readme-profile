@@ -1,0 +1,26 @@
+[build]
+  command = "npm install @netlify/functions && npm run build"
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = [
+    "@resvg/resvg-js",
+    "@resvg/resvg-js-linux-x64-musl",
+    "@resvg/resvg-js-linux-x64-gnu"
+  ]
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "https://gh-readme-profile-generator.vercel.app/:splat"
+  status = 200
+
+[dev]
+  framework = "custom"
+  command = "npm run dev"
