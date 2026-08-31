@@ -10,7 +10,7 @@
     "@types/escape-html": "^1.0.4",
     "@types/express": "^5.0.6",
     "@types/html-minifier-terser": "^7.0.2",
-    "@types/node": "^26.1.0",
+    "@types/node": "^26.4.0",
     "axios": "^1.20.0",
     "dotenv": "^17.4.2",
     "escape-html": "^1.0.3",
