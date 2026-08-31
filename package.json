@@ -60,7 +60,7 @@
     "node": ">=20"
   },
   "devDependencies": {
-    "@markdoc/markdoc": "^0.5.7",
+    "@markdoc/markdoc": "^0.5.9",
     "@types/jest": "^29.5.14",
     "@typescript-eslint/eslint-plugin": "^8.63.0",
     "@typescript-eslint/parser": "^8.63.0",
